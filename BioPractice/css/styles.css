@@ -1,0 +1,22 @@
+/* Devinne McCombs
+   February 15, 2024 */
+
+   .intro{
+    font-size: 24px;
+    color: darkblue;
+    padding: 20px 60px;
+    text-align: center;
+   }
+   .highlight{
+    background-color: lightgoldenrodyellow;
+    padding: 5px;
+   }
+   .alert{
+    background: red;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+   }
+   .blue{
+    background: blue;
+   }
