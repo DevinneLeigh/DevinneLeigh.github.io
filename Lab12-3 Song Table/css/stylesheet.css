@@ -1,0 +1,47 @@
+/* Devinne McCombs
+   February 16, 2024 */
+@charset "utf-8";
+
+body {
+ background: #fffef8; 
+}	
+
+.tableStyle {
+  border: 9px solid #f49ab7;
+  background-color: #d5577f;
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  text-align: left;
+  font-size: 20px;
+}
+a:link{
+  color:#000000 
+}
+a:visited{
+  color: #830025
+}
+a:hover{
+  color:#32d6be
+}
+a:active{
+  color:#229382
+}
+
+caption {
+  color: #7e203d;
+  font-size: 30px;
+}
+thead {
+	background-color: #b62c58;
+}
+
+tr:nth-child(even) {
+  background: #e46f95;
+}
+
+tfoot {
+	text-align: center;
+  color: #330921;
+	background-color: #b62c58;
+}
