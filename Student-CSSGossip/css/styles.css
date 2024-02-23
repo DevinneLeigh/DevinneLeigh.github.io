@@ -28,7 +28,7 @@ h1 {
 }
 h3 {
     font-size: 1.5em;
-    border-bottom: 1px, solid, black;
+    border-bottom: 1px solid black;
 }
 .fonts {
     color: orange;
@@ -43,13 +43,13 @@ h3 {
 }
 .backgrounds {
     color: green;
-    font: 'Trebuchet MS', san-serif;
+    font-family: 'Trebuchet MS', san-serif;
     font-size: 1.25em;
 }
 .more {
     color: blue;
     text-decoration: underline;
-    border: 1px, dashed, gray;
+    border: 1px dashed gray;
     background-color: #D69BBE;
 }
 article ul{
