@@ -1,7 +1,7 @@
 /* Practice CustomFonts Style Sheet */
 
 @font-face {
-    font-family: 'sofia';
+    font-family: 'amerika';
     src: url('../fonts/amerika-webfont.woff2') format('woff2'),
          url('../fonts/amerika-webfont.woff') format('woff');
     font-weight: normal;
@@ -9,5 +9,5 @@
 }
 
 body{
-	font-family: 'sofia', "Times New Roman", serif;
+	font-family: 'amerika', "Brush Script MT", cursive;
 }
