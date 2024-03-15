@@ -73,7 +73,7 @@ main.researchPaper {
 main.oped {
     color:#ffffff;
     background-color:#50000d23;
-    line-height: 1.5em;
+    line-height: 2em;
     letter-spacing: 0.1em;
     word-spacing: 0.2em;
     padding-left: 80px;
@@ -89,6 +89,13 @@ main.oped {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+main.oped p {
+    text-align: left;
+    text-indent: 50px;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5em;
 }
 
 main.researchPaper p {
