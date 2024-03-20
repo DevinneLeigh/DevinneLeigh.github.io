@@ -1,0 +1,66 @@
+
+/* Devinne McCombs
+   March 19, 2024 */
+
+   @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+   @import url('../fonts/roboto/Roboto-Italic.ttf');
+
+   body, html {
+	height: 100%;
+  }
+  
+  .bg {
+	background-image: url("../image/jewelry.jpg");
+	height: 100%;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
+
+#outerwrapper {	
+
+	background: rgba(243,205,170, 0.4);
+	border-radius: 15%;
+	width: 70%;
+	margin-left: auto;
+    margin-right: auto;
+
+}
+.bold {
+	font-weight: bold;
+}
+main {
+	font-size: 1.25em;
+	font-family: "Trebuchet MS", Arial, sans-serif;
+	background: linear-gradient(#ffffff, #f0f9e6);
+	padding: 10px;
+	margin: 20px;
+	border-radius: 2em;
+}
+footer {
+	font-size: 1em;
+	text-align: center;
+	padding-bottom: 10px;
+}
+#necklace {
+	float: left;
+	border-radius: 50%;
+}
+.addrightmargin {
+	margin-right: 10%;
+}
+nav li {
+	list-style: none;
+	font-size: 1.5em;
+	clear: both;
+}
+h1 {
+	font-family: "Pacifico", cursive;
+	font-size: 4em;
+}
+h2 {
+	font-family: "Roboto", sans-serif;
+	font-style: italic;
+	font-size: 2em;;
+}
