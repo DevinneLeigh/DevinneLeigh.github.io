@@ -55,10 +55,7 @@ main.researchPaper {
     line-height: 1.5em;
     letter-spacing: 0.1em;
     word-spacing: 0.2em;
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 40px 80px;
     text-align: center;
     width: 70%;
     border-radius: 60px;
@@ -76,10 +73,7 @@ main.oped {
     line-height: 2em;
     letter-spacing: 0.1em;
     word-spacing: 0.2em;
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 40px 80px;
     text-align: center;
     width: 70%;
     border-radius: 60px;
@@ -106,15 +100,13 @@ main.researchPaper p {
 
 .pinkorange {
     background: linear-gradient(#fe6164, #f78ef2, #fe6164, #f78ef2, #fe6164, #f78ef2);
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding: 100px 0px;
     margin: 15px;
 }
 
 .blueblack {
     background: linear-gradient(#14213c, #0cb9db, #300499, #0cb9db, #14213c);
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding: 100px 0px;
     margin: 15px;
 }
 
