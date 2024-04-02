@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+table {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  background-color: #170b26b5;
+  text-align: left;
+  font-size: 20px;
+  line-height: 1.3em;
+  word-spacing: 0.1em;
+  border-radius: 25px;
+  padding: 2%;
+}
+
+
+thead {
+    text-align: center;
+}
+td {
+    border-top: 1px solid #8282828f; 
+    padding: 3px;
+}
+
+.tables {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+@media only screen and (min-width: 700px) { /* desktop */
+  .tables {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  table {
+    width: 25%;
+    /* margin-right: 2%;
+    padding: 2%; */
+  }
+  
+  table:first-child {
+    width: 75%;
+    margin-left: 2%;
+  }
+
+  
+}
+
