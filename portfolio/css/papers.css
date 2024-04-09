@@ -54,4 +54,22 @@ footer .references {
 
 
 
-.reference
+.references a:link {
+    color: white;
+}
+.references a:visited {
+    color: #05f2f286;
+}
+.references a:hover {
+    color: #F20574;
+}
+
+.references a:active {
+    color: #730240;
+}
+
+@media only screen and (min-width: 1200px) { /* desktop */
+    .infoGraphic img {
+        width: 80%;
+    }
+}
