@@ -11,9 +11,11 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+        <link rel="stylesheet" type="text/css" href="css/contact.css">
     </head>
     <body>
         <header>
+            <a href="index.html"><img class="logo" src="image/logo.svg" alt="Logo with the anitials D.M. with a computer diplaying code."></a>
             <nav>
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
@@ -24,23 +26,24 @@
         <main>
             <body>
                 <form action="mailto:dleighmccombs@gmail.com?subject=Personal%20Portfolio%20Mail" enctype="text/plain" method="POST">
-                    <fieldset id="contact">
+                    <section>
+                    <fieldset class="box">
                         <div>
                             <label for="company">Company:</label>
                             <br>
-                            <input type="text" name="company" id="company" size="45" required/>
+                            <input type="text" name="company" id="company" size="26" required/>
                         </div>
                         <br>
                         <div>
-                            <label for="person_to_contact">Person to contact:</label>
+                            <label for="name">Name:</label>
                             <br>
-                            <input type="text" name="person_to_contact" id="person_to_contact" size="45" required/>
+                            <input type="text" name="name" id="name" size="26" required/>
                         </div>
                         <br>
                         <div>
                             <label for="email">Email:</label>
                             <br>
-                            <input type="email" name="email" id="email" size="35" placeholder="YourEmail@gmail.com" required/>
+                            <input type="email" name="email" id="email" size="26" placeholder="YourEmail@gmail.com" required/>
                         </div>
                         <br>
                         <div>
@@ -48,36 +51,44 @@
                             <br>
                             <input type="tel" name="phone" id="phone" size="12" placeholder="000-000-0000" required />
                         </div>
-                        <br>
                     </fieldset>
-                    <fieldset id="opportunities">
-                            <label for="position_type">Type of Position:</label>
-                            <select name="position_type" id="position_type">
-                                <option value="Internship">Internship</option>
-                                <option value="Part-time">Part-time</option>
-                                <option value="Full-time">Full-time</option>
-                                <option value="Contract">Contract</option>
-                            </select>
-                        
-                            <p>How did you find me?</p>
-                            <input type="radio" name="how_did_you_find_me" id="linkedin" value="linkedin" checked /> <label for="linkedin">LinkedIn</label>
-                            <input type="radio" name="how_did_you_find_me" id="job_fair" value="job_fair" checked /> <label for="job_fair">Job Fair</label>
+                    <fieldset class="box">
+                            <p>Type of Position:</p>
+                            <input type="radio" name="type_of_position" id="internship" value="internship" checked /> <label for="internship">Internship</label>
                             <br>
-                            <input type="radio" name="how_did_you_find_me" id="cwi_partner" value="cwi_partner" checked /> <label for="cwi_partner">CWI Corporate Partner</label>
-                            <input type="radio" name="how_did_you_find_me" id="other" value="other" checked /> <label for="other">Other</label>
-            
+                            <input type="radio" name="type_of_position" id="contract" value="contract" checked /> <label for="contract">Contract</label>
+                            <br>
+                            <input type="radio" name="type_of_position" id="full_time" value="full_time" checked /> <label for="full_time">Full Time</label>
                             <div>
-                           <br>
-                           <label for="prepare">How should I prepare for the interview?</label>
-                           <br>
-                            <textarea cols="80" rows="9" type="text" name="prepare_for_interview" id="prepare_for_interview"></textarea>
+                                <br>
+                                <label for="name">Job Title:</label>
+                                <br>
+                                <input type="text" name="job_title" id="job_title" size="26" required/>
                             </div>
+                            <div>
+                                <br>
+                            <label for="pay_range">Pay Range:</label>
+                            <select name="pay_range" id="pay_range">
+                                <option value="$50k-$75k">$50k-$75k</option>
+                                <option value="$76k-$100k">$76k-$100k</option>
+                                <option value="$100k+">$100k+</option>
+                                <option value="other">other</option>
+                            </select>
+                            </div> 
                     </fieldset>
-                        <br><br>
+                    <fieldset class="box">
+                        <div>
+                            <label for="prepare">What should I know about <br>your companay?</label>
+                            <br><br>
+                             <textarea cols="26" rows="10" type="text" name="know_about_company" id="know_about_company"></textarea>
+                        </div>
+                    </fieldset>
+                </section>
+                <div class="button">
                         <input type="submit" id="submit" value="Submit" class="btn">
-                 </form>
-                 
-                 
+                </div>
+                
+                 </form>     
         </main>
         <footer>
             <a href="https://www.linkedin.com" target="_blank"><img class="linkedin" src="image/linkedin.svg" alt="Linkedin icon"></a>

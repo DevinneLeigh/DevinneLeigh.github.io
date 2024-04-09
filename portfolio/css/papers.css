@@ -1,0 +1,57 @@
+header.paper {
+    padding: 40px;
+    font-size: 26px;
+    background: #170B26;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    background: linear-gradient( to top right, #F2059F, #05F2F2, #F2059F);
+}
+
+.wrapper main {
+    background:#170b26b5;
+    padding: 0 70px 30px 70px;
+    width: 98%;
+    border-radius: 60px;
+    font-size: 1.3em;
+}
+
+.wrapper p {
+    text-align: left;
+    text-indent: 50px;
+    line-height: 1.7em;
+}
+
+footer .references {
+    width: 100%;
+    justify-content: center;
+    text-align: left;
+}
+
+.references {
+    width: 70%;
+    font-size: 22px;
+
+}
+
+.references a {
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+.infoGraphic {
+    background: #313e57;
+}
+
+.infoGraphic img {
+    width: 100%;
+}
+
+
+
+.reference

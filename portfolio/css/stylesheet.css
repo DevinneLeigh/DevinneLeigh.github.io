@@ -4,20 +4,29 @@
 }
 
 html {
-    background: #1A1040;
     font-family: "Montserrat", sans-serif;
     color:#D7C7D9;
+    text-align: center;
 }
 
-/* header {
+main {
+    background-image: url(../image/LightBackgroundMobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
     background: #170B26;
-    padding: 80px;
-    display: flex;
-    align-items: flex-end;
-} */
+}
+
+.logo {
+    width: 250px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 20px;
+}
 
 nav {
-    background: #170B26;
     display: flex;
     justify-content: center;
     height: 200px;
@@ -36,114 +45,19 @@ nav a {
     border-radius: 40px;
 }
 
-nav a:hover {
-    background-color: #F20574;
-}
-
-nav a:active {
-    background-color: #730240;
-}
-
-
 main {
     padding: 50px 0;
-}
-main.banner {
-    background: linear-gradient( to top right, #F2059F, #05F2F2);
-    padding: 200px;
+    line-height: 3em;
+    letter-spacing: 0.1em;
+    word-spacing: 0.2em;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1, h2 {
     font-family: "Teko", sans-serif;
     font-optical-sizing: auto;
     font-weight: 550;
     font-style: normal;
     color: #ededed;
-    text-align: center;
-    font-size: 3em;
-}
-   
-section {
-    padding: 15px 0px 60px 0px;
-    clear: right;
-    width: 95%;
-    margin: 0 auto;
-}
-
-.projectExamples {
-    width: 100%;
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-a.projectBox {
-    
-    background: linear-gradient(to top left, #037F8C, #05F2F2, #037F8C);
-    width: 100%;
-    text-align: center;
-    border-radius: 25px;
-    padding: 6%;
-}
-
-a.projectBox:hover {
-    background: #F20574;
-}
-
-a.projectBox:active {
-    background: #730240;
-}
-
-.projectBox img {
-    width: 100%;
-    /* width: 350px; */
-    /* height: 197px; */
-    border-radius: 25px;
-}
-
-
-main.infoGraphic {
-    background: #313e57;
-}
-
-.infoGraphic img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-main.paper {
-    background-color:#0000004c;
-    line-height: 2em;
-    letter-spacing: 0.1em;
-    word-spacing: 0.2em;
-    padding: 40px 80px;
-    text-align: center;
-    width: 70%;
-    border-radius: 60px;
-    margin-left: 90px;
-    font-size: 22px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-main.paper p {
-    text-align: left;
-    text-indent: 50px;
-}
-
-.pinkBackground {
-    background: linear-gradient(to top left, #F20574, #730240);
-    padding: 100px 0px;
-    margin: 15px;
-}
-
-.tealBackground {
-    background: linear-gradient(to top left, #05F2F2, #037F8C);
-    padding: 100px 0px;
-    margin: 15px;
 }
 
 footer {
@@ -157,50 +71,19 @@ footer {
     margin-left: 14px;
 }
 
-form {
-    padding: 30px 0px 50px 0px;
-    font-size: 22px;
-}
-
-fieldset {
-    background: #05f2f286;
-    padding: 30px;
-    border: none;
-    line-height: 1.5em;
-    letter-spacing: 0.05em;
-    word-spacing: 0.1em;
-    border-radius: 40px;
-    float: left;
-}
-
-#contact {
-    margin-left: 30px;
-    width: 40%;
-}
-
-#opportunities {
-    margin-left: 30px;
-    width: 40%;
-}
-
-#submit {
-    clear: both;
-    display: block;
-    margin-left: 150px;
-    padding: 10px 15px;
-    border-radius: 40px;
-    border: 0;
-}
-
-#submit:hover {
+nav a:hover {
     background: #F20574;
 }
 
-#submit:active {
+nav a:active {
     background: #730240;
 }
 
-@media only screen and (min-width: 700px) { /* desktop */
+@media only screen and (min-width: 800px) { /* desktop */
+    main {
+        background-image: url(../image/LightBackground.png);
+    }
+    
     .projectExamples {
         flex-flow: row;
     }

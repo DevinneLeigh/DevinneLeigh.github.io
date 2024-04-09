@@ -1,0 +1,60 @@
+
+section {
+    padding: 15px 0px 60px 0px;
+    clear: right;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.projectExamples {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+a.projectBox {
+    
+    background: linear-gradient(to top left, #037F8C, #05F2F2, #037F8C);
+    width: 100%;
+    text-align: center;
+    border-radius: 25px;
+    padding: 6%;
+}
+
+
+.projectBox img {
+    width: 100%;
+    border-radius: 25px;
+}
+
+
+main.infoGraphic {
+    background: #313e57;
+}
+
+.infoGraphic img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.projectBox:hover {
+    background: #F20574;
+}
+
+.projectBox:active {
+    background: #730240;
+}
+
+@media only screen and (min-width: 800px) { /* desktop */
+    .projectExamples {
+        flex-flow: row;
+    }
+
+    a.projectBox {
+        width: 33.33%;
+        padding: 2%;
+    }
+}
