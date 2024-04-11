@@ -11,6 +11,7 @@ html {
 
 main {
     background-image: url(../image/LightBackgroundMobile.png);
+    width: auto;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -139,7 +140,7 @@ main#banner { /*home*/
     margin-left: 41px;
 }
 
-@media only screen and (min-width: 1199px) {
+@media only screen and (min-width: 1025px) {
     main {
         background-image: url(../image/LightBackground.png);
     }
