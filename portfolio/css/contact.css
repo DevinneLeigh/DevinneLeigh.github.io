@@ -58,14 +58,6 @@ textarea {
     border: 0;
 }
 
-#submit:hover {
-    background: #F20574;
-}
-
-#submit:active {
-    background: #730240;
-}
-
 @media only screen and (min-width: 1200px) { /* desktop */
     section {
         flex-flow: row;

@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body { 
 	background-color: #FFFFFF;
     color: #666666;
@@ -87,6 +91,7 @@ img {
 	img {
 		display: block;
 		max-width: 100%;
+		height: auto;
 	} 
 	
 	h2 { 

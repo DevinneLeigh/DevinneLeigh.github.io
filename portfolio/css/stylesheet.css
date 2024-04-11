@@ -20,7 +20,7 @@ header {
 }
 
 .logo {
-    width: 250px;
+    width: 230px;
     float: left;
     margin-top: 10px;
     margin-left: 20px;
@@ -29,7 +29,7 @@ header {
 nav {
     display: flex;
     justify-content: center;
-    height: 200px;
+    height: 185px;
     align-items: flex-end;
     font-weight: 600;
     font-size: 20px;
@@ -37,11 +37,17 @@ nav {
 
 }
 
-nav a {
+.navWrapper {
     background: #170B26;
+    padding: 30px 20px;
+    border-radius: 40px;
+}
+
+nav a {
+    /* background: #170B26; */
     color: #ededed;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 6px 16px;
     border-radius: 40px;
 }
 
@@ -86,12 +92,16 @@ footer {
     margin-left: 14px;
 }
 
-nav a:hover {
+.navWrapper:hover, nav a:hover, #submit:hover {
     background: #F20574;
 }
 
-nav a:active {
+nav a:active, #submit:active {
     background: #730240;
+}
+
+.navWrapper:active {
+    background: #170B26;
 }
 
 img.me { /*about*/
@@ -100,7 +110,7 @@ img.me { /*about*/
 }
 
 main#banner { /*home*/
-    background: linear-gradient( to top right, #F2059F, #05F2F2);
+    background: linear-gradient( to top right, #f20574f4, #05f2f2ef);
     padding: 60px 0;
 }
 
@@ -140,6 +150,11 @@ main#banner { /*home*/
     nav {
         flex-flow: row;
         justify-content: flex-end;
+        height: 145px;
+    }
+
+    .logo {
+        width: 175px;
     }
 
     nav a {
@@ -168,5 +183,9 @@ main#banner { /*home*/
 
     .wrapper {
         width: 75%;
+    }
+
+    footer {
+        padding: 30px;
     }
 }
