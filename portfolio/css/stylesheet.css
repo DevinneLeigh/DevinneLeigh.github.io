@@ -3,10 +3,30 @@
     box-sizing: border-box;
 }
 
+:root {
+    --wiggle: box .3s;
+    --lightPink: #F20574;
+    --darkPink: #730240;
+    --lightTeal: #05F2F2;
+    --darkTeal: #037F8C;
+    --boxColor: #2913455d;
+}
+
+@keyframes box {
+    10% {rotate: 2deg;}
+    30% {rotate: 5deg;}
+    40% {rotate: -2deg;}
+    60% {rotate: -5deg;}
+    75% {rotate: 2deg;}
+    95% {rotate: -1deg;}
+    100% {rotate: 0deg;}
+  }
+
 html {
     font-family: "Montserrat", sans-serif;
     color:#D7C7D9;
     text-align: center;
+    font-size: 20px;
 }
 
 main {
@@ -16,7 +36,7 @@ main {
     width: auto;
 }
 
-header {
+header, footer {
     background: #170B26;
 }
 
@@ -33,7 +53,6 @@ nav {
     height: 185px;
     align-items: flex-end;
     font-weight: 600;
-    font-size: 20px;
     flex-flow: column;
 
 }
@@ -58,13 +77,14 @@ h1, h2 {
     font-weight: 550;
     font-style: normal;
     color: #ededed;
+    text-shadow: 3px 1px 3px #170B26;
     font-size: 40px;
 }
 
 .wrapper {
     width: 98%;
     padding: 5px 20px;
-    background: #2913455d;
+    background: var(--boxColor);
     border-radius: 65px;
     margin: auto;
 }
@@ -76,33 +96,20 @@ h1, h2 {
 }
 
 footer {
-    clear: both;
-    background: #170B26;
     padding: 60px;
-    text-align: center;
 }
 
 .github {
     margin-left: 14px;
 }
 
-nav a:hover {
-    background: #F20574;
-    animation: box .3s;
+nav a:hover, .projectBox:hover, #submit:hover {
+    background: var(--lightPink);
+    animation: var(--wiggle);
 }
 
-@keyframes box {
-    10% {rotate: 2deg;}
-    30% {rotate: 5deg;}
-    40% {rotate: -2deg;}
-    60% {rotate: -5deg;}
-    75% {rotate: 2deg;}
-    95% {rotate: -1deg;}
-    100% {rotate: 0deg;}
-  }
-
-nav a:active {
-    background: #730240;
+nav a:active, .projectBox:active, #submit:active {
+    background: var(--darkPink);
     transform: scale(0.85)
 }
 
@@ -112,11 +119,12 @@ img.me { /*about*/
 }
 
 main#banner { /*home*/
-    background: linear-gradient( to top right, #F20574, #05F2F2);
+    background: linear-gradient( to top right, var(--lightPink), var(--lightTeal));
     padding: 60px 0;
 }
 
 #banner h1{ /*home*/
+    text-shadow: 6px 5px 4px var(--boxColor);
     font-size: 80px;
     text-align: left;
     justify-content: center;
@@ -141,6 +149,98 @@ main#banner { /*home*/
     margin-left: 41px;
 }
 
+.projectExamples {
+    width: 85%;
+    display: flex;
+    flex-flow: column;
+    gap: 50px;
+    margin: auto;
+}
+
+.projectBox:hover {
+  transform: scale(1.15);
+}
+
+.projectBox:active {
+  transform: scale(1);
+}
+
+.projectBox {
+    background: linear-gradient(to top left, var(--darkTeal), var(--lightTeal), var(--darkTeal));
+    border-radius: 50px;
+    padding: 5%;
+    margin: auto;
+    display: block;
+    width: 100%; 
+}
+
+.projectBox img {
+    width: 100%;
+    border-radius: 35px;
+}
+
+#infoGraphic {
+    background: #313e57;
+}
+
+#infoGraphic img {
+    width: 100%;
+}
+
+header.paper {
+    padding: 40px;
+    font-size: 24px;
+    background: #170B26;
+}
+
+main.paper {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient( to top right, var(--lightPink), var(--lightTeal), var(--lightPink));
+}
+
+.box {
+    background:#170b26b5;
+    padding: 0 70px 30px 70px;
+    width: 98%;
+    border-radius: 65px;
+}
+
+.box p {
+    text-align: left;
+    text-indent: 50px;
+    line-height: 1.7em;
+}
+
+footer .references {
+    width: 100%;
+    text-align: left;
+}
+
+.references {
+    width: 70%;
+    font-size: 22px;
+}
+
+.references a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.references a:link {
+    color: white;
+}
+.references a:visited {
+    color: var(--lightTeal);
+}
+.references a:hover {
+    color: var(--lightPink);
+}
+
+.references a:active {
+    color: var(--darkPink);
+}
+
 @media only screen and (min-width: 1200px) {
     main {
         background-image: url(../image/Background.png);
@@ -148,9 +248,13 @@ main#banner { /*home*/
         background-repeat: no-repeat;
         background-size: cover;
     }
+
+    #infoGraphic img {
+        width: 70%;
+    }
 }
 
-@media only screen and (min-width: 800px) { /* desktop */
+@media only screen and (min-width: 800px) {
     
     nav {
         flex-flow: row;
@@ -192,5 +296,19 @@ main#banner { /*home*/
 
     footer {
         padding: 30px;
+    }
+
+    .projectExamples {
+        flex-flow: row;
+        width: 90%;
+    }
+
+  .projectBox {
+    width: 33.33%;
+    padding: 2%;
+  }
+ 
+    #infoGraphic img {
+        width: 85%;
     }
 }

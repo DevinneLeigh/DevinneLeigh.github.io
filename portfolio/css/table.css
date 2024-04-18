@@ -16,21 +16,11 @@
     padding: 2%;
   }
 
-  thead { 
-      text-align: center;
-  }
-
-  tr {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
   td { 
       border-top: 1px solid #ededed0f; 
       padding: 3px;
   }
 
-  
   #classes { 
     display: grid;
     justify-content: space-around;
@@ -38,7 +28,7 @@
   }
 
   #classes table {
-    background: #2913455d;
+    background: var(--boxColor);
     height: 375px;
     border-radius: 65px;
     width: 85%;
@@ -46,70 +36,14 @@
   }
 
   #accomplishments {
-    background: #2913455d;
+    background: var(--boxColor);
     margin-top: 30px;
     width: 100%;
   }
 
   #accomplishments table {
-   
     max-width: 800px;
   }
-
-.projectExamples {
-    width: 80%;
-    display: flex;
-    flex-flow: column;
-    gap: 50px;
-    margin: auto;
-}
-
-.projectBox:hover {
-  background: #F20574;
-  transform: scale(1.15);
-  animation: box .3s;
-}
-
-@keyframes box {
-  10% {rotate: 2deg;}
-  30% {rotate: 5deg;}
-  40% {rotate: -2deg;}
-  60% {rotate: -5deg;}
-  75% {rotate: 2deg;}
-  95% {rotate: -1deg;}
-  100% {rotate: 0deg;}
-}
-
-.projectBox {
-    
-    background: linear-gradient(to top left, #037F8C, #05F2F2, #037F8C);
-    text-align: center;
-    border-radius: 50px;
-    padding: 5%;
-    margin: auto;
-    display: block;
-    width: 100%; 
-}
-
-.projectBox img {
-    width: 100%;
-    border-radius: 35px;
-}
-
-main.infoGraphic {
-    background: #313e57;
-}
-
-.infoGraphic img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.projectBox:active {
-    background: #730240;
-    transform: scale(1);
-}
 
 @media only screen and (min-width: 525px) {
   #classes table{
@@ -151,7 +85,7 @@ main.infoGraphic {
   #accomplishments {
     margin-top: 50px;
   }
-  }  
+}  
 
 @media only screen and (min-width: 1178px) { /* desktop */
   #classes { 
@@ -167,16 +101,4 @@ main.infoGraphic {
     padding: 10px 50px 10px 50px;
     height: 400px;
   }
-
-  .projectExamples {
-        flex-flow: row;
-        width: 90%;
-    }
-
-  .projectBox {
-    width: 33.33%;
-    padding: 2%;
-  }
-
-
 }
