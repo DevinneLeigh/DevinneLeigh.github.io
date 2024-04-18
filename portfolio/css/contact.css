@@ -26,10 +26,13 @@ input {
     border: none;
     color: white;
     font-size: 20px;
+}
+
+input[type="text"] {
     transition: all 0.5s ease;
 }
 
-input:focus {
+input[type="text"]:focus {
     font-size: 22px;
     padding: 6px;
     outline: none;
@@ -76,7 +79,7 @@ textarea:focus {
 #submit:hover {
     background: #F20574;
     transform: scale(1.15);
-    animation: box .3s;
+    animation: box .3s linear;
   }
 
  #submit:active {
