@@ -4,7 +4,7 @@ header.paper {
     background: #170B26;
 }
 
-.wrapper {
+main {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -12,15 +12,15 @@ header.paper {
     background: linear-gradient( to top right, #F2059F, #05F2F2, #F2059F);
 }
 
-.wrapper main {
+.box {
     background:#170b26b5;
     padding: 0 70px 30px 70px;
     width: 98%;
-    border-radius: 60px;
+    border-radius: 65px;
     font-size: 1.3em;
 }
 
-.wrapper p {
+.box p {
     text-align: left;
     text-indent: 50px;
     line-height: 1.7em;

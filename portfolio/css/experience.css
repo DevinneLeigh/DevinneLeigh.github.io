@@ -1,65 +1,100 @@
 * { 
     box-sizing: border-box;
   }
+
+  main h2 {
+    margin-top: 50px;
+  }
   
   table { 
     justify-content: center;
-    width: 100%;
+    margin: auto;
     font-weight: 300;
-    background-color: #170b2630;
-    text-align: left;
-    font-size: 18px;
+    font-size: 19px;
     line-height: 1.3em;
     word-spacing: 0.1em;
-    border-radius: 25px;
     padding: 2%;
   }
 
   thead { 
       text-align: center;
   }
+
+  tr {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
   td { 
       border-top: 1px solid #ededed0f; 
       padding: 3px;
   }
+
   
-  .tables { 
-    gap: 20px;
+  #classes { 
+    display: grid;
+    justify-content: space-around;
+    grid-gap: 25px;
+  }
+
+  #classes table {
+    background: #2913455d;
+    height: 375px;
+    border-radius: 65px;
+    width: 85%;
+    padding: 10px 15px 10px 15px;
+  }
+
+  #accomplishments {
+    background: #2913455d;
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  #accomplishments table {
+   
+    max-width: 800px;
   }
 
 .projectExamples {
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-flow: column;
-    justify-content: space-between;
-    gap: 10px;
+    gap: 50px;
+    margin: auto;
 }
 
-.wrapper {
-  background: #ffffff00;
-  padding: 2.3%;
-  border-radius: 60px;
-  text-align: center;
+.projectBox:hover {
+  background: #F20574;
+  transform: scale(1.15);
+  animation: box .3s;
 }
 
-a.projectBox {
+@keyframes box {
+  10% {rotate: 2deg;}
+  30% {rotate: 5deg;}
+  40% {rotate: -2deg;}
+  60% {rotate: -5deg;}
+  75% {rotate: 2deg;}
+  95% {rotate: -1deg;}
+  100% {rotate: 0deg;}
+}
+
+.projectBox {
     
     background: linear-gradient(to top left, #037F8C, #05F2F2, #037F8C);
-    height: 200px;
     text-align: center;
     border-radius: 50px;
     padding: 5%;
     margin: auto;
     display: block;
-    height: 100%;
+    width: 100%; 
 }
-
 
 .projectBox img {
     width: 100%;
     border-radius: 35px;
 }
-
 
 main.infoGraphic {
     background: #313e57;
@@ -71,45 +106,77 @@ main.infoGraphic {
     margin-right: auto;
 }
 
-.projectBox:hover, .projectBox:focus {
-    background: #F20574;
-}
-
 .projectBox:active {
     background: #730240;
+    transform: scale(1);
 }
 
-.wrapper:has(.projectBox:hover), .wrapper:has(.projectBox:focus) {
-  background: #F20574;
+@media only screen and (min-width: 525px) {
+  #classes table{
+    padding: 10px 30px 10px 30px;
+  }
+
+  table {
+    font-size: 18.5px;
+  }
 }
 
-.wrapper:has(.projectBox:active) {
-  background: #730240;
+@media only screen and (min-width: 630px) {
+  #classes table{
+    width: 80%;
+    padding: 10px 40px 10px 40px;
+  }
 }
 
-@media only screen and (min-width: 1000px) { 
-    .tables { 
-      display: flex;
-      flex-flow: row;
-      gap: 20px;
-    }
-  
-    table { 
-      width: 25%;
-    }
-    
-    table:first-child { 
-      width: 75%;
-      margin-left: 2%;
-    }  
+@media only screen and (min-width: 730px) {
+  #classes table{
+    width: 75%;
+    padding: 10px 50px 10px 50px;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  #classes table{
+    width: 70%;
+    padding: 10px 70px 10px 70px;
+  }
+}
+
+@media only screen and (min-width: 975px) { 
+  #classes table {
+    width: 65%;
+    padding: 10px 90px 10px 90px;
+  }
+
+  #accomplishments {
+    margin-top: 50px;
+  }
   }  
 
-@media only screen and (min-width: 1200px) { /* desktop */
-    .projectExamples {
+@media only screen and (min-width: 1178px) { /* desktop */
+  #classes { 
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-around;
+    grid-gap: 25px;
+    padding: 15px;
+  }
+
+  #classes table {
+    width: 100%;
+    padding: 10px 50px 10px 50px;
+    height: 400px;
+  }
+
+  .projectExamples {
         flex-flow: row;
+        width: 90%;
     }
 
-    .wrapper {
-      padding: 1.3%;
-    }
+  .projectBox {
+    width: 33.33%;
+    padding: 2%;
+  }
+
+
 }

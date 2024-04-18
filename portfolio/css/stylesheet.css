@@ -10,10 +10,10 @@ html {
 }
 
 main {
-    background-image: url(../image/LightBackgroundMobile.png);
-    width: auto;
+    background-image: url(../image/BackgroundMobile.png);
     background-repeat: no-repeat;
     background-size: cover;
+    width: auto;
 }
 
 header {
@@ -38,17 +38,10 @@ nav {
 
 }
 
-.navWrapper {
-    background: #170B26;
-    padding: 30px 20px;
-    border-radius: 40px;
-}
-
 nav a {
-    /* background: #170B26; */
     color: #ededed;
     text-decoration: none;
-    padding: 6px 16px;
+    padding: 10px 16px;
     border-radius: 40px;
 }
 
@@ -71,8 +64,8 @@ h1, h2 {
 .wrapper {
     width: 98%;
     padding: 5px 20px;
-    background: #170b2630;
-    border-radius: 25px;
+    background: #2913455d;
+    border-radius: 65px;
     margin: auto;
 }
 
@@ -93,16 +86,24 @@ footer {
     margin-left: 14px;
 }
 
-.navWrapper:hover, nav a:hover, #submit:hover {
+nav a:hover {
     background: #F20574;
+    animation: box .3s;
 }
 
-nav a:active, #submit:active {
+@keyframes box {
+    10% {rotate: 2deg;}
+    30% {rotate: 5deg;}
+    40% {rotate: -2deg;}
+    60% {rotate: -5deg;}
+    75% {rotate: 2deg;}
+    95% {rotate: -1deg;}
+    100% {rotate: 0deg;}
+  }
+
+nav a:active {
     background: #730240;
-}
-
-.navWrapper:active {
-    background: #170B26;
+    transform: scale(0.85)
 }
 
 img.me { /*about*/
@@ -111,7 +112,7 @@ img.me { /*about*/
 }
 
 main#banner { /*home*/
-    background: linear-gradient( to top right, #f20574f4, #05f2f2ef);
+    background: linear-gradient( to top right, #F20574, #05F2F2);
     padding: 60px 0;
 }
 
@@ -140,9 +141,12 @@ main#banner { /*home*/
     margin-left: 41px;
 }
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1200px) {
     main {
-        background-image: url(../image/LightBackground.png);
+        background-image: url(../image/Background.png);
+        width: auto;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
 
@@ -159,7 +163,7 @@ main#banner { /*home*/
     }
 
     nav a {
-        padding: 20px 20px;
+        padding: 15px 20px;
     }
 
     #banner h1 { /*home*/
