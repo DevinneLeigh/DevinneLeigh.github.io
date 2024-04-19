@@ -2,6 +2,12 @@
     box-sizing: border-box;
   }
 
+  :root {
+    --classesWidth: 85%;
+    --classesPadding: 10px 15px 10px 15px;
+    --classesHeight: 375px;
+  }
+
   main h2 {
     margin-top: 50px;
   }
@@ -29,10 +35,10 @@
 
   #classes table {
     background: var(--boxColor);
-    height: 375px;
+    height: var(--classesHeight);
     border-radius: 65px;
-    width: 85%;
-    padding: 10px 15px 10px 15px;
+    width: var(--classesWidth);
+    padding: var(--classesPadding);
   }
 
   #accomplishments {
@@ -46,8 +52,8 @@
   }
 
 @media only screen and (min-width: 525px) {
-  #classes table{
-    padding: 10px 30px 10px 30px;
+  #classes {
+    --classesPadding: 10px 30px 10px 30px;
   }
 
   table {
@@ -56,30 +62,30 @@
 }
 
 @media only screen and (min-width: 630px) {
-  #classes table{
-    width: 80%;
-    padding: 10px 40px 10px 40px;
+  #classes {
+    --classesWidth: 80%;
+    --classesPadding: 10px 40px 10px 40px;
   }
 }
 
 @media only screen and (min-width: 730px) {
-  #classes table{
-    width: 75%;
-    padding: 10px 50px 10px 50px;
+  #classes {
+    --classesWidth: 75%;
+    --classesPadding: 10px 50px 10px 50px;
   }
 }
 
 @media only screen and (min-width: 850px) {
-  #classes table{
-    width: 70%;
-    padding: 10px 70px 10px 70px;
+  #classes {
+    --classesWidth: 70%;
+    --classesPadding: 10px 70px 10px 70px;
   }
 }
 
 @media only screen and (min-width: 975px) { 
-  #classes table {
-    width: 65%;
-    padding: 10px 90px 10px 90px;
+  #classes {
+    --classesWidth: 65%;
+    --classesPadding: 10px 90px 10px 90px;
   }
 
   #accomplishments {
@@ -89,16 +95,10 @@
 
 @media only screen and (min-width: 1178px) { /* desktop */
   #classes { 
-    display: grid;
     grid-template-columns: 30% 30% 30%;
-    justify-content: space-around;
-    grid-gap: 25px;
     padding: 15px;
-  }
-
-  #classes table {
-    width: 100%;
-    padding: 10px 50px 10px 50px;
-    height: 400px;
+    --classesWidth: 100%;
+    --classesPadding: 10px 50px 10px 50px;
+    --classesHeight: 400px;
   }
 }

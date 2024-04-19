@@ -10,6 +10,21 @@
     --lightTeal: #05F2F2;
     --darkTeal: #037F8C;
     --boxColor: #2913455d;
+    --graphicWidth: 100%;
+    --navFlexFlow: column;
+    --navPadding: 10px 16px;
+    --navJustify: center;
+    --navHeight: 185px;
+    --bannerOne: 110px;
+    --bannerTwo: 0px;
+    --bannerThree: 50px;
+    --bannerFour: 41px;
+    --bannerFont: 80px;
+    --projectFlexFlow: column;
+    --projectWidth: 85%;
+    --projectBoxWidth: 100%;
+    --projectBoxPadding: 5% 5% 2.5% 5%;
+    --progBoxBordRad: 60px;
 }
 
 @keyframes box {
@@ -49,18 +64,18 @@ header, footer {
 
 nav {
     display: flex;
-    justify-content: center;
-    height: 185px;
+    justify-content: var(--navJustify);
+    height: var(--navHeight);
     align-items: flex-end;
     font-weight: 600;
-    flex-flow: column;
+    flex-flow: var(--navFlexFlow);
 
 }
 
 nav a {
     color: #ededed;
     text-decoration: none;
-    padding: 10px 16px;
+    padding: var(--navPadding);
     border-radius: 40px;
 }
 
@@ -103,12 +118,12 @@ footer {
     margin-left: 14px;
 }
 
-nav a:hover, .projectBox:hover, #submit:hover {
+nav a:hover, .projectExamples a:hover, #submit:hover {
     background: var(--lightPink);
     animation: var(--wiggle);
 }
 
-nav a:active, .projectBox:active, #submit:active {
+nav a:active, .projectExamples a:active, #submit:active {
     background: var(--darkPink);
     transform: scale(0.85)
 }
@@ -125,7 +140,7 @@ main#banner { /*home*/
 
 #banner h1{ /*home*/
     text-shadow: 6px 5px 4px var(--boxColor);
-    font-size: 80px;
+    font-size: var(--bannerFont);
     text-align: left;
     justify-content: center;
     line-height: 15px;
@@ -133,48 +148,49 @@ main#banner { /*home*/
 }
 
 #banner h1:nth-child(1) { /*home*/
-    margin-right: 110px;
+    margin-right: var(--bannerOne);
 }
 
 #banner h1:nth-child(2) { /*home*/
     color: white;
+    margin-left: var(--bannerTwo);
 }
 
 #banner h1:nth-child(3) { /*home*/
-    margin-right: 50px;
+    margin-right: var(--bannerThree);
 }
 
 #banner h1:nth-child(4) { /*home*/
    color: white;
-    margin-left: 41px;
+    margin-left: var(--bannerFour);
 }
 
 .projectExamples {
-    width: 85%;
+    width: var(--projectWidth);
     display: flex;
-    flex-flow: column;
+    flex-flow: var(--projectFlexFlow);
     gap: 50px;
     margin: auto;
 }
 
-.projectBox:hover {
+.projectExamples a:hover {
   transform: scale(1.15);
 }
 
-.projectBox:active {
+.projectExamples a:active {
   transform: scale(1);
 }
 
-.projectBox {
+.projectExamples a {
     background: linear-gradient(to top left, var(--darkTeal), var(--lightTeal), var(--darkTeal));
-    border-radius: 50px;
-    padding: 5%;
+    border-radius: var(--progBoxBordRad);
+    padding: var(--projectBoxPadding);
     margin: auto;
     display: block;
-    width: 100%; 
+    width: var(--projectBoxWidth); 
 }
 
-.projectBox img {
+.projectExamples a img {
     width: 100%;
     border-radius: 35px;
 }
@@ -184,7 +200,7 @@ main#banner { /*home*/
 }
 
 #infoGraphic img {
-    width: 100%;
+    width: var(--graphicWidth);
 }
 
 header.paper {
@@ -250,44 +266,29 @@ footer .references {
     }
 
     #infoGraphic img {
-        width: 70%;
+        --graphicWidth: 70%;
     }
 }
 
 @media only screen and (min-width: 800px) {
     
     nav {
-        flex-flow: row;
-        justify-content: flex-end;
-        height: 145px;
+        --navFlexFlow: row;
+        --navPadding: 15px 20px;
+        --navJustify: flex-end;
+        --navHeight: 145px;
     }
 
     .logo {
         width: 175px;
     }
 
-    nav a {
-        padding: 15px 20px;
-    }
-
-    #banner h1 { /*home*/
-        font-size: 115px;
-    }
-
-    #banner h1:nth-child(1) { /*home*/
-        margin-right: 200px;
-    }
-    
-    #banner h1:nth-child(2) { /*home*/
-        margin-left: 130px;
-    }
-    
-    #banner h1:nth-child(3) { /*home*/
-        margin-right: 110px;
-    }
-
-    #banner h1:nth-child(4) { /*home*/
-        margin-left: 200px;
+    #banner { /*home*/
+        --bannerFont: 115px;
+        --bannerOne: 200px;
+        --bannerTwo: 130px;
+        --bannerThree: 110px;
+        --bannerFour: 200px;
     }
 
     .wrapper {
@@ -299,16 +300,14 @@ footer .references {
     }
 
     .projectExamples {
-        flex-flow: row;
-        width: 90%;
+        --projectFlexFlow: row;
+        --projectWidth: 90%;
+        --projectBoxWidth: 33.33%;
+        --projectBoxPadding: 2% 2% .5% 2%;
+        --progBoxBordRad: 50px;
     }
-
-  .projectBox {
-    width: 33.33%;
-    padding: 2%;
-  }
  
     #infoGraphic img {
-        width: 85%;
+        --graphicWidth: 85%;
     }
 }
