@@ -3,7 +3,7 @@
 }
 
 input, select, textarea {
-    font-size: 20px;
+    font-size: 15px;
     color: white;
     border-radius: 22px;
     background: #ffffff3b;
@@ -19,15 +19,16 @@ section {
     gap: 20px;
 }
 
-fieldset.box {
+fieldset {
     background: var(--boxColor);
     border: none;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 1.5em;
     letter-spacing: 0.05em;
     word-spacing: 0.1em;
     border-radius: 25px;
-    width: 50%;
+    width: 94%;
+    padding: 15px;
 }
 
 input[type="text"], textarea {
@@ -35,8 +36,8 @@ input[type="text"], textarea {
 }
 
 input[type="text"]:focus, textarea:focus {
-    font-size: 22px;
-    padding: 6px;
+    font-size: 17px;
+    padding: 3px;
     outline: none;
 }
 
@@ -62,8 +63,35 @@ input[type="text"]:focus, textarea:focus {
     transform: scale(1)
   }
   
+@media only screen and (min-width: 460px) {
+    input, select, textarea {
+        font-size: 20px;
+    }
+
+    input[type="text"]:focus, textarea:focus {
+        font-size: 22px;
+        padding: 6px;
+    }
+
+    fieldset { 
+        font-size: 22px;
+        width: 85%;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    fieldset {
+        width: 60%;
+    }
+}
+
 @media only screen and (min-width: 1200px) { 
     section {
         flex-flow: row;
     }
+
+    fieldset {
+        flex: 1;
+    }
 }
+

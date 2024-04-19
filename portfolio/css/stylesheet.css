@@ -92,7 +92,7 @@ h1, h2 {
     font-weight: 550;
     font-style: normal;
     color: #ededed;
-    text-shadow: 3px 1px 3px #170B26;
+    text-shadow: 4px 3px 5px #170B26;
     font-size: 40px;
 }
 
@@ -139,7 +139,7 @@ main#banner { /*home*/
 }
 
 #banner h1{ /*home*/
-    text-shadow: 6px 5px 4px var(--boxColor);
+    text-shadow: 6px 5px 8px var(--boxColor);
     font-size: var(--bannerFont);
     text-align: left;
     justify-content: center;
