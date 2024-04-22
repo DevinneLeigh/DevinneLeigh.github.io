@@ -11,94 +11,45 @@
   main h2 {
     margin-top: 50px;
   }
-  
-  table { 
+
+  td { 
+      border-top: 2px solid #ededed0f; 
+      padding: 6px;
+  }
+
+  .accomplishments {
+    display: flex;
+    flex-flow: column;
+    gap: 125px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .accomplishment {
+    background: #170B26;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    animation: fade-in linear;
+    animation-timeline: view();
+    animation-range-start: 5px;
+    animation-range-end: 700px;
+  }
+
+  @keyframes fade-in {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  table {
     justify-content: center;
     margin: auto;
+    max-width: 650px;
     font-weight: 300;
-    font-size: 19px;
+    font-size: 24px;
     line-height: 1.3em;
     word-spacing: 0.1em;
     padding: 2%;
   }
 
-  td { 
-      border-top: 1px solid #ededed0f; 
-      padding: 3px;
+  .width {
+    margin-left: 50px;
   }
-
-  #classes { 
-    display: grid;
-    justify-content: space-around;
-    grid-gap: 25px;
-  }
-
-  #classes table {
-    background: var(--boxColor);
-    height: var(--classesHeight);
-    border-radius: 65px;
-    width: var(--classesWidth);
-    padding: var(--classesPadding);
-  }
-
-  #accomplishments {
-    background: var(--boxColor);
-    margin-top: 30px;
-    width: 100%;
-  }
-
-  #accomplishments table {
-    max-width: 800px;
-  }
-
-@media only screen and (min-width: 525px) {
-  #classes {
-    --classesPadding: 10px 30px 10px 30px;
-  }
-
-  table {
-    font-size: 18.5px;
-  }
-}
-
-@media only screen and (min-width: 630px) {
-  #classes {
-    --classesWidth: 80%;
-    --classesPadding: 10px 40px 10px 40px;
-  }
-}
-
-@media only screen and (min-width: 730px) {
-  #classes {
-    --classesWidth: 75%;
-    --classesPadding: 10px 50px 10px 50px;
-  }
-}
-
-@media only screen and (min-width: 850px) {
-  #classes {
-    --classesWidth: 70%;
-    --classesPadding: 10px 70px 10px 70px;
-  }
-}
-
-@media only screen and (min-width: 975px) { 
-  #classes {
-    --classesWidth: 65%;
-    --classesPadding: 10px 90px 10px 90px;
-  }
-
-  #accomplishments {
-    margin-top: 50px;
-  }
-}  
-
-@media only screen and (min-width: 1178px) { /* desktop */
-  #classes { 
-    grid-template-columns: 30% 30% 30%;
-    padding: 15px;
-    --classesWidth: 100%;
-    --classesPadding: 10px 50px 10px 50px;
-    --classesHeight: 400px;
-  }
-}

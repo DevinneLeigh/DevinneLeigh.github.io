@@ -44,8 +44,13 @@ html {
     font-size: 20px;
 }
 
+body {
+    margin: 0;
+}
+
 main {
     background-image: url(../image/BackgroundMobile.png);
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     width: auto;
@@ -118,12 +123,12 @@ footer {
     margin-left: 14px;
 }
 
-nav a:hover, .projectExamples a:hover, #submit:hover {
+nav a:hover, #projectExamples a:hover, #submit:hover {
     background: var(--lightPink);
     animation: var(--wiggle);
 }
 
-nav a:active, .projectExamples a:active, #submit:active {
+nav a:active, #projectExamples a:active, #submit:active {
     background: var(--darkPink);
     transform: scale(0.85)
 }
@@ -165,23 +170,32 @@ main#banner { /*home*/
     margin-left: var(--bannerFour);
 }
 
-.projectExamples {
+#experience h2{
+    font-size: 50px;
+}
+
+#projectExamples {
     width: var(--projectWidth);
     display: flex;
     flex-flow: var(--projectFlexFlow);
     gap: 50px;
     margin: auto;
+    padding-bottom: 90px;
 }
 
-.projectExamples a:hover {
+#projectExamples a:hover {
   transform: scale(1.15);
 }
 
-.projectExamples a:active {
+/* #banner h1:hover {
+    transform: scale(1.2);
+} */
+
+#projectExamples a:active {
   transform: scale(1);
 }
 
-.projectExamples a {
+#projectExamples a {
     background: linear-gradient(to top left, var(--darkTeal), var(--lightTeal), var(--darkTeal));
     border-radius: var(--progBoxBordRad);
     padding: var(--projectBoxPadding);
@@ -190,42 +204,52 @@ main#banner { /*home*/
     width: var(--projectBoxWidth); 
 }
 
-.projectExamples a img {
+#projectExamples a img {
     width: 100%;
     border-radius: 35px;
 }
 
 #infoGraphic {
-    background: #313e57;
+    background: #170B26;
+    margin-top: 150px;
 }
 
 #infoGraphic img {
     width: var(--graphicWidth);
+    border-radius: 170px;
 }
 
-header.paper {
-    padding: 40px;
-    font-size: 24px;
-    background: #170B26;
+header.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
-main.paper {
-    display: flex;
-    justify-content: center;
-    background: linear-gradient( to top right, var(--lightPink), var(--lightTeal), var(--lightPink));
+.paper { /*papers*/
+    margin-top: 140px;
 }
 
-.box {
-    background:#170b26b5;
-    padding: 0 70px 30px 70px;
+.box { /*papers*/
+    background:var(--boxColor);
+    padding: 10px 15px 30px 15px;
     width: 98%;
     border-radius: 65px;
 }
 
-.box p {
+.box p { /*papers*/
     text-align: left;
     text-indent: 50px;
     line-height: 1.7em;
+    font-size: 16px;
+}
+
+.box h1 { /*papers*/
+    font-size: 35px;
+    line-height: 1.2em;
+}
+
+.box h2 { /*papers*/
+    font-size: 20px; 
 }
 
 footer .references {
@@ -257,6 +281,22 @@ footer .references {
     color: var(--darkPink);
 }
 
+.scroll-watcher {
+    height: 15px;
+    position: fixed;
+    top: 188.83px;
+    z-index: 1000;
+    background: var(--lightPink);
+    width: 100%;
+    scale: 0 1;
+    transform-origin: left;
+    animation: scroll-watcher linear;
+    animation-timeline: scroll(y);
+}
+
+@keyframes scroll-watcher {
+    to { scale: 1 1; }
+}
 @media only screen and (min-width: 1200px) {
     main {
         background-image: url(../image/Background.png);
@@ -279,6 +319,10 @@ footer .references {
         --navHeight: 145px;
     }
 
+    .scroll-watcher {
+        top: 146.06px;
+    }
+
     .logo {
         width: 175px;
     }
@@ -299,7 +343,7 @@ footer .references {
         padding: 30px;
     }
 
-    .projectExamples {
+    #projectExamples {
         --projectFlexFlow: row;
         --projectWidth: 90%;
         --projectBoxWidth: 33.33%;
@@ -309,5 +353,14 @@ footer .references {
  
     #infoGraphic img {
         --graphicWidth: 85%;
+        border-radius: 200px;
+    }
+
+    #infoGraphic {
+        margin-top: 120px;
+    }
+
+    .box {
+        padding: 10px 70px 30px 70px;
     }
 }
