@@ -23,7 +23,7 @@
     --projectFlexFlow: column;
     --projectWidth: 85%;
     --projectBoxWidth: 100%;
-    --projectBoxPadding: 5% 5% 2.5% 5%;
+    --projectBoxPadding: 5%;
     --progBoxBordRad: 60px;
 }
 
@@ -86,7 +86,6 @@ nav a {
 
 main {
     padding: 50px 0;
-    line-height: 3em;
     letter-spacing: 0.1em;
     word-spacing: 0.2em;
 }
@@ -101,7 +100,7 @@ h1, h2 {
     font-size: 40px;
 }
 
-.wrapper {
+.aboutWrapper {
     width: 98%;
     padding: 5px 20px;
     background: var(--boxColor);
@@ -109,7 +108,8 @@ h1, h2 {
     margin: auto;
 }
 
-.wrapper p {
+.aboutWrapper p {
+    line-height: 2em;
     text-align: left;
     text-indent: 50px;
     font-size: 22px;
@@ -186,10 +186,6 @@ main#banner { /*home*/
 #projectExamples a:hover {
   transform: scale(1.15);
 }
-
-/* #banner h1:hover {
-    transform: scale(1.2);
-} */
 
 #projectExamples a:active {
   transform: scale(1);
@@ -335,7 +331,7 @@ footer .references {
         --bannerFour: 200px;
     }
 
-    .wrapper {
+    .aboutWrapper {
         width: 75%;
     }
 
@@ -347,7 +343,7 @@ footer .references {
         --projectFlexFlow: row;
         --projectWidth: 90%;
         --projectBoxWidth: 33.33%;
-        --projectBoxPadding: 2% 2% .5% 2%;
+        --projectBoxPadding: 2%;
         --progBoxBordRad: 50px;
     }
  
@@ -363,4 +359,5 @@ footer .references {
     .box {
         padding: 10px 70px 30px 70px;
     }
+    
 }
