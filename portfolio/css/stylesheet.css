@@ -237,6 +237,7 @@ header.fixed {
     text-indent: 50px;
     line-height: 1.7em;
     font-size: 16px;
+    margin-left: 20px;
 }
 
 .box h1 { /*papers*/
@@ -358,6 +359,10 @@ footer .references {
 
     .box {
         padding: 10px 70px 30px 70px;
+    }
+
+    .box p {
+        margin-left: 0;
     }
     
 }
