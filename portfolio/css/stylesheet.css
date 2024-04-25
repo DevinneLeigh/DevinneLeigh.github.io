@@ -93,7 +93,6 @@ main {
 
 h1, h2 {
     font-family: "Teko", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 550;
     font-style: normal;
     color: #ededed;
