@@ -15,29 +15,21 @@
 
   #cImage {
     background-image: url(../image/C.webp);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: 44%;
-    width: auto;
-    height: 500px;
   }
 
   #htmlImage {
-    background-image: url(../image/HTMLSmall.png);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: 7%;
-    width: auto;
-    height: 500px;
+    background-image: url(../image/HTML.png);
   }
 
   #booksImage {
     background-image: url(../image/books.webp);
+  }
+
+  #cImage, #htmlImage, #booksImage {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position-x: 44%;
     width: auto;
     height: 500px;
   }
@@ -90,13 +82,6 @@
     to {opacity: 1;}
   }
 
-  @media only screen and (min-width: 880px) {
-    #htmlImage {
-      background-image: url(../image/HTMLMedium.png);
-      background-position-x: 0%;
-    }
-  }
-
   @media only screen and (min-width: 800px) {
     #portfolio h2 {
       font-size: 50px;
@@ -105,21 +90,5 @@
     .tables {
       font-size: 26px;
     }
-
-    cImage {
-      background-size: cover;
-      background-position-x: 0%;
-      width: auto;
-      height: 500px;
-    }
-
   }
-
-  @media only screen and (min-width: 1200px) {
-    #htmlImage {
-      background-image: url(../image/HTML.png);
-      background-position-x: 44%;
-    }
-  }
-
 
