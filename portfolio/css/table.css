@@ -34,7 +34,7 @@
   }
 
   #booksImage {
-    background-image: url(../image/books.png);
+    background-image: url(../image/books.webp);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
