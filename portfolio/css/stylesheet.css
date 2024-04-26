@@ -66,6 +66,15 @@ header, footer {
     float: left;
     margin-top: 20px;
     margin-left: 20px;
+    transition: all .2s ease-in;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.logo img:active {
+    transform: scale(1)
 }
 
 nav {
@@ -130,6 +139,19 @@ footer img {
     margin-left: 14px;
 }
 
+.linkedin, .github {
+    transition: all .1s ease-in;
+}
+
+.linkedin:hover, .github:hover {
+    animation: var(--wiggle);
+    transform: scale(1.2);
+}
+
+.linkedin:active, .github:active {
+    transform: scale(1);
+}
+
 nav a:hover, #projectExamples a:hover, #submit:hover {
     background: var(--lightPink);
     animation: var(--wiggle);
@@ -137,7 +159,7 @@ nav a:hover, #projectExamples a:hover, #submit:hover {
 
 nav a:active, #projectExamples a:active, #submit:active {
     background: var(--darkPink);
-    transform: scale(0.85)
+    transform: scale(0.85);
 }
 
 img.me { /*about*/
