@@ -3,7 +3,7 @@
 }
 
 input, select, textarea {
-    font-family: 'Exo', sans-serif;
+    font-family: 'Exo', Trebuchet MS, sans-serif;
     font-size: 15px;
     color: white;
     border-radius: 22px;
@@ -50,7 +50,7 @@ input[type="text"]:focus, textarea:focus {
 }
 
 #submit {
-    font-family: 'Exo', sans-serif;
+    font-family: 'Exo', Trebuchet MS, sans-serif;
     background: linear-gradient(to top left, var(--darkTeal), var(--lightTeal));
     padding: 10px 15px;
     border-radius: 40px;
