@@ -174,24 +174,26 @@ main#banner { /*home*/
     font-size: var(--bannerFont);
     text-align: left;
     justify-content: center;
-    line-height: 15px;
+    align-items: center;
+    line-height: 95px;
     display: flex;
+    flex-flow: column;
 }
 
-#banner h1:nth-child(1) { /*home*/
+#bannerLineOne { 
     margin-right: var(--bannerOne);
 }
 
-#banner h1:nth-child(2) { /*home*/
+#bannerLineTwo { 
     color: white;
     margin-left: var(--bannerTwo);
 }
 
-#banner h1:nth-child(3) { /*home*/
+#bannerLineThree { 
     margin-right: var(--bannerThree);
 }
 
-#banner h1:nth-child(4) { /*home*/
+#bannerLineFour { 
    color: white;
     margin-left: var(--bannerFour);
 }
