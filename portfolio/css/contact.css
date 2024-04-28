@@ -65,12 +65,8 @@ input[type="text"]:focus, textarea:focus {
     border: 0;
 }
 
-#submit:hover {
-    transform: scale(1.15);
-  }
-
  #submit:active {
-    transform: scale(1);
+    transform: scale(.85);
   }
   
 @media only screen and (min-width: 460px) {

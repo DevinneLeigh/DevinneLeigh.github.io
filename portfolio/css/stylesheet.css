@@ -5,7 +5,8 @@
 }
 
 :root {
-    --wiggle: box .3s;
+    --footerWiggle: fWiggle .3s;
+    --headerWiggle: hWiggle .3s;
     --lightPink: #F20574;
     --darkPink: #730240;
     --lightTeal: #05F2F2;
@@ -28,15 +29,26 @@
     --progBoxBordRad: 60px;
 }
 
-@keyframes box {
-    10% {rotate: 2deg;}
-    30% {rotate: 5deg;}
-    40% {rotate: -2deg;}
-    60% {rotate: -5deg;}
-    75% {rotate: 2deg;}
-    95% {rotate: -1deg;}
-    100% {rotate: 0deg;}
+@keyframes fWiggle {
+    10% {transform: rotate(2deg);}
+    30% {transform: rotate(5deg);}
+    40% {transform: rotate(-2deg);}
+    60% {transform: rotate(-5deg) ;}
+    75% {transform: rotate(2deg) ;}
+    95% {transform: rotate(-1deg) ;}
+    100% {transform: rotate(0deg) ;}
   }
+
+  @keyframes hWiggle {
+    10% {transform: rotate(3deg);}
+    30% {transform: rotate(7deg);}
+    40% {transform: rotate(-3deg);}
+    60% {transform: rotate(-7deg) ;}
+    75% {transform: rotate(3deg) ;}
+    95% {transform: rotate(-2deg) ;}
+    100% {transform: rotate(0deg) ;}
+  }
+
 
 html {
     font-family: 'Exo', Trebuchet MS, sans-serif;
@@ -70,7 +82,7 @@ header, footer {
 }
 
 .logo img:hover {
-    transform: scale(1.1);
+    transform: scale(1.1) translate(10px, -10px);
 }
 
 .logo img:active {
@@ -100,8 +112,8 @@ main {
     word-spacing: 0.2em;
 }
 
-h1, h2 {
-    font-family: "Teko", Arial, sans-serif;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Teko', Arial, sans-serif;
     font-weight: 550;
     font-style: normal;
     color: #ededed;
@@ -128,30 +140,34 @@ footer {
     padding: 10px;
 }
 
+footer a {
+    transform: scale(1);
+    transition: all .1s ease-in;
+    display: inline-block;
+    margin-left: 25px;
+
+}
+
+footer a:hover, footer:focus {
+    transform: scale(1.2);
+}
+
 footer img {
     height: 40px;
 }
 
-.github, .phone, .email {
-    margin-left: 15px;
-}
-
-.linkedin, .github, .phone, .email {
-    transition: all .1s ease-in;
-}
-
 .linkedin:hover, .github:hover, .phone:hover, .email:hover {
-    animation: var(--wiggle);
-    transform: scale(1.2);
+    
+    animation: var(--footerWiggle);
 }
 
-.linkedin:active, .github:active, .phone:active, .email:active {
-    transform: scale(1);
-}
+footer a:active { 
+    transform: scale(1); 
+} 
 
-nav a:hover, #projectExamples a:hover, #submit:hover {
+nav a:hover, #submit:hover {
     background: var(--lightPink);
-    animation: var(--wiggle);
+    animation: var(--headerWiggle);
 }
 
 nav a:active, #projectExamples a:active, #submit:active {
@@ -202,6 +218,10 @@ main#banner { /*home*/
     font-size: 50px;
 }
 
+#experience h1 {
+    padding-bottom: 20px;
+}
+
 #projectExamples {
     width: var(--projectWidth);
     display: flex;
@@ -211,8 +231,13 @@ main#banner { /*home*/
     padding-bottom: 90px;
 }
 
+#projectExamples a {
+    transition: all .2s ease-in;
+}
+
 #projectExamples a:hover {
-  transform: scale(1.15);
+    transform: scale(1.15) translate(0px, -25px);
+    background: var(--lightPink);
 }
 
 #projectExamples a:active {
@@ -249,60 +274,65 @@ header.fixed {
     width: 100%;
 }
 
-.paper { /*papers*/
+.paper { 
     margin-top: 140px;
+    display: flex; 
+    flex-flow: column;
+    gap: 30px;
 }
 
-.box { /*papers*/
+.box { 
     background:var(--boxColor);
     padding: 10px 15px 30px 15px;
-    width: 98%;
     border-radius: 65px;
-}
-
-.box p { /*papers*/
-    text-align: left;
-    text-indent: 50px;
-    line-height: 1.7em;
     font-size: 16px;
-    margin-left: 20px;
+    margin: auto;
 }
 
-.box h1 { /*papers*/
-    font-size: 35px;
-    line-height: 1.2em;
-}
-
-.box h2 { /*papers*/
-    font-size: 20px; 
-}
-
-footer .references {
-    width: 100%;
+.box p {
     text-align: left;
+    line-height: 1.7em;
 }
 
-.references {
-    width: 70%;
-    font-size: 22px;
+.box h1 { 
+    font-size: 35px;
 }
 
-.references a {
+.box h2 {
+    font-size: 28px;
+}
+
+.box h3 { 
+    font-size: 25px; 
+}
+
+.box:nth-child(1) {
+    width: 98%;
+}
+
+.box:nth-child(1) p {
+    text-indent: 50px;
+}
+
+.box:nth-child(2) {
+    width: 75%;
+}
+
+.box:nth-child(2) a {
     text-decoration: none;
-    font-weight: bold;
 }
 
-.references a:link {
+.box:nth-child(2) a:link {
     color: white;
 }
-.references a:visited {
+.box:nth-child(2) a:visited {
     color: var(--lightTeal);
 }
-.references a:hover {
+.box:nth-child(2) a:hover {
     color: var(--lightPink);
 }
 
-.references a:active {
+.box:nth-child(2) a:active {
     color: var(--darkPink);
 }
 
@@ -405,10 +435,6 @@ footer .references {
 
     footer img {
         height: 60px;
-    }
-    
-    .github, .phone, .email {
-        margin-left: 25px;
     }
     
 }
