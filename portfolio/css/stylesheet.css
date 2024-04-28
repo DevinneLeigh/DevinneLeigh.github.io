@@ -6,7 +6,7 @@
 
 :root {
     --footerWiggle: fWiggle .3s;
-    --headerWiggle: hWiggle .3s;
+    --wiggle: wiggle .3s;
     --lightPink: #F20574;
     --darkPink: #730240;
     --lightTeal: #05F2F2;
@@ -29,6 +29,7 @@
     --progBoxBordRad: 60px;
 }
 
+/* site wide styles */
 @keyframes fWiggle {
     10% {transform: rotate(2deg);}
     30% {transform: rotate(5deg);}
@@ -39,7 +40,7 @@
     100% {transform: rotate(0deg) ;}
   }
 
-  @keyframes hWiggle {
+  @keyframes wiggle {
     10% {transform: rotate(3deg);}
     30% {transform: rotate(7deg);}
     40% {transform: rotate(-3deg);}
@@ -121,21 +122,6 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 40px;
 }
 
-.aboutWrapper {
-    width: 98%;
-    padding: 5px 20px;
-    background: var(--boxColor);
-    border-radius: 65px;
-    margin: auto;
-}
-
-.aboutWrapper p {
-    line-height: 2em;
-    text-align: left;
-    text-indent: 50px;
-    font-size: 22px;
-}
-
 footer {
     padding: 10px;
 }
@@ -167,7 +153,7 @@ footer a:active {
 
 nav a:hover, #submit:hover {
     background: var(--lightPink);
-    animation: var(--headerWiggle);
+    animation: var(--wiggle);
 }
 
 nav a:active, #projectExamples a:active, #submit:active {
@@ -175,17 +161,14 @@ nav a:active, #projectExamples a:active, #submit:active {
     transform: scale(0.85);
 }
 
-img.me { /*about*/
-    width: 150px;
-    border-radius: 75px;
-}
 
-main#banner { /*home*/
+/* home page */
+main#banner { 
     background: linear-gradient( to top right, var(--lightPink), var(--lightTeal));
     padding: 80px 0;
 }
 
-#banner h1{ /*home*/
+#banner h1{ 
     text-shadow: 6px 5px 8px var(--boxColor);
     font-size: var(--bannerFont);
     text-align: left;
@@ -214,6 +197,29 @@ main#banner { /*home*/
     margin-left: var(--bannerFour);
 }
 
+
+/* about page */
+.aboutWrapper {
+    width: 98%;
+    padding: 5px 20px;
+    background: var(--boxColor);
+    border-radius: 65px;
+    margin: auto;
+}
+
+.aboutWrapper p {
+    line-height: 2em;
+    text-align: left;
+    text-indent: 50px;
+    font-size: 22px;
+}
+
+img.me {
+    width: 150px;
+    border-radius: 75px;
+}
+
+/* portfolio page */
 #experience h2{
     font-size: 50px;
 }
@@ -236,12 +242,13 @@ main#banner { /*home*/
 }
 
 #projectExamples a:hover {
-    transform: scale(1.15) translate(0px, -25px);
-    background: var(--lightPink);
+    transform: scale(1.2) translate(0px, -25px);
+    background: linear-gradient(to top left, #04bbd0, #75ffff, #04bbd0);
 }
 
 #projectExamples a:active {
   transform: scale(1);
+  background: linear-gradient(to top left, #014951, #06baba, #014951);
 }
 
 #projectExamples a {
@@ -258,6 +265,7 @@ main#banner { /*home*/
     border-radius: 35px;
 }
 
+/* antimicrobial resistance info graphic page */
 #infoGraphic {
     background: #170B26;
     margin-top: 150px;
@@ -268,6 +276,7 @@ main#banner { /*home*/
     border-radius: 170px;
 }
 
+/* research and op-ed pages */
 header.fixed {
     position: fixed;
     top: 0;
@@ -352,6 +361,8 @@ header.fixed {
 @keyframes scroll-watcher {
     to { scale: 1 1; }
 }
+
+/* desktop size */
 @media only screen and (min-width: 1200px) {
     main {
         background-image: url(../image/Background.webp);
@@ -365,8 +376,10 @@ header.fixed {
     }
 }
 
+/* break point */
 @media only screen and (min-width: 800px) {
     
+/*site wide styles */
     header {
         padding-bottom: 10px;
     }
@@ -379,20 +392,21 @@ header.fixed {
         margin-right: 15px;
     }
 
-    .paper p {
-        font-size: 20px;
-    }
-
-    .scroll-watcher {
-        top: 170.06px;
-    }
-
     .logo img {
         width: 175px;
         margin-top: 24px;
     }
 
-    #banner { /*home*/
+    footer {
+        padding: 20px;
+    }
+
+    footer img {
+        height: 60px;
+    }
+
+/* home page */
+    #banner { 
         --bannerFont: 115px;
         --bannerOne: 200px;
         --bannerTwo: 130px;
@@ -400,10 +414,12 @@ header.fixed {
         --bannerFour: 200px;
     }
 
+/* about page */
     .aboutWrapper {
         width: 75%;
     }
 
+/* portfolio page */
     #projectExamples {
         --projectFlexFlow: row;
         --projectWidth: 90%;
@@ -411,7 +427,8 @@ header.fixed {
         --projectBoxPadding: 2%;
         --progBoxBordRad: 50px;
     }
- 
+
+/* antimicrobial resistance info graphic page */
     #infoGraphic img {
         --graphicWidth: 85%;
         border-radius: 200px;
@@ -421,20 +438,21 @@ header.fixed {
         margin-top: 120px;
     }
 
+/* research paper and op-ed pages */
+    .paper p {
+        font-size: 20px;
+    }
+
+    .scroll-watcher {
+        top: 170.06px;
+    }
+
     .box {
         padding: 10px 70px 30px 70px;
     }
 
     .box p {
         margin-left: 0;
-    }
-
-    footer {
-        padding: 20px;
-    }
-
-    footer img {
-        height: 60px;
     }
     
 }

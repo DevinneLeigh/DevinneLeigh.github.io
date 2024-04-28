@@ -5,21 +5,20 @@
   #experience {
     padding-bottom: 0;
   }
-  
 
-  #cImage {
+  #cImage { /* background image between tables */
     background-image: url(../image/C.webp);
   }
 
-  #htmlImage {
+  #htmlImage { /* background image between tables */
     background-image: url(../image/HTML.png);
   }
 
-  #booksImage {
+  #booksImage { /* background image between tables */
     background-image: url(../image/books.webp);
   }
 
-  #cImage, #htmlImage, #booksImage {
+  #cImage, #htmlImage, #booksImage { /* background images between tables */
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -28,7 +27,7 @@
     height: 500px;
   }
 
-  #portfolio h2 {
+  #portfolio h2 { /* body id */
     font-size: 40px;
     padding: 20px;
   }
@@ -56,7 +55,7 @@
       padding: 18px;
   }
 
-  .tables {
+  .tables { /* parent to individual table div tags */
     display: flex;
     flex-flow: column;
     width: 100%;
@@ -68,25 +67,27 @@
     padding-top: 50px;
   }
 
-  table {
+  table { 
     justify-content: center;
     margin: auto;
     max-width: 650px;
     word-spacing: 0.1em;
     padding: 2%;
+/* table content scroll fade animation */
     animation: fade-in linear;
     animation-timeline: view();
     animation-range-start: 1px;
     animation-range-end: 900px;
   }
 
-  @keyframes fade-in {
+  @keyframes fade-in { /* table content scroll fade animation */
     from {opacity: 0;}
     to {opacity: 1;}
   }
 
+/* break point */
   @media only screen and (min-width: 800px) {
-    #portfolio h2 {
+    #portfolio h2 { /* body id */
       font-size: 50px;
     }
 
