@@ -79,11 +79,11 @@ header, footer {
     float: left;
     margin-top: 20px;
     margin-left: 20px;
-    transition: all .2s ease-in;
+    transition: all .18s ease-in;
 }
 
 .logo img:hover {
-    transform: scale(1.1) translate(10px, -10px);
+    transform: scale(1.15) translate(8px, -8px);
 }
 
 .logo img:active {
@@ -237,22 +237,24 @@ img.me {
     padding-bottom: 90px;
 }
 
-#projectExamples a {
+/* #projectExamples a {
     transition: all .2s ease-in;
-}
+    
+} */
 
 #projectExamples a:hover {
+    transition: all .19s ease-in;
     transform: scale(1.2) translate(0px, -25px);
-    background: linear-gradient(to top left, #04bbd0, #75ffff, #04bbd0);
+    background: linear-gradient(to top right, var(--lightTeal), #95ffff, var(--lightTeal));
 }
 
 #projectExamples a:active {
   transform: scale(1);
-  background: linear-gradient(to top left, #014951, #06baba, #014951);
+  background: linear-gradient(to top right, #012e33, var(--darkTeal), #012e33);
 }
 
 #projectExamples a {
-    background: linear-gradient(to top left, var(--darkTeal), var(--lightTeal), var(--darkTeal));
+    background: linear-gradient(to top right, var(--darkTeal), var(--lightTeal), var(--darkTeal));
     border-radius: var(--progBoxBordRad);
     padding: var(--projectBoxPadding);
     margin: auto;
@@ -363,6 +365,18 @@ header.fixed {
 }
 
 /* desktop size */
+@media only screen and (min-width: 1500px) {
+    #projectExamples a:hover {
+        transform: scale(1.15) translate(0px, -25px);
+    }
+
+    #projectExamples a:active {
+        transform: scale(1);
+        background: linear-gradient(to top right, #012e33, var(--darkTeal), #012e33);
+      }
+}
+
+/* break point */
 @media only screen and (min-width: 1200px) {
     main {
         background-image: url(../image/Background.webp);
