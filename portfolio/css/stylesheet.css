@@ -402,4 +402,57 @@ header.fixed {
     }
 
     footer img {
-        
+        height: 60px;
+    }
+
+/* home page */
+    #banner { 
+        --bannerFont: 115px;
+        --bannerOne: 200px;
+        --bannerTwo: 130px;
+        --bannerThree: 110px;
+        --bannerFour: 200px;
+    }
+
+/* about page */
+    .aboutWrapper {
+        width: 75%;
+    }
+
+/* portfolio page */
+    #projectExamples {
+        --projectFlexFlow: row;
+        --projectWidth: 90%;
+        --projectBoxWidth: 33.33%;
+        --projectBoxPadding: 2%;
+        --progBoxBordRad: 50px;
+    }
+
+/* antimicrobial resistance info graphic page */
+    #infoGraphic img {
+        --graphicWidth: 85%;
+        border-radius: 200px;
+    }
+
+    #infoGraphic {
+        margin-top: 120px;
+    }
+
+/* research paper and op-ed pages */
+    .paper p {
+        font-size: 20px;
+    }
+
+    .scroll-watcher {
+        top: 170.06px;
+    }
+
+    .box {
+        padding: 10px 70px 30px 70px;
+    }
+
+    .box p {
+        margin-left: 0;
+    }
+    
+}
