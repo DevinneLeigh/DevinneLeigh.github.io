@@ -116,7 +116,7 @@ nav a {
 }
 
 main {
-    padding: 50px 0;
+    padding: 80px 0;
     letter-spacing: 0.1em;
     word-spacing: 0.2em;
 }
@@ -361,17 +361,86 @@ img.me {
     to { scale: 1 1; }
 }
 
-/* desktop size */
-@media only screen and (min-width: 1500px) {
-    #projectExamples a:hover {
-        transform: scale(1.1) translate(0px, -35px);
+/* break point */
+@media only screen and (min-width: 800px) {
+    
+    /*site wide styles */
+        header {
+            padding-bottom: 10px;
+        }
+        
+        nav {
+            --navFlexFlow: row;
+            --navPadding: 15px 20px;
+            --navJustify: flex-end;
+            --navHeight: 160px;
+            margin-right: 15px;
+        }
+    
+        .logo img {
+            width: 175px;
+            margin-top: 24px;
+        }
+    
+        footer {
+            padding: 20px;
+        }
+    
+        footer img {
+            height: 60px;
+        }
+    
+    /* home page */
+        #banner { 
+            --bannerFont: 115px;
+            --bannerOne: 200px;
+            --bannerTwo: 130px;
+            --bannerThree: 110px;
+            --bannerFour: 200px;
+        }
+    
+    /* about page */
+        .aboutWrapper {
+            width: 88%;
+        }
+    
+    /* portfolio page */
+        #projectExamples {
+            --projectFlexFlow: row;
+            --projectWidth: 90%;
+            --projectBoxWidth: 33.33%;
+            --projectBoxPadding: 2%;
+            --progBoxBordRad: 50px;
+        }
+    
+    /* antimicrobial resistance info graphic page */
+        #infoGraphic img {
+            --graphicWidth: 85%;
+            border-radius: 200px;
+        }
+    
+        #infoGraphic {
+            margin-top: 120px;
+        }
+    
+    /* research paper and op-ed pages */
+        .paper p {
+            font-size: 20px;
+        }
+    
+        .scroll-watcher {
+            top: 170.06px;
+        }
+    
+        .box {
+            padding: 10px 70px 30px 70px;
+        }
+    
+        .box p {
+            margin-left: 0;
+        }
+        
     }
-
-    #projectExamples a:active {
-        transform: scale(1);
-        background: linear-gradient(to top right, #012e33, var(--darkTeal), #012e33);
-      }
-}
 
 /* break point */
 @media only screen and (min-width: 1200px) {
@@ -383,87 +452,30 @@ img.me {
     }
 
     #infoGraphic img {
-        --graphicWidth: 70%;
-    }
-}
-
-/* break point */
-@media only screen and (min-width: 800px) {
-    
-/*site wide styles */
-    header {
-        padding-bottom: 10px;
-    }
-    
-    nav {
-        --navFlexFlow: row;
-        --navPadding: 15px 20px;
-        --navJustify: flex-end;
-        --navHeight: 160px;
-        margin-right: 15px;
+        --graphicWidth: 55%;
     }
 
-    .logo img {
-        width: 175px;
-        margin-top: 24px;
-    }
-
-    footer {
-        padding: 20px;
-    }
-
-    footer img {
-        height: 60px;
-    }
-
-/* home page */
-    #banner { 
-        --bannerFont: 115px;
-        --bannerOne: 200px;
-        --bannerTwo: 130px;
-        --bannerThree: 110px;
-        --bannerFour: 200px;
-    }
-
-/* about page */
+    /* about page */
     .aboutWrapper {
-        width: 75%;
+        width: 68%;
     }
-
-/* portfolio page */
-    #projectExamples {
-        --projectFlexFlow: row;
-        --projectWidth: 90%;
-        --projectBoxWidth: 33.33%;
-        --projectBoxPadding: 2%;
-        --progBoxBordRad: 50px;
-    }
-
-/* antimicrobial resistance info graphic page */
-    #infoGraphic img {
-        --graphicWidth: 85%;
-        border-radius: 200px;
-    }
-
-    #infoGraphic {
-        margin-top: 120px;
-    }
-
-/* research paper and op-ed pages */
-    .paper p {
-        font-size: 20px;
-    }
-
-    .scroll-watcher {
-        top: 170.06px;
-    }
-
-    .box {
-        padding: 10px 70px 30px 70px;
-    }
-
-    .box p {
-        margin-left: 0;
-    }
-    
 }
+
+/* desktop size */
+@media only screen and (min-width: 1500px) {
+    /* about page */
+    .aboutWrapper {
+       width: 45%;
+   }
+   
+   #projectExamples a:hover {
+       transform: scale(1.1) translate(0px, -35px);
+   }
+
+   #projectExamples a:active {
+       transform: scale(1);
+       background: linear-gradient(to top right, #012e33, var(--darkTeal), #012e33);
+     }
+}
+
+

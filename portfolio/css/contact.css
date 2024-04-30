@@ -68,7 +68,8 @@ input[type="text"]:focus, textarea:focus {
  #submit:active {
     transform: scale(.85);
   }
-  
+
+/*break point */
 @media only screen and (min-width: 460px) {
     input, select, textarea {
         font-size: 20px;
@@ -85,12 +86,14 @@ input[type="text"]:focus, textarea:focus {
     }
 }
 
+/*break point */
 @media only screen and (min-width: 700px) {
     fieldset {
         width: 60%;
     }
 }
 
+/* destop */
 @media only screen and (min-width: 1200px) { 
     section {
         flex-flow: row;
@@ -98,6 +101,7 @@ input[type="text"]:focus, textarea:focus {
 
     fieldset {
         flex: 1;
+        margin-top: 30px;
     }
 }
 
