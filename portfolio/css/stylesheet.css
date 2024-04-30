@@ -68,6 +68,14 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     width: auto;
+    margin-top: 140px;
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1000;
 }
 
 header, footer {
@@ -237,11 +245,6 @@ img.me {
     padding-bottom: 90px;
 }
 
-/* #projectExamples a {
-    transition: all .2s ease-in;
-    
-} */
-
 #projectExamples a:hover {
     transition: all .19s ease-in;
     transform: scale(1.2) translate(0px, -25px);
@@ -279,12 +282,6 @@ img.me {
 }
 
 /* research and op-ed pages */
-header.fixed {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
 .paper { 
     margin-top: 140px;
     display: flex; 
@@ -367,7 +364,7 @@ header.fixed {
 /* desktop size */
 @media only screen and (min-width: 1500px) {
     #projectExamples a:hover {
-        transform: scale(1.15) translate(0px, -25px);
+        transform: scale(1.1) translate(0px, -35px);
     }
 
     #projectExamples a:active {

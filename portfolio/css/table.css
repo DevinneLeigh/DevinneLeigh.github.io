@@ -27,13 +27,9 @@
     height: 500px;
   }
 
-  #portfolio h2 { /* body id */
-    font-size: 40px;
-    padding: 20px;
-  }
-
-  h1, h2 {
-    margin-top: 50px;
+  #portfolio h1, #portfolio h2 { /* body id */
+    margin-top: 90px;
+    font-size: 50px;
   }
 
   caption {
@@ -77,7 +73,7 @@
     animation: fade-in linear;
     animation-timeline: view();
     animation-range-start: 1px;
-    animation-range-end: 900px;
+    animation-range-end: 1000px;
   }
 
   @keyframes fade-in { /* table content scroll fade animation */
@@ -87,8 +83,8 @@
 
 /* break point */
   @media only screen and (min-width: 800px) {
-    #portfolio h2 { /* body id */
-      font-size: 50px;
+    #portfolio h2, #portfolio h1 { /* body id */
+      font-size: 60px;
     }
 
     caption {
@@ -97,12 +93,12 @@
 
     thead {
       font-size: 33px;
-      line-height: 2.5em;
+      line-height: 2.4em;
     }
 
     tbody {
       font-size: 26px;
-      line-height: 2em;
+      line-height: 1.9em;
     }
   }
 
