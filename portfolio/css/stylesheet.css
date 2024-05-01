@@ -457,7 +457,7 @@ img.me {
 
     /* about page */
     .aboutWrapper {
-        width: 68%;
+        width: 78%;
     }
 }
 
@@ -465,7 +465,7 @@ img.me {
 @media only screen and (min-width: 1500px) {
     /* about page */
     .aboutWrapper {
-       width: 45%;
+       width: 60%;
    }
    
    #projectExamples a:hover {
