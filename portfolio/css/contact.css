@@ -29,7 +29,6 @@ fieldset {
     word-spacing: 0.1em;
     border-radius: 25px;
     width: 94%;
-    padding: 15px;
 }
 
 .form1 {
@@ -102,6 +101,10 @@ input[type="text"]:focus, textarea:focus {
     fieldset {
         flex: 1;
         margin-top: 30px;
+    }
+
+    .form3 {
+        padding: 65px 0 65px 0;
     }
 }
 
