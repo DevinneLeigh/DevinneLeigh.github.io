@@ -1,4 +1,7 @@
 /**
+@include xs { // 400px
+
+}
 @include sm { // 576px
 
 }
@@ -84,7 +87,7 @@ header nav {
   header nav ul a {
     font-size: 19px;
     font-weight: bold;
-    margin: 0 25px 10px 0;
+    margin: 0 2px 10px 0;
     text-decoration: none;
     line-height: 60px;
     padding: 15px;
@@ -96,7 +99,7 @@ header nav {
     padding: 0 12px 0 12px;
     border-radius: 40px;
     display: flex;
-    margin-top: 10px;
+    margin: 10px 10px 0 0;
   }
   header nav ul .ticket_button:hover {
     background-color: #008888;
@@ -160,6 +163,15 @@ header nav.open ul .ticket_button:hover {
 nav a:hover {
   background: #00b2b2;
   color: #fbfcfc;
+}
+
+main {
+  margin-top: 84.28px;
+}
+@media (min-width: 960px) {
+  main {
+    margin-top: 109.28px;
+  }
 }
 
 #welcome_container {
@@ -305,7 +317,7 @@ nav a:hover {
 #wave_top {
   margin-top: 448px;
   width: 100%;
-  z-index: 100;
+  z-index: 90;
   position: relative;
 }
 @media (min-width: 768px) {
@@ -330,7 +342,6 @@ nav a:hover {
 }
 
 #wave_bottom {
-  margin-top: -10px;
   width: 100%;
   z-index: 90;
   position: relative;
@@ -388,38 +399,38 @@ nav a:hover {
   background-position: center;
   position: relative;
   width: 100vw;
-  top: -52px;
-  margin-bottom: -52px;
+  top: -68px;
+  margin-bottom: -68px;
   z-index: 70;
 }
 @media (min-width: 576px) {
   #jellyfishImage {
-    top: -68px;
-    margin-bottom: -68px;
+    top: -88px;
+    margin-bottom: -88px;
   }
 }
 @media (min-width: 768px) {
   #jellyfishImage {
-    top: -84px;
-    margin-bottom: -84px;
+    top: -110px;
+    margin-bottom: -110px;
   }
 }
 @media (min-width: 960px) {
   #jellyfishImage {
-    top: -104px;
-    margin-bottom: -104px;
+    top: -136px;
+    margin-bottom: -136px;
   }
 }
 @media (min-width: 1200px) {
   #jellyfishImage {
-    top: -120px;
-    margin-bottom: -120px;
+    top: -158px;
+    margin-bottom: -158px;
   }
 }
 @media (min-width: 1400px) {
   #jellyfishImage {
-    top: -170px;
-    margin-bottom: -170px;
+    top: -220px;
+    margin-bottom: -220px;
   }
 }
 #jellyfishImage #box_wrapper {
@@ -497,4 +508,193 @@ footer .footer_bottom .social_media img {
   footer .footer_bottom .social_media img {
     margin: 0 20px 20px 0;
   }
+}
+
+#wave_box {
+  background: #00b2b2;
+  padding: 50px 0 50px 0;
+  z-index: 100;
+}
+@media (min-width: 1400px) {
+  #wave_box {
+    padding: 80px 0 1px 0;
+    margin-top: -10px;
+  }
+}
+#wave_box h2 {
+  color: #fbfcfc;
+  text-align: center;
+  font-size: 30px;
+}
+@media (min-width: 1400px) {
+  #wave_box h2 {
+    font-size: 50px;
+  }
+}
+
+#wave {
+  width: 100%;
+  z-index: 90;
+  position: relative;
+}
+
+#kelpImage {
+  background-image: url(../image/kelp2.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+  width: 100vw;
+  height: 750px;
+  top: -68px;
+  margin-bottom: -68px;
+  z-index: 70;
+}
+@media (min-width: 576px) {
+  #kelpImage {
+    height: 800px;
+    top: -88px;
+    margin-bottom: -88px;
+  }
+}
+@media (min-width: 768px) {
+  #kelpImage {
+    height: 900px;
+    top: -110px;
+    margin-bottom: -110px;
+  }
+}
+@media (min-width: 960px) {
+  #kelpImage {
+    height: 1000px;
+    top: -136px;
+    margin-bottom: -136px;
+  }
+}
+@media (min-width: 1200px) {
+  #kelpImage {
+    height: 1100px;
+    top: -158px;
+    margin-bottom: -158px;
+  }
+}
+@media (min-width: 1400px) {
+  #kelpImage {
+    height: 1200px;
+    top: -240px;
+    margin-bottom: -240px;
+  }
+}
+#kelpImage #member_box {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  top: 150px;
+  padding: 50px 0 50px 0;
+  z-index: 100;
+  position: relative;
+  background-color: rgba(251, 252, 252, 0.8235294118);
+  width: 85%;
+  border-radius: 60px;
+}
+@media (min-width: 576px) {
+  #kelpImage #member_box {
+    top: 175px;
+    width: 75%;
+  }
+}
+@media (min-width: 768px) {
+  #kelpImage #member_box {
+    top: 200px;
+    width: 60%;
+  }
+}
+@media (min-width: 960px) {
+  #kelpImage #member_box {
+    top: 250px;
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  #kelpImage #member_box {
+    top: 300px;
+    width: 45%;
+  }
+}
+@media (min-width: 1400px) {
+  #kelpImage #member_box {
+    top: 350px;
+    width: 40%;
+    border-radius: 60px;
+  }
+}
+#kelpImage #member_box section {
+  margin: 0 30px 0 30px;
+  font-size: 0.94em;
+  line-height: 45px;
+  letter-spacing: 1.3px;
+}
+@media (min-width: 400px) {
+  #kelpImage #member_box section {
+    font-size: 1em;
+    line-height: 50px;
+    letter-spacing: 1.4px;
+  }
+}
+@media (min-width: 576px) {
+  #kelpImage #member_box section {
+    font-size: 1.1em;
+    line-height: 55px;
+    letter-spacing: 1.5px;
+  }
+}
+@media (min-width: 768px) {
+  #kelpImage #member_box section {
+    font-size: 1.25em;
+    line-height: 60px;
+    letter-spacing: 1.6px;
+  }
+}
+@media (min-width: 960px) {
+  #kelpImage #member_box section {
+    font-size: 1.4em;
+    line-height: 65px;
+    letter-spacing: 1.7px;
+  }
+}
+@media (min-width: 1200px) {
+  #kelpImage #member_box section {
+    font-size: 1.55em;
+    line-height: 70px;
+    letter-spacing: 1.8px;
+  }
+}
+@media (min-width: 1400px) {
+  #kelpImage #member_box section {
+    font-size: 1.7em;
+    line-height: 75px;
+    letter-spacing: 1.9px;
+  }
+}
+#kelpImage #member_box section h3 {
+  text-align: center;
+}
+#kelpImage #member_box section li {
+  list-style-type: circle;
+  margin-left: -16px;
+}
+#kelpImage #member_box section li::marker {
+  color: #48ecec;
+}
+#kelpImage #member_box section #button_wrapper {
+  display: flex;
+  justify-content: center;
+}
+#kelpImage #member_box section #button_wrapper button {
+  border: none;
+  padding: 10px 18px 14px 18px;
+  border-radius: 40px;
+  background: #00b2b2;
+  color: #fbfcfc;
+  font-size: 22px;
 }/*# sourceMappingURL=styles.css.map */

@@ -1,3 +1,4 @@
+$xs:  400px;
 $sm:  576px;
 $md:  768px;
 $lg:  960px;
@@ -5,6 +6,9 @@ $xl:  1200px;
 $xxl: 1400px;
 
 /**
+@include xs { // 400px
+
+}
 @include sm { // 576px
 
 }
@@ -28,6 +32,7 @@ $secondary: #00b2b2;
 $dark-bg: #283644;
 
 /* Mixins */
+@mixin xs { @media (min-width: $xs) { @content; }}
 @mixin sm { @media (min-width: $sm) { @content; } }
 @mixin sm-landscape { @media (min-width: $sm) and (max-width: $md) and (orientation: landscape) { @content; } }
 @mixin md { @media (min-width: $md) { @content; } }
@@ -107,7 +112,7 @@ header {
                 a {
                     font-size: 19px;
                     font-weight: bold;
-                    margin: 0 25px 10px 0;
+                    margin: 0 2px 10px 0;
                     text-decoration: none;
                     line-height: 60px;
                     padding: 15px;
@@ -120,7 +125,7 @@ header {
                     padding: 0 12px 0 12px;
                     border-radius: 40px;
                     display: flex;
-                    margin-top: 10px;
+                    margin: 10px 10px 0 0;
                 }
                 .ticket_button:hover {
                     background-color: #008888;
@@ -187,6 +192,13 @@ header {
 nav a:hover {
     background: #00b2b2;
     color: #fbfcfc;
+}
+
+main { 
+    margin-top: 84.28px;
+    @include lg { // 960px
+        margin-top: 109.28px;
+    }
 }
 
 #welcome_container {
@@ -298,7 +310,7 @@ nav a:hover {
 #wave_top {
     margin-top: 448px;
     width: 100%;
-    z-index: 100;
+    z-index: 90;
     position: relative;
     @include md { //768px
         margin-top: 276px;
@@ -315,7 +327,7 @@ nav a:hover {
 }
 
 #wave_bottom {
-    margin-top: -10px;
+    // margin-top: -2px;
     width: 100%;
     z-index: 90;
     position: relative;
@@ -365,28 +377,28 @@ nav a:hover {
     background-position: center;
     position: relative;
     width: 100vw;
-    top: -52px;
-    margin-bottom: -52px;
+    top: -68px;
+    margin-bottom: -68px;
     z-index: 70;
     @include sm { // 576px
-        top: -68px;
-        margin-bottom: -68px;
+        top: -88px;
+        margin-bottom: -88px;
     }
     @include md { // 768px
-        top: -84px;
-        margin-bottom: -84px;
+        top: -110px;
+        margin-bottom: -110px;
     }
     @include lg { // 960px
-        top: -104px;
-        margin-bottom: -104px;
+        top: -136px;
+        margin-bottom: -136px;
     }
     @include xl { // 1200px
-        top: -120px;
-        margin-bottom: -120px;
+        top: -158px;
+        margin-bottom: -158px;
     }
     @include xxl { // 1400px
-        top: -170px;
-        margin-bottom: -170px;
+        top: -220px;
+        margin-bottom: -220px;
     }
     #box_wrapper {
         padding: 300px 0 300px 0;
@@ -471,6 +483,185 @@ footer {
                 margin: 20px 20px 20px 0;
                 @include md { // 768px
                     margin: 0 20px 20px 0;
+                }
+            }
+        }
+    }
+}
+
+// membership page 
+
+#wave_box {
+    background: #00b2b2;
+    padding: 50px 0 50px 0;
+    z-index: 100;
+    @include sm { // 576px
+
+    }
+    @include md { // 768px
+    
+    }
+    @include lg { // 960px
+    
+    }
+    @include xl { // 1200px
+    
+    }
+    @include xxl { // 1400px
+        padding: 80px 0 1px 0;
+        margin-top: -10px;
+    }
+    h2 {
+        color: #fbfcfc;
+        text-align: center;
+        font-size: 30px;
+        @include sm { // 576px
+
+        }
+        @include md { // 768px
+        
+        }
+        @include lg { // 960px
+        
+        }
+        @include xl { // 1200px
+        
+        }
+        @include xxl { // 1400px
+            font-size: 50px; 
+        }
+    }
+}
+
+#wave {
+    width: 100%;
+    z-index: 90;
+    position: relative;
+}
+
+#kelpImage {
+    background-image: url(../image/kelp2.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+    width: 100vw;
+    height: 750px;
+    top: -68px;
+    margin-bottom: -68px;
+    z-index: 70;
+    @include sm { // 576px
+        height: 800px;
+        top: -88px;
+        margin-bottom: -88px;
+    }
+    @include md { // 768px
+        height: 900px;
+        top: -110px;
+        margin-bottom: -110px;
+    }
+    @include lg { // 960px
+        height: 1000px;
+        top: -136px;
+        margin-bottom: -136px;
+    }
+    @include xl { // 1200px
+        height: 1100px;
+        top: -158px;
+        margin-bottom: -158px;
+    }
+    @include xxl { // 1400px
+        height: 1200px;
+        top: -240px;
+        margin-bottom: -240px;
+    }
+        #member_box {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        top: 150px;
+        padding: 50px 0 50px 0;
+        z-index: 100;
+        position: relative;
+        background-color: #fbfcfcd2;
+        width: 85%;
+        border-radius: 60px;
+        @include sm { // 576px
+            top: 175px;
+            width: 75%;
+        }
+        @include md { // 768p
+            top: 200px;
+            width: 60%;
+        }
+        @include lg { // 960px
+            top: 250px;
+            width: 50%;
+        }
+        @include xl { // 1200px
+            top: 300px;
+            width: 45%;
+        }
+        @include xxl { // 1400px
+            top: 350px;
+            width: 40%;
+            border-radius: 60px;
+        }
+        section {
+            margin: 0 30px 0 30px;
+            font-size: .94em;
+            line-height: 45px;
+            letter-spacing: 1.3px;
+            @include xs { // 400px
+                font-size: 1em;
+                line-height: 50px;
+                letter-spacing: 1.4px;
+            }
+            @include sm { // 576px
+                font-size: 1.1em;
+                line-height: 55px;
+                letter-spacing: 1.5px;
+            }
+            @include md { // 768px
+                font-size: 1.25em;
+                line-height: 60px;
+                letter-spacing: 1.6px;
+            }
+            @include lg { // 960px
+                font-size: 1.4em;
+                line-height: 65px;
+                letter-spacing: 1.7px;
+            }
+            @include xl { // 1200px
+                font-size: 1.55em;
+                line-height: 70px;
+                letter-spacing: 1.8px;
+            }
+            @include xxl { // 1400px
+                font-size: 1.7em;
+                line-height: 75px;
+                letter-spacing: 1.9px;
+            }
+            h3 {
+                text-align: center;
+            }
+            li {
+                list-style-type: circle;
+                margin-left: -16px;
+            }
+            li::marker {
+                color: #48ecec;
+            }
+            #button_wrapper {
+                display: flex;
+                justify-content: center;
+                button {
+                    border: none;
+                    padding: 10px 18px 14px 18px;
+                    border-radius: 40px;
+                    background: #00b2b2;
+                    color:#fbfcfc;
+                    font-size: 22px;
                 }
             }
         }
