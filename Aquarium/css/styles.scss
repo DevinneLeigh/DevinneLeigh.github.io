@@ -417,15 +417,6 @@ main {
             flex-flow: row;
             gap: 110px;
         }
-        @include lg { // 960px
-        
-        }
-        @include xl { // 1200px
-        
-        }
-        @include xxl { // 1400px
-        
-        }
         div {
             color: #4a4a4a;
             width: 350px;
@@ -495,18 +486,6 @@ footer {
     background: #00b2b2;
     padding: 50px 0 50px 0;
     z-index: 100;
-    @include sm { // 576px
-
-    }
-    @include md { // 768px
-    
-    }
-    @include lg { // 960px
-    
-    }
-    @include xl { // 1200px
-    
-    }
     @include xxl { // 1400px
         padding: 80px 0 1px 0;
         margin-top: -10px;
@@ -515,18 +494,6 @@ footer {
         color: #fbfcfc;
         text-align: center;
         font-size: 30px;
-        @include sm { // 576px
-
-        }
-        @include md { // 768px
-        
-        }
-        @include lg { // 960px
-        
-        }
-        @include xl { // 1200px
-        
-        }
         @include xxl { // 1400px
             font-size: 50px; 
         }
@@ -546,10 +513,35 @@ footer {
     background-position: center;
     position: relative;
     width: 100vw;
-    height: 750px;
+    height: 780px;
     top: -68px;
     margin-bottom: -68px;
     z-index: 70;
+    
+    &.open {
+        height: 1440px;
+        @include xs { //400px 
+            height: 1480px;
+        }
+        @include sm { // 576px
+            height: 1530px;
+        }
+        @include md { // 768px
+            height: 1620px;
+        }
+        @include lg { // 960px
+            height: 1760px;
+        }
+        @include xl { // 1200px
+            height: 1930px;
+        }
+        @include xxl { // 1400px
+            height: 2100px;
+        }
+    }
+    @include xs { //400px 
+        height: 775px;
+    }
     @include sm { // 576px
         height: 800px;
         top: -88px;
@@ -574,8 +566,10 @@ footer {
         height: 1200px;
         top: -240px;
         margin-bottom: -240px;
-    }
-        #member_box {
+    }  
+}
+#member_wrapper {
+    #member_box {
         display: flex;
         justify-content: center;
         margin: auto;
@@ -652,10 +646,13 @@ footer {
             li::marker {
                 color: #48ecec;
             }
-            #button_wrapper {
+        }
+    }
+
+    #button_wrapper {
                 display: flex;
                 justify-content: center;
-                button {
+                #sign_up_button {
                     border: none;
                     padding: 10px 18px 14px 18px;
                     border-radius: 40px;
@@ -664,6 +661,121 @@ footer {
                     font-size: 22px;
                 }
             }
+
+    #form_wrapper{
+        #open_form {
+            display: none;
+            label, input, p {
+                font-size: .94em;
+                line-height: 30px;
+                letter-spacing: 1.2px;
+                @include xs { // 400px
+                    font-size: 1em;
+                    letter-spacing: 1.25px;
+                }
+                @include sm { // 576px
+                    font-size: 1.1em;
+                    letter-spacing: 1.3px;
+                }
+                @include md { // 768px
+                    font-size: 1.25em;
+                    letter-spacing: 1.35px;
+                }
+                @include lg { // 960px
+                    font-size: 1.4em;
+                    letter-spacing: 1.4px;
+                    line-height: 35px;
+                }
+                @include xl { // 1200px
+                    font-size: 1.55em;
+                    letter-spacing: 1.45px;
+                    line-height: 40px;
+                }
+                @include xxl { // 1400px
+                    font-size: 1.7em;
+                    letter-spacing: 1.5px;
+                    line-height: 45px;
+                }
+            }
+            input[type=checkbox] {
+                width: 16px;
+                height: 16px;
+                @include xs { //400px
+                    width: 18px;
+                    height: 18px;
+                }
+                @include sm { // 576px
+                    width: 20px;
+                    height: 20px;
+                }
+                @include md { // 768px
+                    width: 22px;
+                    height: 22px;
+                }
+                @include lg { // 960px
+                    width: 24px;
+                    height: 24px;
+                }
+                @include xl { // 1200px
+                    width: 26px;
+                    height: 26px;
+                }
+                @include xxl { // 1400px
+                    width: 28px;
+                    height: 28px;
+                }
+            }
+            input[type=text] {
+                border-radius: 10px;
+                border-style: none;
+            }
+            #submit {
+                border: none;
+                padding: 10px 18px 14px 18px;
+                border-radius: 40px;
+                background: #00b2b2;
+                color:#fbfcfc;
+                font-size: 19px;
+            }
+            &.open {
+                display: block;
+                margin: auto;
+                top: 180px;
+                padding: 50px;
+                z-index: 100;
+                position: relative;
+                background-color: #fbfcfcd2;
+                width: 85%;
+                height: auto;
+                border-radius: 60px;
+                @include xs { // 400px
+                    
+                }
+                @include sm { // 576px
+                    width: 75%;
+                    top: 200px;
+                }
+                @include md { // 768px
+                    width: 60%;
+                    top: 230px;
+                }
+                @include lg { // 960px
+                    width: 50%;
+                    top: 280px;
+                }
+                @include xl { // 1200px
+                    width: 45%;
+                    top: 330px;
+                }
+                @include xxl { // 1400px
+                    width: 40%;
+                    top: 380px;
+                }
+            }
         }
     }
+}
+#email_error, #name_error, #phone_error {
+    color: #dc005f;
+    font-weight: bold;
 }

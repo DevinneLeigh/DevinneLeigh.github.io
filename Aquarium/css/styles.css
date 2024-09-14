@@ -545,10 +545,48 @@ footer .footer_bottom .social_media img {
   background-position: center;
   position: relative;
   width: 100vw;
-  height: 750px;
+  height: 780px;
   top: -68px;
   margin-bottom: -68px;
   z-index: 70;
+}
+#kelpImage.open {
+  height: 1440px;
+}
+@media (min-width: 400px) {
+  #kelpImage.open {
+    height: 1480px;
+  }
+}
+@media (min-width: 576px) {
+  #kelpImage.open {
+    height: 1530px;
+  }
+}
+@media (min-width: 768px) {
+  #kelpImage.open {
+    height: 1620px;
+  }
+}
+@media (min-width: 960px) {
+  #kelpImage.open {
+    height: 1760px;
+  }
+}
+@media (min-width: 1200px) {
+  #kelpImage.open {
+    height: 1930px;
+  }
+}
+@media (min-width: 1400px) {
+  #kelpImage.open {
+    height: 2100px;
+  }
+}
+@media (min-width: 400px) {
+  #kelpImage {
+    height: 775px;
+  }
 }
 @media (min-width: 576px) {
   #kelpImage {
@@ -585,7 +623,8 @@ footer .footer_bottom .social_media img {
     margin-bottom: -240px;
   }
 }
-#kelpImage #member_box {
+
+#member_wrapper #member_box {
   display: flex;
   justify-content: center;
   margin: auto;
@@ -598,103 +637,249 @@ footer .footer_bottom .social_media img {
   border-radius: 60px;
 }
 @media (min-width: 576px) {
-  #kelpImage #member_box {
+  #member_wrapper #member_box {
     top: 175px;
     width: 75%;
   }
 }
 @media (min-width: 768px) {
-  #kelpImage #member_box {
+  #member_wrapper #member_box {
     top: 200px;
     width: 60%;
   }
 }
 @media (min-width: 960px) {
-  #kelpImage #member_box {
+  #member_wrapper #member_box {
     top: 250px;
     width: 50%;
   }
 }
 @media (min-width: 1200px) {
-  #kelpImage #member_box {
+  #member_wrapper #member_box {
     top: 300px;
     width: 45%;
   }
 }
 @media (min-width: 1400px) {
-  #kelpImage #member_box {
+  #member_wrapper #member_box {
     top: 350px;
     width: 40%;
     border-radius: 60px;
   }
 }
-#kelpImage #member_box section {
+#member_wrapper #member_box section {
   margin: 0 30px 0 30px;
   font-size: 0.94em;
   line-height: 45px;
   letter-spacing: 1.3px;
 }
 @media (min-width: 400px) {
-  #kelpImage #member_box section {
+  #member_wrapper #member_box section {
     font-size: 1em;
     line-height: 50px;
     letter-spacing: 1.4px;
   }
 }
 @media (min-width: 576px) {
-  #kelpImage #member_box section {
+  #member_wrapper #member_box section {
     font-size: 1.1em;
     line-height: 55px;
     letter-spacing: 1.5px;
   }
 }
 @media (min-width: 768px) {
-  #kelpImage #member_box section {
+  #member_wrapper #member_box section {
     font-size: 1.25em;
     line-height: 60px;
     letter-spacing: 1.6px;
   }
 }
 @media (min-width: 960px) {
-  #kelpImage #member_box section {
+  #member_wrapper #member_box section {
     font-size: 1.4em;
     line-height: 65px;
     letter-spacing: 1.7px;
   }
 }
 @media (min-width: 1200px) {
-  #kelpImage #member_box section {
+  #member_wrapper #member_box section {
     font-size: 1.55em;
     line-height: 70px;
     letter-spacing: 1.8px;
   }
 }
 @media (min-width: 1400px) {
-  #kelpImage #member_box section {
+  #member_wrapper #member_box section {
     font-size: 1.7em;
     line-height: 75px;
     letter-spacing: 1.9px;
   }
 }
-#kelpImage #member_box section h3 {
+#member_wrapper #member_box section h3 {
   text-align: center;
 }
-#kelpImage #member_box section li {
+#member_wrapper #member_box section li {
   list-style-type: circle;
   margin-left: -16px;
 }
-#kelpImage #member_box section li::marker {
+#member_wrapper #member_box section li::marker {
   color: #48ecec;
 }
-#kelpImage #member_box section #button_wrapper {
+#member_wrapper #button_wrapper {
   display: flex;
   justify-content: center;
 }
-#kelpImage #member_box section #button_wrapper button {
+#member_wrapper #button_wrapper #sign_up_button {
   border: none;
   padding: 10px 18px 14px 18px;
   border-radius: 40px;
   background: #00b2b2;
   color: #fbfcfc;
   font-size: 22px;
+}
+#member_wrapper #form_wrapper #open_form {
+  display: none;
+}
+#member_wrapper #form_wrapper #open_form label, #member_wrapper #form_wrapper #open_form input, #member_wrapper #form_wrapper #open_form p {
+  font-size: 0.94em;
+  line-height: 30px;
+  letter-spacing: 1.2px;
+}
+@media (min-width: 400px) {
+  #member_wrapper #form_wrapper #open_form label, #member_wrapper #form_wrapper #open_form input, #member_wrapper #form_wrapper #open_form p {
+    font-size: 1em;
+    letter-spacing: 1.25px;
+  }
+}
+@media (min-width: 576px) {
+  #member_wrapper #form_wrapper #open_form label, #member_wrapper #form_wrapper #open_form input, #member_wrapper #form_wrapper #open_form p {
+    font-size: 1.1em;
+    letter-spacing: 1.3px;
+  }
+}
+@media (min-width: 768px) {
+  #member_wrapper #form_wrapper #open_form label, #member_wrapper #form_wrapper #open_form input, #member_wrapper #form_wrapper #open_form p {
+    font-size: 1.25em;
+    letter-spacing: 1.35px;
+  }
+}
+@media (min-width: 960px) {
+  #member_wrapper #form_wrapper #open_form label, #member_wrapper #form_wrapper #open_form input, #member_wrapper #form_wrapper #open_form p {
+    font-size: 1.4em;
+    letter-spacing: 1.4px;
+    line-height: 35px;
+  }
+}
+@media (min-width: 1200px) {
+  #member_wrapper #form_wrapper #open_form label, #member_wrapper #form_wrapper #open_form input, #member_wrapper #form_wrapper #open_form p {
+    font-size: 1.55em;
+    letter-spacing: 1.45px;
+    line-height: 40px;
+  }
+}
+@media (min-width: 1400px) {
+  #member_wrapper #form_wrapper #open_form label, #member_wrapper #form_wrapper #open_form input, #member_wrapper #form_wrapper #open_form p {
+    font-size: 1.7em;
+    letter-spacing: 1.5px;
+    line-height: 45px;
+  }
+}
+#member_wrapper #form_wrapper #open_form input[type=checkbox] {
+  width: 16px;
+  height: 16px;
+}
+@media (min-width: 400px) {
+  #member_wrapper #form_wrapper #open_form input[type=checkbox] {
+    width: 18px;
+    height: 18px;
+  }
+}
+@media (min-width: 576px) {
+  #member_wrapper #form_wrapper #open_form input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media (min-width: 768px) {
+  #member_wrapper #form_wrapper #open_form input[type=checkbox] {
+    width: 22px;
+    height: 22px;
+  }
+}
+@media (min-width: 960px) {
+  #member_wrapper #form_wrapper #open_form input[type=checkbox] {
+    width: 24px;
+    height: 24px;
+  }
+}
+@media (min-width: 1200px) {
+  #member_wrapper #form_wrapper #open_form input[type=checkbox] {
+    width: 26px;
+    height: 26px;
+  }
+}
+@media (min-width: 1400px) {
+  #member_wrapper #form_wrapper #open_form input[type=checkbox] {
+    width: 28px;
+    height: 28px;
+  }
+}
+#member_wrapper #form_wrapper #open_form input[type=text] {
+  border-radius: 10px;
+  border-style: none;
+}
+#member_wrapper #form_wrapper #open_form #submit {
+  border: none;
+  padding: 10px 18px 14px 18px;
+  border-radius: 40px;
+  background: #00b2b2;
+  color: #fbfcfc;
+  font-size: 19px;
+}
+#member_wrapper #form_wrapper #open_form.open {
+  display: block;
+  margin: auto;
+  top: 180px;
+  padding: 50px;
+  z-index: 100;
+  position: relative;
+  background-color: rgba(251, 252, 252, 0.8235294118);
+  width: 85%;
+  height: auto;
+  border-radius: 60px;
+}
+@media (min-width: 576px) {
+  #member_wrapper #form_wrapper #open_form.open {
+    width: 75%;
+    top: 200px;
+  }
+}
+@media (min-width: 768px) {
+  #member_wrapper #form_wrapper #open_form.open {
+    width: 60%;
+    top: 230px;
+  }
+}
+@media (min-width: 960px) {
+  #member_wrapper #form_wrapper #open_form.open {
+    width: 50%;
+    top: 280px;
+  }
+}
+@media (min-width: 1200px) {
+  #member_wrapper #form_wrapper #open_form.open {
+    width: 45%;
+    top: 330px;
+  }
+}
+@media (min-width: 1400px) {
+  #member_wrapper #form_wrapper #open_form.open {
+    width: 40%;
+    top: 380px;
+  }
+}
+
+#email_error, #name_error, #phone_error {
+  color: #dc005f;
+  font-weight: bold;
 }/*# sourceMappingURL=styles.css.map */

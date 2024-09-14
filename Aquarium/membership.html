@@ -34,20 +34,75 @@
             <img id="wave_bottom" src="image/wave_bottom2.svg">
 
             <div id="kelpImage">
-                <div id="member_box">
-                    <section>
-                        <h3>Members receive</h3>
-                        <ul>
-                            <li>Exclusive deals on tickets</li>
-                            <li>Discounts on merchandise</li>
-                            <li>Special event notifications</li>
-                            <li>Aquatic Wildlife newsletter</li>
-                        </ul>
+                <div id="member_wrapper">
+                    <div id="member_box">
+                        <section>
+                            <h3>Members receive</h3>
+                            <ul>
+                                <li>Exclusive deals on tickets</li>
+                                <li>Discounts on merchandise</li>
+                                <li>Special event notifications</li>
+                                <li>Aquatic Wildlife newsletter</li>
+                            </ul>
 
-                        <div id="button_wrapper">
-                        <button>Sign up</button>
-                        </div>
-                    </section>
+                            <div id="button_wrapper">
+                            <button id="sign_up_button">Sign up</button>
+                            </div>
+                        </section>
+                    </div>
+                    <div id="form_wrapper">
+                        <form id ="open_form" action="confirm.html" method="post">
+                            <div>
+                                <label for="name">Name:</label>
+                                <br>
+                                <input type="text" name="name" id="name" size="25">
+                            </div>
+                            <div id="name_error"></div>
+                            <br>
+                            <div>
+                                <label for="email_address">Email:</label>
+                                <br>
+                                <input type="text" name="email_address" id="email_address" size="25">
+                            </div>
+                            <div id="email_error"></div>
+                            <br>
+                            <div>
+                                <label for="phone">Phone:</label>
+                                <br>
+                                <input type="text" name="phone" id="phone" size="18">
+                            </div>
+                            <div id="phone_error"></div>
+                            <br>
+                            <div>
+                                <label>Contact by:</label>
+                                <br>
+                                <p>
+                                <input type="radio" name="contact" id="email"
+                                    value="email" checked>Email
+                                <input type="radio" name="contact" id="text"
+                                    value="text">Text
+                                </p>
+                            </div>
+                            <br>
+                            <div>
+                                <label>Would you like to receive event notifications?</label>
+                                <br>
+                                <input type="checkbox" name="news" id="news"
+                                    value="yes" checked>
+                            </div>
+                            <br>
+                            <div>
+                                <label>Would you like to receive our news letter?</label>
+                                <br>
+                                <input type="checkbox" name="offers" id="offers"
+                                    value="yes" checked>
+                            </div>
+                            <br>
+                            <div id="button_wrapper">
+                                <input type="button" id="submit" value="Submit">
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </main>
