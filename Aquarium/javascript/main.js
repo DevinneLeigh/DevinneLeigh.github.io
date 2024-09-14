@@ -12,10 +12,12 @@ menuToggle.addEventListener("click", function() {
 })
 
 //open form
-signUpButton.addEventListener("click", function() {
-    openForm.classList.toggle("open");
-    background.classList.toggle("open");
-})
+if (signUpButton) {
+    signUpButton.addEventListener("click", function() {
+        openForm.classList.toggle("open");
+        background.classList.toggle("open");
+    })
+}
 
 // submit form
 const nameError = document.getElementById("name_error")
@@ -54,14 +56,36 @@ const processEntries = () => {
         window.open("confirm.html", "_self");
     }
 };
-
 document.addEventListener("DOMContentLoaded", () => { 
-    document.querySelector("#submit").addEventListener("click", processEntries);
+    let submit = document.querySelector("#submit");
+    if (submit) {
+        document.querySelector("#submit").addEventListener("click", processEntries);
+    }
 });
 
 
 
 
 
+let slideIndex = 1;
+showSlides(slideIndex);
 
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+
+  slides[slideIndex-1].style.display = "block";  
+}
