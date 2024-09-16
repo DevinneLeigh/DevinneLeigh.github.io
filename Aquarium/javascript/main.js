@@ -63,10 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-
-
-
-
+// image slides
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -89,3 +86,27 @@ function showSlides(n) {
 
   slides[slideIndex-1].style.display = "block";  
 }
+
+// preloaded images
+const logo = new Image();
+image.src = "logo.svg";
+const _1 = new Image();
+image.src = "1.webp";
+const _2 = new Image();
+image.src = "2.webp";
+const _3 = new Image();
+image.src = "3.webp";
+const _4 = new Image();
+image.src = "4.webp";
+const _5 = new Image();
+image.src = "5.webp";
+const _6 = new Image();
+image.src = "6.webp";
+const _7 = new Image();
+image.src = "7.webp";
+const _8 = new Image();
+image.src = "8.webp";
+const kelp = new Image();
+image.src = "kelp.png";
+
+
