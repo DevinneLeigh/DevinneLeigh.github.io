@@ -15,12 +15,13 @@
     <body>
         <header>
             <a class="logo" href="index.html"><img src="image/logo.svg" alt="Lapras Aquarium logo with cartoon plesiosaurus."></a>
-            <button id="menu_toggle"><img src="image/hamburger_bars.svg"></button>
+            <button id="menu_toggle">
+                <!-- <img src="image/hamburger_bars.svg"> -->
+                 <p>&#9776</p>
+            </button>
             <nav id="nav">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
                     <li><a href="explore.html">Explore</a></li>
-                    <li><a href="about.html">About</a></li>
                     <li><a href="events.html">Events</a></li>
                     <li><a href="membership.html">Membership</a></li>
                     <li><a class="ticket_button" href="tickets.html">Buy Tickets</a></li>
@@ -42,18 +43,18 @@
                     <span id="aquarium">AQUARIUM</span>
                 </h1>
             </div>
-            <img id="wave_top" src="image/wave_top.svg">
+            <img class="wave" id="wave_home" src="image/wave_top.svg">
             <div id="mission_statement">
                 <h2>Our Mission</h2>
                 <p>We strive to be a sanctuary for marine life, fostering a deep connection between visitors and the ocean. Our mission is to educate, inspire, and empower individuals to become active stewards of our planet's oceans.</p>
             </div>
-            <img id="wave_bottom" src="image/wave_bottom.svg">
-            <div id="jellyfishImage">
+            <img class="wave" src="image/wave_bottom.svg">
+            <div class="background_image" id="jellyfishImage">
                 <div id="box_wrapper">
-                    <div id="time_box">
+                    <div class="box" id="time_box">
                         <table>
                             <tr>
-                                <th colspan="2">Hours</th>
+                                <th colspan="2"><h3>Hours</h3></th>
                             </tr>
                             <tr>
                                 <td>Monday</td>
@@ -85,7 +86,7 @@
                             </tr>
                         </table>
                     </div>
-                    <div id="contact_box">
+                    <div class="box" id="contact_box">
                         <h3>Address</h3>
                         <p>123 Seahorse way, Ocean View, CA 92538</p>
                         <h3>Call</h3>

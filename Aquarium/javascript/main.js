@@ -6,10 +6,18 @@ const signUpButton = document.getElementById("sign_up_button")
 const openForm = document.getElementById("open_form")
 const background = document.getElementById("kelpImage")
 
+
 //open mobile navigation
-menuToggle.addEventListener("click", function() { 
-    mobileNav.classList.toggle("open");
-})
+// if (menuToggle) {
+    menuToggle.addEventListener("click", function() { 
+        if (mobileNav) {
+            mobileNav.classList.toggle("open");
+
+        }
+        
+    })
+// }
+
 
 //open form
 if (signUpButton) {

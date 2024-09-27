@@ -66,8 +66,10 @@ header {
     width: 100%;
     z-index: 10000;
     #menu_toggle {
+        font-size: 36px;
+        //line-height: 0px;
         float: right;
-        margin: 11px 11px 0 0;
+        margin-right: 12px;
         border: 0;
         background-color: #fbfcfc;
         @include lg {
@@ -201,6 +203,15 @@ main {
     }
 }
 
+.background_image {
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+    width: 100vw;
+    height: 100%;
+}
+
 #welcome_container {
 
     position: relative;
@@ -307,11 +318,15 @@ main {
     }
 }
 
-#wave_top {
-    margin-top: 448px;
+.wave {
     width: 100%;
     z-index: 90;
     position: relative;
+    margin-top: -3px;
+}
+
+#wave_home {
+    margin-top: 448px;
     @include md { //768px
         margin-top: 276px;
     }
@@ -324,13 +339,6 @@ main {
     @include xxl { //1400px
         margin-top: 475px;
     }
-}
-
-#wave_bottom {
-    // margin-top: -2px;
-    width: 100%;
-    z-index: 90;
-    position: relative;
 }
 
 #mission_statement {
@@ -372,11 +380,6 @@ main {
 
 #jellyfishImage {
     background-image: url(../image/jellyfish.webp);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    position: relative;
-    width: 100vw;
     top: -68px;
     margin-bottom: -68px;
     z-index: 70;
@@ -401,28 +404,70 @@ main {
         margin-bottom: -220px;
     }
     #box_wrapper {
-        padding: 300px 0 300px 0;
+        padding: 130px 0 100px 0;
         display: flex;
         flex-flow: column;
-        gap: 90px;
+        gap: 50px;
         z-index: 100;
-        width: 100%;
         justify-content: center;
         align-items: center;
         @include sm { // 576px
 
         }
         @include md { // 768px
-            font-size: 26px;
             flex-flow: row;
-            gap: 110px;
+            gap: 40px;
         }
-        div {
+        @include lg { // 960px
+            gap: 50px;
+        }
+        @include xl { // 1200px
+            gap: 60px;
+        }
+        @include xxl { // 1400px
+            gap: 70px;
+            padding-top: 240px;
+        }
+        .box {
             color: #4a4a4a;
             width: 350px;
             background-color: #fbfcfcd2;
             border-radius: 40px;
             padding: 16px;
+            font-size: 1em;
+            width: 90%;
+            h3 {
+                line-height: 0;
+            }
+            @include xs { // 400px
+                font-size: 1.1em;
+                width: 80%;
+            }
+            @include sm { // 576px
+                font-size: 1.2em;
+                width: 70%;
+            }
+            @include md { // 768px
+                font-size: 1.3em;
+                width: 42%;
+                height: 350px;
+            }
+            @include lg { // 960px
+                font-size: 1.4em;
+                width: 38%;
+                height: 360px;
+            
+            }
+            @include xl { // 1200px
+                font-size: 1.5em;
+                width: 34%;
+                height: 380px;
+            
+            }
+            @include xxl { // 1400px
+                font-size: 1.6em;
+            
+            }
         }
         #time_box {
             table {
@@ -430,15 +475,13 @@ main {
             }
         }
         #contact_box {
-            @include md { // 768px
-                font-size: 29px;
-                padding: 24px;
-            }
-            h3{
-                line-height: 0;
-            }
             h3, p {
                 text-align: center;
+            }
+            h3:first-of-type {
+                @include md { // 768px
+                    margin-top: 70px;
+                }
             }
         }
     }
@@ -490,7 +533,7 @@ footer {
         padding: 80px 0 1px 0;
         margin-top: -10px;
     }
-    h2 {
+    h1 {
         color: #fbfcfc;
         text-align: center;
         font-size: 30px;
@@ -502,11 +545,6 @@ footer {
 
 #kelpImage {
     background-image: url(../image/kelp.png);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    position: relative;
-    width: 100vw;
     height: 780px;
     top: -68px;
     margin-bottom: -68px;
@@ -776,13 +814,8 @@ footer {
 
 #confirm_page_image {
     background-image: url(../image/kelp.png);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    position: relative;
     top: -100px;
     margin-bottom: -100px;
-    width: 100vw;
     height: 800px;
     #confirm_message_wrapper {
         display: block;
@@ -901,18 +934,9 @@ footer {
     }
 
 }
-#wave_top_explore {
-    width: 100%;
-    z-index: 90;
-    position: relative;
-    margin-top: -40px;
-}
-#wave_bottom_explore {
+#wave_map {
     margin-top: 10px;
     margin-bottom: -10px;
-    width: 100%;
-    z-index: 90;
-    position: relative;
     @include xs { // 400px
         margin-top: 15px;
         margin-bottom: -15px;
@@ -927,7 +951,7 @@ footer {
         padding: 80px 0 1px 0;
         margin-top: -10px;
     }
-    h2 {
+    h1 {
         color: #fbfcfc;
         text-align: center;
         font-size: 30px;
@@ -940,3 +964,140 @@ footer {
         height: auto;
     }
 }
+
+// events page 
+
+#schoolImage {
+    background-image: url(../image/school.webp);
+    margin-top: -50px;
+    @include xs { // 400px
+        margin-top: -70px;
+    }
+    @include sm { // 576px
+        margin-top: -90px;
+    }
+    @include md { // 768px
+        margin-top: -110px;
+    }
+    @include lg { // 960px
+        margin-top: -135px;
+    }
+    @include xl { // 1200px
+        margin-top: -155px;
+    }
+    @include xxl { // 1400px
+        margin-top: -220px;
+    }
+    #event_wrapper {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        gap: 20px;
+        z-index: 100;
+        width: 100%;
+        align-items: center;
+        padding: 50px 0 50px 0;
+        @include xs { // 400px
+            padding-top: 80px;
+            gap: 25px;
+        }
+        @include sm { // 576px
+            padding-top: 100px;
+            gap: 30px;
+        }
+        @include md { // 768px
+            padding-top: 120px;
+            flex-flow: row;
+            flex-wrap: wrap;
+            gap: 35px;
+        }
+        @include lg { // 960px
+            padding-top: 140px;
+            gap: 40px;
+        }
+        @include xl { // 1200px
+            padding-top: 160px;
+            gap: 45px;
+        }
+        @include xxl { // 1400px
+            padding-top: 220px;
+            gap: 50px;
+        }
+        .event_box {
+            background: #fbfcfcd2;
+            padding: 20px;
+            width: 90%;
+            height: 325px;
+            border-radius: 40px;
+            font-size: 1em;
+            @include xs { // 400px
+                width: 80%;
+                height: 350px;
+                font-size: 1.1em;
+            }
+            @include sm { // 576px
+                width: 70%;
+                height: 330px;
+                font-size: 1.2em;
+            }
+            @include md { // 768px
+                width: 40%;
+                height: 450px;
+                font-size: 1.3em;
+            }
+            @include lg { // 960px
+                font-size: 1.4em;
+            }
+            @include xl { // 1200px
+                width: 30%;
+                height: 500px;
+                font-size: 1.5em;
+            }
+            @include xxl { // 1400px
+                font-size: 1.6em;
+            }
+        }
+    }
+}
+
+        .box {
+            color: #4a4a4a;
+            width: 350px;
+            background-color: #fbfcfcd2;
+            border-radius: 40px;
+            padding: 16px;
+            font-size: 1em;
+            width: 90%;
+            h3 {
+                line-height: 0;
+            }
+            @include xs { // 400px
+                font-size: 1.1em;
+                width: 80%;
+            }
+            @include sm { // 576px
+                font-size: 1.2em;
+                width: 70%;
+            }
+            @include md { // 768px
+                font-size: 1.3em;
+                width: 42%;
+                height: 350px;
+            }
+            @include lg { // 960px
+                font-size: 1.4em;
+                width: 38%;
+                height: 360px;
+            
+            }
+            @include xl { // 1200px
+                font-size: 1.5em;
+                width: 34%;
+                height: 380px;
+            
+            }
+            @include xxl { // 1400px
+                font-size: 1.6em;
+            
+            }
+        }
