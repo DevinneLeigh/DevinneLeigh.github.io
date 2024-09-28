@@ -42,11 +42,14 @@ header {
   z-index: 10000;
 }
 header #menu_toggle {
-  font-size: 36px;
+  font-size: 44px;
   float: right;
   margin-right: 12px;
   border: 0;
   background-color: #fbfcfc;
+}
+header #menu_toggle p {
+  margin: 0;
 }
 @media (min-width: 960px) {
   header #menu_toggle {
@@ -1096,13 +1099,13 @@ footer .footer_bottom .social_media img {
     margin-top: -10px;
   }
 }
-#map_box h1 {
+#map_box h2 {
   color: #fbfcfc;
   text-align: center;
   font-size: 30px;
 }
 @media (min-width: 1400px) {
-  #map_box h1 {
+  #map_box h2 {
     font-size: 50px;
   }
 }

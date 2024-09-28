@@ -66,12 +66,15 @@ header {
     width: 100%;
     z-index: 10000;
     #menu_toggle {
-        font-size: 36px;
+        font-size: 44px;
         //line-height: 0px;
         float: right;
         margin-right: 12px;
         border: 0;
         background-color: #fbfcfc;
+        p {
+            margin: 0;
+        }
         @include lg {
             display: none;
         }
@@ -951,7 +954,7 @@ footer {
         padding: 80px 0 1px 0;
         margin-top: -10px;
     }
-    h1 {
+    h2 {
         color: #fbfcfc;
         text-align: center;
         font-size: 30px;
