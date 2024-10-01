@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <button id="menu_toggle">
+            <p>&#9776</p>
+        </button>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="index_image_wrapper">
+            <img class="index" src="images/index.png">
+            <div id="title_wrapper">
+                <h1>Contact</h1>
+            </div>
+        </div>
+        <div id="form_wrapper">
+            <form id ="open_form" action="confirm.html" method="post">
+                <div>
+                    <label for="name">Name:</label>
+                    <br>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div id="name_error"></div>
+                <br>
+                <div>
+                    <label for="email_address">Email:</label>
+                    <br>
+                    <input type="text" name="email_address" id="email_address">
+                </div>
+                <div id="email_error"></div>
+                <br>
+                <div>
+                    <label for="phone">Phone:</label>
+                    <br>
+                    <input type="text" name="phone" id="phone">
+                </div>
+                <div id="phone_error"></div>
+                <br>
+                <div>
+                    <label>Contact by:</label>
+                    <br>
+                    <p>
+                    <input type="radio" name="contact" id="email"
+                        value="email" checked>Email
+                    <input type="radio" name="contact" id="text"
+                        value="text">Text
+                    </p>
+                </div>
+                <br>
+                <div>
+                    <label>Would you like to receive event notifications?</label>
+                    <br>
+                    <input type="checkbox" name="news" id="news"
+                        value="yes" checked>
+                </div>
+                <br>
+                <div>
+                    <label>Would you like to receive our news letter?</label>
+                    <br>
+                    <input type="checkbox" name="offers" id="offers"
+                        value="yes" checked>
+                </div>
+                <br>
+                <div id="button_wrapper">
+                    <input type="button" id="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+    </main>
+    <footer>
+        <div id="social_media">
+            <a href="https://www.facebook.com" target="_blank"><img class="facebook" src="images/facebook.svg" alt="Facebook icon"></a>
+            <a href="https://www.twitter.com" target="_blank"><img class="twitter" src="images/twitter.svg" alt="Twitter icon"></a>
+            <a href="https://www.instagram.com" target="_blank"><img class="instagram" src="images/instagram.svg" alt="Instagram icon"></a>
+            <a href="https://www.tiktok.com" target="_blank"><img class="tiktok" src="images/tiktok.svg" alt="Tiktok icon"></a>
+            <a href="https://www.youtube.com" target="_blank"><img class="youtube" src="images/youtube.svg" alt="Youtube icon"></a>
+        </div>
+    </footer>
+    <script src="javascript/main.js"></script>
+</body>
+</html>
