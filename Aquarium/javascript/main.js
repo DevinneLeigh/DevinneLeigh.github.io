@@ -52,10 +52,10 @@ var processEntries = function () {
         if (email.value === "") {
             emailError.innerText = "Email required";
             isValid = false;
-        }
-        else if (!email.value.includes("@") || !email.value.includes(".")) {
-            emailError.innerText = "Invalid Email";
-            isValid = false;
+            // } // TODO: UNCOMMENT LATER
+            // else if (!email.value.includes("@") || !email.value.includes(".")) {
+            //     emailError.innerText ="Invalid Email";
+            //     isValid = false;
         }
         else {
             emailError.innerText = "";
@@ -74,7 +74,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // image slides
 var slideIndex = 1;
-showSlides(slideIndex);
+if (document.getElementsByClassName("mySlides").length) {
+    showSlides(slideIndex);
+}
 function plusSlides(n) {
     showSlides(slideIndex += n);
 }
@@ -97,3 +99,33 @@ function showSlides(n) {
     var slide = slides[slideIndex - 1];
     slide.style.display = "block";
 }
+// ticket price calc
+var adult = document.getElementById("adult_number");
+var child = document.getElementById("child_number");
+var total = document.getElementById("total");
+var childPrice = 0;
+var adultPrice = 0;
+var ticketTotal = childPrice + adultPrice;
+if (total) {
+    total.innerText = "Total: $0";
+}
+adult === null || adult === void 0 ? void 0 : adult.addEventListener('change', function (event) {
+    var selectElement = event.target;
+    var selectedIndex = selectElement.selectedIndex;
+    var numTickets = parseInt(selectElement.options[selectedIndex].value);
+    adultPrice = numTickets * 20;
+    ticketTotal = childPrice + adultPrice;
+    if (total) {
+        total.innerText = "Total: $" + ticketTotal;
+    }
+});
+child === null || child === void 0 ? void 0 : child.addEventListener('change', function (event) {
+    var selectElement = event.target;
+    var selectedIndex = selectElement.selectedIndex;
+    var numTickets = parseInt(selectElement.options[selectedIndex].value);
+    childPrice = numTickets * 15;
+    ticketTotal = childPrice + adultPrice;
+    if (total) {
+        total.innerText = "Total: $" + ticketTotal;
+    }
+});

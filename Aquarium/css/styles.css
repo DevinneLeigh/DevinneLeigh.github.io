@@ -1292,4 +1292,28 @@ footer .footer_bottom .social_media img {
   .box {
     font-size: 1.6em;
   }
+}
+
+#ticket_page_main {
+  background: #00b2b2;
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+}
+#ticket_page_main #ticket_form_wrapper {
+  background: rgba(251, 252, 252, 0.8235294118);
+  border-radius: 40px;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+#ticket_page_main #ticket_form_wrapper #price_wrapper {
+  display: flex;
+  flex-flow: row;
+  gap: 60px;
+}
+#ticket_page_main #ticket_form_wrapper #total {
+  margin: 20px 0;
+  font-size: 20px;
+  font-weight: bold;
 }/*# sourceMappingURL=styles.css.map */

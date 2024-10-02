@@ -28,7 +28,51 @@
                 </ul>
             </nav>
         </header>
-        <main>
+        <main id="ticket_page_main">
+            <div id="ticket_form_wrapper">
+                <form action="confirm_tickets.html" method="post">
+                    <div id="price_wrapper">
+                        <div id="adult">
+                            <h3>Adult Price: $20</h3>
+                            <label for="adult_number">Adult 13+</label>
+                            <br>
+                            <select name="adult_number" id="adult_number">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                        <br>
+                        <div id="child">
+                            <h3>Child Price: $15</h3>
+                            <label for="child_number">Child 4-12</label>
+                            <br>
+                            <select name="child_number" id="child_number">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="total"></div>
+                </form>
+            </div>
         </main>
         <footer>
             <div class="footer_logo">

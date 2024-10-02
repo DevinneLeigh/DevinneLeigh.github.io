@@ -6,6 +6,7 @@ const signUpButton = document.getElementById("sign_up_button")
 const openForm = document.getElementById("open_form")
 const background = document.getElementById("kelpImage")
 
+
 //open mobile navigation
 menuToggle.addEventListener("click", function() { 
     if (mobileNav) {
@@ -58,10 +59,10 @@ const processEntries = () => {
         if (email.value === "") {
             emailError.innerText = "Email required";
             isValid = false;
-        }
-        else if (!email.value.includes("@") || !email.value.includes(".")) {
-            emailError.innerText ="Invalid Email";
-            isValid = false;
+        // } // TODO: UNCOMMENT LATER
+        // else if (!email.value.includes("@") || !email.value.includes(".")) {
+        //     emailError.innerText ="Invalid Email";
+        //     isValid = false;
         } else {
             emailError.innerText = "";
         }
@@ -79,7 +80,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // image slides
 let slideIndex = 1;
-showSlides(slideIndex);
+if (document.getElementsByClassName("mySlides").length) {
+    showSlides(slideIndex);
+}
+
 
 function plusSlides(n: number) {
   showSlides(slideIndex += n);
@@ -102,3 +106,43 @@ function showSlides(n: number) {
   let slide = slides[slideIndex-1] as HTMLElement;
   slide.style.display = "block";  
 }
+
+// ticket price calc
+const adult = document.getElementById("adult_number")
+const child = document.getElementById("child_number")
+const total = document.getElementById("total")
+
+let childPrice = 0;
+let adultPrice = 0;
+let ticketTotal = childPrice + adultPrice;
+
+if (total) {
+    total.innerText = "Total: $0";
+}
+
+adult?.addEventListener('change', function(event) {
+    let selectElement = event.target as HTMLSelectElement;
+    let selectedIndex = selectElement.selectedIndex;
+    let numTickets = parseInt(selectElement.options[selectedIndex].value);
+
+    adultPrice = numTickets * 20;
+    ticketTotal = childPrice + adultPrice;
+    if (total) {
+        total.innerText = "Total: $" + ticketTotal;
+    }
+});
+
+child?.addEventListener('change', function(event) {
+    let selectElement = event.target as HTMLSelectElement;
+    let selectedIndex = selectElement.selectedIndex;
+    let numTickets = parseInt(selectElement.options[selectedIndex].value);
+
+    childPrice = numTickets * 15;
+    ticketTotal = childPrice + adultPrice;
+    if (total) {
+        total.innerText = "Total: $" + ticketTotal;
+    }
+});
+
+
+

@@ -1063,44 +1063,69 @@ footer {
     }
 }
 
-        .box {
-            color: #4a4a4a;
-            width: 350px;
-            background-color: #fbfcfcd2;
-            border-radius: 40px;
-            padding: 16px;
-            font-size: 1em;
-            width: 90%;
-            h3 {
-                line-height: 0;
-            }
-            @include xs { // 400px
-                font-size: 1.1em;
-                width: 80%;
-            }
-            @include sm { // 576px
-                font-size: 1.2em;
-                width: 70%;
-            }
-            @include md { // 768px
-                font-size: 1.3em;
-                width: 42%;
-                height: 350px;
-            }
-            @include lg { // 960px
-                font-size: 1.4em;
-                width: 38%;
-                height: 360px;
+.box {
+    color: #4a4a4a;
+    width: 350px;
+    background-color: #fbfcfcd2;
+    border-radius: 40px;
+    padding: 16px;
+    font-size: 1em;
+    width: 90%;
+    h3 {
+        line-height: 0;
+    }
+    @include xs { // 400px
+        font-size: 1.1em;
+        width: 80%;
+    }
+    @include sm { // 576px
+        font-size: 1.2em;
+        width: 70%;
+    }
+    @include md { // 768px
+        font-size: 1.3em;
+        width: 42%;
+        height: 350px;
+    }
+    @include lg { // 960px
+        font-size: 1.4em;
+        width: 38%;
+        height: 360px;
             
-            }
-            @include xl { // 1200px
-                font-size: 1.5em;
-                width: 34%;
-                height: 380px;
+    }
+    @include xl { // 1200px
+        font-size: 1.5em;
+        width: 34%;
+        height: 380px;
             
-            }
-            @include xxl { // 1400px
-                font-size: 1.6em;
+    }
+    @include xxl { // 1400px
+        font-size: 1.6em;
             
-            }
+    }
+}
+
+#ticket_page_main {
+    background: #00b2b2;
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    #ticket_form_wrapper {
+        background: #fbfcfcd2;
+        border-radius: 40px;
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        #price_wrapper {
+            display: flex;
+            flex-flow: row;
+            gap: 60px;
+            
         }
+        #total {
+            margin: 20px 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+}
