@@ -22,62 +22,57 @@
     <main>
         <div id="index_image_wrapper">
             <img class="index" src="images/index.png">
-            <div id="title_wrapper">
-                <h1>Contact</h1>
+            <div class="title_wrapper">
+                <h1>Contact Us</h1>
             </div>
         </div>
         <div id="form_wrapper">
-            <form id ="open_form" action="confirm.html" method="post">
-                <div>
-                    <label for="name">Name:</label>
+            <div id="form">
+                <form action="join.php" method="post" id ="open_form" action="confirm.html" method="post">
+                    <div>
+                        <label for="name">Name:</label>
+                        <br>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div id="name_error"></div>
                     <br>
-                    <input type="text" name="name" id="name">
-                </div>
-                <div id="name_error"></div>
-                <br>
-                <div>
-                    <label for="email_address">Email:</label>
+                    <div>
+                        <label for="email_address">Email:</label>
+                        <br>
+                        <input type="text" name="email_address" id="email_address">
+                    </div>
+                    <div id="email_error"></div>
                     <br>
-                    <input type="text" name="email_address" id="email_address">
-                </div>
-                <div id="email_error"></div>
-                <br>
-                <div>
-                    <label for="phone">Phone:</label>
+                    <div>
+                        <label for="phone">Phone:</label>
+                        <br>
+                        <input type="text" name="phone" id="phone" placeholder="999-999-9999" pattern="[0-9]{10}" required>
+                    </div>
+                    <div id="phone_error"></div>
                     <br>
-                    <input type="text" name="phone" id="phone">
-                </div>
-                <div id="phone_error"></div>
-                <br>
-                <div>
-                    <label>Contact by:</label>
+                    <div>
+                        <label>Contact by:</label>
+                        <br>
+                        <p>
+                        <input type="radio" name="contact" id="email"
+                            value="email" checked>Email
+                        <input type="radio" name="contact" id="text"
+                            value="text">Text
+                        </p>
+                    </div>
                     <br>
-                    <p>
-                    <input type="radio" name="contact" id="email"
-                        value="email" checked>Email
-                    <input type="radio" name="contact" id="text"
-                        value="text">Text
-                    </p>
-                </div>
-                <br>
-                <div>
-                    <label>Would you like to receive event notifications?</label>
+                    <div>
+                        <label>Would you like to receive our news letter?</label>
+                        <br>
+                        <input type="checkbox" name="offers" id="offers"
+                            value="yes" checked>
+                    </div>
                     <br>
-                    <input type="checkbox" name="news" id="news"
-                        value="yes" checked>
-                </div>
-                <br>
-                <div>
-                    <label>Would you like to receive our news letter?</label>
-                    <br>
-                    <input type="checkbox" name="offers" id="offers"
-                        value="yes" checked>
-                </div>
-                <br>
-                <div id="button_wrapper">
-                    <input type="button" id="submit" value="Submit">
-                </div>
-            </form>
+                    <div id="button_wrapper">
+                        <input type="button" id="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>

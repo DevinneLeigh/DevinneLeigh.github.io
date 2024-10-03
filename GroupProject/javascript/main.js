@@ -26,6 +26,7 @@ const processEntries = () => {
     const name = document.querySelector("#name")
     const email = document.querySelector("#email_address")
     const phone = document.querySelector("#phone")
+    let result = phone.value.match(/^\d{10}/);
 
     let isValid = true;
     if (name.value === "") {
@@ -36,6 +37,10 @@ const processEntries = () => {
     }
     if (phone.value === "") {
         phoneError.innerText = "Phone number required"; 
+        isValid = false;
+    } 
+    else if (!result) {
+        phoneError.innerText = "The number is not in a correct format";
         isValid = false;
     } else {
         phoneError.innerText = "";
@@ -60,4 +65,3 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector("#submit").addEventListener("click", processEntries);
     }
 });
-
