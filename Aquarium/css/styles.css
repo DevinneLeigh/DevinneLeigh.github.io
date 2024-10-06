@@ -104,6 +104,7 @@ header nav {
     border-radius: 40px;
     display: flex;
     margin: 10px 10px 0 0;
+    text-shadow: 1px 1px 2px #283644;
   }
   header nav ul .ticket_button:hover {
     background-color: #008888;
@@ -927,9 +928,15 @@ footer .footer_bottom .social_media img {
   }
 }
 
-#email_error, #name_error, #phone_error {
+#email_error, #name_error, #phone_error, #card_error, #month_error, #year_error, #ccv_error, #date_error {
   color: #dc005f;
-  font-weight: bold;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+#date_error {
+  margin-top: -22px;
+  margin-right: 500px;
 }
 
 #confirm_page_image {
@@ -1295,7 +1302,7 @@ footer .footer_bottom .social_media img {
 }
 
 #ticket_page_main {
-  background: #00b2b2;
+  background: #bff0f0;
   padding: 80px 0;
   display: flex;
   justify-content: center;
@@ -1303,17 +1310,201 @@ footer .footer_bottom .social_media img {
 #ticket_page_main #ticket_form_wrapper {
   background: rgba(251, 252, 252, 0.8235294118);
   border-radius: 40px;
-  width: 60%;
-  display: flex;
-  justify-content: center;
+  width: 95%;
+  padding: 26px;
 }
-#ticket_page_main #ticket_form_wrapper #price_wrapper {
+#ticket_page_main #ticket_form_wrapper form #form {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  font-size: 1.1em;
+}
+#ticket_page_main #ticket_form_wrapper form #form input {
+  font-size: 1em;
+  background: #fbfcfc;
+  border-color: #bff0f0;
+  border-style: solid;
+  border-radius: 10px;
+}
+#ticket_page_main #ticket_form_wrapper form #form #payment_info_wrapper {
+  display: flex;
+  flex-flow: column;
+}
+#ticket_page_main #ticket_form_wrapper form #form #payment_info_wrapper #payment_info #card_details_wrapper {
   display: flex;
   flex-flow: row;
-  gap: 60px;
+  justify-content: left;
+  text-align: center;
+  gap: 2%;
 }
-#ticket_page_main #ticket_form_wrapper #total {
+#ticket_page_main #ticket_form_wrapper form #form #payment_info_wrapper #payment_info #card_details_wrapper label {
+  text-align: center;
+}
+#ticket_page_main #ticket_form_wrapper form #form #payment_info_wrapper #payment_info #card_details_wrapper select {
+  font-size: 1em;
+  background: #fbfcfc;
+  border-color: #bff0f0;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 2px;
+}
+#ticket_page_main #ticket_form_wrapper form #form #price_date_wrapper {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  gap: 30px;
+}
+#ticket_page_main #ticket_form_wrapper form #form #price_date_wrapper h2 {
+  font-size: 1.5em;
+  margin-bottom: -30px;
+  margin-top: 30px;
+}
+#ticket_page_main #ticket_form_wrapper form #form #price_date_wrapper #price_wrapper {
+  display: flex;
+  flex-flow: row;
+  gap: 15px;
+  justify-content: center;
+}
+#ticket_page_main #ticket_form_wrapper form #ticket_button {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+#ticket_page_main #ticket_form_wrapper form #ticket_button #confirm {
+  background: #00b2b2;
+  border: none;
+  padding: 10px;
+  border-radius: 26px;
+  font-size: 1.1em;
+  color: #fbfcfc;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px #283644;
+}
+#ticket_page_main #ticket_form_wrapper form #ticket_button #confirm:hover {
+  background-color: #008888;
+}
+#ticket_page_main #ticket_form_wrapper form #total {
   margin: 20px 0;
-  font-size: 20px;
+  font-size: 1.1em;
   font-weight: bold;
+  text-align: right;
+}
+
+@media (min-width: 400px) {
+  #ticket_page_main #ticket_form_wrapper {
+    width: 90%;
+  }
+  #ticket_page_main #ticket_form_wrapper form #form {
+    font-size: 1.2em;
+  }
+  #ticket_page_main #ticket_form_wrapper form #ticket_button #confirm {
+    font-size: 1.2em;
+  }
+  #ticket_page_main #ticket_form_wrapper form #total {
+    font-size: 1.2em;
+  }
+}
+@media (min-width: 576px) {
+  #ticket_page_main #ticket_form_wrapper {
+    width: 80%;
+    padding: 60px;
+  }
+  #ticket_page_main #ticket_form_wrapper form #form {
+    font-size: 1.3em;
+  }
+  #ticket_page_main #ticket_form_wrapper form #ticket_button #confirm {
+    font-size: 1.3em;
+  }
+  #ticket_page_main #ticket_form_wrapper form #total {
+    font-size: 1.3em;
+  }
+}
+@media (min-width: 768px) {
+  #ticket_page_main #ticket_form_wrapper {
+    padding: 80px;
+    width: 75%;
+  }
+  #ticket_page_main #ticket_form_wrapper form #form {
+    font-size: 1.4em;
+    gap: 2%;
+  }
+  #ticket_page_main #ticket_form_wrapper form #form #payment_info_wrapper #payment_info #card_details_wrapper {
+    gap: 3%;
+  }
+  #ticket_page_main #ticket_form_wrapper form #form #price_date_wrapper #price_wrapper {
+    gap: 30px;
+  }
+  #ticket_page_main #ticket_form_wrapper form #ticket_button #confirm {
+    font-size: 1.4em;
+  }
+  #ticket_page_main #ticket_form_wrapper form #total {
+    font-size: 1.4em;
+  }
+}
+@media (min-width: 960px) {
+  #ticket_page_main #ticket_form_wrapper {
+    padding: 40px;
+    width: 90%;
+  }
+  #ticket_page_main #ticket_form_wrapper form #form {
+    flex-flow: row;
+    font-size: 1.5em;
+    gap: 10%;
+  }
+  #ticket_page_main #ticket_form_wrapper form #form #payment_info_wrapper #payment_info #card_details_wrapper {
+    gap: 3%;
+  }
+  #ticket_page_main #ticket_form_wrapper form #form #price_date_wrapper #price_wrapper {
+    gap: 20px;
+  }
+  #ticket_page_main #ticket_form_wrapper form #form #price_date_wrapper p {
+    text-align: left;
+  }
+  #ticket_page_main #ticket_form_wrapper form #ticket_button #confirm {
+    font-size: 1.5em;
+  }
+  #ticket_page_main #ticket_form_wrapper form #total {
+    font-size: 1.5em;
+  }
+}
+@media (min-width: 1200px) {
+  #ticket_page_main #ticket_form_wrapper {
+    padding: 60px;
+    width: 80%;
+  }
+  #ticket_page_main #ticket_form_wrapper form #form {
+    font-size: 1.6em;
+  }
+  #ticket_page_main #ticket_form_wrapper form #form #payment_info_wrapper #payment_info #card_details_wrapper {
+    gap: 4%;
+  }
+  #ticket_page_main #ticket_form_wrapper form #form #price_date_wrapper #price_wrapper {
+    gap: 15px;
+  }
+  #ticket_page_main #ticket_form_wrapper form #ticket_button #confirm {
+    font-size: 1.6em;
+  }
+  #ticket_page_main #ticket_form_wrapper form #total {
+    font-size: 1.6em;
+  }
+}
+@media (min-width: 1400px) {
+  #ticket_page_main #ticket_form_wrapper {
+    width: 70%;
+  }
+  #ticket_page_main #ticket_form_wrapper form #form {
+    font-size: 1.7em;
+  }
+  #ticket_page_main #ticket_form_wrapper form #form #payment_info_wrapper #payment_info #card_details_wrapper {
+    gap: 5%;
+  }
+  #ticket_page_main #ticket_form_wrapper form #form #price_date_wrapper #price_wrapper {
+    gap: 20px;
+  }
+  #ticket_page_main #ticket_form_wrapper form #ticket_button #confirm {
+    font-size: 1.7em;
+  }
+  #ticket_page_main #ticket_form_wrapper form #total {
+    font-size: 1.7em;
+  }
 }/*# sourceMappingURL=styles.css.map */

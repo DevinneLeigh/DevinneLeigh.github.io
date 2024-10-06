@@ -50,30 +50,30 @@
                         </section>
                     </div>
                     <div id="form_wrapper">
-                        <form id ="open_form" action="confirm.html" method="post">
+                        <form id ="open_form" action="memberConfirm.html" method="post">
                             <div>
-                                <label for="name">Name:</label>
+                                <label for="name">Name</label>
                                 <br>
                                 <input type="text" name="name" id="name">
                             </div>
                             <div id="name_error"></div>
                             <br>
                             <div>
-                                <label for="email_address">Email:</label>
+                                <label for="email_address">Email</label>
                                 <br>
                                 <input type="text" name="email_address" id="email_address">
                             </div>
                             <div id="email_error"></div>
                             <br>
                             <div>
-                                <label for="phone">Phone:</label>
+                                <label for="phone">Phone</label>
                                 <br>
-                                <input type="text" name="phone" id="phone">
+                                <input type="text" name="phone" id="phone" size="12" placeholder="(000)000-0000" required>
                             </div>
                             <div id="phone_error"></div>
                             <br>
                             <div>
-                                <label>Contact by:</label>
+                                <label>Contact by</label>
                                 <br>
                                 <p>
                                 <input type="radio" name="contact" id="email"
@@ -118,6 +118,14 @@
                 </div>
             </div>
         </footer>
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js"></script>
+        <script>
+            $(function() {
+                $("#phone").inputmask("(999)999-9999");
+            });
+        </script>
         <script src="javascript/main.js"></script>
     </body>
 </html>
