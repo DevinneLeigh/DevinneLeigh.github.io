@@ -241,3 +241,40 @@ child === null || child === void 0 ? void 0 : child.addEventListener('change', f
         total.innerText = "Total: $" + ticketTotal;
     }
 });
+// open event info
+var eventBox1 = document.getElementById("event_box1");
+eventBox1.addEventListener("click", function () {
+    if (eventBox1) {
+        eventBox1.classList.toggle("open");
+    }
+});
+var eventBox2 = document.getElementById("event_box2");
+eventBox2.addEventListener("click", function () {
+    if (eventBox2) {
+        eventBox2.classList.toggle("open");
+    }
+});
+var eventBox3 = document.getElementById("event_box3");
+eventBox3.addEventListener("click", function () {
+    if (eventBox3) {
+        eventBox3.classList.toggle("open");
+    }
+});
+var eventBox4 = document.getElementById("event_box4");
+eventBox4.addEventListener("click", function () {
+    if (eventBox4) {
+        eventBox4.classList.toggle("open");
+    }
+});
+var eventBox5 = document.getElementById("event_box5");
+eventBox5.addEventListener("click", function () {
+    if (eventBox5) {
+        eventBox5.classList.toggle("open");
+    }
+});
+var eventBox6 = document.getElementById("event_box6");
+eventBox6.addEventListener("click", function () {
+    if (eventBox6) {
+        eventBox6.classList.toggle("open");
+    }
+});
