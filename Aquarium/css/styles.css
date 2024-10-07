@@ -593,8 +593,67 @@ footer .footer_bottom .social_media img {
 
 #kelpImage {
   background-image: url(../image/kelp.png);
-  padding-bottom: 50px;
+  padding-bottom: 200px;
+  height: 100%;
   z-index: 70;
+}
+#kelpImage #confirm_message_wrapper {
+  display: block;
+  margin: auto;
+  padding: 50px;
+  z-index: 100;
+  position: relative;
+  background-color: rgba(251, 252, 252, 0.8235294118);
+  width: 80%;
+  height: 100%;
+  border-radius: 60px;
+  font-size: 1.15em;
+  text-align: center;
+}
+@media (min-width: 400px) {
+  #kelpImage #confirm_message_wrapper {
+    font-size: 1.25em;
+    width: 75%;
+    top: 160px;
+  }
+}
+@media (min-width: 576px) {
+  #kelpImage #confirm_message_wrapper {
+    font-size: 1.5em;
+    width: 70%;
+  }
+}
+@media (min-width: 768px) {
+  #kelpImage #confirm_message_wrapper {
+    font-size: 1.6em;
+    width: 65%;
+  }
+}
+@media (min-width: 960px) {
+  #kelpImage #confirm_message_wrapper {
+    font-size: 1.7em;
+    width: 60%;
+  }
+}
+@media (min-width: 1200px) {
+  #kelpImage #confirm_message_wrapper {
+    font-size: 1.8em;
+    width: 55%;
+  }
+}
+@media (min-width: 1400px) {
+  #kelpImage #confirm_message_wrapper {
+    font-size: 1.9em;
+    width: 50%;
+  }
+}
+#kelpImage #confirm_message_wrapper #exit_wrapper {
+  float: right;
+  margin-top: -50px;
+}
+#kelpImage #confirm_message_wrapper #exit_wrapper a {
+  text-decoration: none;
+  font-size: 50px;
 }
 
 #member_wrapper #member_box {
@@ -853,71 +912,6 @@ footer .footer_bottom .social_media img {
 #date_error {
   margin-top: -22px;
   margin-right: 500px;
-}
-
-#confirm_page {
-  top: -100px;
-  margin-bottom: -100px;
-  height: 800px;
-}
-#confirm_page #confirm_message_wrapper {
-  display: block;
-  margin: auto;
-  top: 180px;
-  padding: 50px;
-  z-index: 100;
-  position: relative;
-  background-color: rgba(251, 252, 252, 0.8235294118);
-  width: 80%;
-  height: auto;
-  border-radius: 60px;
-  font-size: 1.15em;
-  text-align: center;
-}
-@media (min-width: 400px) {
-  #confirm_page #confirm_message_wrapper {
-    font-size: 1.25em;
-    width: 75%;
-    top: 160px;
-  }
-}
-@media (min-width: 576px) {
-  #confirm_page #confirm_message_wrapper {
-    font-size: 1.5em;
-    width: 70%;
-  }
-}
-@media (min-width: 768px) {
-  #confirm_page #confirm_message_wrapper {
-    font-size: 1.6em;
-    width: 65%;
-  }
-}
-@media (min-width: 960px) {
-  #confirm_page #confirm_message_wrapper {
-    font-size: 1.7em;
-    width: 60%;
-  }
-}
-@media (min-width: 1200px) {
-  #confirm_page #confirm_message_wrapper {
-    font-size: 1.8em;
-    width: 55%;
-  }
-}
-@media (min-width: 1400px) {
-  #confirm_page #confirm_message_wrapper {
-    font-size: 1.9em;
-    width: 50%;
-  }
-}
-#confirm_page #confirm_message_wrapper #exit_wrapper {
-  float: right;
-  margin-top: -50px;
-}
-#confirm_page #confirm_message_wrapper #exit_wrapper a {
-  text-decoration: none;
-  font-size: 50px;
 }
 
 #image_slider {

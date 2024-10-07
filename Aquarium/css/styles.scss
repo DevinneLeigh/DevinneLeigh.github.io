@@ -547,11 +547,59 @@ footer {
 
 #kelpImage {
     background-image: url(../image/kelp.png);
-    padding-bottom: 50px;
+    padding-bottom: 200px;
+    height: 100%;
     // height: 780px;
     // top: -68px;
     // margin-bottom: -68px;
     z-index: 70;
+    #confirm_message_wrapper {
+        display: block;
+        margin: auto;
+        //top: 180px;
+        padding: 50px;
+        z-index: 100;
+        position: relative;
+        background-color: #fbfcfcd2;
+        width: 80%;
+        height: 100%;
+        border-radius: 60px;
+        font-size: 1.15em;
+        text-align: center;
+        @include xs { // 400px
+            font-size: 1.25em;
+            width: 75%;
+            top: 160px;
+        }
+        @include sm { // 576px
+            font-size: 1.5em;
+            width: 70%;
+        }
+        @include md { // 768px
+            font-size: 1.6em;
+            width: 65%;
+        }
+        @include lg { // 960px
+            font-size: 1.7em;
+            width: 60%;
+        }
+        @include xl { // 1200px
+            font-size: 1.8em;
+            width: 55%;
+        }
+        @include xxl { // 1400px
+            font-size: 1.9em;
+            width: 50%;
+        }
+        #exit_wrapper {
+            float: right;
+            margin-top: -50px;
+            a {
+                text-decoration: none;
+                font-size: 50px;
+            }
+        }
+    }
 }
 #member_wrapper {
     #member_box {
@@ -763,58 +811,58 @@ footer {
     margin-right: 500px;
 }
 
-#confirm_page {
-    top: -100px;
-    margin-bottom: -100px;
-    height: 800px;
-    #confirm_message_wrapper {
-        display: block;
-        margin: auto;
-        top: 180px;
-        padding: 50px;
-        z-index: 100;
-        position: relative;
-        background-color: #fbfcfcd2;
-        width: 80%;
-        height: auto;
-        border-radius: 60px;
-        font-size: 1.15em;
-        text-align: center;
-        @include xs { // 400px
-            font-size: 1.25em;
-            width: 75%;
-            top: 160px;
-        }
-        @include sm { // 576px
-            font-size: 1.5em;
-            width: 70%;
-        }
-        @include md { // 768px
-            font-size: 1.6em;
-            width: 65%;
-        }
-        @include lg { // 960px
-            font-size: 1.7em;
-            width: 60%;
-        }
-        @include xl { // 1200px
-            font-size: 1.8em;
-            width: 55%;
-        }
-        @include xxl { // 1400px
-            font-size: 1.9em;
-            width: 50%;
-        }
-        #exit_wrapper {
-            float: right;
-            margin-top: -50px;
-            a {
-                text-decoration: none;
-                font-size: 50px;
-            }
-        }
-    }
-}
+// #kelp_image {
+//     top: -100px;
+//     margin-bottom: -100px;
+//     height: 800px;
+//     #confirm_message_wrapper {
+//         display: block;
+//         margin: auto;
+//         top: 180px;
+//         padding: 50px;
+//         z-index: 100;
+//         position: relative;
+//         background-color: #fbfcfcd2;
+//         width: 80%;
+//         height: auto;
+//         border-radius: 60px;
+//         font-size: 1.15em;
+//         text-align: center;
+//         @include xs { // 400px
+//             font-size: 1.25em;
+//             width: 75%;
+//             top: 160px;
+//         }
+//         @include sm { // 576px
+//             font-size: 1.5em;
+//             width: 70%;
+//         }
+//         @include md { // 768px
+//             font-size: 1.6em;
+//             width: 65%;
+//         }
+//         @include lg { // 960px
+//             font-size: 1.7em;
+//             width: 60%;
+//         }
+//         @include xl { // 1200px
+//             font-size: 1.8em;
+//             width: 55%;
+//         }
+//         @include xxl { // 1400px
+//             font-size: 1.9em;
+//             width: 50%;
+//         }
+//         #exit_wrapper {
+//             float: right;
+//             margin-top: -50px;
+//             a {
+//                 text-decoration: none;
+//                 font-size: 50px;
+//             }
+//         }
+//     }
+// }
 
 #image_slider {
     position: relative;
