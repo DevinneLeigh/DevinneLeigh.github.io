@@ -914,6 +914,66 @@ footer .footer_bottom .social_media img {
   margin-right: 500px;
 }
 
+#confirm_ticket_wrapper {
+  display: block;
+  margin: auto;
+  top: 180px;
+  padding: 50px;
+  z-index: 100;
+  position: relative;
+  background-color: rgba(251, 252, 252, 0.8235294118);
+  width: 80%;
+  height: auto;
+  border-radius: 60px;
+  font-size: 1.15em;
+  text-align: center;
+}
+@media (min-width: 400px) {
+  #confirm_ticket_wrapper {
+    font-size: 1.25em;
+    width: 75%;
+    top: 160px;
+  }
+}
+@media (min-width: 576px) {
+  #confirm_ticket_wrapper {
+    font-size: 1.5em;
+    width: 70%;
+  }
+}
+@media (min-width: 768px) {
+  #confirm_ticket_wrapper {
+    font-size: 1.6em;
+    width: 65%;
+  }
+}
+@media (min-width: 960px) {
+  #confirm_ticket_wrapper {
+    font-size: 1.7em;
+    width: 60%;
+  }
+}
+@media (min-width: 1200px) {
+  #confirm_ticket_wrapper {
+    font-size: 1.8em;
+    width: 55%;
+  }
+}
+@media (min-width: 1400px) {
+  #confirm_ticket_wrapper {
+    font-size: 1.9em;
+    width: 50%;
+  }
+}
+#confirm_ticket_wrapper #exit_wrapper {
+  float: right;
+  margin-top: -50px;
+}
+#confirm_ticket_wrapper #exit_wrapper a {
+  text-decoration: none;
+  font-size: 50px;
+}
+
 #image_slider {
   position: relative;
   margin: auto;
@@ -1036,6 +1096,7 @@ footer .footer_bottom .social_media img {
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+  padding-bottom: 200px;
 }
 .sand_background #event_wrapper {
   display: flex;
