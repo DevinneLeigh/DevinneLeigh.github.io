@@ -53,7 +53,7 @@
                             <div>
                                 <label for="name">Name</label>
                                 <br>
-                                <input type="text" name="name" id="name">
+                                <input type="text" name="name" id="name" autocomplete="name">
                             </div>
                             <div id="name_error"></div>
                             <br>
@@ -67,30 +67,29 @@
                             <div>
                                 <label for="phone">Phone</label>
                                 <br>
-                                <input type="text" name="phone" id="phone" size="12" placeholder="(000)000-0000" required>
+                                <input type="text" name="phone" id="phone" size="14" placeholder="(000)000-0000" autocomplete="phone number">
                             </div>
                             <div id="phone_error"></div>
                             <br>
                             <div>
-                                <label>Contact by</label>
-                                <br>
+                                <p>Contact by</p>
                                 <p>
                                 <input type="radio" name="contact" id="email"
-                                    value="email" checked>Email
+                                    value="email" autocomplete="checked" checked>Email
                                 <input type="radio" name="contact" id="text"
                                     value="text">Text
                                 </p>
                             </div>
                             <br>
                             <div>
-                                <label>Would you like to receive event notifications?</label>
+                                <label label for="news">Would you like to receive event notifications?</label>
                                 <br>
                                 <input type="checkbox" name="news" id="news"
                                     value="yes" checked>
                             </div>
                             <br>
                             <div>
-                                <label>Would you like to receive our news letter?</label>
+                                <label label for="offers">Would you like to receive our news letter?</label>
                                 <br>
                                 <input type="checkbox" name="offers" id="offers"
                                     value="yes" checked>

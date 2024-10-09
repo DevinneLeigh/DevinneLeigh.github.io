@@ -32,17 +32,36 @@ if (signUpButton) {
 const nameError = document.getElementById("name_error")
 const phoneError = document.getElementById("phone_error")
 const emailError = document.getElementById("email_error")
-let submit = document.querySelector("#submit");
+const cardError = document.getElementById("card_error")
+const monthError = document.getElementById("month_error")
+const yearError = document.getElementById("year_error")
+const ccvError = document.getElementById("ccv_error")
+const dateError = document.getElementById("date_error")
+const ticketError = document.getElementById("ticket_error")
+
+const confirmTickets = document.querySelector("#confirm")
+const submit = document.querySelector("#submit")
+
+const userName = document.querySelector("#name") as HTMLInputElement;
+const email = document.querySelector("#email_address") as HTMLInputElement;
+const phone = document.querySelector("#phone") as HTMLInputElement;
+const cardNumber = document.querySelector("#card_number") as HTMLInputElement;
+const month = document.querySelector("#month") as HTMLSelectElement;
+const year = document.querySelector("#year") as HTMLSelectElement;
+const ccv = document.querySelector("#ccv") as HTMLInputElement;
+const date = document.querySelector("#datepicker") as HTMLInputElement;
+const adultTicket = document.querySelector("#adult_number") as HTMLInputElement;
+const childTicket = document.querySelector("#child_number") as HTMLInputElement;
+const toddlerTicket = document.querySelector("#toddler_number") as HTMLInputElement;
 
 const processMembership = () => {
-    const name = document.querySelector("#name") as HTMLInputElement;
-    const email = document.querySelector("#email_address") as HTMLInputElement;
-    const phone = document.querySelector("#phone") as HTMLInputElement;
     let phonePattern = phone.value.match(/^[(\s]\d{3}[)\s]\d{3}[-\s]\d{4}/);
+    let emailPattern = email.value.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+);
 
     let isValid = true;
-    if (name && nameError) {
-        if (name.value === "") {
+    if (userName && nameError) {
+        if (userName.value === "") {
             nameError.innerText = "*Required*";
             isValid = false;
         } else {
@@ -50,10 +69,15 @@ const processMembership = () => {
         }
     }
     if (phone && phoneError) {
-        if (phonePattern) {
-            phoneError.innerText = "";
-        } else {
-            phoneError.innerText = "*Required*"; 
+        if (phone.value === "") {
+            phoneError.innerText = "*Required*";
+        } 
+        else if (!phonePattern) {
+            phoneError.innerText = "*Invalid Number*"; 
+            isValid = false;
+        }
+        else {
+            phoneError.innerText = ""; 
             isValid = false;
         }
     }
@@ -62,10 +86,10 @@ const processMembership = () => {
             emailError.innerText = "*Required*";
             isValid = false;
         }
-        // else if (!email.value.includes("@") || !email.value.includes(".")) {
-        //     emailError.innerText ="Invalid Email";
-        //     isValid = false;
-        // } 
+        else if (!emailPattern) {
+            emailError.innerText ="*Invalid Email*";
+            isValid = false;
+        } 
         else {
             emailError.innerText = "";
         }
@@ -83,30 +107,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// submit ticket form
-const cardError = document.getElementById("card_error")
-const monthError = document.getElementById("month_error")
-const yearError = document.getElementById("year_error")
-const ccvError = document.getElementById("ccv_error")
-const dateError = document.getElementById("date_error")
-let confirmTickets = document.querySelector("#confirm");
-const card = document.querySelector("#card_number") as HTMLInputElement;
-
 const processTickets = () => {
-    const name = document.querySelector("#name") as HTMLInputElement;
-    const email = document.querySelector("#email_address") as HTMLInputElement;
-    const phone = document.querySelector("#phone") as HTMLInputElement;
-    const card = document.querySelector("#card_number") as HTMLInputElement;
-    const month = document.querySelector("#month") as HTMLSelectElement;
-    const year = document.querySelector("#year") as HTMLSelectElement;
-    const ccv = document.querySelector("#ccv") as HTMLInputElement;
-    const date = document.querySelector("#datepicker") as HTMLInputElement;
     let phonePattern = phone.value.match(/^[(\s]\d{3}[)\s]\d{3}[-\s]\d{4}/);
-    let cardPattern = card.value.match(/^\d{4}[ \t]+\d{4}[ \t]+\d{4}[ \t]+\d{4}/);
+    let cardPattern = cardNumber.value.match(/^\d{4}[ \t]+\d{4}[ \t]+\d{4}[ \t]+\d{4}/);
+    let emailPattern = email.value.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+    let ccvPattern = ccv.value.match(/^\{3}/);
 
     let isValid = true;
-    if (name && nameError) {
-        if (name.value === "") {
+    if (userName && nameError) {
+        if (userName.value === "") {
             nameError.innerText = "*Required*";
             isValid = false;
         } else {
@@ -114,10 +123,15 @@ const processTickets = () => {
         }
     }
     if (phone && phoneError) {
-        if (phonePattern) {
-            phoneError.innerText = "";
-        } else {
-            phoneError.innerText = "*Required*"; 
+        if (phone.value === "") {
+            phoneError.innerText = "*Required*";
+        } 
+        else if (!phonePattern) {
+            phoneError.innerText = "*Invalid*"; 
+            isValid = false;
+        }
+        else {
+            phoneError.innerText = ""; 
             isValid = false;
         }
     }
@@ -126,26 +140,25 @@ const processTickets = () => {
             emailError.innerText = "*Required*";
             isValid = false;
         }
-        // else if (!email.value.includes("@") || !email.value.includes(".")) {
-        //     emailError.innerText ="Invalid Email";
-        //     isValid = false;
-        // } 
+        else if (!emailPattern) {
+            emailError.innerText ="*Invalid*";
+            isValid = false;
+        } 
         else {
             emailError.innerText = "";
         }
-        if (isValid) { 
-            if (submit) {
-                window.open("memberConfirm.html", "_self");
-            }
-        }
     }
-    if (card && cardError) {
-        if (cardPattern) {
-            cardError.innerText = "";
-        }
-        else {
+    if (cardNumber && cardError) {
+        if (cardNumber.value === "") {
             cardError.innerText = "*Required*";
             isValid = false;
+        }
+        else if (!cardPattern) {
+            cardError.innerText = "*Invalid*";
+            isValid = false;
+        }
+        else {
+            cardError.innerText = "";
         }
     }
     if (month && monthError) {
@@ -171,6 +184,10 @@ const processTickets = () => {
             ccvError.innerText = "*Required*";
             isValid = false;
         }
+        else if (!ccvPattern) {
+            ccvError.innerText = "*Invalid*";
+            isValid = false;
+        }
         else {
             ccvError.innerText = "";
         }
@@ -183,12 +200,34 @@ const processTickets = () => {
         else {
             dateError.innerText = "";
         }
+    }
+    if (adultTicket && childTicket && ticketError) {
+        let adultTicket = parseFloat((<HTMLInputElement>document.getElementById("adult_number")).value);
+        let childTicket = parseFloat((<HTMLInputElement>document.getElementById("child_number")).value);
+        let toddlerTicket = parseFloat((<HTMLInputElement>document.getElementById("toddler_number")).value);
+        let ratio = adultTicket / (childTicket + toddlerTicket);
+
+        if (!adultTicket && !childTicket && !toddlerTicket) {
+            ticketError.innerText = "*Please add tickets to continue*"
+        }
+        else if (!adultTicket) {
+            ticketError.innerText = "*At least one adult is required*";
+            isValid = false;
+        }
+        else if (ratio < (1 / 6)) {
+            ticketError.innerText = "*One adult for every six children is required*";
+            isValid = false;
+        }
+        else {
+            ticketError.innerText = "";
+        }
         if (isValid) { 
             if (confirmTickets) {
                 window.open("ticketConfirm.html", "_self");
             }
         }
     }
+
 };
 
 document.addEventListener("DOMContentLoaded", () => { 
@@ -259,44 +298,10 @@ child?.addEventListener('change', function(event) {
 });
 
 // open event info
-const  eventBox1 = document.getElementById("event_box1")!
-eventBox1.addEventListener("click", function() { 
-    if (eventBox1) {
-        eventBox1.classList.toggle("open");
-    }    
-})
-
-const  eventBox2 = document.getElementById("event_box2")!
-eventBox2.addEventListener("click", function() { 
-    if (eventBox2) {
-        eventBox2.classList.toggle("open");
-    }    
-})
-
-const  eventBox3 = document.getElementById("event_box3")!
-eventBox3.addEventListener("click", function() { 
-    if (eventBox3) {
-        eventBox3.classList.toggle("open");
-    }   
-})
-
-const  eventBox4 = document.getElementById("event_box4")!
-eventBox4.addEventListener("click", function() { 
-    if (eventBox4) {
-        eventBox4.classList.toggle("open");
-    }  
-})
-
-const  eventBox5 = document.getElementById("event_box5")!
-eventBox5.addEventListener("click", function() { 
-    if (eventBox5) {
-        eventBox5.classList.toggle("open");
-    }   
-})
-
-const  eventBox6 = document.getElementById("event_box6")!
-eventBox6.addEventListener("click", function() { 
-    if (eventBox6) {
-        eventBox6.classList.toggle("open");
-    }   
-})
+let  eventBox = document.querySelectorAll(".event_box")!
+ 
+for (let i = 0; i < eventBox.length; i++) {
+    eventBox[i].addEventListener("click", function() {
+        eventBox[i].classList.toggle("open");
+    });
+}

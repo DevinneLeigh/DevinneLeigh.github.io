@@ -25,15 +25,31 @@ if (signUpButton) {
 var nameError = document.getElementById("name_error");
 var phoneError = document.getElementById("phone_error");
 var emailError = document.getElementById("email_error");
+var cardError = document.getElementById("card_error");
+var monthError = document.getElementById("month_error");
+var yearError = document.getElementById("year_error");
+var ccvError = document.getElementById("ccv_error");
+var dateError = document.getElementById("date_error");
+var ticketError = document.getElementById("ticket_error");
+var confirmTickets = document.querySelector("#confirm");
 var submit = document.querySelector("#submit");
+var userName = document.querySelector("#name");
+var email = document.querySelector("#email_address");
+var phone = document.querySelector("#phone");
+var cardNumber = document.querySelector("#card_number");
+var month = document.querySelector("#month");
+var year = document.querySelector("#year");
+var ccv = document.querySelector("#ccv");
+var date = document.querySelector("#datepicker");
+var adultTicket = document.querySelector("#adult_number");
+var childTicket = document.querySelector("#child_number");
+var toddlerTicket = document.querySelector("#toddler_number");
 var processMembership = function () {
-    var name = document.querySelector("#name");
-    var email = document.querySelector("#email_address");
-    var phone = document.querySelector("#phone");
     var phonePattern = phone.value.match(/^[(\s]\d{3}[)\s]\d{3}[-\s]\d{4}/);
+    var emailPattern = email.value.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
     var isValid = true;
-    if (name && nameError) {
-        if (name.value === "") {
+    if (userName && nameError) {
+        if (userName.value === "") {
             nameError.innerText = "*Required*";
             isValid = false;
         }
@@ -42,11 +58,15 @@ var processMembership = function () {
         }
     }
     if (phone && phoneError) {
-        if (phonePattern) {
-            phoneError.innerText = "";
+        if (phone.value === "") {
+            phoneError.innerText = "*Required*";
+        }
+        else if (!phonePattern) {
+            phoneError.innerText = "*Invalid Number*";
+            isValid = false;
         }
         else {
-            phoneError.innerText = "*Required*";
+            phoneError.innerText = "";
             isValid = false;
         }
     }
@@ -55,10 +75,10 @@ var processMembership = function () {
             emailError.innerText = "*Required*";
             isValid = false;
         }
-        // else if (!email.value.includes("@") || !email.value.includes(".")) {
-        //     emailError.innerText ="Invalid Email";
-        //     isValid = false;
-        // } 
+        else if (!emailPattern) {
+            emailError.innerText = "*Invalid Email*";
+            isValid = false;
+        }
         else {
             emailError.innerText = "";
         }
@@ -75,28 +95,14 @@ document.addEventListener("DOMContentLoaded", function () {
         (_a = document.querySelector("#submit")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", processMembership);
     }
 });
-// submit ticket form
-var cardError = document.getElementById("card_error");
-var monthError = document.getElementById("month_error");
-var yearError = document.getElementById("year_error");
-var ccvError = document.getElementById("ccv_error");
-var dateError = document.getElementById("date_error");
-var confirmTickets = document.querySelector("#confirm");
-var card = document.querySelector("#card_number");
 var processTickets = function () {
-    var name = document.querySelector("#name");
-    var email = document.querySelector("#email_address");
-    var phone = document.querySelector("#phone");
-    var card = document.querySelector("#card_number");
-    var month = document.querySelector("#month");
-    var year = document.querySelector("#year");
-    var ccv = document.querySelector("#ccv");
-    var date = document.querySelector("#datepicker");
     var phonePattern = phone.value.match(/^[(\s]\d{3}[)\s]\d{3}[-\s]\d{4}/);
-    var cardPattern = card.value.match(/^\d{4}[ \t]+\d{4}[ \t]+\d{4}[ \t]+\d{4}/);
+    var cardPattern = cardNumber.value.match(/^\d{4}[ \t]+\d{4}[ \t]+\d{4}[ \t]+\d{4}/);
+    var emailPattern = email.value.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+    var ccvPattern = ccv.value.match(/^\{3}/);
     var isValid = true;
-    if (name && nameError) {
-        if (name.value === "") {
+    if (userName && nameError) {
+        if (userName.value === "") {
             nameError.innerText = "*Required*";
             isValid = false;
         }
@@ -105,11 +111,15 @@ var processTickets = function () {
         }
     }
     if (phone && phoneError) {
-        if (phonePattern) {
-            phoneError.innerText = "";
+        if (phone.value === "") {
+            phoneError.innerText = "*Required*";
+        }
+        else if (!phonePattern) {
+            phoneError.innerText = "*Invalid*";
+            isValid = false;
         }
         else {
-            phoneError.innerText = "*Required*";
+            phoneError.innerText = "";
             isValid = false;
         }
     }
@@ -118,26 +128,25 @@ var processTickets = function () {
             emailError.innerText = "*Required*";
             isValid = false;
         }
-        // else if (!email.value.includes("@") || !email.value.includes(".")) {
-        //     emailError.innerText ="Invalid Email";
-        //     isValid = false;
-        // } 
+        else if (!emailPattern) {
+            emailError.innerText = "*Invalid*";
+            isValid = false;
+        }
         else {
             emailError.innerText = "";
         }
-        if (isValid) {
-            if (submit) {
-                window.open("memberConfirm.html", "_self");
-            }
-        }
     }
-    if (card && cardError) {
-        if (cardPattern) {
-            cardError.innerText = "";
-        }
-        else {
+    if (cardNumber && cardError) {
+        if (cardNumber.value === "") {
             cardError.innerText = "*Required*";
             isValid = false;
+        }
+        else if (!cardPattern) {
+            cardError.innerText = "*Invalid*";
+            isValid = false;
+        }
+        else {
+            cardError.innerText = "";
         }
     }
     if (month && monthError) {
@@ -163,6 +172,10 @@ var processTickets = function () {
             ccvError.innerText = "*Required*";
             isValid = false;
         }
+        else if (!ccvPattern) {
+            ccvError.innerText = "*Invalid*";
+            isValid = false;
+        }
         else {
             ccvError.innerText = "";
         }
@@ -174,6 +187,26 @@ var processTickets = function () {
         }
         else {
             dateError.innerText = "";
+        }
+    }
+    if (adultTicket && childTicket && ticketError) {
+        var adultTicket_1 = parseFloat(document.getElementById("adult_number").value);
+        var childTicket_1 = parseFloat(document.getElementById("child_number").value);
+        var toddlerTicket_1 = parseFloat(document.getElementById("toddler_number").value);
+        var ratio = adultTicket_1 / (childTicket_1 + toddlerTicket_1);
+        if (!adultTicket_1 && !childTicket_1 && !toddlerTicket_1) {
+            ticketError.innerText = "*Please add tickets to continue*";
+        }
+        else if (!adultTicket_1) {
+            ticketError.innerText = "*At least one adult is required*";
+            isValid = false;
+        }
+        else if (ratio < (1 / 6)) {
+            ticketError.innerText = "*One adult for every six children is required*";
+            isValid = false;
+        }
+        else {
+            ticketError.innerText = "";
         }
         if (isValid) {
             if (confirmTickets) {
@@ -242,39 +275,12 @@ child === null || child === void 0 ? void 0 : child.addEventListener('change', f
     }
 });
 // open event info
-var eventBox1 = document.getElementById("event_box1");
-eventBox1.addEventListener("click", function () {
-    if (eventBox1) {
-        eventBox1.classList.toggle("open");
-    }
-});
-var eventBox2 = document.getElementById("event_box2");
-eventBox2.addEventListener("click", function () {
-    if (eventBox2) {
-        eventBox2.classList.toggle("open");
-    }
-});
-var eventBox3 = document.getElementById("event_box3");
-eventBox3.addEventListener("click", function () {
-    if (eventBox3) {
-        eventBox3.classList.toggle("open");
-    }
-});
-var eventBox4 = document.getElementById("event_box4");
-eventBox4.addEventListener("click", function () {
-    if (eventBox4) {
-        eventBox4.classList.toggle("open");
-    }
-});
-var eventBox5 = document.getElementById("event_box5");
-eventBox5.addEventListener("click", function () {
-    if (eventBox5) {
-        eventBox5.classList.toggle("open");
-    }
-});
-var eventBox6 = document.getElementById("event_box6");
-eventBox6.addEventListener("click", function () {
-    if (eventBox6) {
-        eventBox6.classList.toggle("open");
-    }
-});
+var eventBox = document.querySelectorAll(".event_box");
+var _loop_1 = function (i) {
+    eventBox[i].addEventListener("click", function () {
+        eventBox[i].classList.toggle("open");
+    });
+};
+for (var i = 0; i < eventBox.length; i++) {
+    _loop_1(i);
+}

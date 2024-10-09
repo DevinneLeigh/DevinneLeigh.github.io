@@ -130,6 +130,7 @@ header {
                     display: flex;
                     margin: 10px 10px 0 0;
                     text-shadow: 1px 1px 2px #283644;
+                    box-shadow: 2px 2px 4px #97aeac;
                 }
                 .ticket_button:hover {
                     background-color: #008888;
@@ -175,6 +176,8 @@ header {
                 .ticket_button {
                     background: #00b2b2;
                     color: #fbfcfc;
+                    box-shadow: 2px 2px 4px #97aeac;
+                    text-shadow: 1px 1px 2px #283644;
                     padding: 0 12px 0 12px;
                     border-radius: 40px;
                     display: flex;
@@ -213,6 +216,7 @@ main {
     height: 100%;
 }
 
+// index page
 #welcome_container {
 
     position: relative;
@@ -342,6 +346,7 @@ main {
     }
 }
 
+// index page
 #mission_statement {
     margin-top: -40px;
     background-color: #00b2b2;
@@ -429,6 +434,8 @@ main {
             gap: 70px;
             padding-top: 240px;
         }
+
+        // index page date and address boxes
         .box {
             color: #4a4a4a;
             width: 350px;
@@ -686,7 +693,8 @@ footer {
                     border-radius: 40px;
                     background: #00b2b2;
                     color:#fbfcfc;
-                    text-shadow: 1px 2px #283644;
+                    text-shadow: 1px 1px 2px #283644;
+                    box-shadow: 2px 2px 4px #97aeac;
                     font-size: 22px;
                 }
             }
@@ -696,7 +704,7 @@ footer {
             display: none;
             label, input, p {
                 font-size: .94em;
-                line-height: 30px;
+                line-height: 5px;
                 letter-spacing: 1.2px;
                 @include xs { // 400px
                     font-size: 1em;
@@ -713,17 +721,17 @@ footer {
                 @include lg { // 960px
                     font-size: 1.4em;
                     letter-spacing: 1.4px;
-                    line-height: 35px;
+                    line-height: 15px;
                 }
                 @include xl { // 1200px
                     font-size: 1.55em;
                     letter-spacing: 1.45px;
-                    line-height: 40px;
+                    line-height: 20px;
                 }
                 @include xxl { // 1400px
                     font-size: 1.7em;
                     letter-spacing: 1.5px;
-                    line-height: 45px;
+                    //line-height: 45px;
                 }
             }
             input[type=checkbox] {
@@ -760,7 +768,7 @@ footer {
             }
             #submit {
                 border: none;
-                padding: 10px 18px 14px 18px;
+                padding: 20px 18px 26px 18px;
                 border-radius: 40px;
                 background: #00b2b2;
                 color:#fbfcfc;
@@ -801,14 +809,17 @@ footer {
         }
     }
 }
-#email_error, #name_error, #phone_error, #card_error, #month_error, #year_error, #ccv_error, #date_error {
+#email_error, #name_error, #phone_error, #card_error, #month_error, #year_error, #ccv_error, #date_error, #ticket_error {
     color: #dc005f;
     font-size: 13px;
     font-weight: 500;
 }
 #date_error {
-    margin-top: -22px;
+    margin-top: -26px;
     margin-right: 500px;
+}
+#ticket_error {
+    margin-top: -30px;
 }
 
 // #kelp_image {
@@ -1000,10 +1011,11 @@ footer {
         @include xxl { // 1400px
             gap: 50px;
         }
-        #event_box1, #event_box2, #event_box3, #event_box4,#event_box5, #event_box6 {
+        .event_box {
             display: flex;
             flex-flow: column;
             background: #1bd5d5;
+            box-shadow: 10px 10px 24px #567575;
             //flex-grow: 1;
             width: 90%;
             height: 420px;
@@ -1012,29 +1024,38 @@ footer {
             text-shadow: 1px 1px 2px #283644;
             @include xs { // 400px
                 height: 480px;
+                width: 80%;
+                font-size: 1.1em;
             }
             @include sm { // 576px
                 height: 540px;
+                width: 70%;
+                font-size: 1.2em;
             }
             @include md { // 768px
                 height: 460px;
+                width: 40%;
+                font-size: 1.3em;
             }
             @include lg { // 960px
                 height: 500px;
             }
             @include xl { // 1200px
-            
+                font-size: 1.4em;
+                width: 30%;
+                font-size: 1.5em;
             }
             @include xxl { // 1400px
                 height: 550px;
+                font-size: 1.6em;
             }
             &.open {
                 background: #00b2b2;
                 h2, h3 {
                     display: none;
                 }
-                #image_wrapper {
-                    #more_info {
+                .image_wrapper {
+                    .more_info {
                         font-size: .7em;
                         display: block;
                         border-radius: 40px;
@@ -1053,7 +1074,7 @@ footer {
                         h3 {
                             display: block;
                         }
-                        #x {
+                        .x {
                             display: block;
                             text-align: right;
                             margin-right: 15px;
@@ -1062,17 +1083,16 @@ footer {
 
                         }
                     }
-                    #img {
+                    .img {
                         display: none;
                     }
                 }
-                #learn_more_button_wrapper {
+                .learn_more_button_wrapper {
                     align-self: center;
-                    #learn_more {
+                    .learn_more {
                         display: none; 
                     }
                 }
-
             }
             .bottom-wrapper {
                 display: flex;
@@ -1080,40 +1100,14 @@ footer {
                 height: 100%;
                     
             }
-            @include xs { // 400px
-                width: 80%;
-                //height: 350px;
-                font-size: 1.1em;
-            }
-            @include sm { // 576px
-                width: 70%;
-                font-size: 1.2em;
-            }
-            @include md { // 768px
-                width: 40%;
-                //height: 450px;
-                font-size: 1.3em;
-            }
-            @include lg { // 960px
-                font-size: 1.4em;
-                //height: 450px;
-            }
-            @include xl { // 1200px
-                width: 30%;
-                //height: 500px;
-                font-size: 1.5em;
-            }
-            @include xxl { // 1400px
-                font-size: 1.6em;
-            }
-            #image_wrapper {
-                #more_info {
+            .image_wrapper {
+                .more_info {
                     display: none;
-                    #x {
+                    .x {
                         display: none;
                     }
                 }
-                #img {
+                .img {
                     max-width: 100%;
                     z-index: 50;
                     border-top-left-radius: 40px;
@@ -1131,14 +1125,13 @@ footer {
                 margin-top: 0;
                 margin-left: 20px;
             }
-            #learn_more_button_wrapper {
-                //display: flex;
+            .learn_more_button_wrapper {
                 align-self: center;
-                //align-self: flex-end;
-                #learn_more {
+                .learn_more {
                     background: #e58e42;
                     color: #fbfcfc;
                     text-shadow: 1px 1px 2px #693b13;
+                    box-shadow: 2px 2px 4px #a06836;
                     font-size: 22px;
                     font-weight: bold;
                     padding: 5px 10px;
@@ -1196,6 +1189,7 @@ footer {
     }
 }
 
+// buy tickets page
 #ticket_page_main {
     padding: 80px 0;
     display: flex;
@@ -1268,12 +1262,13 @@ footer {
                 #confirm {
                     background: #00b2b2;
                     border: none;
-                    padding: 10px;
-                    border-radius: 26px;
+                    padding: 10px 14px 14px 14px;
+                    border-radius: 32px;
                     font-size: 1.1em;
                     color: #fbfcfc;
                     font-weight: 700;
                     text-shadow: 1px 1px 2px #283644;
+                    box-shadow: 2px 2px 4px #97aeac;
                 }
                 #confirm:hover {
                     background-color: #008888;
@@ -1289,6 +1284,7 @@ footer {
     }
 }
 
+// ticket page media queries 
 @include xs { // 400px
     #ticket_page_main {
         #ticket_form_wrapper {

@@ -103,6 +103,7 @@ header nav {
     display: flex;
     margin: 10px 10px 0 0;
     text-shadow: 1px 1px 2px #283644;
+    box-shadow: 2px 2px 4px #97aeac;
   }
   header nav ul .ticket_button:hover {
     background-color: #008888;
@@ -147,6 +148,8 @@ header nav.open ul a {
 header nav.open ul .ticket_button {
   background: #00b2b2;
   color: #fbfcfc;
+  box-shadow: 2px 2px 4px #97aeac;
+  text-shadow: 1px 1px 2px #283644;
   padding: 0 12px 0 12px;
   border-radius: 40px;
   display: flex;
@@ -761,7 +764,8 @@ footer .footer_bottom .social_media img {
   border-radius: 40px;
   background: #00b2b2;
   color: #fbfcfc;
-  text-shadow: 1px 2px #283644;
+  text-shadow: 1px 1px 2px #283644;
+  box-shadow: 2px 2px 4px #97aeac;
   font-size: 22px;
 }
 #member_wrapper #form_wrapper #open_form {
@@ -769,7 +773,7 @@ footer .footer_bottom .social_media img {
 }
 #member_wrapper #form_wrapper #open_form label, #member_wrapper #form_wrapper #open_form input, #member_wrapper #form_wrapper #open_form p {
   font-size: 0.94em;
-  line-height: 30px;
+  line-height: 5px;
   letter-spacing: 1.2px;
 }
 @media (min-width: 400px) {
@@ -794,21 +798,20 @@ footer .footer_bottom .social_media img {
   #member_wrapper #form_wrapper #open_form label, #member_wrapper #form_wrapper #open_form input, #member_wrapper #form_wrapper #open_form p {
     font-size: 1.4em;
     letter-spacing: 1.4px;
-    line-height: 35px;
+    line-height: 15px;
   }
 }
 @media (min-width: 1200px) {
   #member_wrapper #form_wrapper #open_form label, #member_wrapper #form_wrapper #open_form input, #member_wrapper #form_wrapper #open_form p {
     font-size: 1.55em;
     letter-spacing: 1.45px;
-    line-height: 40px;
+    line-height: 20px;
   }
 }
 @media (min-width: 1400px) {
   #member_wrapper #form_wrapper #open_form label, #member_wrapper #form_wrapper #open_form input, #member_wrapper #form_wrapper #open_form p {
     font-size: 1.7em;
     letter-spacing: 1.5px;
-    line-height: 45px;
   }
 }
 #member_wrapper #form_wrapper #open_form input[type=checkbox] {
@@ -857,7 +860,7 @@ footer .footer_bottom .social_media img {
 }
 #member_wrapper #form_wrapper #open_form #submit {
   border: none;
-  padding: 10px 18px 14px 18px;
+  padding: 20px 18px 26px 18px;
   border-radius: 40px;
   background: #00b2b2;
   color: #fbfcfc;
@@ -903,15 +906,19 @@ footer .footer_bottom .social_media img {
   }
 }
 
-#email_error, #name_error, #phone_error, #card_error, #month_error, #year_error, #ccv_error, #date_error {
+#email_error, #name_error, #phone_error, #card_error, #month_error, #year_error, #ccv_error, #date_error, #ticket_error {
   color: #dc005f;
   font-size: 13px;
   font-weight: 500;
 }
 
 #date_error {
-  margin-top: -22px;
+  margin-top: -26px;
   margin-right: 500px;
+}
+
+#ticket_error {
+  margin-top: -30px;
 }
 
 #confirm_ticket_wrapper {
@@ -1141,10 +1148,11 @@ footer .footer_bottom .social_media img {
     gap: 50px;
   }
 }
-.sand_background #event_wrapper #event_box1, .sand_background #event_wrapper #event_box2, .sand_background #event_wrapper #event_box3, .sand_background #event_wrapper #event_box4, .sand_background #event_wrapper #event_box5, .sand_background #event_wrapper #event_box6 {
+.sand_background #event_wrapper .event_box {
   display: flex;
   flex-flow: column;
   background: #1bd5d5;
+  box-shadow: 10px 10px 24px #567575;
   width: 90%;
   height: 420px;
   border-radius: 40px;
@@ -1152,141 +1160,122 @@ footer .footer_bottom .social_media img {
   text-shadow: 1px 1px 2px #283644;
 }
 @media (min-width: 400px) {
-  .sand_background #event_wrapper #event_box1, .sand_background #event_wrapper #event_box2, .sand_background #event_wrapper #event_box3, .sand_background #event_wrapper #event_box4, .sand_background #event_wrapper #event_box5, .sand_background #event_wrapper #event_box6 {
+  .sand_background #event_wrapper .event_box {
     height: 480px;
+    width: 80%;
+    font-size: 1.1em;
   }
 }
 @media (min-width: 576px) {
-  .sand_background #event_wrapper #event_box1, .sand_background #event_wrapper #event_box2, .sand_background #event_wrapper #event_box3, .sand_background #event_wrapper #event_box4, .sand_background #event_wrapper #event_box5, .sand_background #event_wrapper #event_box6 {
+  .sand_background #event_wrapper .event_box {
     height: 540px;
+    width: 70%;
+    font-size: 1.2em;
   }
 }
 @media (min-width: 768px) {
-  .sand_background #event_wrapper #event_box1, .sand_background #event_wrapper #event_box2, .sand_background #event_wrapper #event_box3, .sand_background #event_wrapper #event_box4, .sand_background #event_wrapper #event_box5, .sand_background #event_wrapper #event_box6 {
+  .sand_background #event_wrapper .event_box {
     height: 460px;
+    width: 40%;
+    font-size: 1.3em;
   }
 }
 @media (min-width: 960px) {
-  .sand_background #event_wrapper #event_box1, .sand_background #event_wrapper #event_box2, .sand_background #event_wrapper #event_box3, .sand_background #event_wrapper #event_box4, .sand_background #event_wrapper #event_box5, .sand_background #event_wrapper #event_box6 {
+  .sand_background #event_wrapper .event_box {
     height: 500px;
   }
 }
-@media (min-width: 1400px) {
-  .sand_background #event_wrapper #event_box1, .sand_background #event_wrapper #event_box2, .sand_background #event_wrapper #event_box3, .sand_background #event_wrapper #event_box4, .sand_background #event_wrapper #event_box5, .sand_background #event_wrapper #event_box6 {
-    height: 550px;
+@media (min-width: 1200px) {
+  .sand_background #event_wrapper .event_box {
+    font-size: 1.4em;
+    width: 30%;
+    font-size: 1.5em;
   }
 }
-.sand_background #event_wrapper #event_box1.open, .sand_background #event_wrapper #event_box2.open, .sand_background #event_wrapper #event_box3.open, .sand_background #event_wrapper #event_box4.open, .sand_background #event_wrapper #event_box5.open, .sand_background #event_wrapper #event_box6.open {
+@media (min-width: 1400px) {
+  .sand_background #event_wrapper .event_box {
+    height: 550px;
+    font-size: 1.6em;
+  }
+}
+.sand_background #event_wrapper .event_box.open {
   background: #00b2b2;
 }
-.sand_background #event_wrapper #event_box1.open h2, .sand_background #event_wrapper #event_box1.open h3, .sand_background #event_wrapper #event_box2.open h2, .sand_background #event_wrapper #event_box2.open h3, .sand_background #event_wrapper #event_box3.open h2, .sand_background #event_wrapper #event_box3.open h3, .sand_background #event_wrapper #event_box4.open h2, .sand_background #event_wrapper #event_box4.open h3, .sand_background #event_wrapper #event_box5.open h2, .sand_background #event_wrapper #event_box5.open h3, .sand_background #event_wrapper #event_box6.open h2, .sand_background #event_wrapper #event_box6.open h3 {
+.sand_background #event_wrapper .event_box.open h2, .sand_background #event_wrapper .event_box.open h3 {
   display: none;
 }
-.sand_background #event_wrapper #event_box1.open #image_wrapper #more_info, .sand_background #event_wrapper #event_box2.open #image_wrapper #more_info, .sand_background #event_wrapper #event_box3.open #image_wrapper #more_info, .sand_background #event_wrapper #event_box4.open #image_wrapper #more_info, .sand_background #event_wrapper #event_box5.open #image_wrapper #more_info, .sand_background #event_wrapper #event_box6.open #image_wrapper #more_info {
+.sand_background #event_wrapper .event_box.open .image_wrapper .more_info {
   font-size: 0.7em;
   display: block;
   border-radius: 40px;
   background: #00b2b2;
   z-index: 100;
 }
-.sand_background #event_wrapper #event_box1.open #image_wrapper #more_info p, .sand_background #event_wrapper #event_box2.open #image_wrapper #more_info p, .sand_background #event_wrapper #event_box3.open #image_wrapper #more_info p, .sand_background #event_wrapper #event_box4.open #image_wrapper #more_info p, .sand_background #event_wrapper #event_box5.open #image_wrapper #more_info p, .sand_background #event_wrapper #event_box6.open #image_wrapper #more_info p {
+.sand_background #event_wrapper .event_box.open .image_wrapper .more_info p {
   color: #fbfcfc;
   margin: 0 30px 20px 30px;
   font-size: 16px;
 }
-.sand_background #event_wrapper #event_box1.open #image_wrapper #more_info h2, .sand_background #event_wrapper #event_box2.open #image_wrapper #more_info h2, .sand_background #event_wrapper #event_box3.open #image_wrapper #more_info h2, .sand_background #event_wrapper #event_box4.open #image_wrapper #more_info h2, .sand_background #event_wrapper #event_box5.open #image_wrapper #more_info h2, .sand_background #event_wrapper #event_box6.open #image_wrapper #more_info h2 {
+.sand_background #event_wrapper .event_box.open .image_wrapper .more_info h2 {
   text-shadow: 1px 1px 2px #283644;
   display: block;
   font-size: 22px;
 }
-.sand_background #event_wrapper #event_box1.open #image_wrapper #more_info h3, .sand_background #event_wrapper #event_box2.open #image_wrapper #more_info h3, .sand_background #event_wrapper #event_box3.open #image_wrapper #more_info h3, .sand_background #event_wrapper #event_box4.open #image_wrapper #more_info h3, .sand_background #event_wrapper #event_box5.open #image_wrapper #more_info h3, .sand_background #event_wrapper #event_box6.open #image_wrapper #more_info h3 {
+.sand_background #event_wrapper .event_box.open .image_wrapper .more_info h3 {
   display: block;
 }
-.sand_background #event_wrapper #event_box1.open #image_wrapper #more_info #x, .sand_background #event_wrapper #event_box2.open #image_wrapper #more_info #x, .sand_background #event_wrapper #event_box3.open #image_wrapper #more_info #x, .sand_background #event_wrapper #event_box4.open #image_wrapper #more_info #x, .sand_background #event_wrapper #event_box5.open #image_wrapper #more_info #x, .sand_background #event_wrapper #event_box6.open #image_wrapper #more_info #x {
+.sand_background #event_wrapper .event_box.open .image_wrapper .more_info .x {
   display: block;
   text-align: right;
   margin-right: 15px;
   color: #fbfcfc;
   font-size: 40px;
 }
-.sand_background #event_wrapper #event_box1.open #image_wrapper #img, .sand_background #event_wrapper #event_box2.open #image_wrapper #img, .sand_background #event_wrapper #event_box3.open #image_wrapper #img, .sand_background #event_wrapper #event_box4.open #image_wrapper #img, .sand_background #event_wrapper #event_box5.open #image_wrapper #img, .sand_background #event_wrapper #event_box6.open #image_wrapper #img {
+.sand_background #event_wrapper .event_box.open .image_wrapper .img {
   display: none;
 }
-.sand_background #event_wrapper #event_box1.open #learn_more_button_wrapper, .sand_background #event_wrapper #event_box2.open #learn_more_button_wrapper, .sand_background #event_wrapper #event_box3.open #learn_more_button_wrapper, .sand_background #event_wrapper #event_box4.open #learn_more_button_wrapper, .sand_background #event_wrapper #event_box5.open #learn_more_button_wrapper, .sand_background #event_wrapper #event_box6.open #learn_more_button_wrapper {
+.sand_background #event_wrapper .event_box.open .learn_more_button_wrapper {
   align-self: center;
 }
-.sand_background #event_wrapper #event_box1.open #learn_more_button_wrapper #learn_more, .sand_background #event_wrapper #event_box2.open #learn_more_button_wrapper #learn_more, .sand_background #event_wrapper #event_box3.open #learn_more_button_wrapper #learn_more, .sand_background #event_wrapper #event_box4.open #learn_more_button_wrapper #learn_more, .sand_background #event_wrapper #event_box5.open #learn_more_button_wrapper #learn_more, .sand_background #event_wrapper #event_box6.open #learn_more_button_wrapper #learn_more {
+.sand_background #event_wrapper .event_box.open .learn_more_button_wrapper .learn_more {
   display: none;
 }
-.sand_background #event_wrapper #event_box1 .bottom-wrapper, .sand_background #event_wrapper #event_box2 .bottom-wrapper, .sand_background #event_wrapper #event_box3 .bottom-wrapper, .sand_background #event_wrapper #event_box4 .bottom-wrapper, .sand_background #event_wrapper #event_box5 .bottom-wrapper, .sand_background #event_wrapper #event_box6 .bottom-wrapper {
+.sand_background #event_wrapper .event_box .bottom-wrapper {
   display: flex;
   flex-flow: column;
   height: 100%;
 }
-@media (min-width: 400px) {
-  .sand_background #event_wrapper #event_box1, .sand_background #event_wrapper #event_box2, .sand_background #event_wrapper #event_box3, .sand_background #event_wrapper #event_box4, .sand_background #event_wrapper #event_box5, .sand_background #event_wrapper #event_box6 {
-    width: 80%;
-    font-size: 1.1em;
-  }
-}
-@media (min-width: 576px) {
-  .sand_background #event_wrapper #event_box1, .sand_background #event_wrapper #event_box2, .sand_background #event_wrapper #event_box3, .sand_background #event_wrapper #event_box4, .sand_background #event_wrapper #event_box5, .sand_background #event_wrapper #event_box6 {
-    width: 70%;
-    font-size: 1.2em;
-  }
-}
-@media (min-width: 768px) {
-  .sand_background #event_wrapper #event_box1, .sand_background #event_wrapper #event_box2, .sand_background #event_wrapper #event_box3, .sand_background #event_wrapper #event_box4, .sand_background #event_wrapper #event_box5, .sand_background #event_wrapper #event_box6 {
-    width: 40%;
-    font-size: 1.3em;
-  }
-}
-@media (min-width: 960px) {
-  .sand_background #event_wrapper #event_box1, .sand_background #event_wrapper #event_box2, .sand_background #event_wrapper #event_box3, .sand_background #event_wrapper #event_box4, .sand_background #event_wrapper #event_box5, .sand_background #event_wrapper #event_box6 {
-    font-size: 1.4em;
-  }
-}
-@media (min-width: 1200px) {
-  .sand_background #event_wrapper #event_box1, .sand_background #event_wrapper #event_box2, .sand_background #event_wrapper #event_box3, .sand_background #event_wrapper #event_box4, .sand_background #event_wrapper #event_box5, .sand_background #event_wrapper #event_box6 {
-    width: 30%;
-    font-size: 1.5em;
-  }
-}
-@media (min-width: 1400px) {
-  .sand_background #event_wrapper #event_box1, .sand_background #event_wrapper #event_box2, .sand_background #event_wrapper #event_box3, .sand_background #event_wrapper #event_box4, .sand_background #event_wrapper #event_box5, .sand_background #event_wrapper #event_box6 {
-    font-size: 1.6em;
-  }
-}
-.sand_background #event_wrapper #event_box1 #image_wrapper #more_info, .sand_background #event_wrapper #event_box2 #image_wrapper #more_info, .sand_background #event_wrapper #event_box3 #image_wrapper #more_info, .sand_background #event_wrapper #event_box4 #image_wrapper #more_info, .sand_background #event_wrapper #event_box5 #image_wrapper #more_info, .sand_background #event_wrapper #event_box6 #image_wrapper #more_info {
+.sand_background #event_wrapper .event_box .image_wrapper .more_info {
   display: none;
 }
-.sand_background #event_wrapper #event_box1 #image_wrapper #more_info #x, .sand_background #event_wrapper #event_box2 #image_wrapper #more_info #x, .sand_background #event_wrapper #event_box3 #image_wrapper #more_info #x, .sand_background #event_wrapper #event_box4 #image_wrapper #more_info #x, .sand_background #event_wrapper #event_box5 #image_wrapper #more_info #x, .sand_background #event_wrapper #event_box6 #image_wrapper #more_info #x {
+.sand_background #event_wrapper .event_box .image_wrapper .more_info .x {
   display: none;
 }
-.sand_background #event_wrapper #event_box1 #image_wrapper #img, .sand_background #event_wrapper #event_box2 #image_wrapper #img, .sand_background #event_wrapper #event_box3 #image_wrapper #img, .sand_background #event_wrapper #event_box4 #image_wrapper #img, .sand_background #event_wrapper #event_box5 #image_wrapper #img, .sand_background #event_wrapper #event_box6 #image_wrapper #img {
+.sand_background #event_wrapper .event_box .image_wrapper .img {
   max-width: 100%;
   z-index: 50;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
 }
-.sand_background #event_wrapper #event_box1 h2, .sand_background #event_wrapper #event_box2 h2, .sand_background #event_wrapper #event_box3 h2, .sand_background #event_wrapper #event_box4 h2, .sand_background #event_wrapper #event_box5 h2, .sand_background #event_wrapper #event_box6 h2 {
+.sand_background #event_wrapper .event_box h2 {
   font-size: 22px;
   color: #fbfcfc;
   margin: 0 20px 0 20px;
 }
-.sand_background #event_wrapper #event_box1 h3, .sand_background #event_wrapper #event_box2 h3, .sand_background #event_wrapper #event_box3 h3, .sand_background #event_wrapper #event_box4 h3, .sand_background #event_wrapper #event_box5 h3, .sand_background #event_wrapper #event_box6 h3 {
+.sand_background #event_wrapper .event_box h3 {
   font-size: 14px;
   color: #fbfcfc;
   margin-top: 0;
   margin-left: 20px;
 }
-.sand_background #event_wrapper #event_box1 #learn_more_button_wrapper, .sand_background #event_wrapper #event_box2 #learn_more_button_wrapper, .sand_background #event_wrapper #event_box3 #learn_more_button_wrapper, .sand_background #event_wrapper #event_box4 #learn_more_button_wrapper, .sand_background #event_wrapper #event_box5 #learn_more_button_wrapper, .sand_background #event_wrapper #event_box6 #learn_more_button_wrapper {
+.sand_background #event_wrapper .event_box .learn_more_button_wrapper {
   align-self: center;
 }
-.sand_background #event_wrapper #event_box1 #learn_more_button_wrapper #learn_more, .sand_background #event_wrapper #event_box2 #learn_more_button_wrapper #learn_more, .sand_background #event_wrapper #event_box3 #learn_more_button_wrapper #learn_more, .sand_background #event_wrapper #event_box4 #learn_more_button_wrapper #learn_more, .sand_background #event_wrapper #event_box5 #learn_more_button_wrapper #learn_more, .sand_background #event_wrapper #event_box6 #learn_more_button_wrapper #learn_more {
+.sand_background #event_wrapper .event_box .learn_more_button_wrapper .learn_more {
   background: #e58e42;
   color: #fbfcfc;
   text-shadow: 1px 1px 2px #693b13;
+  box-shadow: 2px 2px 4px #a06836;
   font-size: 22px;
   font-weight: bold;
   padding: 5px 10px;
@@ -1294,7 +1283,7 @@ footer .footer_bottom .social_media img {
   border-radius: 30px;
   border: none;
 }
-.sand_background #event_wrapper #event_box1 #learn_more_button_wrapper #learn_more.open, .sand_background #event_wrapper #event_box2 #learn_more_button_wrapper #learn_more.open, .sand_background #event_wrapper #event_box3 #learn_more_button_wrapper #learn_more.open, .sand_background #event_wrapper #event_box4 #learn_more_button_wrapper #learn_more.open, .sand_background #event_wrapper #event_box5 #learn_more_button_wrapper #learn_more.open, .sand_background #event_wrapper #event_box6 #learn_more_button_wrapper #learn_more.open {
+.sand_background #event_wrapper .event_box .learn_more_button_wrapper .learn_more.open {
   display: none;
 }
 
@@ -1420,12 +1409,13 @@ footer .footer_bottom .social_media img {
 #ticket_page_main #ticket_form_wrapper form #ticket_button #confirm {
   background: #00b2b2;
   border: none;
-  padding: 10px;
-  border-radius: 26px;
+  padding: 10px 14px 14px 14px;
+  border-radius: 32px;
   font-size: 1.1em;
   color: #fbfcfc;
   font-weight: 700;
   text-shadow: 1px 1px 2px #283644;
+  box-shadow: 2px 2px 4px #97aeac;
 }
 #ticket_page_main #ticket_form_wrapper form #ticket_button #confirm:hover {
   background-color: #008888;
