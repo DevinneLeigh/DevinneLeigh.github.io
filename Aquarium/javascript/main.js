@@ -10,6 +10,16 @@ menuToggle.addEventListener("click", function () {
         mobileNav.classList.toggle("open");
     }
 });
+//open explore page dropdowns
+var dropDown = document.querySelectorAll(".dropdown");
+var _loop_1 = function (i) {
+    dropDown[i].addEventListener("click", function () {
+        dropDown[i].classList.toggle("open");
+    });
+};
+for (var i = 0; i < dropDown.length; i++) {
+    _loop_1(i);
+}
 //open form
 if (signUpButton) {
     signUpButton.addEventListener("click", function () {
@@ -276,11 +286,11 @@ child === null || child === void 0 ? void 0 : child.addEventListener('change', f
 });
 // open event info
 var eventBox = document.querySelectorAll(".event_box");
-var _loop_1 = function (i) {
+var _loop_2 = function (i) {
     eventBox[i].addEventListener("click", function () {
         eventBox[i].classList.toggle("open");
     });
 };
 for (var i = 0; i < eventBox.length; i++) {
-    _loop_1(i);
+    _loop_2(i);
 }

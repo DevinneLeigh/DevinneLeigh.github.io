@@ -961,17 +961,57 @@ footer {
         padding: 80px 0 1px 0;
         margin-top: -10px;
     }
+    p {
+        color: #fbfcfc;
+        margin: 5px 10px 0 0;
+        font-size: 20px;
+        width: 30px;
+        transform: rotate(0deg);
+        transition: .3s all ease-in-out;
+    }
     h2 {
         color: #fbfcfc;
         text-align: center;
         font-size: 30px;
+        margin-top: 0;
         @include xxl { // 1400px
             font-size: 50px; 
         }
     }
-    img {
-        width: 100vw;
-        height: auto;
+    .dropdown {
+        background: #00b2b2;
+        border: 2px groove #00cccc;
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 6px;
+        .arrow {
+            cursor: pointer;
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            text-align: center;
+        }
+        img {
+            display: none;
+        }
+        &.open {
+            .arrow {
+                p {
+                    transform: rotate(180deg);
+                    transition: .3s all ease-in-out;
+                    text-shadow: -1px -1px 2px #283644;
+                }
+            }
+            img {
+                transition: 2s all ease-in-out;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                width: 75%;
+                height: auto;
+            } 
+        }
     }
 }
 

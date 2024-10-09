@@ -16,6 +16,17 @@ menuToggle.addEventListener("click", function() {
         
 })
 
+//open explore page dropdowns
+let  dropDown = document.querySelectorAll(".dropdown")!
+ 
+for (let i = 0; i < dropDown.length; i++) {
+    dropDown[i].addEventListener("click", function() {
+        dropDown[i].classList.toggle("open");
+    });
+}
+
+
+
 //open form
 if (signUpButton) {
     signUpButton.addEventListener("click", function() {
