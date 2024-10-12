@@ -70,6 +70,7 @@ var processMembership = function () {
     if (phone && phoneError) {
         if (phone.value === "") {
             phoneError.innerText = "*Required*";
+            isValid = false;
         }
         else if (!phonePattern) {
             phoneError.innerText = "*Invalid Number*";
@@ -77,7 +78,6 @@ var processMembership = function () {
         }
         else {
             phoneError.innerText = "";
-            isValid = false;
         }
     }
     if (email && emailError) {
@@ -109,7 +109,7 @@ var processTickets = function () {
     var phonePattern = phone.value.match(/^[(\s]\d{3}[)\s]\d{3}[-\s]\d{4}/);
     var cardPattern = cardNumber.value.match(/^\d{4}[ \t]+\d{4}[ \t]+\d{4}[ \t]+\d{4}/);
     var emailPattern = email.value.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
-    var ccvPattern = ccv.value.match(/^\{3}/);
+    var ccvPattern = ccv.value.match(/^[0-9]{3}/);
     var isValid = true;
     if (userName && nameError) {
         if (userName.value === "") {
@@ -123,6 +123,7 @@ var processTickets = function () {
     if (phone && phoneError) {
         if (phone.value === "") {
             phoneError.innerText = "*Required*";
+            isValid = false;
         }
         else if (!phonePattern) {
             phoneError.innerText = "*Invalid*";
@@ -130,7 +131,6 @@ var processTickets = function () {
         }
         else {
             phoneError.innerText = "";
-            isValid = false;
         }
     }
     if (email && emailError) {
@@ -206,6 +206,7 @@ var processTickets = function () {
         var ratio = adultTicket_1 / (childTicket_1 + toddlerTicket_1);
         if (!adultTicket_1 && !childTicket_1 && !toddlerTicket_1) {
             ticketError.innerText = "*Please add tickets to continue*";
+            isValid = false;
         }
         else if (!adultTicket_1) {
             ticketError.innerText = "*At least one adult is required*";

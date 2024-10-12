@@ -82,6 +82,7 @@ const processMembership = () => {
     if (phone && phoneError) {
         if (phone.value === "") {
             phoneError.innerText = "*Required*";
+            isValid = false;
         } 
         else if (!phonePattern) {
             phoneError.innerText = "*Invalid Number*"; 
@@ -89,7 +90,6 @@ const processMembership = () => {
         }
         else {
             phoneError.innerText = ""; 
-            isValid = false;
         }
     }
     if (email && emailError) {
@@ -122,7 +122,7 @@ const processTickets = () => {
     let phonePattern = phone.value.match(/^[(\s]\d{3}[)\s]\d{3}[-\s]\d{4}/);
     let cardPattern = cardNumber.value.match(/^\d{4}[ \t]+\d{4}[ \t]+\d{4}[ \t]+\d{4}/);
     let emailPattern = email.value.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
-    let ccvPattern = ccv.value.match(/^\{3}/);
+    let ccvPattern = ccv.value.match(/^[0-9]{3}/);
 
     let isValid = true;
     if (userName && nameError) {
@@ -136,6 +136,7 @@ const processTickets = () => {
     if (phone && phoneError) {
         if (phone.value === "") {
             phoneError.innerText = "*Required*";
+            isValid = false;
         } 
         else if (!phonePattern) {
             phoneError.innerText = "*Invalid*"; 
@@ -143,7 +144,6 @@ const processTickets = () => {
         }
         else {
             phoneError.innerText = ""; 
-            isValid = false;
         }
     }
     if (email && emailError) {
@@ -220,6 +220,7 @@ const processTickets = () => {
 
         if (!adultTicket && !childTicket && !toddlerTicket) {
             ticketError.innerText = "*Please add tickets to continue*"
+            isValid = false;
         }
         else if (!adultTicket) {
             ticketError.innerText = "*At least one adult is required*";
