@@ -50,6 +50,24 @@ header #title h1 {
   letter-spacing: 1px;
   text-shadow: #506447 2px 2px 3px;
 }
+header #sub_title {
+  font-family: "Oxygen", sans-serif;
+}
+header #sub_title h2 {
+  font-size: 2em;
+  text-align: center;
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-shadow: #506447 2px 2px 3px;
+}
+header #sub_title p {
+  text-align: left;
+  font-weight: 200;
+  letter-spacing: 1px;
+  margin: 10px 60px 0 60px;
+  font-size: 20px;
+}
 
 main {
   padding-bottom: 150px;
@@ -113,11 +131,11 @@ main {
     width: 100%;
   }
 }
-#game_wrapper #left_side_wrapper #input form {
+#game_wrapper #left_side_wrapper #input #form {
   display: flex;
   flex-flow: column;
 }
-#game_wrapper #left_side_wrapper #input form #user_input {
+#game_wrapper #left_side_wrapper #input #form #user_input {
   background: #EBF2EC;
   color: #1E402D;
   width: 100%;
@@ -133,27 +151,16 @@ main {
   font-family: "Oxanium", sans-serif;
 }
 @media (min-width: 576px) {
-  #game_wrapper #left_side_wrapper #input form #user_input {
+  #game_wrapper #left_side_wrapper #input #form #user_input {
     height: 338px;
     margin-top: 0;
   }
 }
-#game_wrapper #left_side_wrapper #input form button {
-  background: #1E402D;
-  box-shadow: 3px 3px 4px #939393;
-  border: none;
-  border-radius: 18px;
-  font-size: 20px;
-  color: #EBF2EC;
-  font-weight: bold;
-  padding: 8px 12px;
+#game_wrapper #left_side_wrapper #input #form #submit {
   margin-top: -65px;
   margin-bottom: 65px;
   margin-right: auto;
   margin-left: auto;
-  font-family: "Oxygen", sans-serif;
-  font-weight: 300;
-  letter-spacing: 1.5px;
 }
 #game_wrapper #left_side_wrapper #log_box {
   background: #EBF2EC;
@@ -188,6 +195,15 @@ main {
   font-size: 24px;
   margin: 0 24px;
 }
+#game_wrapper #left_side_wrapper #log_box #next_wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+#game_wrapper #left_side_wrapper #log_box #next_wrapper #next {
+  margin-bottom: 55px;
+}
 #game_wrapper #right_side_wrapper {
   margin: auto;
 }
@@ -211,6 +227,20 @@ main {
   max-width: 100%;
   height: 100%;
   z-index: 0;
+}
+
+button {
+  background: #1E402D;
+  box-shadow: 3px 3px 4px #939393;
+  border: none;
+  border-radius: 18px;
+  font-size: 20px;
+  color: #EBF2EC;
+  font-weight: bold;
+  padding: 8px 12px;
+  font-family: "Oxygen", sans-serif;
+  font-weight: 300;
+  letter-spacing: 1.5px;
 }
 
 footer {

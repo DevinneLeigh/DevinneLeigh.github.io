@@ -73,6 +73,24 @@ header {
             text-shadow: #506447 2px 2px 3px;
         }
     }
+    #sub_title {
+        font-family: "Oxygen", sans-serif;
+        h2 {
+            font-size: 2em;
+            text-align: center;
+            margin: 0;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-shadow: #506447 2px 2px 3px;
+        }
+        p {
+            text-align: left;
+            font-weight: 200;
+            letter-spacing: 1px;
+            margin: 10px 60px 0 60px;
+            font-size: 20px;
+        }
+    }
 }
 
 main {
@@ -125,7 +143,7 @@ main {
             @include lg { // 960px
                 width: 100%;
             }
-            form {
+            #form {
                 display: flex;
                 flex-flow: column;
                 #user_input {
@@ -147,22 +165,11 @@ main {
                         margin-top: 0;
                     }
                 }
-                button {
-                    background: $primary-dark;
-                    box-shadow: 3px 3px 4px #939393 ;
-                    border: none;
-                    border-radius: 18px;
-                    font-size: 20px;
-                    color: $primary;
-                    font-weight: bold;
-                    padding: 8px 12px;
+                #submit {
                     margin-top: -65px;
                     margin-bottom: 65px;
                     margin-right: auto;
                     margin-left: auto;
-                    font-family: "Oxygen", sans-serif;
-                    font-weight: 300;
-                    letter-spacing: 1.5px;
                 }
             }
         }
@@ -194,6 +201,15 @@ main {
                 font-size: 24px;
                 margin: 0 24px;
             }
+            #next_wrapper {
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                #next {
+                    margin-bottom: 55px;
+                }
+            }
         }
     }
     #right_side_wrapper {
@@ -218,6 +234,20 @@ main {
             }
         }
     }
+}
+
+button {
+    background: $primary-dark;
+    box-shadow: 3px 3px 4px #939393 ;
+    border: none;
+    border-radius: 18px;
+    font-size: 20px;
+    color: $primary;
+    font-weight: bold;
+    padding: 8px 12px;
+    font-family: "Oxygen", sans-serif;
+    font-weight: 300;
+    letter-spacing: 1.5px;
 }
 
 footer {
