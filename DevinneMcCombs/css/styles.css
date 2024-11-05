@@ -1,0 +1,150 @@
+/**
+@include xs { // 400px
+
+}
+@include sm { // 576px
+
+}
+@include md { // 768px
+
+}
+@include lg { // 960px
+
+}
+@include xl { // 1200px
+
+}
+@include xxl { // 1400px
+
+}
+**/
+/* Mixins */
+header {
+  background: #fbfcfc;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 10000;
+}
+header #menu_toggle {
+  font-size: 44px;
+  float: right;
+  margin-right: 12px;
+  border: 0;
+  background-color: #fbfcfc;
+}
+header #menu_toggle p {
+  cursor: pointer;
+  margin: 0;
+}
+@media (min-width: 960px) {
+  header #menu_toggle {
+    display: none;
+  }
+}
+header #menu_toggle img {
+  width: 60px;
+}
+header nav {
+  position: fixed;
+  background: rgba(251, 252, 252, 0.8235294118);
+  align-items: flex-end;
+}
+@media (min-width: 960px) {
+  header nav {
+    position: unset;
+  }
+}
+@media (min-width: 960px) {
+  header nav ul {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: baseline;
+    list-style: none;
+    padding-left: 0;
+  }
+  header nav ul a {
+    font-size: 19px;
+    font-weight: bold;
+    margin: 0 20px 0 0;
+    text-decoration: none;
+    line-height: 60px;
+  }
+}
+header nav.open {
+  right: 10px;
+  top: 68px;
+  padding: 20px;
+  width: 219px;
+  height: 100%;
+  text-align: center;
+}
+@media (min-width: 960px) {
+  header nav.open {
+    width: 100%;
+    padding: 0;
+  }
+}
+header nav.open ul {
+  list-style: none;
+  display: flex;
+  flex-flow: column;
+  padding-left: 0;
+  align-items: flex-end;
+}
+@media (min-width: 960px) {
+  header nav.open ul {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: baseline;
+  }
+}
+header nav.open ul a {
+  font-size: 19px;
+  font-weight: bold;
+  margin: 0 25px 10px 0;
+  text-decoration: none;
+  line-height: 60px;
+}
+header nav.open a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #00b2b2;
+}
+@media (max-width: 960px) {
+  header nav {
+    right: -130px;
+  }
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #00b2b2;
+}
+
+#home #image {
+  background: #4a4a4a;
+  width: 100vw;
+  height: 100vh;
+}
+
+#about {
+  background: #8c3970;
+  height: 2000px;
+}
+
+#portfolio {
+  background: #039b1f;
+  height: 2000px;
+}
+#portfolio .example {
+  background: #4a4a4a;
+}
+
+#contact {
+  background: #cb9a1f;
+  height: 2000px;
+}/*# sourceMappingURL=styles.css.map */
