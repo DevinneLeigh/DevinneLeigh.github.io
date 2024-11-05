@@ -1,21 +1,18 @@
-/**
-@include xs { // 400px
-
+#top_image {
+  height: 100vh;
 }
-@include sm { // 576px
 
+a.nav-link {
+  color: black;
 }
-@include md { // 768px
 
+#button {
+  background: rgba(27, 27, 27, 0.737254902);
+  border-radius: 60px;
+  padding: 15px;
 }
-@include lg { // 960px
 
-}
-@include xl { // 1200px
-
-}
-@include xxl { // 1400px
-
-}
-**/
-/* Mixins *//*# sourceMappingURL=styles.css.map */
+.fakeimg {
+  height: 200px;
+  background: #aaa;
+}/*# sourceMappingURL=styles.css.map */

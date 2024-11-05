@@ -1,45 +1,22 @@
-$xs:  400px;
-$sm:  576px;
-$md:  768px;
-$lg:  960px;
-$xl:  1200px;
-$xxl: 1400px;
-
-/**
-@include xs { // 400px
-
+#top_image {
+    height: 100vh;
 }
-@include sm { // 576px
 
+// nav {
+//     background: blue;
+//     color: black;
+// }
+
+a.nav-link {
+    color: black;
 }
-@include md { // 768px
 
+#button {
+    background: #1b1b1bbc;
+    border-radius: 60px;
+    padding: 15px;
 }
-@include lg { // 960px
-
-}
-@include xl { // 1200px
-
-}
-@include xxl { // 1400px
-
-}
-**/
-
-$primary: #EBF2EC;
-$primary-dark: #1E402D;
-$secondary: #90BF7A;
-$dark-bg: #7BA66F;
-
-/* Mixins */
-@mixin xs { @media (min-width: $xs) { @content; }}
-@mixin sm { @media (min-width: $sm) { @content; } }
-@mixin sm-landscape { @media (min-width: $sm) and (max-width: $md) and (orientation: landscape) { @content; } }
-@mixin md { @media (min-width: $md) { @content; } }
-@mixin lg { @media (min-width: $lg) { @content; } }
-@mixin xl { @media (min-width: $xl) { @content; } }
-@mixin xxl { @media (min-width: $xxl) { @content; } }
-@mixin lt($width) { @media (max-width: $width) { @content; } }
-@mixin gt($width) { @media (min-width: $width) { @content; } }
-@mixin between($width1, $width2) { @media (min-width: $width1) and (max-width: $width2) { @content; } }
-
+.fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
