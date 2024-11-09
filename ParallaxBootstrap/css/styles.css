@@ -1,18 +1,360 @@
-#top_image {
-  height: 100vh;
+/**
+@include xs { // 400px
+
+}
+@include sm { // 576px
+
+}
+@include md { // 768px
+
+}
+@include lg { // 960px
+
+}
+@include xl { // 1200px
+
+}
+@include xxl { // 1400px
+
+}
+**/
+/* Mixins */
+header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 10000;
+}
+header #menu_toggle {
+  font-size: 44px;
+  float: right;
+  margin: 12px;
+  border: 0;
+  background-color: #191d42;
+  border-radius: 40px;
+  padding: 0 20px;
+}
+header #menu_toggle p {
+  cursor: pointer;
+  color: #ffffff;
+}
+@media (min-width: 960px) {
+  header #menu_toggle {
+    display: none;
+  }
+}
+header #menu_toggle img {
+  width: 60px;
+}
+header nav {
+  position: fixed;
+  background: #191d42;
+  align-items: flex-end;
+}
+@media (min-width: 960px) {
+  header nav {
+    position: unset;
+  }
+}
+@media (min-width: 960px) {
+  header nav ul {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: baseline;
+    list-style: none;
+    padding-left: 0;
+  }
+  header nav ul a {
+    font-size: 19px;
+    font-weight: bold;
+    margin: 0 20px 0 0;
+    text-decoration: none;
+    line-height: 60px;
+    color: #ffffff;
+  }
+}
+header nav.open {
+  background: #191d42;
+  right: 10px;
+  top: 100px;
+  padding: 20px 40px;
+  border-radius: 40px;
+  text-align: center;
+}
+@media (min-width: 960px) {
+  header nav.open {
+    width: 100%;
+    padding: 0;
+  }
+}
+header nav.open ul {
+  list-style: none;
+  display: flex;
+  flex-flow: column;
+  padding-left: 0;
+  align-items: flex-end;
+}
+@media (min-width: 960px) {
+  header nav.open ul {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: baseline;
+  }
+}
+header nav.open ul a {
+  color: #ffffff;
+  font-size: 19px;
+  font-weight: bold;
+  margin: 0 25px 10px 0;
+  text-decoration: none;
+  line-height: 60px;
+}
+header nav.open a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #f2b705;
+}
+@media (max-width: 960px) {
+  header nav {
+    right: -130px;
+  }
 }
 
-a.nav-link {
-  color: black;
+a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #00b2b2;
 }
 
-#button {
-  background: rgba(27, 27, 27, 0.737254902);
-  border-radius: 60px;
-  padding: 15px;
+#home {
+  width: 100vw;
+  height: auto;
+  background: #bf4904;
+}
+#home #image {
+  position: relative;
+}
+#home #image #img1, #home #image #img2, #home #image #img3, #home #image #img4, #home #image #img5, #home #image #img6, #home #image #img7 {
+  width: 100vw;
+  height: auto;
+  position: absolute;
+  margin-top: 50px;
+}
+#home #image #img1 {
+  z-index: 1;
+  margin-top: 0;
+}
+#home #image #img2 {
+  z-index: 2;
+}
+#home #image #img3 {
+  z-index: 3;
+}
+#home #image #img4 {
+  z-index: 4;
+}
+#home #image #img5 {
+  z-index: 5;
+}
+#home #image #img6 {
+  z-index: 6;
+}
+#home #image #fake-img7 {
+  z-index: 7;
+  background: #bf4904;
+  width: 100%;
+  display: block;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+#home #image #fake-img7 h1 {
+  font-size: 1.1em;
+  margin: 35px 10px;
+  line-height: 20px;
+  letter-spacing: 1.4px;
+}
+@media (min-width: 400px) {
+  #home #image #fake-img7 h1 {
+    font-size: 1.2em;
+    margin: 50px 15px;
+    line-height: 25px;
+    letter-spacing: 1.5px;
+  }
+}
+@media (min-width: 576px) {
+  #home #image #fake-img7 h1 {
+    font-size: 1.6em;
+    margin: 70px 20px;
+    line-height: 30px;
+    letter-spacing: 1.6px;
+  }
+}
+@media (min-width: 768px) {
+  #home #image #fake-img7 h1 {
+    font-size: 1.7em;
+    margin: 90px 35px 70px 35px;
+    line-height: 35px;
+    letter-spacing: 1.7px;
+  }
+}
+@media (min-width: 960px) {
+  #home #image #fake-img7 h1 {
+    font-size: 1.8em;
+    margin: 90px 50px 70px 50px;
+    line-height: 40px;
+    letter-spacing: 1.8px;
+  }
+}
+@media (min-width: 1200px) {
+  #home #image #fake-img7 h1 {
+    font-size: 2em;
+    margin: 100px;
+    line-height: 45px;
+    letter-spacing: 1.9px;
+  }
+}
+@media (min-width: 1400px) {
+  #home #image #fake-img7 h1 {
+    font-size: 2.2em;
+    line-height: 50px;
+    letter-spacing: 2px;
+    margin: 160px;
+  }
 }
 
-.fakeimg {
-  height: 200px;
-  background: #aaa;
+#bus_wrapper {
+  background: #bf4904;
+  margin-top: -70px;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#bus_wrapper #bus {
+  height: 300px;
+  margin-top: 50px;
+}
+@media (min-width: 400px) {
+  #bus_wrapper #bus {
+    height: 350px;
+    margin-top: 80px;
+  }
+}
+@media (min-width: 576px) {
+  #bus_wrapper #bus {
+    height: 400px;
+    margin-top: 200px;
+  }
+}
+@media (min-width: 768px) {
+  #bus_wrapper #bus {
+    height: 450px;
+    margin-top: 100px;
+  }
+}
+@media (min-width: 960px) {
+  #bus_wrapper #bus {
+    height: 500px;
+    margin-top: 180px;
+  }
+}
+@media (min-width: 1200px) {
+  #bus_wrapper #bus {
+    height: 550px;
+  }
+}
+@media (min-width: 1400px) {
+  #bus_wrapper #bus {
+    height: 600px;
+  }
+}
+
+#gallery {
+  background: #48758d;
+  height: 800px;
+}
+
+.background {
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 170%;
+  background-attachment: fixed;
+}
+@media (min-width: 400px) {
+  .background {
+    height: 400px;
+  }
+}
+@media (min-width: 576px) {
+  .background {
+    height: 600px;
+    background-size: 175%;
+  }
+}
+@media (min-width: 768px) {
+  .background {
+    height: 750px;
+    background-size: 180%;
+  }
+}
+@media (min-width: 960px) {
+  .background {
+    background-size: 150%;
+    height: 800px;
+  }
+}
+@media (min-width: 1200px) {
+  .background {
+    background-size: 130%;
+    height: 750px;
+  }
+}
+@media (min-width: 1400px) {
+  .background {
+    background-size: 100%;
+    height: 800px;
+  }
+}
+
+#people {
+  background-image: url(../image/people.png);
+  background-color: #48758d;
+}
+
+#rollercoaster {
+  background-image: url(../image/rollercoaster.png);
+  background-color: #f28705;
+}
+
+#airplane {
+  background-image: url(../image/airplane.png);
+  background-color: #f2b705;
+}
+
+#about {
+  background: #f28705;
+  height: 800px;
+}
+
+#pricing {
+  background: #f2b705;
+  height: 800px;
+}
+
+#contact {
+  background: #183459;
+  height: 800px;
+}
+
+footer {
+  background: #191d42;
+  height: 100px;
+  width: 100vw;
 }/*# sourceMappingURL=styles.css.map */
