@@ -290,7 +290,82 @@ a:hover {
 
 #gallery {
     background: #48758d;
-    height: 800px;
+    padding-bottom: 120px;
+    h2 {
+        color: #fff;
+        text-align: center;
+        padding: 100px 0 20px 0;
+    }
+    .carousel-item img {
+        margin: auto;
+        width: 96%;
+    }
+}
+
+@include sm { // 576px
+    #gallery {
+        .carousel-item img {
+            width: 86%;
+        }
+        .carousel-control-prev{
+            left: 4%;
+        }
+        .carousel-control-next {
+            right: 4%;
+        }
+    }
+}
+@include md { // 768px
+    #gallery {
+        .carousel-item img {
+            width: 76%;
+        }
+        .carousel-control-prev{
+            left: 1%;
+        }
+        .carousel-control-next {
+            right: 1%;
+        }
+    }
+}
+@include lg { // 960px
+    #gallery {
+        .carousel-item img {
+            width: 66%;
+        }
+        .carousel-control-prev{
+            left: 5%;
+        }
+        .carousel-control-next {
+            right: 5%;
+        }
+    }
+}
+@include xl { // 1200px
+    #gallery {
+        .carousel-item img {
+            width: 56%;
+        }
+        .carousel-control-prev{
+            left: 10%;
+        }
+        .carousel-control-next {
+            right: 10%;
+        }
+    }
+}
+@include xxl { // 1400px
+    #gallery {
+        .carousel-item img {
+            width: 46%;
+        }
+        .carousel-control-prev{
+            left: 15%;
+        }
+        .carousel-control-next {
+            right: 15%;
+        }
+    }
 }
 
 .background {
@@ -334,6 +409,8 @@ a:hover {
     background-color: #f28705;
 }
 
+
+
 #airplane {
     background-image: url(../image/airplane.png);
     background-color: #f2b705;
@@ -341,12 +418,193 @@ a:hover {
 
 #about {
     background: #f28705;
-    height: 800px;
+    padding: 50px 0;
+    #about_text_wrapper {
+        padding: 40px;
+        width: 98%;
+        margin: auto;
+        background: #191d42;
+        color: #fff;
+        h2 {
+            font-size: 1.2em;
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            font-size: .8em;
+        } 
+    }
+}
+@include xs { // 400px
+    #about {
+        padding: 60px 0;
+        #about_text_wrapper {
+            padding: 40px;
+            width: 90%;
+            h2 {
+                font-size: 1.4em;
+            }
+            p {
+                font-size: 1em;
+            } 
+        }
+    }
+}
+@include sm { // 576px
+    #about {
+        padding: 70px 0;
+        #about_text_wrapper {
+            padding: 55px;
+            width: 80%;
+            h2 {
+                font-size: 1.6em;
+            }
+            p {
+                font-size: 1.1em;
+            } 
+        }
+    }
+}
+@include md { // 768px
+    #about {
+        padding: 80px 0;
+        #about_text_wrapper {
+            padding: 70px;
+            width: 70%;
+            h2 {
+                font-size: 1.8em;
+            }
+            p {
+                font-size: 1.2em;
+            } 
+        }
+    }
+}
+@include lg { // 960px
+    #about {
+        padding: 90px 0;
+        #about_text_wrapper {
+            padding: 85px;
+            width: 60%;
+            h2 {
+                font-size: 2em;
+            }
+            p {
+                font-size: 1.3em;
+            } 
+        }
+    }
+}
+@include xl { // 1200px
+    #about {
+        padding: 100px 0;
+        #about_text_wrapper {
+            padding: 100px;
+            width: 52%;
+            h2 {
+                font-size: 2.2em;
+            }
+            p {
+                font-size: 1.4em;
+            } 
+        }
+    }
+}
+@include xxl { // 1400px
+    #about {
+        padding: 110px 0;
+        #about_text_wrapper {
+            padding: 115px;
+            width: 46%;
+            h2 {
+                font-size: 2.4em;
+            }
+            p {
+                font-size: 1.3em;
+            } 
+        }
+    }
 }
 
 #pricing {
   background: #f2b705;
-  height: 800px;
+  #cards {
+        margin: 0;
+        .card {
+            border-radius: 50px;
+            margin: 30px 0 0 0;
+            .card-body {
+                color:#191d42;
+                text-align: center;
+                //height: 450px;
+                #button {
+                    background: #bf4904;
+                    color: #fff;
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@include xs { // 400px
+    #pricing {
+        #cards{
+            .card {
+                margin: 30px 10px 0 10px;
+            }
+        }
+    }
+}
+@include sm { // 576px
+    #pricing {
+        #cards{
+            .card {
+                margin: 30px 55px 0 55px;
+            }
+        }
+    }
+}
+@include md { // 768px
+    #pricing {
+        #cards{
+            .card {
+                border-radius: 40px;
+                margin: 80px 0 80px 0;
+            }
+        }
+    }
+}
+@include lg { // 960px
+    #pricing {
+        #cards{
+            margin: 0 40px;
+            .card {
+                margin: 80px 0 80px 0;
+            }
+        }
+    }
+}
+@include xl { // 1200px
+    #pricing {
+        #cards{
+            margin: 0 80px;
+            .card {
+                margin: 80px 0 80px 0;
+            }
+        }
+    }
+}
+@include xxl { // 1400px
+    #pricing {
+        #cards{
+            margin: 0 80px;
+            .card {
+                margin: 80px 15px 80px 55px;
+            }
+        }
+    }
 }
 
 #contact {
@@ -359,5 +617,4 @@ footer {
     height: 100px;
     width: 100vw;
 }
-
 

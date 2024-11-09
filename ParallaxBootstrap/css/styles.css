@@ -277,9 +277,73 @@ a:hover {
 
 #gallery {
   background: #48758d;
-  height: 800px;
+  padding-bottom: 120px;
+}
+#gallery h2 {
+  color: #fff;
+  text-align: center;
+  padding: 100px 0 20px 0;
+}
+#gallery .carousel-item img {
+  margin: auto;
+  width: 96%;
 }
 
+@media (min-width: 576px) {
+  #gallery .carousel-item img {
+    width: 86%;
+  }
+  #gallery .carousel-control-prev {
+    left: 4%;
+  }
+  #gallery .carousel-control-next {
+    right: 4%;
+  }
+}
+@media (min-width: 768px) {
+  #gallery .carousel-item img {
+    width: 76%;
+  }
+  #gallery .carousel-control-prev {
+    left: 1%;
+  }
+  #gallery .carousel-control-next {
+    right: 1%;
+  }
+}
+@media (min-width: 960px) {
+  #gallery .carousel-item img {
+    width: 66%;
+  }
+  #gallery .carousel-control-prev {
+    left: 5%;
+  }
+  #gallery .carousel-control-next {
+    right: 5%;
+  }
+}
+@media (min-width: 1200px) {
+  #gallery .carousel-item img {
+    width: 56%;
+  }
+  #gallery .carousel-control-prev {
+    left: 10%;
+  }
+  #gallery .carousel-control-next {
+    right: 10%;
+  }
+}
+@media (min-width: 1400px) {
+  #gallery .carousel-item img {
+    width: 46%;
+  }
+  #gallery .carousel-control-prev {
+    left: 15%;
+  }
+  #gallery .carousel-control-next {
+    right: 15%;
+  }
+}
 .background {
   height: 300px;
   background-repeat: no-repeat;
@@ -340,14 +404,175 @@ a:hover {
 
 #about {
   background: #f28705;
-  height: 800px;
+  padding: 50px 0;
+}
+#about #about_text_wrapper {
+  padding: 40px;
+  width: 98%;
+  margin: auto;
+  background: #191d42;
+  color: #fff;
+}
+#about #about_text_wrapper h2 {
+  font-size: 1.2em;
+  text-align: center;
+}
+#about #about_text_wrapper p {
+  text-align: center;
+  font-size: 0.8em;
 }
 
+@media (min-width: 400px) {
+  #about {
+    padding: 60px 0;
+  }
+  #about #about_text_wrapper {
+    padding: 40px;
+    width: 90%;
+  }
+  #about #about_text_wrapper h2 {
+    font-size: 1.4em;
+  }
+  #about #about_text_wrapper p {
+    font-size: 1em;
+  }
+}
+@media (min-width: 576px) {
+  #about {
+    padding: 70px 0;
+  }
+  #about #about_text_wrapper {
+    padding: 55px;
+    width: 80%;
+  }
+  #about #about_text_wrapper h2 {
+    font-size: 1.6em;
+  }
+  #about #about_text_wrapper p {
+    font-size: 1.1em;
+  }
+}
+@media (min-width: 768px) {
+  #about {
+    padding: 80px 0;
+  }
+  #about #about_text_wrapper {
+    padding: 70px;
+    width: 70%;
+  }
+  #about #about_text_wrapper h2 {
+    font-size: 1.8em;
+  }
+  #about #about_text_wrapper p {
+    font-size: 1.2em;
+  }
+}
+@media (min-width: 960px) {
+  #about {
+    padding: 90px 0;
+  }
+  #about #about_text_wrapper {
+    padding: 85px;
+    width: 60%;
+  }
+  #about #about_text_wrapper h2 {
+    font-size: 2em;
+  }
+  #about #about_text_wrapper p {
+    font-size: 1.3em;
+  }
+}
+@media (min-width: 1200px) {
+  #about {
+    padding: 100px 0;
+  }
+  #about #about_text_wrapper {
+    padding: 100px;
+    width: 52%;
+  }
+  #about #about_text_wrapper h2 {
+    font-size: 2.2em;
+  }
+  #about #about_text_wrapper p {
+    font-size: 1.4em;
+  }
+}
+@media (min-width: 1400px) {
+  #about {
+    padding: 110px 0;
+  }
+  #about #about_text_wrapper {
+    padding: 115px;
+    width: 46%;
+  }
+  #about #about_text_wrapper h2 {
+    font-size: 2.4em;
+  }
+  #about #about_text_wrapper p {
+    font-size: 1.3em;
+  }
+}
 #pricing {
   background: #f2b705;
-  height: 800px;
+}
+#pricing #cards {
+  margin: 0;
+}
+#pricing #cards .card {
+  border-radius: 50px;
+  margin: 30px 0 0 0;
+}
+#pricing #cards .card .card-body {
+  color: #191d42;
+  text-align: center;
+}
+#pricing #cards .card .card-body #button {
+  background: #bf4904;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
 }
 
+@media (min-width: 400px) {
+  #pricing #cards .card {
+    margin: 30px 10px 0 10px;
+  }
+}
+@media (min-width: 576px) {
+  #pricing #cards .card {
+    margin: 30px 55px 0 55px;
+  }
+}
+@media (min-width: 768px) {
+  #pricing #cards .card {
+    border-radius: 40px;
+    margin: 80px 0 80px 0;
+  }
+}
+@media (min-width: 960px) {
+  #pricing #cards {
+    margin: 0 40px;
+  }
+  #pricing #cards .card {
+    margin: 80px 0 80px 0;
+  }
+}
+@media (min-width: 1200px) {
+  #pricing #cards {
+    margin: 0 80px;
+  }
+  #pricing #cards .card {
+    margin: 80px 0 80px 0;
+  }
+}
+@media (min-width: 1400px) {
+  #pricing #cards {
+    margin: 0 80px;
+  }
+  #pricing #cards .card {
+    margin: 80px 15px 80px 55px;
+  }
+}
 #contact {
   background: #183459;
   height: 800px;
