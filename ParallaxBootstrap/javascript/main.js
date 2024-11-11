@@ -37,6 +37,4 @@ window.addEventListener('scroll', function() {
     img5.style.top = scrollTop * -2 + 'px'; 
     img6.style.top = scrollTop * -2.5 + 'px';
     img7.style.top = (scrollTop * -2.5) + imgHeight + startingMargin + 'px'; 
-    // overflow.style.top = scrollTop * -2.5 + 'px';
-    //section1.style.top = scrollTop * 2.5 + 'px';
   });

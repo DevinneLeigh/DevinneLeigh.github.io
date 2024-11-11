@@ -526,11 +526,14 @@ a:hover {
   color: #191d42;
   text-align: center;
 }
-#pricing #cards .card .card-body #button {
+
+#button {
   background: #bf4904;
   color: #fff;
   font-weight: bold;
   font-size: 20px;
+  margin: auto;
+  display: block;
 }
 
 @media (min-width: 400px) {
@@ -575,7 +578,55 @@ a:hover {
 }
 #contact {
   background: #183459;
-  height: 800px;
+  padding: 100px 0;
+}
+#contact #form_wrapper {
+  background: #48758d;
+  padding: 45px;
+  margin: auto;
+  width: 98%;
+  color: #fff;
+}
+@media (min-width: 400px) {
+  #contact #form_wrapper {
+    padding: 80px;
+    width: 95%;
+  }
+}
+@media (min-width: 576px) {
+  #contact #form_wrapper {
+    padding: 100px;
+    width: 80%;
+  }
+}
+@media (min-width: 768px) {
+  #contact #form_wrapper {
+    width: 60%;
+  }
+}
+@media (min-width: 960px) {
+  #contact #form_wrapper {
+    width: 45%;
+  }
+}
+@media (min-width: 1200px) {
+  #contact #form_wrapper {
+    width: 40%;
+  }
+}
+@media (min-width: 1400px) {
+  #contact #form_wrapper {
+    width: 35%;
+  }
+}
+#contact #form_wrapper h2 {
+  text-align: center;
+}
+#contact #form_wrapper .form-control {
+  width: 100%;
+}
+#contact #form_wrapper #comment {
+  margin-bottom: 10px;
 }
 
 footer {
