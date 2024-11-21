@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Home</title>
+        <meta name="author" content="Devinne McCombs">
+        <meta charset="UTF-8">
+        <meta name="description" content="Aquarium">
+        <meta name="keywords" content="Aquarium">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+    <body>
+        <header>
+            <a class="logo" href="index.html"><img src="image/logo.svg" alt="Lapras Aquarium logo with cartoon plesiosaurus."></a>
+            <button id="menu_toggle">
+                <p>&#9776</p>
+            </button>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="explore.html">Explore</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a class="ticket_button" href="tickets.html">Buy Tickets</a></li>
+                </ul>
+            </nav>
+
+        </header>
+        <main>
+            <div id="welcome_container">
+                <div id="video_container">
+                    <video autoplay muted loop id="ocean_video">
+                        <source src="image/video.mp4" type="video/mp4">
+                    </video>
+                    
+                </div>
+                <h1>
+                    <span id="welcome">Welcome to</span>
+                    <span id="lapras">LAPRAS</span>
+                    <span id="aquarium">AQUARIUM</span>
+                </h1>
+            </div>
+            <img class="wave" id="wave_home" src="image/wave_top.svg">
+            <div id="mission_statement">
+                <h2>Our Mission</h2>
+                <p>We strive to be a sanctuary for marine life, fostering a deep connection between visitors and the ocean. Our mission is to educate, inspire, and empower individuals to become active stewards of our planet's oceans.</p>
+            </div>
+            <img class="wave" src="image/wave_bottom.svg">
+            <div class="background_image" id="jellyfishImage">
+                <div id="box_wrapper">
+                    <div class="box" id="time_box">
+                        <table>
+                            <tr>
+                                <th colspan="2"><h3>Hours</h3></th>
+                            </tr>
+                            <tr>
+                                <td>Monday</td>
+                                <td>9am-5pm</td>
+                        </tr>
+                            <tr>
+                                <td>Tuesday</td>
+                                <td>9am-5pm</td>
+                            </tr>
+                            <tr>
+                                <td>Wednesday</td>
+                                <td>9am-5pm</td>
+                            </tr>
+                            <tr>
+                                <td>Thursday</td>
+                                <td>9am-5pm</td>
+                            </tr>
+                            <tr>
+                                <td>Friday</td>
+                                <td>9am-5pm</td>
+                            </tr>
+                            <tr>
+                                <td>Saturday</td>
+                                <td>11am-7pm</td>
+                            </tr>
+                            <tr>
+                                <td>Sunday</td>
+                                <td>11am-7pm</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="box" id="contact_box">
+                        <h3>Address</h3>
+                        <p>123 Seahorse way, Ocean View, CA 92538</p>
+                        <h3>Call</h3>
+                        <p>1 234-567-8910</p>
+                    </div>
+                </div>
+            </div>
+    </main>
+        <footer>
+            <div class="footer_logo">
+                <img src="image/logo_circle.svg" alt="Lapras Aquarium logo">
+            </div>
+            <div class="footer_bottom">
+                <p>&#169; 2024 Lapras Aquarium</p>
+                <div class="social_media">
+                    <a href="https://www.facebook.com" target="_blank"><img class="facebook" src="image/facebook.svg" alt="Facebook icon"></a>
+                    <a href="https://www.twitter.com" target="_blank"><img class="twitter" src="image/twitter.svg" alt="Twitter icon"></a>
+                    <a href="https://www.instagram.com" target="_blank"><img class="instagram" src="image/instagram.svg" alt="Instagram icon"></a>
+                </div>
+            </div>
+        </footer>
+        <script src="javascript/main.js"></script>
+    </body>
+</html>

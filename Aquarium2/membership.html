@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Become a Member</title>
+        <meta name="author" content="Devinne McCombs">
+        <meta charset="UTF-8">
+        <meta name="description" content="Aquarium">
+        <meta name="keywords" content="Aquarium">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+    <body>
+        <header>
+            <a class="logo" href="index.html"><img src="image/logo.svg" alt="Lapras Aquarium logo with cartoon plesiosaurus."></a>
+            <button id="menu_toggle"><p>&#9776</p></button>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="explore.html">Explore</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="membership.html">Membership</a></li>
+                    <li><a class="ticket_button" href="tickets.html">Buy Tickets</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="background_image" id="kelpImage">
+            <div id="wave_box">
+                <h1>Become a Member</h1>
+            </div>
+            <img class="wave" src="image/wave_bottom.svg">
+
+                <div id="member_wrapper">
+                    <div id="member_box">
+                        <section>
+                            <h2>Members receive</h2>
+                            <ul>
+                                <li>Exclusive deals on tickets</li>
+                                <li>Discounts on merchandise</li>
+                                <li>Special event notifications</li>
+                                <li>Aquatic Wildlife newsletter</li>
+                            </ul>
+
+                            <div id="button_wrapper">
+                            <button id="sign_up_button">Sign up</button>
+                            </div>
+                        </section>
+                    </div>
+                    <div id="form_wrapper">
+                        <form id ="open_form" action="memberConfirm.html" method="post">
+                            <div>
+                                <label for="name">Name</label>
+                                <br>
+                                <input type="text" name="name" id="name" autocomplete="name">
+                            </div>
+                            <div id="name_error"></div>
+                            <br>
+                            <div>
+                                <label for="email_address">Email</label>
+                                <br>
+                                <input type="text" name="email_address" id="email_address">
+                            </div>
+                            <div id="email_error"></div>
+                            <br>
+                            <div>
+                                <label for="phone">Phone</label>
+                                <br>
+                                <input type="text" name="phone" id="phone" size="14" placeholder="(000)000-0000" autocomplete="phone number">
+                            </div>
+                            <div id="phone_error"></div>
+                            <br>
+                            <div>
+                                <p>Contact by</p>
+                                <p>
+                                <input type="radio" name="contact" id="email"
+                                    value="email" autocomplete="checked" checked>Email
+                                <input type="radio" name="contact" id="text"
+                                    value="text">Text
+                                </p>
+                            </div>
+                            <br>
+                            <div>
+                                <label label for="news">Would you like to receive event notifications?</label>
+                                <br>
+                                <input type="checkbox" name="news" id="news"
+                                    value="yes" checked>
+                            </div>
+                            <br>
+                            <div>
+                                <label label for="offers">Would you like to receive our news letter?</label>
+                                <br>
+                                <input type="checkbox" name="offers" id="offers"
+                                    value="yes" checked>
+                            </div>
+                            <br>
+                            <div id="button_wrapper">
+                                <input type="button" id="submit" value="Submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+        </main>
+        <footer>
+            <div class="footer_logo">
+                <img src="image/logo_circle.svg" alt="Lapras Aquarium logo">
+            </div>
+            <div class="footer_bottom">
+                <p>&#169; 2024 Lapras Aquarium</p>
+                <div class="social_media">
+                    <a href="https://www.facebook.com" target="_blank"><img class="facebook" src="image/facebook.svg" alt="Facebook icon"></a>
+                    <a href="https://www.twitter.com" target="_blank"><img class="twitter" src="image/twitter.svg" alt="Twitter icon"></a>
+                    <a href="https://www.instagram.com" target="_blank"><img class="instagram" src="image/instagram.svg" alt="Instagram icon"></a>
+                </div>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.9/jquery.inputmask.min.js"></script>
+        <script>
+            $(function() {
+                $("#phone").inputmask("(999)999-9999");
+            });
+        </script>
+        <script src="javascript/main.js"></script>
+    </body>
+</html>
