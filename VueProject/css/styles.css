@@ -18,4 +18,9 @@
 
 }
 **/
-/* Mixins *//*# sourceMappingURL=styles.css.map */
+/* Mixins */
+body {
+  background-image: url(../image/background.png);
+  background-size: 800px;
+  background-attachment: fixed;
+}/*# sourceMappingURL=styles.css.map */

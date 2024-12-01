@@ -1,18 +1,16 @@
-[
-	{
-		"name": "Ace",
+{
+	"Ace": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/brd09.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBrd09.png",
 		"houseImage": "",
 		"species": "Bird",
 		"gender": "Male",
 		"personality": "Jock",
-		"hobby": "X Nature",
+		"hobby": "Nature",
 		"birthday": "8/11",
 		"catchphrase": "ace"
 	},
-	{
-		"name": "Admiral",
+	"Admiral": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/brd06.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBrd06.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/brd06_39_Admiral.png",
@@ -22,9 +20,7 @@
 		"hobby": "Nature",
 		"birthday": "1/27",
 		"catchphrase": "aye aye"
-	},
-	{
-		"name": "Agent S",
+	"Agent S": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/squ05.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlSqu05.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/squ05_357_Agent%20S.png",
@@ -34,9 +30,7 @@
 		"hobby": "Fitness",
 		"birthday": "7/2",
 		"catchphrase": "sidekick"
-	},
-	{
-		"name": "Agnes",
+	"Agnes": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pig17.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPig17.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pig17_313_Agnes.png",
@@ -46,9 +40,7 @@
 		"hobby": "Play",
 		"birthday": "4/21",
 		"catchphrase": "snuffle"
-	},
-	{
-		"name": "Al",
+	"Al": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/gor08.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlGor08.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/gor08_190_Al.png",
@@ -58,9 +50,7 @@
 		"hobby": "Fitness",
 		"birthday": "10/18",
 		"catchphrase": "ayyyeee"
-	},
-	{
-		"name": "Alfonso",
+	"Alfonso": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/crd00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCrd00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/crd00_102_Alfonso.png",
@@ -70,9 +60,7 @@
 		"hobby": "Play",
 		"birthday": "6/9",
 		"catchphrase": "it'sa me"
-	},
-	{
-		"name": "Alice",
+	"Alice": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/kal01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlKal01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/kal01_221_Alice.png",
@@ -82,9 +70,7 @@
 		"hobby": "Education",
 		"birthday": "8/19",
 		"catchphrase": "guvnor"
-	},
-	{
-		"name": "Alli",
+	"Alli": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/crd01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCrd01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/crd01_103_Alli.png",
@@ -94,9 +80,7 @@
 		"hobby": "Fashion",
 		"birthday": "11/8",
 		"catchphrase": "graaagh"
-	},
-	{
-		"name": "Amelia",
+	"Amelia": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pbr01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPbr01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pbr01_279_Amelia.png",
@@ -107,8 +91,7 @@
 		"birthday": "11/19",
 		"catchphrase": "cuz"
 	},
-	{
-		"name": "Anabelle",
+	"Anabelle": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/ant03.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlAnt03.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/ant03_15_Anabelle.png",
@@ -118,9 +101,7 @@
 		"hobby": "Fashion",
 		"birthday": "2/16",
 		"catchphrase": "snorty"
-	},
-	{
-		"name": "Anchovy",
+	"Anchovy": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/brd02.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBrd02.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/brd02_35_Anchovy.png",
@@ -130,9 +111,7 @@
 		"hobby": "Play",
 		"birthday": "3/4",
 		"catchphrase": "chuurp"
-	},
-	{
-		"name": "Angus",
+	"Angus": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/bul00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBul00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/bul00_46_Angus.png",
@@ -142,9 +121,7 @@
 		"hobby": "Fitness",
 		"birthday": "4/30",
 		"catchphrase": "macmoo"
-	},
-	{
-		"name": "Anicotti",
+	"Anicotti": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/mus10.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlMus10.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/mus10_258_Anicotti.png",
@@ -154,9 +131,7 @@
 		"hobby": "Fashion",
 		"birthday": "2/24",
 		"catchphrase": "cannoli"
-	},
-	{
-		"name": "Ankha",
+	"Ankha": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cat19.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCat19.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cat19_70_Ankha.png",
@@ -166,9 +141,7 @@
 		"hobby": "Nature",
 		"birthday": "9/22",
 		"catchphrase": "me meow"
-	},
-	{
-		"name": "Annalisa",
+	"Annalisa": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/ant08.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlAnt08.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/ant08_17_Annalisa.png",
@@ -178,9 +151,7 @@
 		"hobby": "Nature",
 		"birthday": "2/6",
 		"catchphrase": "gumdrop"
-	},
-	{
-		"name": "Annalise",
+	"Annalise": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/hrs09.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlHrs09.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/hrs09_214_Annalise.png",
@@ -190,9 +161,7 @@
 		"hobby": "Fashion",
 		"birthday": "12/2",
 		"catchphrase": "nipper"
-	},
-	{
-		"name": "Antonio",
+	"Antonio": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/ant01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlAnt01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/ant01_13_Antonio.png",
@@ -202,9 +171,7 @@
 		"hobby": "Fitness",
 		"birthday": "10/20",
 		"catchphrase": "honk"
-	},
-	{
-		"name": "Apollo",
+	"Apollo": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pbr00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPbr00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pbr00_278_Apollo.png",
@@ -214,9 +181,7 @@
 		"hobby": "Music",
 		"birthday": "7/4",
 		"catchphrase": "pah"
-	},
-	{
-		"name": "Apple",
+	"Apple": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/ham01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlHam01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/ham01_194_Apple.png",
@@ -226,9 +191,7 @@
 		"hobby": "Play",
 		"birthday": "9/24",
 		"catchphrase": "cheekers"
-	},
-	{
-		"name": "Astrid",
+	"Astrid": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/kgr05.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlKgr05.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/kgr05_231_Astrid.png",
@@ -238,9 +201,7 @@
 		"hobby": "Music",
 		"birthday": "9/8",
 		"catchphrase": "my pet"
-	},
-	{
-		"name": "Audie",
+	"Audie": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/wol12.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlWol12.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/wol12_387_Audie.png",
@@ -251,8 +212,7 @@
 		"birthday": "8/31",
 		"catchphrase": "foxtrot"
 	},
-	{
-		"name": "Aurora",
+	"Aurora": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pgn00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPgn00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pgn00_287_Aurora.png",
@@ -262,9 +222,7 @@
 		"hobby": "Education",
 		"birthday": "1/27",
 		"catchphrase": "b-b-baby"
-	},
-	{
-		"name": "Ava",
+	"Ava": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/chn05.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlChn05.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/chn05_92_Ava.png",
@@ -274,9 +232,7 @@
 		"hobby": "Music",
 		"birthday": "4/28",
 		"catchphrase": "beaker"
-	},
-	{
-		"name": "Avery",
+	"Avery": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pbr05.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPbr05.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pbr05_282_Avery.png",
@@ -286,9 +242,7 @@
 		"hobby": "Music",
 		"birthday": "2/22",
 		"catchphrase": "skree-haw"
-	},
-	{
-		"name": "Axel",
+	"Axel": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/elp06.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlElp06.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/elp06_154_Axel.png",
@@ -298,9 +252,7 @@
 		"hobby": "Fitness",
 		"birthday": "3/23",
 		"catchphrase": "WHONK"
-	},
-	{
-		"name": "Azalea",
+	"Azalea": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/rhn05.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlRhn05.png",
 		"houseImage": "",
@@ -310,9 +262,7 @@
 		"hobby": "Nature",
 		"birthday": "12/18",
 		"catchphrase": "merci"
-	},
-	{
-		"name": "Baabara",
+	"Baabara": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/shp01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlShp01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/shp01_341_Baabara.png",
@@ -322,9 +272,7 @@
 		"hobby": "Fashion",
 		"birthday": "3/28",
 		"catchphrase": "daahling"
-	},
-	{
-		"name": "Bam",
+	"Bam": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/der01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDer01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/der01_110_Bam.png",
@@ -334,9 +282,7 @@
 		"hobby": "Play",
 		"birthday": "11/7",
 		"catchphrase": "kablang"
-	},
-	{
-		"name": "Bangle",
+	"Bangle": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/tig03.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlTig03.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/tig03_373_Bangle.png",
@@ -346,9 +292,7 @@
 		"hobby": "Fashion",
 		"birthday": "8/27",
 		"catchphrase": "growf"
-	},
-	{
-		"name": "Barold",
+	"Barold": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cbr16.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCbr16.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cbr16_86_Barold.png",
@@ -358,9 +302,7 @@
 		"hobby": "Play",
 		"birthday": "3/2",
 		"catchphrase": "cubby"
-	},
-	{
-		"name": "Bea",
+	"Bea": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/dog10.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDog10.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/dog10_128_Bea.png",
@@ -370,9 +312,7 @@
 		"hobby": "Nature",
 		"birthday": "10/15",
 		"catchphrase": "bingo"
-	},
-	{
-		"name": "Beardo",
+	"Beardo": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/bea13.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBea13.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/bea13_30_Beardo.png",
@@ -382,9 +322,7 @@
 		"hobby": "Education",
 		"birthday": "9/27",
 		"catchphrase": "whiskers"
-	},
-	{
-		"name": "Beau",
+	"Beau": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/der07.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDer07.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/der07_115_Beau.png",
@@ -394,9 +332,7 @@
 		"hobby": "Nature",
 		"birthday": "4/5",
 		"catchphrase": "saltlick"
-	},
-	{
-		"name": "Becky",
+	"Becky": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/chn09.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlChn09.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/chn09_93_Becky.png",
@@ -406,9 +342,7 @@
 		"hobby": "Music",
 		"birthday": "12/9",
 		"catchphrase": "chicklet"
-	},
-	{
-		"name": "Bella",
+	"Bella": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/mus02.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlMus02.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/mus02_252_Bella.png",
@@ -418,9 +352,7 @@
 		"hobby": "Music",
 		"birthday": "12/28",
 		"catchphrase": "eeks"
-	},
-	{
-		"name": "Benedict",
+	"Benedict": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/chn01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlChn01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/chn01_90_Benedict.png",
@@ -430,9 +362,7 @@
 		"hobby": "Play",
 		"birthday": "10/10",
 		"catchphrase": "uh-hoo"
-	},
-	{
-		"name": "Benjamin",
+	"Benjamin": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/dog16.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDog16.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/dog16_130_Benjamin.png",
@@ -442,9 +372,7 @@
 		"hobby": "Nature",
 		"birthday": "8/3",
 		"catchphrase": "alrighty"
-	},
-	{
-		"name": "Bertha",
+	"Bertha": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/hip03.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlHip03.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/hip03_202_Bertha.png",
@@ -454,9 +382,7 @@
 		"hobby": "Education",
 		"birthday": "4/25",
 		"catchphrase": "bloop"
-	},
-	{
-		"name": "Bettina",
+	"Bettina": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/mus15.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlMus15.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/mus15_261_Bettina.png",
@@ -466,9 +392,7 @@
 		"hobby": "Education",
 		"birthday": "6/12",
 		"catchphrase": "eekers"
-	},
-	{
-		"name": "Bianca",
+	"Bianca": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/tig06.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlTig06.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/tig06_376_Bianca.png",
@@ -478,9 +402,7 @@
 		"hobby": "Play",
 		"birthday": "12/13",
 		"catchphrase": "glimmer"
-	},
-	{
-		"name": "Biff",
+	"Biff": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/hip04.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlHip04.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/hip04_203_Biff.png",
@@ -490,9 +412,7 @@
 		"hobby": "Fitness",
 		"birthday": "3/29",
 		"catchphrase": "squirt"
-	},
-	{
-		"name": "Big Top",
+	"Big Top": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/elp02.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlElp02.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/elp02_150_Big%20Top.png",
@@ -502,9 +422,7 @@
 		"hobby": "Play",
 		"birthday": "10/3",
 		"catchphrase": "villain"
-	},
-	{
-		"name": "Bill",
+	"Bill": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/duk00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDuk00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/duk00_133_Bill.png",
@@ -515,8 +433,7 @@
 		"birthday": "2/1",
 		"catchphrase": "quacko"
 	},
-	{
-		"name": "Billy",
+	"Billy": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/goa02.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlGoa02.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/goa02_178_Billy.png",
@@ -526,9 +443,7 @@
 		"hobby": "Play",
 		"birthday": "3/25",
 		"catchphrase": "dagnaabit"
-	},
-	{
-		"name": "Biskit",
+	"Biskit": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/dog03.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDog03.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/dog03_121_Biskit.png",
@@ -538,9 +453,7 @@
 		"hobby": "Play",
 		"birthday": "5/13",
 		"catchphrase": "dawg"
-	},
-	{
-		"name": "Bitty",
+	"Bitty": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/hip05.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlHip05.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/hip05_204_Bitty.png",
@@ -550,9 +463,7 @@
 		"hobby": "Education",
 		"birthday": "10/6",
 		"catchphrase": "my dear"
-	},
-	{
-		"name": "Blaire",
+	"Blaire": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/squ01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlSqu01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/squ01_353_Blaire.png",
@@ -562,9 +473,7 @@
 		"hobby": "Fashion",
 		"birthday": "7/3",
 		"catchphrase": "nutlet"
-	},
-	{
-		"name": "Blanche",
+	"Blanche": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/ost08.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlOst08.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/ost08_275_Blanche.png",
@@ -574,9 +483,7 @@
 		"hobby": "Nature",
 		"birthday": "12/21",
 		"catchphrase": "quite so"
-	},
-	{
-		"name": "Bluebear",
+	"Bluebear": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cbr00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCbr00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cbr00_74_Bluebear.png",
@@ -586,9 +493,7 @@
 		"hobby": "Fashion",
 		"birthday": "6/24",
 		"catchphrase": "peach"
-	},
-	{
-		"name": "Bob",
+	"Bob": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cat00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCat00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cat00_52_Bob.png",
@@ -598,9 +503,7 @@
 		"hobby": "Play",
 		"birthday": "1/1",
 		"catchphrase": "pthhpth"
-	},
-	{
-		"name": "Bonbon",
+	"Bonbon": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/rbt17.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlRbt17.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/rbt17_331_Bonbon.png",
@@ -610,9 +513,7 @@
 		"hobby": "Play",
 		"birthday": "3/3",
 		"catchphrase": "deelish"
-	},
-	{
-		"name": "Bones",
+	"Bones": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/dog04.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDog04.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/dog04_122_Bones.png",
@@ -622,9 +523,7 @@
 		"hobby": "Play",
 		"birthday": "8/4",
 		"catchphrase": "yip yip"
-	},
-	{
-		"name": "Boomer",
+	"Boomer": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pgn10.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPgn10.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pgn10_295_Boomer.png",
@@ -634,9 +533,7 @@
 		"hobby": "Fitness",
 		"birthday": "2/7",
 		"catchphrase": "human"
-	},
-	{
-		"name": "Boone",
+	"Boone": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/gor02.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlGor02.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/gor02_186_Boone.png",
@@ -646,9 +543,7 @@
 		"hobby": "Fitness",
 		"birthday": "9/12",
 		"catchphrase": "baboom"
-	},
-	{
-		"name": "Boots",
+	"Boots": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/crd02.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCrd02.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/crd02_104_Boots.png",
@@ -658,9 +553,7 @@
 		"hobby": "Play",
 		"birthday": "8/7",
 		"catchphrase": "munchie"
-	},
-	{
-		"name": "Boris",
+	"Boris": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pig09.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPig09.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pig09_306_Boris.png",
@@ -670,9 +563,7 @@
 		"hobby": "Nature",
 		"birthday": "11/6",
 		"catchphrase": "schnort"
-	},
-	{
-		"name": "Boyd",
+	"Boyd": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/gor05.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlGor05.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/gor05_188_Boyd.png",
@@ -682,9 +573,7 @@
 		"hobby": "Fitness",
 		"birthday": "10/1",
 		"catchphrase": "uh-oh"
-	},
-	{
-		"name": "Bree",
+	"Bree": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/mus03.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlMus03.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/mus03_253_Bree.png",
@@ -694,9 +583,7 @@
 		"hobby": "Fashion",
 		"birthday": "7/7",
 		"catchphrase": "cheeseball"
-	},
-	{
-		"name": "Broccolo",
+	"Broccolo": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/mus12.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlMus12.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/mus12_259_Broccolo.png",
@@ -706,9 +593,7 @@
 		"hobby": "Play",
 		"birthday": "6/30",
 		"catchphrase": "eat it"
-	},
-	{
-		"name": "Broffina",
+	"Broffina": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/chn12.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlChn12.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/chn12_96_Broffina.png",
@@ -718,9 +603,7 @@
 		"hobby": "Music",
 		"birthday": "10/24",
 		"catchphrase": "cluckadoo"
-	},
-	{
-		"name": "Bruce",
+	"Bruce": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/der03.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDer03.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/der03_111_Bruce.png",
@@ -730,9 +613,7 @@
 		"hobby": "Nature",
 		"birthday": "5/26",
 		"catchphrase": "gruff"
-	},
-	{
-		"name": "Bubbles",
+	"Bubbles": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/hip02.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlHip02.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/hip02_201_Bubbles.png",
@@ -742,9 +623,7 @@
 		"hobby": "Fashion",
 		"birthday": "9/18",
 		"catchphrase": "hipster"
-	},
-	{
-		"name": "Buck",
+	"Buck": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/hrs00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlHrs00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/hrs00_206_Buck.png",
@@ -754,9 +633,7 @@
 		"hobby": "Fitness",
 		"birthday": "4/4",
 		"catchphrase": "pardner"
-	},
-	{
-		"name": "Bud",
+	"Bud": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/lon00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlLon00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/lon00_236_Bud.png",
@@ -766,9 +643,7 @@
 		"hobby": "Fitness",
 		"birthday": "8/8",
 		"catchphrase": "shredded"
-	},
-	{
-		"name": "Bunnie",
+	"Bunnie": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/rbt00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlRbt00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/rbt00_314_Bunnie.png",
@@ -778,9 +653,7 @@
 		"hobby": "Fashion",
 		"birthday": "5/9",
 		"catchphrase": "tee-hee"
-	},
-	{
-		"name": "Butch",
+	"Butch": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/dog01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDog01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/dog01_119_Butch.png",
@@ -791,8 +664,7 @@
 		"birthday": "11/1",
 		"catchphrase": "ROOOOOWF"
 	},
-	{
-		"name": "Buzz",
+	"Buzz": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pbr03.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPbr03.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pbr03_281_Buzz.png",
@@ -802,9 +674,7 @@
 		"hobby": "Nature",
 		"birthday": "12/7",
 		"catchphrase": "captain"
-	},
-	{
-		"name": "Cally",
+	"Cally": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/squ11.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlSqu11.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/squ11_363_Cally.png",
@@ -814,9 +684,7 @@
 		"hobby": "Nature",
 		"birthday": "9/4",
 		"catchphrase": "WHEE"
-	},
-	{
-		"name": "Camofrog",
+	"Camofrog": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/flg03.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlFlg03.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/flg03_161_Camofrog.png",
@@ -826,9 +694,7 @@
 		"hobby": "Music",
 		"birthday": "6/5",
 		"catchphrase": "ten-hut"
-	},
-	{
-		"name": "Canberra",
+	"Canberra": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/kal08.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlKal08.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/kal08_225_Canberra.png",
@@ -838,9 +704,7 @@
 		"hobby": "Play",
 		"birthday": "5/14",
 		"catchphrase": "nuh uh"
-	},
-	{
-		"name": "Candi",
+	"Candi": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/mus08.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlMus08.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/mus08_256_Candi.png",
@@ -851,8 +715,7 @@
 		"birthday": "4/13",
 		"catchphrase": "sweetie"
 	},
-	{
-		"name": "Carmen",
+	"Carmen": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/rbt16.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlRbt16.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/rbt16_330_Carmen.png",
@@ -862,9 +725,7 @@
 		"hobby": "Fashion",
 		"birthday": "1/6",
 		"catchphrase": "nougat"
-	},
-	{
-		"name": "Caroline",
+	"Caroline": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/squ06.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlSqu06.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/squ06_358_Caroline.png",
@@ -874,9 +735,7 @@
 		"hobby": "Music",
 		"birthday": "7/15",
 		"catchphrase": "hulaaaa"
-	},
-	{
-		"name": "Carrie",
+	"Carrie": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/kgr02.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlKgr02.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/kgr02_230_Carrie.png",
@@ -886,9 +745,7 @@
 		"hobby": "Nature",
 		"birthday": "12/5",
 		"catchphrase": "little one"
-	},
-	{
-		"name": "Cashmere",
+	"Cashmere": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/shp04.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlShp04.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/shp04_343_Cashmere.png",
@@ -898,9 +755,7 @@
 		"hobby": "Fashion",
 		"birthday": "4/2",
 		"catchphrase": "baaaby"
-	},
-	{
-		"name": "Celia",
+	"Celia": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pbr09.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPbr09.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pbr09_286_Celia.png",
@@ -910,9 +765,7 @@
 		"hobby": "Nature",
 		"birthday": "3/25",
 		"catchphrase": "feathers"
-	},
-	{
-		"name": "Cephalobot",
+	"Cephalobot": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/ocp04.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlOcp04.png",
 		"houseImage": "",
@@ -922,9 +775,7 @@
 		"hobby": "Play",
 		"birthday": "4/1",
 		"catchphrase": "donk donk"
-	},
-	{
-		"name": "Cesar",
+	"Cesar": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/gor00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlGor00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/gor00_184_Cesar.png",
@@ -934,9 +785,7 @@
 		"hobby": "Fitness",
 		"birthday": "9/6",
 		"catchphrase": "highness"
-	},
-	{
-		"name": "Chabwick",
+	"Chabwick": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pgn07.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPgn07.png",
 		"houseImage": "",
@@ -946,9 +795,7 @@
 		"hobby": "Play",
 		"birthday": "12/24",
 		"catchphrase": "blargh"
-	},
-	{
-		"name": "Chadder",
+	"Chadder": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/mus18.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlMus18.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/mus18_264_Chadder.png",
@@ -958,9 +805,7 @@
 		"hobby": "Fitness",
 		"birthday": "12/15",
 		"catchphrase": "fromage"
-	},
-	{
-		"name": "Chai",
+	"Chai": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/elp11.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlElp11.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/elp11_Chai.png",
@@ -970,9 +815,7 @@
 		"hobby": "Play",
 		"birthday": "3/6",
 		"catchphrase": "flap flap"
-	},
-	{
-		"name": "Charlise",
+	"Charlise": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/bea12.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBea12.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/bea12_29_Charlise.png",
@@ -982,9 +825,7 @@
 		"hobby": "Fitness",
 		"birthday": "4/17",
 		"catchphrase": "urgh"
-	},
-	{
-		"name": "Chelsea",
+	"Chelsea": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/der10.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDer10.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/der10_Chelsea.png",
@@ -994,9 +835,7 @@
 		"hobby": "Play",
 		"birthday": "1/18",
 		"catchphrase": "pound cake"
-	},
-	{
-		"name": "Cheri",
+	"Cheri": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cbr10.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCbr10.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cbr10_83_Cheri.png",
@@ -1006,9 +845,7 @@
 		"hobby": "Fashion",
 		"birthday": "3/17",
 		"catchphrase": "tralala"
-	},
-	{
-		"name": "Cherry",
+	"Cherry": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/dog17.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDog17.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/dog17_131_Cherry.png",
@@ -1018,9 +855,7 @@
 		"hobby": "Music",
 		"birthday": "5/11",
 		"catchphrase": "what what"
-	},
-	{
-		"name": "Chester",
+	"Chester": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cbr15.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCbr15.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cbr15_85_Chester.png",
@@ -1030,9 +865,7 @@
 		"hobby": "Play",
 		"birthday": "8/6",
 		"catchphrase": "rookie"
-	},
-	{
-		"name": "Chevre",
+	"Chevre": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/goa00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlGoa00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/goa00_176_Chevre.png",
@@ -1042,9 +875,7 @@
 		"hobby": "Education",
 		"birthday": "3/6",
 		"catchphrase": "la baa"
-	},
-	{
-		"name": "Chief",
+	"Chief": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/wol00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlWol00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/wol00_377_Chief.png",
@@ -1054,9 +885,7 @@
 		"hobby": "Music",
 		"birthday": "12/19",
 		"catchphrase": "harrumph"
-	},
-	{
-		"name": "Chops",
+	"Chops": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pig14.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPig14.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pig14_310_Chops.png",
@@ -1066,9 +895,7 @@
 		"hobby": "Education",
 		"birthday": "10/13",
 		"catchphrase": "zoink"
-	},
-	{
-		"name": "Chow",
+	"Chow": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/bea03.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBea03.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/bea03_21_Chow.png",
@@ -1078,9 +905,7 @@
 		"hobby": "Fitness",
 		"birthday": "7/22",
 		"catchphrase": "aiya"
-	},
-	{
-		"name": "Chrissy",
+	"Chrissy": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/rbt13.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlRbt13.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/rbt13_327_Chrissy.png",
@@ -1090,9 +915,7 @@
 		"hobby": "Fashion",
 		"birthday": "8/28",
 		"catchphrase": "sparkles"
-	},
-	{
-		"name": "Claude",
+	"Claude": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/rbt11.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlRbt11.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/rbt11_325_Claude.png",
@@ -1102,9 +925,7 @@
 		"hobby": "Nature",
 		"birthday": "12/3",
 		"catchphrase": "hopalong"
-	},
-	{
-		"name": "Claudia",
+	"Claudia": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/tig05.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlTig05.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/tig05_375_Claudia.png",
@@ -1114,9 +935,7 @@
 		"hobby": "Music",
 		"birthday": "11/22",
 		"catchphrase": "ooh la la"
-	},
-	{
-		"name": "Clay",
+	"Clay": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/ham05.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlHam05.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/ham05_197_Clay.png",
@@ -1126,9 +945,7 @@
 		"hobby": "Nature",
 		"birthday": "10/19",
 		"catchphrase": "thump"
-	},
-	{
-		"name": "Cleo",
+	"Cleo": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/hrs07.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlHrs07.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/hrs07_7_Cleo.png",
@@ -1138,9 +955,7 @@
 		"hobby": "Education",
 		"birthday": "2/9",
 		"catchphrase": "sugar"
-	},
-	{
-		"name": "Clyde",
+	"Clyde": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/hrs10.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlHrs10.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/hrs10_215_Clyde.png",
@@ -1150,9 +965,7 @@
 		"hobby": "Play",
 		"birthday": "5/1",
 		"catchphrase": "clip clawp"
-	},
-	{
-		"name": "Coach",
+	"Coach": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/bul07.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBul07.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/bul07_50_Coach.png",
@@ -1163,8 +976,7 @@
 		"birthday": "4/29",
 		"catchphrase": "stubble"
 	},
-	{
-		"name": "Cobb",
+	"Cobb": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pig08.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPig08.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pig08_305_Cobb.png",
@@ -1174,9 +986,7 @@
 		"hobby": "Education",
 		"birthday": "10/7",
 		"catchphrase": "hot dog"
-	},
-	{
-		"name": "Coco",
+	"Coco": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/rbt02.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlRbt02.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/rbt02_316_Coco.png",
@@ -1186,9 +996,7 @@
 		"hobby": "Education",
 		"birthday": "3/1",
 		"catchphrase": "doyoing"
-	},
-	{
-		"name": "Cole",
+	"Cole": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/rbt18.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlRbt18.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/rbt18_332_Cole.png",
@@ -1198,9 +1006,7 @@
 		"hobby": "Nature",
 		"birthday": "8/10",
 		"catchphrase": "coooooool"
-	},
-	{
-		"name": "Colton",
+	"Colton": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/hrs11.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlHrs11.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/hrs11_216_Colton.png",
@@ -1210,9 +1016,7 @@
 		"hobby": "Nature",
 		"birthday": "5/22",
 		"catchphrase": "check it"
-	},
-	{
-		"name": "Cookie",
+	"Cookie": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/dog08.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDog08.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/dog08_126_Cookie.png",
@@ -1222,9 +1026,7 @@
 		"hobby": "Fashion",
 		"birthday": "6/18",
 		"catchphrase": "arfer"
-	},
-	{
-		"name": "Cousteau",
+	"Cousteau": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/flg10.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlFlg10.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/flg10_167_Cousteau.png",
@@ -1234,9 +1036,7 @@
 		"hobby": "Fitness",
 		"birthday": "12/17",
 		"catchphrase": "oui oui"
-	},
-	{
-		"name": "Cranston",
+	"Cranston": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/ost06.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlOst06.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/ost06_273_Cranston.png",
@@ -1246,9 +1046,7 @@
 		"hobby": "Nature",
 		"birthday": "9/23",
 		"catchphrase": "sweatband"
-	},
-	{
-		"name": "Croque",
+	"Croque": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/flg17.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlFlg17.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/flg17_173_Croque.png",
@@ -1258,9 +1056,7 @@
 		"hobby": "Nature",
 		"birthday": "7/18",
 		"catchphrase": "as if"
-	},
-	{
-		"name": "Cube",
+	"Cube": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pgn02.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPgn02.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pgn02_289_Cube.png",
@@ -1270,9 +1066,7 @@
 		"hobby": "Play",
 		"birthday": "1/29",
 		"catchphrase": "brainfreeze"
-	},
-	{
-		"name": "Curlos",
+	"Curlos": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/shp08.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlShp08.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/shp08_345_Curlos.png",
@@ -1283,8 +1077,7 @@
 		"birthday": "5/8",
 		"catchphrase": "shearly"
 	},
-	{
-		"name": "Curly",
+	"Curly": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pig00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPig00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pig00_300_Curly.png",
@@ -1294,9 +1087,7 @@
 		"hobby": "Fitness",
 		"birthday": "7/26",
 		"catchphrase": "nyoink"
-	},
-	{
-		"name": "Curt",
+	"Curt": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/bea02.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBea02.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/bea02_388_Curt.png",
@@ -1306,9 +1097,7 @@
 		"hobby": "Nature",
 		"birthday": "7/1",
 		"catchphrase": "fuzzball"
-	},
-	{
-		"name": "Cyd",
+	"Cyd": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/elp12.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlElp12.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/elp12_158_Cyd.png",
@@ -1318,9 +1107,7 @@
 		"hobby": "Music",
 		"birthday": "6/9",
 		"catchphrase": "rockin'"
-	},
-	{
-		"name": "Cyrano",
+	"Cyrano": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/ant00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlAnt00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/ant00_12_Cyrano.png",
@@ -1330,9 +1117,7 @@
 		"hobby": "Education",
 		"birthday": "3/9",
 		"catchphrase": "ah-CHOO"
-	},
-	{
-		"name": "Daisy",
+	"Daisy": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/dog07.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDog07.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/dog07_125_Daisy.png",
@@ -1342,9 +1127,7 @@
 		"hobby": "Education",
 		"birthday": "11/16",
 		"catchphrase": "bow-WOW"
-	},
-	{
-		"name": "Deena",
+	"Deena": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/duk04.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDuk04.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/duk04_137_Deena.png",
@@ -1354,9 +1137,7 @@
 		"hobby": "Education",
 		"birthday": "6/27",
 		"catchphrase": "woowoo"
-	},
-	{
-		"name": "Deirdre",
+	"Deirdre": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/der04.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDer04.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/der04_112_Deirdre.png",
@@ -1366,9 +1147,7 @@
 		"hobby": "Play",
 		"birthday": "5/4",
 		"catchphrase": "whatevs"
-	},
-	{
-		"name": "Del",
+	"Del": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/crd04.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCrd04.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/crd04_105_Del.png",
@@ -1378,9 +1157,7 @@
 		"hobby": "Fitness",
 		"birthday": "5/27",
 		"catchphrase": "gronk"
-	},
-	{
-		"name": "Deli",
+	"Deli": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/mnk08.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlMnk08.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/mnk08_249_Deli.png",
@@ -1390,9 +1167,7 @@
 		"hobby": "Nature",
 		"birthday": "5/24",
 		"catchphrase": "monch"
-	},
-	{
-		"name": "Derwin",
+	"Derwin": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/duk08.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDuk08.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/duk08_140_Derwin.png",
@@ -1402,9 +1177,7 @@
 		"hobby": "Play",
 		"birthday": "5/25",
 		"catchphrase": "derrrr"
-	},
-	{
-		"name": "Diana",
+	"Diana": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/der08.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDer08.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/der08_116_Diana.png",
@@ -1414,9 +1187,7 @@
 		"hobby": "Education",
 		"birthday": "1/4",
 		"catchphrase": "no doy"
-	},
-	{
-		"name": "Diva",
+	"Diva": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/flg18.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlFlg18.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/flg18_174_Diva.png",
@@ -1426,9 +1197,7 @@
 		"hobby": "Fitness",
 		"birthday": "10/2",
 		"catchphrase": "ya know"
-	},
-	{
-		"name": "Dizzy",
+	"Dizzy": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/elp01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlElp01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/elp01_149_Dizzy.png",
@@ -1438,9 +1207,7 @@
 		"hobby": "Play",
 		"birthday": "7/14",
 		"catchphrase": "woo-oo"
-	},
-	{
-		"name": "Dobie",
+	"Dobie": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/wol04.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlWol04.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/wol04_381_Dobie.png",
@@ -1450,9 +1217,7 @@
 		"hobby": "Nature",
 		"birthday": "2/17",
 		"catchphrase": "ohmmm"
-	},
-	{
-		"name": "Doc",
+	"Doc": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/rbt10.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlRbt10.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/rbt10_324_Doc.png",
@@ -1462,9 +1227,7 @@
 		"hobby": "Education",
 		"birthday": "3/16",
 		"catchphrase": "old bunny"
-	},
-	{
-		"name": "Dom",
+	"Dom": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/shp15.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlShp15.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/shp15_351_Dom.png",
@@ -1474,9 +1237,7 @@
 		"hobby": "Play",
 		"birthday": "3/18",
 		"catchphrase": "indeedaroo"
-	},
-	{
-		"name": "Dora",
+	"Dora": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/mus00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlMus00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/mus00_250_Dora.png",
@@ -1486,9 +1247,7 @@
 		"hobby": "Education",
 		"birthday": "2/18",
 		"catchphrase": "squeaky"
-	},
-	{
-		"name": "Dotty",
+	"Dotty": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/rbt01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlRbt01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/rbt01_315_Dotty.png",
@@ -1498,9 +1257,7 @@
 		"hobby": "Fashion",
 		"birthday": "3/14",
 		"catchphrase": "wee one"
-	},
-	{
-		"name": "Drago",
+	"Drago": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/crd08.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCrd08.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/crd08_108_Drago.png",
@@ -1510,9 +1267,7 @@
 		"hobby": "Nature",
 		"birthday": "2/12",
 		"catchphrase": "burrrn"
-	},
-	{
-		"name": "Drake",
+	"Drake": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/duk09.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDuk09.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/duk09_141_Drake.png",
@@ -1522,9 +1277,7 @@
 		"hobby": "Play",
 		"birthday": "6/25",
 		"catchphrase": "quacko"
-	},
-	{
-		"name": "Drift",
+	"Drift": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/flg04.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlFlg04.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/flg04_162_Drift.png",
@@ -1534,9 +1287,7 @@
 		"hobby": "Fitness",
 		"birthday": "10/9",
 		"catchphrase": "dribbit"
-	},
-	{
-		"name": "Ed",
+	"Ed": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/hrs06.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlHrs06.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/hrs06_212_Ed.png",
@@ -1546,9 +1297,7 @@
 		"hobby": "Nature",
 		"birthday": "9/16",
 		"catchphrase": "greenhorn"
-	},
-	{
-		"name": "Egbert",
+	"Egbert": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/chn02.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlChn02.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/chn02_91_Egbert.png",
@@ -1558,9 +1307,7 @@
 		"hobby": "Play",
 		"birthday": "10/14",
 		"catchphrase": "doodle-duh"
-	},
-	{
-		"name": "Elise",
+	"Elise": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/mnk05.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlMnk05.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/mnk05_246_Elise.png",
@@ -1570,9 +1317,7 @@
 		"hobby": "Fashion",
 		"birthday": "3/21",
 		"catchphrase": "puh-lease"
-	},
-	{
-		"name": "Ellie",
+	"Ellie": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/elp07.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlElp07.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/elp07_155_Ellie.png",
@@ -1582,9 +1327,7 @@
 		"hobby": "Nature",
 		"birthday": "5/12",
 		"catchphrase": "li'l one"
-	},
-	{
-		"name": "Elmer",
+	"Elmer": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/hrs03.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlHrs03.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/hrs03_209_Elmer.png",
@@ -1594,9 +1337,7 @@
 		"hobby": "Play",
 		"birthday": "10/5",
 		"catchphrase": "tenderfoot"
-	},
-	{
-		"name": "Eloise",
+	"Eloise": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/elp03.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlElp03.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/elp03_151_Eloise.png",
@@ -1606,9 +1347,7 @@
 		"hobby": "Fashion",
 		"birthday": "12/8",
 		"catchphrase": "tooooot"
-	},
-	{
-		"name": "Elvis",
+	"Elvis": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/lon01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlLon01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/lon01_237_Elvis.png",
@@ -1618,9 +1357,7 @@
 		"hobby": "Education",
 		"birthday": "7/23",
 		"catchphrase": "unh-hunh"
-	},
-	{
-		"name": "Erik",
+	"Erik": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/der09.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDer09.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/der09_117_Erik.png",
@@ -1630,9 +1367,7 @@
 		"hobby": "Nature",
 		"birthday": "7/27",
 		"catchphrase": "chow down"
-	},
-	{
-		"name": "Étoile",
+	"Étoile": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/shp14.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlShp14.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/shp14_Etoile.png",
@@ -1642,9 +1377,7 @@
 		"hobby": "Music",
 		"birthday": "12/25",
 		"catchphrase": "fuzzy"
-	},
-	{
-		"name": "Eugene",
+	"Eugene": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/kal10.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlKal10.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/kal10_227_Eugene.png",
@@ -1654,9 +1387,7 @@
 		"hobby": "Music",
 		"birthday": "10/26",
 		"catchphrase": "yeah buddy"
-	},
-	{
-		"name": "Eunice",
+	"Eunice": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/shp02.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlShp02.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/shp02_342_Eunice.png",
@@ -1666,9 +1397,7 @@
 		"hobby": "Fashion",
 		"birthday": "4/3",
 		"catchphrase": "lambchop"
-	},
-	{
-		"name": "Faith",
+	"Faith": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/kal07.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlKal07.png",
 		"houseImage": "",
@@ -1678,9 +1407,7 @@
 		"hobby": "Music",
 		"birthday": "3/21",
 		"catchphrase": "aloha"
-	},
-	{
-		"name": "Fang",
+	"Fang": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/wol06.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlWol06.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/wol06_383_Fang.png",
@@ -1690,9 +1417,7 @@
 		"hobby": "Education",
 		"birthday": "12/18",
 		"catchphrase": "cha-chomp"
-	},
-	{
-		"name": "Fauna",
+	"Fauna": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/der00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDer00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/der00_109_Fauna.png",
@@ -1702,9 +1427,7 @@
 		"hobby": "Nature",
 		"birthday": "3/26",
 		"catchphrase": "dearie"
-	},
-	{
-		"name": "Felicity",
+	"Felicity": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cat17.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCat17.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cat17_68_Felicity.png",
@@ -1714,9 +1437,7 @@
 		"hobby": "Fashion",
 		"birthday": "3/30",
 		"catchphrase": "mimimi"
-	},
-	{
-		"name": "Filbert",
+	"Filbert": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/squ02.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlSqu02.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/squ02_354_Filbert.png",
@@ -1726,9 +1447,7 @@
 		"hobby": "Nature",
 		"birthday": "6/3",
 		"catchphrase": "bucko"
-	},
-	{
-		"name": "Flip",
+	"Flip": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/mnk06.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlMnk06.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/mnk06_247_Flip.png",
@@ -1738,9 +1457,7 @@
 		"hobby": "Music",
 		"birthday": "11/21",
 		"catchphrase": "rerack"
-	},
-	{
-		"name": "Flo",
+	"Flo": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pgn13.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPgn13.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pgn13_298_Flo.png",
@@ -1750,9 +1467,7 @@
 		"hobby": "Music",
 		"birthday": "9/2",
 		"catchphrase": "cha"
-	},
-	{
-		"name": "Flora",
+	"Flora": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/ost09.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlOst09.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/ost09_276_Flora.png",
@@ -1762,9 +1477,7 @@
 		"hobby": "Play",
 		"birthday": "2/9",
 		"catchphrase": "pinky"
-	},
-	{
-		"name": "Flurry",
+	"Flurry": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/ham06.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlHam06.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/ham06_198_Flurry.png",
@@ -1774,9 +1487,7 @@
 		"hobby": "Nature",
 		"birthday": "1/30",
 		"catchphrase": "powderpuff"
-	},
-	{
-		"name": "Francine",
+	"Francine": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/rbt12.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlRbt12.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/rbt12_326_Francine.png",
@@ -1787,8 +1498,7 @@
 		"birthday": "1/22",
 		"catchphrase": "karat"
 	},
-	{
-		"name": "Frank",
+	"Frank": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pbr06.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPbr06.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pbr06_283_Frank.png",
@@ -1798,9 +1508,7 @@
 		"hobby": "Education",
 		"birthday": "7/30",
 		"catchphrase": "crushy"
-	},
-	{
-		"name": "Freckles",
+	"Freckles": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/duk07.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDuk07.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/duk07_2_Freckles.png",
@@ -1810,9 +1518,7 @@
 		"hobby": "Fashion",
 		"birthday": "2/19",
 		"catchphrase": "ducky"
-	},
-	{
-		"name": "Frett",
+	"Frett": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/dog11.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDog11.png",
 		"houseImage": "",
@@ -1822,9 +1528,7 @@
 		"hobby": "Music",
 		"birthday": "10/30",
 		"catchphrase": "goshers"
-	},
-	{
-		"name": "Freya",
+	"Freya": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/wol05.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlWol05.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/wol05_382_Freya.png",
@@ -1834,9 +1538,7 @@
 		"hobby": "Fashion",
 		"birthday": "12/14",
 		"catchphrase": "uff da"
-	},
-	{
-		"name": "Friga",
+	"Friga": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pgn04.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPgn04.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pgn04_291_Friga.png",
@@ -1847,8 +1549,7 @@
 		"birthday": "10/16",
 		"catchphrase": "brrrmph"
 	},
-	{
-		"name": "Frita",
+	"Frita": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/shp11.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlShp11.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/shp11_348_Frita.png",
@@ -1858,9 +1559,7 @@
 		"hobby": "Music",
 		"birthday": "7/16",
 		"catchphrase": "oh ewe"
-	},
-	{
-		"name": "Frobert",
+	"Frobert": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/flg02.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlFlg02.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/flg02_4_Frobert.png",
@@ -1870,9 +1569,7 @@
 		"hobby": "Fitness",
 		"birthday": "2/8",
 		"catchphrase": "fribbit"
-	},
-	{
-		"name": "Fuchsia",
+	"Fuchsia": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/der06.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDer06.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/der06_114_Fuchsia.png",
@@ -1882,9 +1579,7 @@
 		"hobby": "Music",
 		"birthday": "9/19",
 		"catchphrase": "precious"
-	},
-	{
-		"name": "Gabi",
+	"Gabi": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/rbt05.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlRbt05.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/rbt05_319_Gabi.png",
@@ -1894,9 +1589,7 @@
 		"hobby": "Fashion",
 		"birthday": "12/16",
 		"catchphrase": "honeybun"
-	},
-	{
-		"name": "Gala",
+	"Gala": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pig13.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPig13.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pig13_309_Gala.png",
@@ -1906,9 +1599,7 @@
 		"hobby": "Education",
 		"birthday": "3/5",
 		"catchphrase": "snortie"
-	},
-	{
-		"name": "Gaston",
+	"Gaston": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/rbt04.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlRbt04.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/rbt04_318_Gaston.png",
@@ -1918,9 +1609,7 @@
 		"hobby": "Education",
 		"birthday": "10/28",
 		"catchphrase": "mon chou"
-	},
-	{
-		"name": "Gayle",
+	"Gayle": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/crd07.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCrd07.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/crd07_107_Gayle.png",
@@ -1930,9 +1619,7 @@
 		"hobby": "Nature",
 		"birthday": "5/17",
 		"catchphrase": "snacky"
-	},
-	{
-		"name": "Genji",
+	"Genji": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/rbt08.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlRbt08.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/rbt08_322_Genji.png",
@@ -1942,9 +1629,7 @@
 		"hobby": "Fitness",
 		"birthday": "1/21",
 		"catchphrase": "mochi"
-	},
-	{
-		"name": "Gigi",
+	"Gigi": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/flg16.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlFlg16.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/flg16_172_Gigi.png",
@@ -1954,9 +1639,7 @@
 		"hobby": "Fashion",
 		"birthday": "8/11",
 		"catchphrase": "ribbette"
-	},
-	{
-		"name": "Gladys",
+	"Gladys": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/ost01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlOst01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/ost01_269_Gladys.png",
@@ -1966,9 +1649,7 @@
 		"hobby": "Education",
 		"birthday": "1/15",
 		"catchphrase": "stretch"
-	},
-	{
-		"name": "Gloria",
+	"Gloria": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/duk15.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDuk15.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/duk15_145_Gloria.png",
@@ -1978,9 +1659,7 @@
 		"hobby": "Fashion",
 		"birthday": "8/12",
 		"catchphrase": "quacker"
-	},
-	{
-		"name": "Goldie",
+	"Goldie": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/dog00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDog00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/dog00_118_Goldie.png",
@@ -1991,8 +1670,7 @@
 		"birthday": "12/27",
 		"catchphrase": "woof"
 	},
-	{
-		"name": "Gonzo",
+	"Gonzo": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/kal04.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlKal04.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/kal04_223_Gonzo.png",
@@ -2002,9 +1680,7 @@
 		"hobby": "Nature",
 		"birthday": "10/13",
 		"catchphrase": "mate"
-	},
-	{
-		"name": "Goose",
+	"Goose": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/chn00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlChn00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/chn00_89_Goose.png",
@@ -2014,9 +1690,7 @@
 		"hobby": "Fitness",
 		"birthday": "10/4",
 		"catchphrase": "buh-kay"
-	},
-	{
-		"name": "Graham",
+	"Graham": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/ham02.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlHam02.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/ham02_195_Graham.png",
@@ -2026,9 +1700,7 @@
 		"hobby": "Education",
 		"birthday": "6/20",
 		"catchphrase": "indeed"
-	},
-	{
-		"name": "Greta",
+	"Greta": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/mus16.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlMus16.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/mus16_262_Greta.png",
@@ -2038,9 +1710,7 @@
 		"hobby": "Education",
 		"birthday": "9/5",
 		"catchphrase": "yelp"
-	},
-	{
-		"name": "Grizzly",
+	"Grizzly": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/bea09.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBea09.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/bea09_26_Grizzly.png",
@@ -2051,8 +1721,7 @@
 		"birthday": "7/31",
 		"catchphrase": "grrr"
 	},
-	{
-		"name": "Groucho",
+	"Groucho": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/bea06.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBea06.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/bea06_23_Groucho.png",
@@ -2062,9 +1731,7 @@
 		"hobby": "Music",
 		"birthday": "10/23",
 		"catchphrase": "grumble"
-	},
-	{
-		"name": "Gruff",
+	"Gruff": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/goa04.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlGoa04.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/goa04_179_Gruff.png",
@@ -2074,9 +1741,7 @@
 		"hobby": "Music",
 		"birthday": "8/29",
 		"catchphrase": "bleh eh eh"
-	},
-	{
-		"name": "Gwen",
+	"Gwen": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pgn05.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPgn05.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pgn05_292_Gwen.png",
@@ -2086,9 +1751,7 @@
 		"hobby": "Fashion",
 		"birthday": "1/23",
 		"catchphrase": "h-h-h-hon"
-	},
-	{
-		"name": "Hamlet",
+	"Hamlet": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/ham00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlHam00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/ham00_193_Hamlet.png",
@@ -2098,9 +1761,7 @@
 		"hobby": "Play",
 		"birthday": "5/30",
 		"catchphrase": "hammie"
-	},
-	{
-		"name": "Hamphrey",
+	"Hamphrey": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/ham07.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlHam07.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/ham07_199_Hamphrey.png",
@@ -2110,9 +1771,7 @@
 		"hobby": "Nature",
 		"birthday": "2/25",
 		"catchphrase": "snort"
-	},
-	{
-		"name": "Hans",
+	"Hans": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/gor10.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlGor10.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/gor10_192_Hans.png",
@@ -2122,9 +1781,7 @@
 		"hobby": "Fitness",
 		"birthday": "12/5",
 		"catchphrase": "groovy"
-	},
-	{
-		"name": "Harry",
+	"Harry": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/hip08.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlHip08.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/hip08_205_Harry.png",
@@ -2134,9 +1791,7 @@
 		"hobby": "Education",
 		"birthday": "1/7",
 		"catchphrase": "beach bum"
-	},
-	{
-		"name": "Hazel",
+	"Hazel": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/squ18.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlSqu18.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/squ18_369_Hazel.png",
@@ -2146,9 +1801,7 @@
 		"hobby": "Play",
 		"birthday": "8/30",
 		"catchphrase": "uni-wow"
-	},
-	{
-		"name": "Henry",
+	"Henry": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/flg19.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlFlg19.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/flg19_175_Henry.png",
@@ -2158,9 +1811,7 @@
 		"hobby": "Music",
 		"birthday": "9/21",
 		"catchphrase": "snoozit"
-	},
-	{
-		"name": "Hippeux",
+	"Hippeux": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/hip09.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlHip09.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/hip09_6_Hippeux.png",
@@ -2170,9 +1821,7 @@
 		"hobby": "Education",
 		"birthday": "10/15",
 		"catchphrase": "natch"
-	},
-	{
-		"name": "Hopkins",
+	"Hopkins": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/rbt14.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlRbt14.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/rbt14_328_Hopkins.png",
@@ -2182,9 +1831,7 @@
 		"hobby": "Nature",
 		"birthday": "3/11",
 		"catchphrase": "thumper"
-	},
-	{
-		"name": "Hopper",
+	"Hopper": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pgn03.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPgn03.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pgn03_290_Hopper.png",
@@ -2194,9 +1841,7 @@
 		"hobby": "Music",
 		"birthday": "4/6",
 		"catchphrase": "slushie"
-	},
-	{
-		"name": "Hornsby",
+	"Hornsby": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/rhn04.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlRhn04.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/rhn04_337_Hornsby.png",
@@ -2206,9 +1851,7 @@
 		"hobby": "Nature",
 		"birthday": "3/20",
 		"catchphrase": "schnozzle"
-	},
-	{
-		"name": "Huck",
+	"Huck": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/flg11.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlFlg11.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/flg11_168_Huck.png",
@@ -2218,9 +1861,7 @@
 		"hobby": "Fitness",
 		"birthday": "7/9",
 		"catchphrase": "hopper"
-	},
-	{
-		"name": "Hugh",
+	"Hugh": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pig03.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPig03.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pig03_302_Hugh.png",
@@ -2230,9 +1871,7 @@
 		"hobby": "Play",
 		"birthday": "12/30",
 		"catchphrase": "snortle"
-	},
-	{
-		"name": "Iggly",
+	"Iggly": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pgn11.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPgn11.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pgn11_296_Iggly.png",
@@ -2242,9 +1881,7 @@
 		"hobby": "Fitness",
 		"birthday": "11/2",
 		"catchphrase": "waddler"
-	},
-	{
-		"name": "Ike",
+	"Ike": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/bea11.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBea11.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/bea11_28_Ike.png",
@@ -2254,9 +1891,7 @@
 		"hobby": "Nature",
 		"birthday": "5/16",
 		"catchphrase": "roadie"
-	},
-	{
-		"name": "Ione",
+	"Ione": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/squ21.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlSqu21.png",
 		"houseImage": "",
@@ -2266,9 +1901,7 @@
 		"hobby": "Fashion",
 		"birthday": "9/11",
 		"catchphrase": "gleam"
-	},
-	{
-		"name": "Jacob",
+	"Jacob": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/brd11.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBrd11.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/brd11_41_Jakey.png",
@@ -2279,8 +1912,7 @@
 		"birthday": "8/24",
 		"catchphrase": "ya feel"
 	},
-	{
-		"name": "Jacques",
+	"Jacques": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/brd16.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBrd16.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/brd16_43_Jacques.png",
@@ -2291,8 +1923,7 @@
 		"birthday": "6/22",
 		"catchphrase": "zut alors"
 	},
-	{
-		"name": "Jambette",
+	"Jambette": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/flg13.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlFlg13.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/flg13_170_Jambette.png",
@@ -2302,9 +1933,7 @@
 		"hobby": "Fashion",
 		"birthday": "10/27",
 		"catchphrase": "croak-kay"
-	},
-	{
-		"name": "Jay",
+	"Jay": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/brd00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBrd00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/brd00_33_Jay.png",
@@ -2314,9 +1943,7 @@
 		"hobby": "Fitness",
 		"birthday": "7/17",
 		"catchphrase": "heeeeeyy"
-	},
-	{
-		"name": "Jeremiah",
+	"Jeremiah": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/flg07.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlFlg07.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/flg07_165_Jeremiah.png",
@@ -2326,9 +1953,7 @@
 		"hobby": "Play",
 		"birthday": "7/8",
 		"catchphrase": "nee-deep"
-	},
-	{
-		"name": "Jitters",
+	"Jitters": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/brd04.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBrd04.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/brd04_37_Jitters.png",
@@ -2338,9 +1963,7 @@
 		"hobby": "Fitness",
 		"birthday": "2/2",
 		"catchphrase": "bzzert"
-	},
-	{
-		"name": "Joey",
+	"Joey": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/duk01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDuk01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/duk01_134_Joey.png",
@@ -2350,9 +1973,7 @@
 		"hobby": "Play",
 		"birthday": "1/3",
 		"catchphrase": "bleeeeeck"
-	},
-	{
-		"name": "Judy",
+	"Judy": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cbr19.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCbr19.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cbr19_88_Judy.png",
@@ -2362,9 +1983,7 @@
 		"hobby": "Music",
 		"birthday": "3/10",
 		"catchphrase": "myohmy"
-	},
-	{
-		"name": "Julia",
+	"Julia": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/ost05.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlOst05.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/ost05_272_Julia.png",
@@ -2374,9 +1993,7 @@
 		"hobby": "Education",
 		"birthday": "7/31",
 		"catchphrase": "dahling"
-	},
-	{
-		"name": "Julian",
+	"Julian": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/hrs13.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlHrs13.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/hrs13_218_Julian.png",
@@ -2386,9 +2003,7 @@
 		"hobby": "Music",
 		"birthday": "3/15",
 		"catchphrase": "glitter"
-	},
-	{
-		"name": "June",
+	"June": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cbr13.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCbr13.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cbr13_390_June.png",
@@ -2398,9 +2013,7 @@
 		"hobby": "Nature",
 		"birthday": "5/21",
 		"catchphrase": "rainbow"
-	},
-	{
-		"name": "Kabuki",
+	"Kabuki": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cat09.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCat09.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cat09_60_Kabuki.png",
@@ -2411,8 +2024,7 @@
 		"birthday": "11/29",
 		"catchphrase": "meooo-OH"
 	},
-	{
-		"name": "Katt",
+	"Katt": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cat21.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCat21.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cat21_72_Katt.png",
@@ -2422,9 +2034,7 @@
 		"hobby": "Music",
 		"birthday": "4/27",
 		"catchphrase": "purrty"
-	},
-	{
-		"name": "Keaton",
+	"Keaton": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pbr08.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPbr08.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pbr08_285_Keaton.png",
@@ -2435,8 +2045,7 @@
 		"birthday": "6/1",
 		"catchphrase": "wingo"
 	},
-	{
-		"name": "Ken",
+	"Ken": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/chn13.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlChn13.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/chn13_97_Ken.png",
@@ -2446,9 +2055,7 @@
 		"hobby": "Education",
 		"birthday": "12/23",
 		"catchphrase": "no doubt"
-	},
-	{
-		"name": "Ketchup",
+	"Ketchup": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/duk13.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDuk13.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/duk13_144_Ketchup.png",
@@ -2458,9 +2065,7 @@
 		"hobby": "Play",
 		"birthday": "7/27",
 		"catchphrase": "bitty"
-	},
-	{
-		"name": "Kevin",
+	"Kevin": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pig15.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPig15.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pig15_311_Kevin.png",
@@ -2470,9 +2075,7 @@
 		"hobby": "Play",
 		"birthday": "4/26",
 		"catchphrase": "weeweewee"
-	},
-	{
-		"name": "Kid Cat",
+	"Kid Cat": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cat10.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCat10.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cat10_61_Kid%20Cat.png",
@@ -2482,9 +2085,7 @@
 		"hobby": "Fitness",
 		"birthday": "8/1",
 		"catchphrase": "psst"
-	},
-	{
-		"name": "Kidd",
+	"Kidd": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/goa07.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlGoa07.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/goa07_181_Kidd.png",
@@ -2494,9 +2095,7 @@
 		"hobby": "Education",
 		"birthday": "6/28",
 		"catchphrase": "wut"
-	},
-	{
-		"name": "Kiki",
+	"Kiki": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cat04.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCat04.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cat04_56_Kiki.png",
@@ -2506,9 +2105,7 @@
 		"hobby": "Education",
 		"birthday": "10/8",
 		"catchphrase": "kitty cat"
-	},
-	{
-		"name": "Kitt",
+	"Kitt": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/kgr00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlKgr00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/kgr00_228_Kitt.png",
@@ -2518,9 +2115,7 @@
 		"hobby": "Education",
 		"birthday": "10/11",
 		"catchphrase": "child"
-	},
-	{
-		"name": "Kitty",
+	"Kitty": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cat14.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCat14.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cat14_65_Kitty.png",
@@ -2530,9 +2125,7 @@
 		"hobby": "Fashion",
 		"birthday": "2/15",
 		"catchphrase": "mrowrr"
-	},
-	{
-		"name": "Klaus",
+	"Klaus": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/bea14.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBea14.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/bea14_31_Klaus.png",
@@ -2542,9 +2135,7 @@
 		"hobby": "Education",
 		"birthday": "3/31",
 		"catchphrase": "strudel"
-	},
-	{
-		"name": "Knox",
+	"Knox": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/chn11.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlChn11.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/chn11_95_Knox.png",
@@ -2554,9 +2145,7 @@
 		"hobby": "Education",
 		"birthday": "11/23",
 		"catchphrase": "cluckling"
-	},
-	{
-		"name": "Kody",
+	"Kody": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cbr04.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCbr04.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cbr04_78_Kody.png",
@@ -2566,9 +2155,7 @@
 		"hobby": "Fitness",
 		"birthday": "9/28",
 		"catchphrase": "grah grah"
-	},
-	{
-		"name": "Kyle",
+	"Kyle": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/wol10.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlWol10.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/wol10_386_Kyle.png",
@@ -2578,9 +2165,7 @@
 		"hobby": "Music",
 		"birthday": "12/6",
 		"catchphrase": "alpha"
-	},
-	{
-		"name": "Leonardo",
+	"Leonardo": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/tig04.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlTig04.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/tig04_374_Leonardo.png",
@@ -2590,9 +2175,7 @@
 		"hobby": "Fitness",
 		"birthday": "5/15",
 		"catchphrase": "flexin'"
-	},
-	{
-		"name": "Leopold",
+	"Leopold": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/lon04.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlLon04.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/lon04_239_Leopold.png",
@@ -2602,9 +2185,7 @@
 		"hobby": "Education",
 		"birthday": "8/14",
 		"catchphrase": "lion cub"
-	},
-	{
-		"name": "Lily",
+	"Lily": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/flg00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlFlg00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/flg00_159_Lily.png",
@@ -2614,9 +2195,7 @@
 		"hobby": "Education",
 		"birthday": "2/4",
 		"catchphrase": "toady"
-	},
-	{
-		"name": "Limberg",
+	"Limberg": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/mus01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlMus01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/mus01_251_Limberg.png",
@@ -2626,9 +2205,7 @@
 		"hobby": "Education",
 		"birthday": "10/17",
 		"catchphrase": "squinky"
-	},
-	{
-		"name": "Lionel",
+	"Lionel": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/lon08.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlLon08.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/lon08_242_Lionel.png",
@@ -2638,9 +2215,7 @@
 		"hobby": "Music",
 		"birthday": "7/29",
 		"catchphrase": "precisely"
-	},
-	{
-		"name": "Lobo",
+	"Lobo": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/wol01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlWol01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/wol01_378_Lobo.png",
@@ -2650,9 +2225,7 @@
 		"hobby": "Education",
 		"birthday": "11/5",
 		"catchphrase": "ah-rooooo"
-	},
-	{
-		"name": "Lolly",
+	"Lolly": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cat18.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCat18.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cat18_69_Lolly.png",
@@ -2662,9 +2235,7 @@
 		"hobby": "Music",
 		"birthday": "3/27",
 		"catchphrase": "bonbon"
-	},
-	{
-		"name": "Lopez",
+	"Lopez": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/der05.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDer05.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/der05_113_Lopez.png",
@@ -2674,9 +2245,7 @@
 		"hobby": "Education",
 		"birthday": "8/20",
 		"catchphrase": "badoom"
-	},
-	{
-		"name": "Louie",
+	"Louie": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/gor04.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlGor04.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/gor04_187_Louie.png",
@@ -2686,9 +2255,7 @@
 		"hobby": "Fitness",
 		"birthday": "3/26",
 		"catchphrase": "hoo hoo ha"
-	},
-	{
-		"name": "Lucha",
+	"Lucha": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/brd15.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBrd15.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/brd15_42_Lucha.png",
@@ -2698,9 +2265,7 @@
 		"hobby": "Fitness",
 		"birthday": "12/12",
 		"catchphrase": "cacaw"
-	},
-	{
-		"name": "Lucky",
+	"Lucky": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/dog02.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDog02.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/dog02_120_Lucky.png",
@@ -2710,9 +2275,7 @@
 		"hobby": "Play",
 		"birthday": "11/4",
 		"catchphrase": "rrr-owch"
-	},
-	{
-		"name": "Lucy",
+	"Lucy": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pig04.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPig04.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pig04_303_Lucy.png",
@@ -2722,9 +2285,7 @@
 		"hobby": "Music",
 		"birthday": "6/2",
 		"catchphrase": "snoooink"
-	},
-	{
-		"name": "Lyman",
+	"Lyman": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/kal09.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlKal09.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/kal09_226_Lyman.png",
@@ -2734,9 +2295,7 @@
 		"hobby": "Play",
 		"birthday": "10/12",
 		"catchphrase": "chips"
-	},
-	{
-		"name": "Mac",
+	"Mac": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/dog14.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDog14.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/dog14_1_Mac.png",
@@ -2746,9 +2305,7 @@
 		"hobby": "Fitness",
 		"birthday": "11/11",
 		"catchphrase": "woo woof"
-	},
-	{
-		"name": "Maddie",
+	"Maddie": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/dog09.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDog09.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/dog09_127_Maddie.png",
@@ -2758,9 +2315,7 @@
 		"hobby": "Play",
 		"birthday": "1/11",
 		"catchphrase": "yippee"
-	},
-	{
-		"name": "Maelle",
+	"Maelle": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/duk03.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDuk03.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/duk03_136_Maelle.png",
@@ -2770,9 +2325,7 @@
 		"hobby": "Fashion",
 		"birthday": "4/8",
 		"catchphrase": "duckling"
-	},
-	{
-		"name": "Maggie",
+	"Maggie": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pig10.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPig10.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pig10_307_Maggie.png",
@@ -2783,8 +2336,7 @@
 		"birthday": "9/3",
 		"catchphrase": "schep"
 	},
-	{
-		"name": "Mallary",
+	"Mallary": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/duk06.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDuk06.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/duk06_139_Mallary.png",
@@ -2794,9 +2346,7 @@
 		"hobby": "Fashion",
 		"birthday": "11/17",
 		"catchphrase": "quackpth"
-	},
-	{
-		"name": "Maple",
+	"Maple": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cbr01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCbr01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cbr01_75_Maple.png",
@@ -2806,9 +2356,7 @@
 		"hobby": "Education",
 		"birthday": "6/15",
 		"catchphrase": "honey"
-	},
-	{
-		"name": "Marcel",
+	"Marcel": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/dog15.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDog15.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/dog15_129_Marcel.png",
@@ -2819,8 +2367,7 @@
 		"birthday": "12/31",
 		"catchphrase": "non"
 	},
-	{
-		"name": "Marcie",
+	"Marcie": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/kgr10.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlKgr10.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/kgr10_235_Marcie.png",
@@ -2830,9 +2377,7 @@
 		"hobby": "Nature",
 		"birthday": "5/31",
 		"catchphrase": "pouches"
-	},
-	{
-		"name": "Margie",
+	"Margie": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/elp04.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlElp04.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/elp04_152_Margie.png",
@@ -2842,9 +2387,7 @@
 		"hobby": "Education",
 		"birthday": "1/28",
 		"catchphrase": "tootie"
-	},
-	{
-		"name": "Marina",
+	"Marina": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/ocp01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlOcp01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/ocp01_266_Marina.png",
@@ -2855,8 +2398,7 @@
 		"birthday": "6/26",
 		"catchphrase": "blurp"
 	},
-	{
-		"name": "Marlo",
+	"Marlo": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/ham09.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlHam09.png",
 		"houseImage": "",
@@ -2867,8 +2409,7 @@
 		"birthday": "6/26",
 		"catchphrase": "gabeesh"
 	},
-	{
-		"name": "Marshal",
+	"Marshal": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/squ17.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlSqu17.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/squ17_368_Marshal.png",
@@ -2878,9 +2419,7 @@
 		"hobby": "Music",
 		"birthday": "9/29",
 		"catchphrase": "sulky"
-	},
-	{
-		"name": "Marty",
+	"Marty": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cbr18.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCbr18.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cbr18_Marty.png",
@@ -2890,9 +2429,7 @@
 		"hobby": "Play",
 		"birthday": "4/16",
 		"catchphrase": "pompom"
-	},
-	{
-		"name": "Mathilda",
+	"Mathilda": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/kgr01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlKgr01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/kgr01_229_Mathilda.png",
@@ -2902,9 +2439,7 @@
 		"hobby": "Fitness",
 		"birthday": "11/12",
 		"catchphrase": "wee baby"
-	},
-	{
-		"name": "Megan",
+	"Megan": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/bea15.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBea15.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/bea15_32_Megan.png",
@@ -2915,8 +2450,7 @@
 		"birthday": "3/13",
 		"catchphrase": "sundae"
 	},
-	{
-		"name": "Melba",
+	"Melba": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/kal02.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlKal02.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/kal02_222_Melba.png",
@@ -2926,9 +2460,7 @@
 		"hobby": "Education",
 		"birthday": "4/12",
 		"catchphrase": "toasty"
-	},
-	{
-		"name": "Merengue",
+	"Merengue": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/rhn07.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlRhn07.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/rhn07_338_Merengue.png",
@@ -2938,9 +2470,7 @@
 		"hobby": "Nature",
 		"birthday": "3/19",
 		"catchphrase": "shortcake"
-	},
-	{
-		"name": "Merry",
+	"Merry": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cat16.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCat16.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cat16_67_Merry.png",
@@ -2950,9 +2480,7 @@
 		"hobby": "Fashion",
 		"birthday": "6/29",
 		"catchphrase": "mweee"
-	},
-	{
-		"name": "Midge",
+	"Midge": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/brd08.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBrd08.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/brd08_40_Midge.png",
@@ -2962,9 +2490,7 @@
 		"hobby": "Education",
 		"birthday": "3/12",
 		"catchphrase": "tweedledee"
-	},
-	{
-		"name": "Mint",
+	"Mint": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/squ09.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlSqu09.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/squ09_361_Mint.png",
@@ -2974,9 +2500,7 @@
 		"hobby": "Fashion",
 		"birthday": "5/2",
 		"catchphrase": "ahhhhhh"
-	},
-	{
-		"name": "Mira",
+	"Mira": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/rbt19.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlRbt19.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/rbt19_333_Mira.png",
@@ -2986,9 +2510,7 @@
 		"hobby": "Fitness",
 		"birthday": "7/6",
 		"catchphrase": "cottontail"
-	},
-	{
-		"name": "Miranda",
+	"Miranda": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/duk12.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDuk12.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/duk12_143_Miranda.png",
@@ -2999,8 +2521,7 @@
 		"birthday": "4/23",
 		"catchphrase": "quackulous"
 	},
-	{
-		"name": "Mitzi",
+	"Mitzi": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cat01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCat01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cat01_53_Mitzi.png",
@@ -3010,9 +2531,7 @@
 		"hobby": "Education",
 		"birthday": "9/25",
 		"catchphrase": "mew"
-	},
-	{
-		"name": "Moe",
+	"Moe": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cat08.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCat08.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cat08_59_Moe.png",
@@ -3022,9 +2541,7 @@
 		"hobby": "Play",
 		"birthday": "1/12",
 		"catchphrase": "myawn"
-	},
-	{
-		"name": "Molly",
+	"Molly": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/duk16.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDuk16.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/duk16_146_Molly.png",
@@ -3034,9 +2551,7 @@
 		"hobby": "Nature",
 		"birthday": "3/7",
 		"catchphrase": "quackidee"
-	},
-	{
-		"name": "Monique",
+	"Monique": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cat11.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCat11.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cat11_62_Monique.png",
@@ -3046,9 +2561,7 @@
 		"hobby": "Fashion",
 		"birthday": "9/30",
 		"catchphrase": "pffffft"
-	},
-	{
-		"name": "Monty",
+	"Monty": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/mnk04.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlMnk04.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/mnk04_245_Monty.png",
@@ -3058,9 +2571,7 @@
 		"hobby": "Education",
 		"birthday": "12/7",
 		"catchphrase": "g'tang"
-	},
-	{
-		"name": "Moose",
+	"Moose": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/mus14.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlMus14.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/mus14_260_Moose.png",
@@ -3071,8 +2582,7 @@
 		"birthday": "9/13",
 		"catchphrase": "shorty"
 	},
-	{
-		"name": "Mott",
+	"Mott": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/lon06.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlLon06.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/lon06_240_Mott.png",
@@ -3082,9 +2592,7 @@
 		"hobby": "Fitness",
 		"birthday": "7/10",
 		"catchphrase": "cagey"
-	},
-	{
-		"name": "Muffy",
+	"Muffy": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/shp12.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlShp12.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/shp12_349_Muffy.png",
@@ -3094,9 +2602,7 @@
 		"hobby": "Music",
 		"birthday": "2/14",
 		"catchphrase": "nightshade"
-	},
-	{
-		"name": "Murphy",
+	"Murphy": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cbr07.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCbr07.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cbr07_81_Murphy.png",
@@ -3106,9 +2612,7 @@
 		"hobby": "Education",
 		"birthday": "12/29",
 		"catchphrase": "malarkey"
-	},
-	{
-		"name": "Nan",
+	"Nan": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/goa01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlGoa01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/goa01_177_Nan.png",
@@ -3118,9 +2622,7 @@
 		"hobby": "Nature",
 		"birthday": "8/24",
 		"catchphrase": "kid"
-	},
-	{
-		"name": "Nana",
+	"Nana": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/mnk01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlMnk01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/mnk01_243_Nana.png",
@@ -3130,9 +2632,7 @@
 		"hobby": "Education",
 		"birthday": "8/23",
 		"catchphrase": "po po"
-	},
-	{
-		"name": "Naomi",
+	"Naomi": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cow07.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCow07.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cow07_101_Naomi.png",
@@ -3142,9 +2642,7 @@
 		"hobby": "Fashion",
 		"birthday": "2/28",
 		"catchphrase": "moolah"
-	},
-	{
-		"name": "Nate",
+	"Nate": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/bea05.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBea05.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/bea05_22_Nate.png",
@@ -3154,9 +2652,7 @@
 		"hobby": "Play",
 		"birthday": "8/16",
 		"catchphrase": "yawwwn"
-	},
-	{
-		"name": "Nibbles",
+	"Nibbles": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/squ04.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlSqu04.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/squ04_356_Nibbles.png",
@@ -3166,9 +2662,7 @@
 		"hobby": "Fashion",
 		"birthday": "7/19",
 		"catchphrase": "niblet"
-	},
-	{
-		"name": "Norma",
+	"Norma": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cow06.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCow06.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cow06_100_Norma.png",
@@ -3179,8 +2673,7 @@
 		"birthday": "9/20",
 		"catchphrase": "hoof hoo"
 	},
-	{
-		"name": "O'Hare",
+	"O'Hare": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/rbt15.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlRbt15.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/rbt15_329_O_Hare.png",
@@ -3190,9 +2683,7 @@
 		"hobby": "Nature",
 		"birthday": "7/24",
 		"catchphrase": "amigo"
-	},
-	{
-		"name": "Octavian",
+	"Octavian": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/ocp00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlOcp00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/ocp00_265_Octavian.png",
@@ -3202,9 +2693,7 @@
 		"hobby": "Play",
 		"birthday": "9/20",
 		"catchphrase": "sucker"
-	},
-	{
-		"name": "Olaf",
+	"Olaf": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/ant09.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlAnt09.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/ant09_18_Olaf.png",
@@ -3214,9 +2703,7 @@
 		"hobby": "Education",
 		"birthday": "5/19",
 		"catchphrase": "whiffa"
-	},
-	{
-		"name": "Olive",
+	"Olive": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cbr09.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCbr09.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cbr09_82_Olive.png",
@@ -3226,9 +2713,7 @@
 		"hobby": "Nature",
 		"birthday": "7/12",
 		"catchphrase": "sweet pea"
-	},
-	{
-		"name": "Olivia",
+	"Olivia": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cat03.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCat03.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cat03_55_Olivia.png",
@@ -3238,9 +2723,7 @@
 		"hobby": "Music",
 		"birthday": "2/3",
 		"catchphrase": "purrr"
-	},
-	{
-		"name": "Opal",
+	"Opal": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/elp00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlElp00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/elp00_148_Opal.png",
@@ -3251,8 +2734,7 @@
 		"birthday": "1/20",
 		"catchphrase": "snoot"
 	},
-	{
-		"name": "Ozzie",
+	"Ozzie": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/kal05.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlKal05.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/kal05_224_Ozzie.png",
@@ -3262,9 +2744,7 @@
 		"hobby": "Play",
 		"birthday": "5/7",
 		"catchphrase": "ol' bear"
-	},
-	{
-		"name": "Pancetti",
+	"Pancetti": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pig16.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPig16.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pig16_312_Pancetti.png",
@@ -3274,9 +2754,7 @@
 		"hobby": "Music",
 		"birthday": "11/14",
 		"catchphrase": "sooey"
-	},
-	{
-		"name": "Pango",
+	"Pango": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/ant02.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlAnt02.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/ant02_14_Pango.png",
@@ -3286,9 +2764,7 @@
 		"hobby": "Fashion",
 		"birthday": "11/9",
 		"catchphrase": "snooooof"
-	},
-	{
-		"name": "Paolo",
+	"Paolo": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/elp05.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlElp05.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/elp05_153_Paolo.png",
@@ -3298,9 +2774,7 @@
 		"hobby": "Nature",
 		"birthday": "5/5",
 		"catchphrase": "pal"
-	},
-	{
-		"name": "Papi",
+	"Papi": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/hrs12.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlHrs12.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/hrs12_217_Papi.png",
@@ -3310,9 +2784,7 @@
 		"hobby": "Nature",
 		"birthday": "1/10",
 		"catchphrase": "haaay"
-	},
-	{
-		"name": "Pashmina",
+	"Pashmina": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/goa08.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlGoa08.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/goa08_182_Pashmina.png",
@@ -3323,8 +2795,7 @@
 		"birthday": "12/26",
 		"catchphrase": "kidders"
 	},
-	{
-		"name": "Pate",
+	"Pate": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/duk02.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDuk02.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/duk02_135_Pate.png",
@@ -3334,9 +2805,7 @@
 		"hobby": "Fashion",
 		"birthday": "2/23",
 		"catchphrase": "quackle"
-	},
-	{
-		"name": "Patty",
+	"Patty": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cow00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCow00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cow00_98_Patty.png",
@@ -3346,9 +2815,7 @@
 		"hobby": "Fashion",
 		"birthday": "5/10",
 		"catchphrase": "how-now"
-	},
-	{
-		"name": "Paula",
+	"Paula": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/bea10.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBea10.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/bea10_27_Paula.png",
@@ -3358,9 +2825,7 @@
 		"hobby": "Fitness",
 		"birthday": "3/22",
 		"catchphrase": "yodelay"
-	},
-	{
-		"name": "Peaches",
+	"Peaches": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/hrs08.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlHrs08.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/hrs08_213_Peaches.png",
@@ -3370,9 +2835,7 @@
 		"hobby": "Education",
 		"birthday": "11/28",
 		"catchphrase": "neighbor"
-	},
-	{
-		"name": "Peanut",
+	"Peanut": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/squ00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlSqu00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/squ00_352_Peanut.png",
@@ -3382,9 +2845,7 @@
 		"hobby": "Fashion",
 		"birthday": "6/8",
 		"catchphrase": "slacker"
-	},
-	{
-		"name": "Pecan",
+	"Pecan": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/squ03.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlSqu03.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/squ03_355_Pecan.png",
@@ -3395,8 +2856,7 @@
 		"birthday": "9/10",
 		"catchphrase": "chipmunk"
 	},
-	{
-		"name": "Peck",
+	"Peck": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/brd17.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBrd17.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/brd17_44_Peck.png",
@@ -3406,9 +2866,7 @@
 		"hobby": "Play",
 		"birthday": "7/25",
 		"catchphrase": "crunch"
-	},
-	{
-		"name": "Peewee",
+	"Peewee": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/gor01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlGor01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/gor01_185_Peewee.png",
@@ -3418,9 +2876,7 @@
 		"hobby": "Fitness",
 		"birthday": "9/11",
 		"catchphrase": "li'l bitty baby"
-	},
-	{
-		"name": "Peggy",
+	"Peggy": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pig11.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPig11.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pig11_308_Peggy.png",
@@ -3430,9 +2886,7 @@
 		"hobby": "Fashion",
 		"birthday": "5/23",
 		"catchphrase": "shweetie"
-	},
-	{
-		"name": "Pekoe",
+	"Pekoe": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cbr14.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCbr14.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cbr14_84_Pekoe.png",
@@ -3442,9 +2896,7 @@
 		"hobby": "Nature",
 		"birthday": "5/18",
 		"catchphrase": "bud"
-	},
-	{
-		"name": "Penelope",
+	"Penelope": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/mus17.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlMus17.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/mus17_263_Penelope.png",
@@ -3454,9 +2906,7 @@
 		"hobby": "Fashion",
 		"birthday": "2/5",
 		"catchphrase": "oh bow"
-	},
-	{
-		"name": "Petri",
+	"Petri": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/mus19.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlMus19.png",
 		"houseImage": "",
@@ -3466,9 +2916,7 @@
 		"hobby": "Education",
 		"birthday": "10/23",
 		"catchphrase": "mmmhmm"
-	},
-	{
-		"name": "Phil",
+	"Phil": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/ost07.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlOst07.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/ost07_274_Phil.png",
@@ -3478,9 +2926,7 @@
 		"hobby": "Music",
 		"birthday": "11/27",
 		"catchphrase": "hurk"
-	},
-	{
-		"name": "Phoebe",
+	"Phoebe": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/ost10.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlOst10.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/ost10_277_Phoebe.png",
@@ -3490,9 +2936,7 @@
 		"hobby": "Fitness",
 		"birthday": "4/22",
 		"catchphrase": "sparky"
-	},
-	{
-		"name": "Pierce",
+	"Pierce": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pbr02.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPbr02.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pbr02_280_Pierce.png",
@@ -3502,9 +2946,7 @@
 		"hobby": "Fitness",
 		"birthday": "1/8",
 		"catchphrase": "hawkeye"
-	},
-	{
-		"name": "Pietro",
+	"Pietro": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/shp13.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlShp13.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/shp13_350_Pietro.png",
@@ -3514,9 +2956,7 @@
 		"hobby": "Music",
 		"birthday": "4/19",
 		"catchphrase": "honk honk"
-	},
-	{
-		"name": "Pinky",
+	"Pinky": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/bea01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBea01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/bea01_20_Pinky.png",
@@ -3526,9 +2966,7 @@
 		"hobby": "Fashion",
 		"birthday": "9/9",
 		"catchphrase": "wah"
-	},
-	{
-		"name": "Piper",
+	"Piper": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/brd05.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBrd05.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/brd05_38_Piper.png",
@@ -3538,9 +2976,7 @@
 		"hobby": "Play",
 		"birthday": "4/18",
 		"catchphrase": "chickadee"
-	},
-	{
-		"name": "Pippy",
+	"Pippy": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/rbt06.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlRbt06.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/rbt06_320_Pippy.png",
@@ -3550,9 +2986,7 @@
 		"hobby": "Fashion",
 		"birthday": "6/14",
 		"catchphrase": "li'l hare"
-	},
-	{
-		"name": "Plucky",
+	"Plucky": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/chn10.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlChn10.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/chn10_94_Plucky.png",
@@ -3562,9 +2996,7 @@
 		"hobby": "Play",
 		"birthday": "10/12",
 		"catchphrase": "chicky-poo"
-	},
-	{
-		"name": "Pompom",
+	"Pompom": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/duk05.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDuk05.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/duk05_138_Pompom.png",
@@ -3574,9 +3006,7 @@
 		"hobby": "Music",
 		"birthday": "2/11",
 		"catchphrase": "rah rah"
-	},
-	{
-		"name": "Poncho",
+	"Poncho": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cbr02.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCbr02.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cbr02_76_Poncho.png",
@@ -3586,9 +3016,7 @@
 		"hobby": "Fitness",
 		"birthday": "1/2",
 		"catchphrase": "li'l bear"
-	},
-	{
-		"name": "Poppy",
+	"Poppy": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/squ15.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlSqu15.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/squ15_366_Poppy.png",
@@ -3598,9 +3026,7 @@
 		"hobby": "Education",
 		"birthday": "8/5",
 		"catchphrase": "nutty"
-	},
-	{
-		"name": "Portia",
+	"Portia": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/dog05.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDog05.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/dog05_123_Portia.png",
@@ -3610,9 +3036,7 @@
 		"hobby": "Fashion",
 		"birthday": "10/25",
 		"catchphrase": "ruffian"
-	},
-	{
-		"name": "Prince",
+	"Prince": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/flg12.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlFlg12.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/flg12_169_Prince.png",
@@ -3622,9 +3046,7 @@
 		"hobby": "Play",
 		"birthday": "7/21",
 		"catchphrase": "burrup"
-	},
-	{
-		"name": "Puck",
+	"Puck": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pgn06.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPgn06.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pgn06_293_Puck.png",
@@ -3634,9 +3056,7 @@
 		"hobby": "Fitness",
 		"birthday": "2/21",
 		"catchphrase": "brrrrrrrrr"
-	},
-	{
-		"name": "Puddles",
+	"Puddles": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/flg06.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlFlg06.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/flg06_164_Puddles.png",
@@ -3646,9 +3066,7 @@
 		"hobby": "Fashion",
 		"birthday": "1/13",
 		"catchphrase": "splish"
-	},
-	{
-		"name": "Pudge",
+	"Pudge": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cbr03.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCbr03.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cbr03_77_Pudge.png",
@@ -3658,9 +3076,7 @@
 		"hobby": "Play",
 		"birthday": "6/11",
 		"catchphrase": "golly"
-	},
-	{
-		"name": "Punchy",
+	"Punchy": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cat06.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCat06.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cat06_389_Punchy.png",
@@ -3670,9 +3086,7 @@
 		"hobby": "Play",
 		"birthday": "4/11",
 		"catchphrase": "mrmpht"
-	},
-	{
-		"name": "Purrl",
+	"Purrl": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cat07.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCat07.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cat07_58_Purrl.png",
@@ -3682,9 +3096,7 @@
 		"hobby": "Fashion",
 		"birthday": "5/29",
 		"catchphrase": "kitten"
-	},
-	{
-		"name": "Queenie",
+	"Queenie": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/ost00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlOst00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/ost00_268_Queenie.png",
@@ -3695,8 +3107,7 @@
 		"birthday": "11/13",
 		"catchphrase": "chicken"
 	},
-	{
-		"name": "Quillson",
+	"Quillson": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/duk17.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDuk17.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/duk17_147_Quillson.png",
@@ -3706,9 +3117,7 @@
 		"hobby": "Music",
 		"birthday": "12/22",
 		"catchphrase": "ridukulous"
-	},
-	{
-		"name": "Quinn",
+	"Quinn": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pbr10.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPbr10.png",
 		"houseImage": "",
@@ -3718,9 +3127,7 @@
 		"hobby": "Education",
 		"birthday": "1/20",
 		"catchphrase": "proper"
-	},
-	{
-		"name": "Raddle",
+	"Raddle": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/flg15.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlFlg15.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/flg15_171_Raddle.png",
@@ -3730,9 +3137,7 @@
 		"hobby": "Nature",
 		"birthday": "6/6",
 		"catchphrase": "aaach—"
-	},
-	{
-		"name": "Rasher",
+	"Rasher": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pig02.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPig02.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pig02_301_Rasher.png",
@@ -3742,9 +3147,7 @@
 		"hobby": "Music",
 		"birthday": "4/7",
 		"catchphrase": "swine"
-	},
-	{
-		"name": "Raymond",
+	"Raymond": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cat23.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCat23.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cat23_73_Raymond.png",
@@ -3754,9 +3157,7 @@
 		"hobby": "Nature",
 		"birthday": "10/1",
 		"catchphrase": "crisp"
-	},
-	{
-		"name": "Renée",
+	"Renée": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/rhn08.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlRhn08.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/rhn08_339_Ren�e.png",
@@ -3766,9 +3167,7 @@
 		"hobby": "Music",
 		"birthday": "5/28",
 		"catchphrase": "yo yo yo"
-	},
-	{
-		"name": "Reneigh",
+	"Reneigh": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/hrs16.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlHrs16.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/hrs16_219_Reneigh.png",
@@ -3779,8 +3178,7 @@
 		"birthday": "6/4",
 		"catchphrase": "ayup yup"
 	},
-	{
-		"name": "Rex",
+	"Rex": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/lon02.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlLon02.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/lon02_238_Rex.png",
@@ -3791,8 +3189,7 @@
 		"birthday": "7/24",
 		"catchphrase": "cool cat"
 	},
-	{
-		"name": "Rhonda",
+	"Rhonda": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/rhn01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlRhn01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/rhn01_335_Rhonda.png",
@@ -3802,9 +3199,7 @@
 		"hobby": "Music",
 		"birthday": "1/24",
 		"catchphrase": "bigfoot"
-	},
-	{
-		"name": "Ribbot",
+	"Ribbot": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/flg01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlFlg01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/flg01_160_Ribbot.png",
@@ -3814,9 +3209,7 @@
 		"hobby": "Fitness",
 		"birthday": "2/13",
 		"catchphrase": "zzrrbbitt"
-	},
-	{
-		"name": "Ricky",
+	"Ricky": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/squ10.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlSqu10.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/squ10_362_Ricky.png",
@@ -3826,9 +3219,7 @@
 		"hobby": "Education",
 		"birthday": "9/14",
 		"catchphrase": "nutcase"
-	},
-	{
-		"name": "Rilla",
+	"Rilla": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/gor11.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlGor11.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/gor11_Rilla.png",
@@ -3838,9 +3229,7 @@
 		"hobby": "Nature",
 		"birthday": "11/1",
 		"catchphrase": "hello"
-	},
-	{
-		"name": "Rio",
+	"Rio": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/ost04.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlOst04.png",
 		"houseImage": "",
@@ -3850,9 +3239,7 @@
 		"hobby": "Music",
 		"birthday": "9/10",
 		"catchphrase": "li'l chick"
-	},
-	{
-		"name": "Rizzo",
+	"Rizzo": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/mus09.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlMus09.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/mus09_257_Rizzo.png",
@@ -3862,9 +3249,7 @@
 		"hobby": "Education",
 		"birthday": "1/17",
 		"catchphrase": "squee"
-	},
-	{
-		"name": "Roald",
+	"Roald": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pgn01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPgn01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pgn01_288_Roald.png",
@@ -3874,9 +3259,7 @@
 		"hobby": "Fitness",
 		"birthday": "1/5",
 		"catchphrase": "b-b-buddy"
-	},
-	{
-		"name": "Robin",
+	"Robin": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/brd01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBrd01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/brd01_34_Robin.png",
@@ -3887,8 +3270,7 @@
 		"birthday": "12/4",
 		"catchphrase": "la-di-da"
 	},
-	{
-		"name": "Rocco",
+	"Rocco": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/hip00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlHip00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/hip00_200_Rocco.png",
@@ -3898,9 +3280,7 @@
 		"hobby": "Education",
 		"birthday": "8/18",
 		"catchphrase": "hippie"
-	},
-	{
-		"name": "Rocket",
+	"Rocket": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/gor09.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlGor09.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/gor09_191_Rocket.png",
@@ -3910,9 +3290,7 @@
 		"hobby": "Fitness",
 		"birthday": "4/14",
 		"catchphrase": "vroom"
-	},
-	{
-		"name": "Rod",
+	"Rod": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/mus05.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlMus05.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/mus05_255_Rod.png",
@@ -3922,9 +3300,7 @@
 		"hobby": "Fitness",
 		"birthday": "8/14",
 		"catchphrase": "ace"
-	},
-	{
-		"name": "Rodeo",
+	"Rodeo": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/bul01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBul01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/bul01_47_Rodeo.png",
@@ -3934,9 +3310,7 @@
 		"hobby": "Fitness",
 		"birthday": "10/29",
 		"catchphrase": "chaps"
-	},
-	{
-		"name": "Rodney",
+	"Rodney": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/ham03.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlHam03.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/ham03_196_Rodney.png",
@@ -3946,9 +3320,7 @@
 		"hobby": "Music",
 		"birthday": "11/10",
 		"catchphrase": "le ham"
-	},
-	{
-		"name": "Rolf",
+	"Rolf": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/tig00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlTig00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/tig00_370_Rolf.png",
@@ -3958,9 +3330,7 @@
 		"hobby": "Fitness",
 		"birthday": "8/22",
 		"catchphrase": "grrrolf"
-	},
-	{
-		"name": "Rooney",
+	"Rooney": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/kgr09.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlKgr09.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/kgr09_234_Rooney.png",
@@ -3970,9 +3340,7 @@
 		"hobby": "Fitness",
 		"birthday": "12/1",
 		"catchphrase": "punches"
-	},
-	{
-		"name": "Rory",
+	"Rory": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/lon07.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlLon07.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/lon07_241_Rory.png",
@@ -3982,9 +3350,7 @@
 		"hobby": "Music",
 		"birthday": "8/7",
 		"catchphrase": "capital"
-	},
-	{
-		"name": "Roscoe",
+	"Roscoe": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/hrs04.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlHrs04.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/hrs04_210_Roscoe.png",
@@ -3994,9 +3360,7 @@
 		"hobby": "Music",
 		"birthday": "6/16",
 		"catchphrase": "nay"
-	},
-	{
-		"name": "Rosie",
+	"Rosie": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cat02.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCat02.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cat02_54_Rosie.png",
@@ -4006,9 +3370,7 @@
 		"hobby": "Music",
 		"birthday": "2/27",
 		"catchphrase": "silly"
-	},
-	{
-		"name": "Roswell",
+	"Roswell": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/crd05.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCrd05.png",
 		"houseImage": "",
@@ -4018,9 +3380,7 @@
 		"hobby": "Nature",
 		"birthday": "5/2",
 		"catchphrase": "spaaace"
-	},
-	{
-		"name": "Rowan",
+	"Rowan": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/tig01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlTig01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/tig01_371_Rowan.png",
@@ -4030,9 +3390,7 @@
 		"hobby": "Fitness",
 		"birthday": "8/26",
 		"catchphrase": "mango"
-	},
-	{
-		"name": "Ruby",
+	"Ruby": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/rbt09.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlRbt09.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/rbt09_323_Ruby.png",
@@ -4042,9 +3400,7 @@
 		"hobby": "Nature",
 		"birthday": "12/25",
 		"catchphrase": "li'l ears"
-	},
-	{
-		"name": "Rudy",
+	"Rudy": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cat20.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCat20.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cat20_71_Rudy.png",
@@ -4054,9 +3410,7 @@
 		"hobby": "Play",
 		"birthday": "12/20",
 		"catchphrase": "mush"
-	},
-	{
-		"name": "Sally",
+	"Sally": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/squ07.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlSqu07.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/squ07_359_Sally.png",
@@ -4067,8 +3421,7 @@
 		"birthday": "6/19",
 		"catchphrase": "nutmeg"
 	},
-	{
-		"name": "Samson",
+	"Samson": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/mus04.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlMus04.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/mus04_254_Samson.png",
@@ -4078,9 +3431,7 @@
 		"hobby": "Fitness",
 		"birthday": "7/5",
 		"catchphrase": "pipsqueak"
-	},
-	{
-		"name": "Sandy",
+	"Sandy": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/ost02.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlOst02.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/ost02_270_Sandy.png",
@@ -4091,8 +3442,7 @@
 		"birthday": "10/21",
 		"catchphrase": "speedy"
 	},
-	{
-		"name": "Sasha",
+	"Sasha": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/rbt21.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlRbt21.png",
 		"houseImage": "",
@@ -4102,9 +3452,7 @@
 		"hobby": "Fashion",
 		"birthday": "5/19",
 		"catchphrase": "hoppity"
-	},
-	{
-		"name": "Savannah",
+	"Savannah": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/hrs02.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlHrs02.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/hrs02_208_Savannah.png",
@@ -4114,9 +3462,7 @@
 		"hobby": "Music",
 		"birthday": "1/25",
 		"catchphrase": "y'all"
-	},
-	{
-		"name": "Scoot",
+	"Scoot": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/duk10.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDuk10.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/duk10_3_Scoot.png",
@@ -4126,9 +3472,7 @@
 		"hobby": "Fitness",
 		"birthday": "6/13",
 		"catchphrase": "zip zoom"
-	},
-	{
-		"name": "Shari",
+	"Shari": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/mnk07.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlMnk07.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/mnk07_248_Shari.png",
@@ -4138,9 +3482,7 @@
 		"hobby": "Music",
 		"birthday": "4/10",
 		"catchphrase": "cheeky"
-	},
-	{
-		"name": "Sheldon",
+	"Sheldon": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/squ16.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlSqu16.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/squ16_367_Sheldon.png",
@@ -4150,9 +3492,7 @@
 		"hobby": "Play",
 		"birthday": "2/26",
 		"catchphrase": "cardio"
-	},
-	{
-		"name": "Shep",
+	"Shep": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/dog18.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDog18.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/dog18_132_Shep.png",
@@ -4162,9 +3502,7 @@
 		"hobby": "Education",
 		"birthday": "11/24",
 		"catchphrase": "baa baa baa"
-	},
-	{
-		"name": "Sherb",
+	"Sherb": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/goa09.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlGoa09.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/goa09_183_Sherb.png",
@@ -4174,9 +3512,7 @@
 		"hobby": "Nature",
 		"birthday": "1/18",
 		"catchphrase": "bawwww"
-	},
-	{
-		"name": "Shino",
+	"Shino": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/der11.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDer11.png",
 		"houseImage": "",
@@ -4186,9 +3522,7 @@
 		"hobby": "Education",
 		"birthday": "10/31",
 		"catchphrase": "okaaay"
-	},
-	{
-		"name": "Simon",
+	"Simon": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/mnk02.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlMnk02.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/mnk02_9_Simon.png",
@@ -4198,9 +3532,7 @@
 		"hobby": "Play",
 		"birthday": "1/19",
 		"catchphrase": "zzzook"
-	},
-	{
-		"name": "Skye",
+	"Skye": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/wol09.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlWol09.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/wol09_385_Skye.png",
@@ -4210,9 +3542,7 @@
 		"hobby": "Music",
 		"birthday": "3/24",
 		"catchphrase": "airmail"
-	},
-	{
-		"name": "Sly",
+	"Sly": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/crd06.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCrd06.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/crd06_106_Sly.png",
@@ -4222,9 +3552,7 @@
 		"hobby": "Play",
 		"birthday": "11/15",
 		"catchphrase": "hoo-rah"
-	},
-	{
-		"name": "Snake",
+	"Snake": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/rbt03.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlRbt03.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/rbt03_317_Snake.png",
@@ -4234,9 +3562,7 @@
 		"hobby": "Fitness",
 		"birthday": "11/3",
 		"catchphrase": "bunyip"
-	},
-	{
-		"name": "Snooty",
+	"Snooty": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/ant06.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlAnt06.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/ant06_16_Snooty.png",
@@ -4246,9 +3572,7 @@
 		"hobby": "Education",
 		"birthday": "10/24",
 		"catchphrase": "sniffff"
-	},
-	{
-		"name": "Soleil",
+	"Soleil": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/ham04.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlHam04.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/ham04_5_Soleil.png",
@@ -4258,9 +3582,7 @@
 		"hobby": "Education",
 		"birthday": "8/9",
 		"catchphrase": "tarnation"
-	},
-	{
-		"name": "Sparro",
+	"Sparro": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/brd18.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBrd18.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/brd18_45_Sparro.png",
@@ -4270,9 +3592,7 @@
 		"hobby": "Play",
 		"birthday": "11/20",
 		"catchphrase": "like whoa"
-	},
-	{
-		"name": "Spike",
+	"Spike": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/rhn02.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlRhn02.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/rhn02_336_Spike.png",
@@ -4282,9 +3602,7 @@
 		"hobby": "Nature",
 		"birthday": "6/17",
 		"catchphrase": "punk"
-	},
-	{
-		"name": "Spork",
+	"Spork": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pig05.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPig05.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pig05_304_Crackle.png",
@@ -4294,9 +3612,7 @@
 		"hobby": "Play",
 		"birthday": "9/3",
 		"catchphrase": "snork"
-	},
-	{
-		"name": "Sprinkle",
+	"Sprinkle": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pgn14.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPgn14.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pgn14_299_Sprinkle.png",
@@ -4306,9 +3622,7 @@
 		"hobby": "Play",
 		"birthday": "2/20",
 		"catchphrase": "frappe"
-	},
-	{
-		"name": "Sprocket",
+	"Sprocket": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/ost03.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlOst03.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/ost03_271_Sprocket.png",
@@ -4318,9 +3632,7 @@
 		"hobby": "Music",
 		"birthday": "12/1",
 		"catchphrase": "zort"
-	},
-	{
-		"name": "Static",
+	"Static": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/squ08.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlSqu08.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/squ08_360_Static.png",
@@ -4330,9 +3642,7 @@
 		"hobby": "Music",
 		"birthday": "7/9",
 		"catchphrase": "krzzt"
-	},
-	{
-		"name": "Stella",
+	"Stella": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/shp03.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlShp03.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/shp03_11_Stella.png",
@@ -4342,9 +3652,7 @@
 		"hobby": "Nature",
 		"birthday": "4/9",
 		"catchphrase": "baa-dabing"
-	},
-	{
-		"name": "Sterling",
+	"Sterling": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pbr07.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPbr07.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pbr07_284_Sterling.png",
@@ -4354,9 +3662,7 @@
 		"hobby": "Fitness",
 		"birthday": "12/11",
 		"catchphrase": "skraaaaw"
-	},
-	{
-		"name": "Stinky",
+	"Stinky": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cat13.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCat13.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cat13_64_Stinky.png",
@@ -4366,9 +3672,7 @@
 		"hobby": "Fitness",
 		"birthday": "8/17",
 		"catchphrase": "GAAHHH"
-	},
-	{
-		"name": "Stitches",
+	"Stitches": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cbr05.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCbr05.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cbr05_79_Stitches.png",
@@ -4378,9 +3682,7 @@
 		"hobby": "Play",
 		"birthday": "2/10",
 		"catchphrase": "stuffin'"
-	},
-	{
-		"name": "Stu",
+	"Stu": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/bul03.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBul03.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/bul03_48_Stu.png",
@@ -4390,9 +3692,7 @@
 		"hobby": "Nature",
 		"birthday": "4/20",
 		"catchphrase": "mrooooo"
-	},
-	{
-		"name": "Sydney",
+	"Sydney": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/kal03.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlKal03.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/kal03_8_Sydney.png",
@@ -4402,9 +3702,7 @@
 		"hobby": "Music",
 		"birthday": "6/21",
 		"catchphrase": "sunshine"
-	},
-	{
-		"name": "Sylvana",
+	"Sylvana": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/squ14.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlSqu14.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/squ14_365_Sylvana.png",
@@ -4414,9 +3712,7 @@
 		"hobby": "Nature",
 		"birthday": "10/22",
 		"catchphrase": "hubbub"
-	},
-	{
-		"name": "Sylvia",
+	"Sylvia": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/kgr06.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlKgr06.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/kgr06_232_Sylvia.png",
@@ -4426,9 +3722,7 @@
 		"hobby": "Music",
 		"birthday": "5/3",
 		"catchphrase": "boing"
-	},
-	{
-		"name": "T-Bone",
+	"T-Bone": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/bul05.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBul05.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/bul05_49_T-Bone.png",
@@ -4438,9 +3732,7 @@
 		"hobby": "Education",
 		"birthday": "5/20",
 		"catchphrase": "moocher"
-	},
-	{
-		"name": "Tabby",
+	"Tabby": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cat12.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCat12.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cat12_63_Tabby.png",
@@ -4450,9 +3742,7 @@
 		"hobby": "Music",
 		"birthday": "8/13",
 		"catchphrase": "me-WOW"
-	},
-	{
-		"name": "Tad",
+	"Tad": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/flg09.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlFlg09.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/flg09_166_Tad.png",
@@ -4462,9 +3752,7 @@
 		"hobby": "Play",
 		"birthday": "8/3",
 		"catchphrase": "sluuuurp"
-	},
-	{
-		"name": "Tammi",
+	"Tammi": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/mnk03.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlMnk03.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/mnk03_244_Tammi.png",
@@ -4474,9 +3762,7 @@
 		"hobby": "Fashion",
 		"birthday": "4/2",
 		"catchphrase": "chimpy"
-	},
-	{
-		"name": "Tammy",
+	"Tammy": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cbr17.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCbr17.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cbr17_87_Tammy.png",
@@ -4486,9 +3772,7 @@
 		"hobby": "Play",
 		"birthday": "6/23",
 		"catchphrase": "ya heard"
-	},
-	{
-		"name": "Tangy",
+	"Tangy": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cat05.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCat05.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cat05_57_Tangy.png",
@@ -4498,9 +3782,7 @@
 		"hobby": "Music",
 		"birthday": "6/17",
 		"catchphrase": "reeeeOWR"
-	},
-	{
-		"name": "Tank",
+	"Tank": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/rhn00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlRhn00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/rhn00_334_Tank.png",
@@ -4510,9 +3792,7 @@
 		"hobby": "Fitness",
 		"birthday": "5/6",
 		"catchphrase": "kerPOW"
-	},
-	{
-		"name": "Tasha",
+	"Tasha": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/squ13.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlSqu13.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/squ13_364_Tasha.png",
@@ -4522,9 +3802,7 @@
 		"hobby": "Fitness",
 		"birthday": "11/30",
 		"catchphrase": "nice nice"
-	},
-	{
-		"name": "Teddy",
+	"Teddy": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/bea00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBea00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/bea00_19_Teddy.png",
@@ -4534,9 +3812,7 @@
 		"hobby": "Fitness",
 		"birthday": "9/26",
 		"catchphrase": "grooof"
-	},
-	{
-		"name": "Tex",
+	"Tex": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pgn12.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPgn12.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pgn12_297_Tex.png",
@@ -4546,9 +3822,7 @@
 		"hobby": "Music",
 		"birthday": "10/6",
 		"catchphrase": "picante"
-	},
-	{
-		"name": "Tia",
+	"Tia": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/elp10.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlElp10.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/elp10_157_Tia.png",
@@ -4558,9 +3832,7 @@
 		"hobby": "Nature",
 		"birthday": "11/18",
 		"catchphrase": "teacup"
-	},
-	{
-		"name": "Tiansheng",
+	"Tiansheng": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/mnk09.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlMnk09.png",
 		"houseImage": "",
@@ -4571,8 +3843,7 @@
 		"birthday": "8/18",
 		"catchphrase": "wuwu"
 	},
-	{
-		"name": "Tiffany",
+	"Tiffany": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/rbt07.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlRbt07.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/rbt07_321_Tiffany.png",
@@ -4582,9 +3853,7 @@
 		"hobby": "Fashion",
 		"birthday": "1/9",
 		"catchphrase": "bunbun"
-	},
-	{
-		"name": "Timbra",
+	"Timbra": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/shp10.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlShp10.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/shp10_347_Timbra.png",
@@ -4594,9 +3863,7 @@
 		"hobby": "Education",
 		"birthday": "10/21",
 		"catchphrase": "pine nut"
-	},
-	{
-		"name": "Tipper",
+	"Tipper": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cow01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCow01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cow01_99_Tipper.png",
@@ -4606,9 +3873,7 @@
 		"hobby": "Fashion",
 		"birthday": "8/25",
 		"catchphrase": "pushy"
-	},
-	{
-		"name": "Toby",
+	"Toby": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/rbt20.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlRbt20.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/rbt20_Toby.png",
@@ -4618,9 +3883,7 @@
 		"hobby": "Music",
 		"birthday": "7/10",
 		"catchphrase": "ribbit"
-	},
-	{
-		"name": "Tom",
+	"Tom": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cat15.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCat15.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cat15_66_Tom.png",
@@ -4630,9 +3893,7 @@
 		"hobby": "Education",
 		"birthday": "12/10",
 		"catchphrase": "me-YOWZA"
-	},
-	{
-		"name": "Truffles",
+	"Truffles": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pig01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPig01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pig01_10_Truffles.png",
@@ -4642,9 +3903,7 @@
 		"hobby": "Fashion",
 		"birthday": "7/28",
 		"catchphrase": "snoutie"
-	},
-	{
-		"name": "Tucker",
+	"Tucker": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/elp09.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlElp09.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/elp09_156_Tucker.png",
@@ -4654,9 +3913,7 @@
 		"hobby": "Nature",
 		"birthday": "9/7",
 		"catchphrase": "fuzzers"
-	},
-	{
-		"name": "Tutu",
+	"Tutu": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/bea07.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBea07.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/bea07_24_Tutu.png",
@@ -4666,9 +3923,7 @@
 		"hobby": "Fashion",
 		"birthday": "9/15",
 		"catchphrase": "twinkles"
-	},
-	{
-		"name": "Twiggy",
+	"Twiggy": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/brd03.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBrd03.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/brd03_36_Twiggy.png",
@@ -4678,9 +3933,7 @@
 		"hobby": "Fashion",
 		"birthday": "7/13",
 		"catchphrase": "cheepers"
-	},
-	{
-		"name": "Tybalt",
+	"Tybalt": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/tig02.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlTig02.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/tig02_372_Tybalt.png",
@@ -4690,9 +3943,7 @@
 		"hobby": "Play",
 		"birthday": "8/19",
 		"catchphrase": "grrrRAH"
-	},
-	{
-		"name": "Ursala",
+	"Ursala": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/bea08.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBea08.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/bea08_25_Ursala.png",
@@ -4702,9 +3953,7 @@
 		"hobby": "Music",
 		"birthday": "1/16",
 		"catchphrase": "grooomph"
-	},
-	{
-		"name": "Velma",
+	"Velma": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/goa06.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlGoa06.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/goa06_180_Velma.png",
@@ -4714,9 +3963,7 @@
 		"hobby": "Education",
 		"birthday": "1/14",
 		"catchphrase": "blih"
-	},
-	{
-		"name": "Vesta",
+	"Vesta": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/shp00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlShp00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/shp00_340_Vesta.png",
@@ -4726,9 +3973,7 @@
 		"hobby": "Fashion",
 		"birthday": "4/16",
 		"catchphrase": "baaaffo"
-	},
-	{
-		"name": "Vic",
+	"Vic": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/bul08.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBul08.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/bul08_51_Vic.png",
@@ -4738,9 +3983,7 @@
 		"hobby": "Fitness",
 		"birthday": "12/29",
 		"catchphrase": "cud"
-	},
-	{
-		"name": "Victoria",
+	"Victoria": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/hrs01.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlHrs01.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/hrs01_207_Victoria.png",
@@ -4750,9 +3993,7 @@
 		"hobby": "Fitness",
 		"birthday": "7/11",
 		"catchphrase": "sugar cube"
-	},
-	{
-		"name": "Violet",
+	"Violet": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/gor07.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlGor07.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/gor07_189_Violet.png",
@@ -4762,9 +4003,7 @@
 		"hobby": "Fitness",
 		"birthday": "9/1",
 		"catchphrase": "sweetie"
-	},
-	{
-		"name": "Vivian",
+	"Vivian": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/wol08.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlWol08.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/wol08_384_Vivian.png",
@@ -4774,9 +4013,7 @@
 		"hobby": "Education",
 		"birthday": "1/26",
 		"catchphrase": "piffle"
-	},
-	{
-		"name": "Vladimir",
+	"Vladimir": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/cbr06.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlCbr06.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/cbr06_80_Vladimir.png",
@@ -4786,9 +4023,7 @@
 		"hobby": "Play",
 		"birthday": "8/2",
 		"catchphrase": "nyet"
-	},
-	{
-		"name": "Wade",
+	"Wade": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/pgn09.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlPgn09.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/pgn09_294_Wade.png",
@@ -4798,9 +4033,7 @@
 		"hobby": "Nature",
 		"birthday": "10/30",
 		"catchphrase": "so it goes"
-	},
-	{
-		"name": "Walker",
+	"Walker": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/dog06.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDog06.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/dog06_124_Walker.png",
@@ -4811,8 +4044,7 @@
 		"birthday": "6/10",
 		"catchphrase": "wuh"
 	},
-	{
-		"name": "Walt",
+	"Walt": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/kgr08.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlKgr08.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/kgr08_233_Walt.png",
@@ -4822,9 +4054,7 @@
 		"hobby": "Fitness",
 		"birthday": "4/24",
 		"catchphrase": "pockets"
-	},
-	{
-		"name": "Wart Jr.",
+	"Wart Jr.": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/flg05.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlFlg05.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/flg05_163_Wart%20Jr..png",
@@ -4834,9 +4064,7 @@
 		"hobby": "Education",
 		"birthday": "8/21",
 		"catchphrase": "grr-ribbit"
-	},
-	{
-		"name": "Weber",
+	"Weber": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/duk11.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDuk11.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/duk11_142_Weber.png",
@@ -4846,9 +4074,7 @@
 		"hobby": "Nature",
 		"birthday": "6/30",
 		"catchphrase": "quaa"
-	},
-	{
-		"name": "Wendy",
+	"Wendy": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/shp09.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlShp09.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/shp09_346_Wendy.png",
@@ -4858,9 +4084,7 @@
 		"hobby": "Fashion",
 		"birthday": "8/15",
 		"catchphrase": "lambkins"
-	},
-	{
-		"name": "Whitney",
+	"Whitney": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/wol03.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlWol03.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/wol03_380_Whitney.png",
@@ -4870,9 +4094,7 @@
 		"hobby": "Fashion",
 		"birthday": "9/17",
 		"catchphrase": "snappy"
-	},
-	{
-		"name": "Willow",
+	"Willow": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/shp07.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlShp07.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/shp07_344_Willow.png",
@@ -4882,9 +4104,7 @@
 		"hobby": "Fashion",
 		"birthday": "11/26",
 		"catchphrase": "bo peep"
-	},
-	{
-		"name": "Winnie",
+	"Winnie": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/hrs05.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlHrs05.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/hrs05_211_Winnie.png",
@@ -4894,9 +4114,7 @@
 		"hobby": "Fashion",
 		"birthday": "1/31",
 		"catchphrase": "hay-OK"
-	},
-	{
-		"name": "Wolfgang",
+	"Wolfgang": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/wol02.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlWol02.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/wol02_379_Wolfgang.png",
@@ -4906,9 +4124,7 @@
 		"hobby": "Education",
 		"birthday": "11/25",
 		"catchphrase": "snarrrl"
-	},
-	{
-		"name": "Yuka",
+	"Yuka": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/kal00.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlKal00.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/kal00_220_Yuka.png",
@@ -4918,9 +4134,7 @@
 		"hobby": "Fashion",
 		"birthday": "7/20",
 		"catchphrase": "tsk tsk"
-	},
-	{
-		"name": "Zell",
+	"Zell": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/der02.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlDer02.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/der02_0_Zell.png",
@@ -4930,9 +4144,7 @@
 		"hobby": "Music",
 		"birthday": "6/7",
 		"catchphrase": "pronk"
-	},
-	{
-		"name": "Zoe",
+	"Zoe": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/ant05.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlAnt05.png",
 		"houseImage": "",
@@ -4942,9 +4154,7 @@
 		"hobby": "Education",
 		"birthday": "2/10",
 		"catchphrase": "zoozooroo"
-	},
-	{
-		"name": "Zucker",
+	"Zucker": {
 		"iconImage": "https://acnhcdn.com/latest/NpcIcon/ocp02.png",
 		"photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlOcp02.png",
 		"houseImage": "https://acnhcdn.com/drivesync/render/houses/ocp02_267_Zucker.png",
@@ -4954,5 +4164,4 @@
 		"hobby": "Nature",
 		"birthday": "3/8",
 		"catchphrase": "bloop"
-	}
-]
+}

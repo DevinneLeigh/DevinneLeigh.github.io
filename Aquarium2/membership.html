@@ -15,27 +15,27 @@
         <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
     <body>
-        <header>
+        <header class="d-flex justify-content-between  align-items-center">
             <a class="logo" href="index.html"><img src="image/logo.svg" alt="Lapras Aquarium logo with cartoon plesiosaurus."></a>
             <button id="menu_toggle"><p>&#9776</p></button>
             <nav id="nav">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="explore.html">Explore</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="membership.html">Membership</a></li>
+                    <li><a class="text-dark" href="index.html">Home</a></li>
+                    <li><a class="text-dark" href="explore.html">Explore</a></li>
+                    <li><a class="text-dark" href="events.html">Events</a></li>
+                    <li><a class="text-dark" href="membership.html">Membership</a></li>
                     <li><a class="ticket_button" href="tickets.html">Buy Tickets</a></li>
                 </ul>
             </nav>
         </header>
-        <main class="background_image" id="kelpImage">
+        <main class="background_image container-fluid g-0" id="kelpImage">
             <div id="wave_box">
-                <h1>Become a Member</h1>
+                <h1 class="mt-4">Become a Member</h1>
             </div>
             <img class="wave" src="image/wave_bottom.svg">
 
-                <div id="member_wrapper">
-                    <div id="member_box">
+                <div id="member_wrapper" class="row">
+                    <div id="member_box" class="col-10 col-md-8 col-lg-6 col-xl-5">
                         <section>
                             <h2>Members receive</h2>
                             <ul>
@@ -51,7 +51,7 @@
                         </section>
                     </div>
                     <div id="form_wrapper">
-                        <form id ="open_form" action="memberConfirm.html" method="post">
+                        <form id ="open_form" class="col-10 col-md-8 col-lg-6 col-xl-5" action="memberConfirm.html" method="post">
                             <div>
                                 <label for="name">Name</label>
                                 <br>

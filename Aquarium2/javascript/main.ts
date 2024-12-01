@@ -16,15 +16,6 @@ menuToggle.addEventListener("click", function() {
         
 })
 
-//open explore page dropdowns
-let  dropDown = document.querySelectorAll(".dropdown")!
- 
-for (let i = 0; i < dropDown.length; i++) {
-    dropDown[i].addEventListener("click", function() {
-        dropDown[i].classList.toggle("open");
-    });
-}
-
 
 
 //open form
@@ -247,34 +238,6 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector("#confirm")?.addEventListener("click", processTickets);
     }
 });
-
-// image slides
-let slideIndex = 1;
-if (document.getElementsByClassName("mySlides").length) {
-    showSlides(slideIndex);
-}
-
-function plusSlides(n: number) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n: number) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n: number) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    let slide = slides[i] as HTMLElement;
-    slide.style.display = "none";
-  }
-
-  let slide = slides[slideIndex-1] as HTMLElement;
-  slide.style.display = "block";  
-}
 
 // ticket price calc
 const adult = document.getElementById("adult_number")

@@ -15,48 +15,50 @@
         <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
     <body>
-        <header>
+        <header class="d-flex justify-content-between  align-items-center">
             <a class="logo" href="index.html"><img src="image/logo.svg" alt="Lapras Aquarium logo with cartoon plesiosaurus."></a>
             <button id="menu_toggle">
                 <p>&#9776</p>
             </button>
             <nav id="nav">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="explore.html">Explore</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="membership.html">Membership</a></li>
+                    <li><a class="text-dark" href="index.html">Home</a></li>
+                    <li><a class="text-dark" href="explore.html">Explore</a></li>
+                    <li><a class="text-dark" href="events.html">Events</a></li>
+                    <li><a class="text-dark" href="membership.html">Membership</a></li>
                     <li><a class="ticket_button" href="tickets.html">Buy Tickets</a></li>
                 </ul>
             </nav>
 
         </header>
-        <main>
-            <div id="welcome_container">
+        <main class="container-fluid g-0">
+            <div id="welcome_container" class="row">
                 <div id="video_container">
                     <video autoplay muted loop id="ocean_video">
                         <source src="image/video.mp4" type="video/mp4">
                     </video>
                     
                 </div>
-                <h1>
+                <h1 class="col-12">
                     <span id="welcome">Welcome to</span>
                     <span id="lapras">LAPRAS</span>
                     <span id="aquarium">AQUARIUM</span>
                 </h1>
             </div>
             <img class="wave" id="wave_home" src="image/wave_top.svg">
-            <div id="mission_statement">
-                <h2>Our Mission</h2>
-                <p>We strive to be a sanctuary for marine life, fostering a deep connection between visitors and the ocean. Our mission is to educate, inspire, and empower individuals to become active stewards of our planet's oceans.</p>
+            <div id="mission_statement" class="row">
+                <div class="col-11 col-sm-9 col-md-8">
+                    <h2>Our Mission</h2>
+                    <p>We strive to be a sanctuary for marine life, fostering a deep connection between visitors and the ocean. Our mission is to educate, inspire, and empower individuals to become active stewards of our planet's oceans.</p>
+                </div>
             </div>
             <img class="wave" src="image/wave_bottom.svg">
             <div class="background_image" id="jellyfishImage">
-                <div id="box_wrapper">
-                    <div class="box" id="time_box">
+                <div id="box_wrapper" class="row">
+                    <div class="box col-12 col-md-6" id="time_box">
                         <table>
                             <tr>
-                                <th colspan="2"><h3>Hours</h3></th>
+                                <th class="text-center py-4" colspan="2"><h3>Hours</h3></th>
                             </tr>
                             <tr>
                                 <td>Monday</td>
@@ -88,10 +90,10 @@
                             </tr>
                         </table>
                     </div>
-                    <div class="box" id="contact_box">
-                        <h3>Address</h3>
+                    <div class="box col-12 col-md-6 text-center py-4" id="contact_box">
+                        <h3 class="pb-3">Address</h3>
                         <p>123 Seahorse way, Ocean View, CA 92538</p>
-                        <h3>Call</h3>
+                        <h3 class="py-3">Call</h3>
                         <p>1 234-567-8910</p>
                     </div>
                 </div>

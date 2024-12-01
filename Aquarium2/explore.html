@@ -15,199 +15,243 @@
         <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
     <body>
-        <header>
+        <header class="d-flex justify-content-between  align-items-center">
             <a class="logo" href="index.html"><img src="image/logo.svg" alt="Lapras Aquarium logo with cartoon plesiosaurus."></a>
             <button id="menu_toggle"><p>&#9776</p></button>
             <nav id="nav">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="explore.html">Explore</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="membership.html">Membership</a></li>
+                    <li><a class="text-dark" href="index.html">Home</a></li>
+                    <li><a class="text-dark" href="explore.html">Explore</a></li>
+                    <li><a class="text-dark" href="events.html">Events</a></li>
+                    <li><a class="text-dark" href="membership.html">Membership</a></li>
                     <li><a class="ticket_button" href="tickets.html">Buy Tickets</a></li>
                 </ul>
             </nav>
 
         </header>
-        <main>
+        <main class="container-fluid g-0">
             <div id="wave_box">
-                <h1>Meet the Animals</h1>
+                <h1 class="mt-4">Meet the Animals</h1>
             </div>
             <img class="wave" src="image/wave_bottom.svg">
 
-            <div id="image_slider">
-                <div id="row">
-                    <div class="mySlides">
-                        <img src="image/1.webp">
-                    </div>
-                    <div class="mySlides">
-                        <img src="image/2.webp">
-                    </div>
-                    <div class="mySlides">
-                        <img src="image/3.webp">
-                    </div>
-                    <div class="mySlides">
-                        <img src="image/4.webp">
-                    </div>
-                    <div class="mySlides">
-                        <img src="image/5.webp">
-                    </div>
-                    <div class="mySlides">
-                        <img src="image/6.webp">
-                    </div>
-                    <div class="mySlides">
-                        <img src="image/7.webp">
-                    </div>
-                    <div class="mySlides">
-                        <img src="image/8.webp">
-                    </div>  
+            <div id="image_slider" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="image/1.webp" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="image/2.webp" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="image/3.webp" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="image/4.webp" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="image/5.webp" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="image/6.webp" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="image/7.webp" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="image/8.webp" class="d-block w-100" alt="...">
+                  </div>
                 </div>
-                <a class="prev" onclick="plusSlides(-1)">❮</a>
-                <a class="next" onclick="plusSlides(1)">❯</a>
-            </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#image_slider" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#image_slider" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
             <img class="wave" id="wave_map" src="image/wave_top.svg">
             <div id="map_box">
-                <div class="dropdown">
+
+
+
+
+
+                <div id="accordion">
+                    <div class="card dropdown">
+                      <div class="card-header" id="headingOne">
+                        <div class="mb-0">
+                          <button class="w-100 btn collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <h2>Aquarium map</h2>
+                          </button>
+                        </div>
+                      </div>
+                  
+                      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-bs-parent="#accordion">
+                        <div class="card-body">
+                            <img src="image/map.png">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card dropdown">
+                      <div class="card-header" id="headingTwo">
+                        <div class="mb-0">
+                          <button class="w-100 btn collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <h2>Cafe Menu</h2>
+                          </button>
+                        </div>
+                      </div>
+                      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion">
+                        <div class="card-body">
+                            <div id="table_wrapper">
+                                <table>
+                                    <tr>
+                                        <th>Coffee</th>
+                                        <th>Tea</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Black Coffee &nbsp;&nbsp;&nbsp; $2.25</td>
+                                        <td>Black Tea &nbsp;&nbsp;&nbsp; $1.50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cappuchino &nbsp;&nbsp;&nbsp; $3.50</td>
+                                        <td>Chai Latte &nbsp;&nbsp;&nbsp; $3.75</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Caffee Latte &nbsp;&nbsp;&nbsp; $3.50</td>
+                                        <td>Matcha Latte &nbsp;&nbsp;&nbsp; $3.75</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cafe Mocha &nbsp;&nbsp;&nbsp; $3.75</td>
+                                        <th class="p-0">Other</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Vanilla Latte &nbsp;&nbsp;&nbsp; $3.75</td>
+                                        <td>hot Chocolate &nbsp;&nbsp;&nbsp; $2.50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Macchiato &nbsp;&nbsp;&nbsp; $3.75</td>
+                                        <td>Water &nbsp;&nbsp;&nbsp; $1.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">*Drinks come hot, iced, or blended*</td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <th>Smoothies</th>
+                                        <th>Pasteries</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Strawberry Banana $4.50</td>
+                                        <td>Chocolate Croissant $3.25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Peach Orange Mango $4.50</td>
+                                        <td>Blueberry Muffin $2.25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cherry Pomegranate $4.50</td>
+                                        <td>Starfish Sugar Cookie $2.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pb Chocolate Banana $4.50</td>
+                                        <td>Jellyfish Cake Pop $1.50</td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <th colspan="2">Food</th>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">*Pick a main and a side $11.99*</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Main</th>
+                                        <th>Sides</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Caprese Sandwich</td>
+                                        <td>Mixed Berries</td>                         
+                                    </tr>
+                                    <tr>
+                                        <td>Cheddar Frittata</td>
+                                        <td>Side Salad</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Crispy Chicken Sliders</td>
+                                        <td>French Fries</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Falafel Gyro</td>
+                                        <td>Mixed Veggies w/ Hummas</td>
+                                    </tr>
+                                </table>
+                                <table>
+                                    <tr>
+                                        <th colspan="3">Kids Menu</th>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">*Pick a main, 2 sides, and a drink for $7.99*</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Main</th>
+                                        <th>Sides</th>
+                                        <th>Drinks</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Mac & Cheese</td>
+                                        <td>Apple Sauce Pouce</td>
+                                        <td>Milk</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Grilled Cheese</td>
+                                        <td>Side Salad</td>
+                                        <td>Chocolate Milk</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pepperoni Pizza</td>
+                                        <td>Mixed Veggies w/ Ranch</td>
+                                        <td>Strawberry Milk</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cheese Pizza</td>
+                                        <td>Mixed Berries</td>
+                                        <td>Apple Juice</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cheese Burger</td>
+                                        <td>French Fries</td>
+                                        <td>Orange Juice</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Veggie Burger</td>
+                                        <td>Goldfish Crackers</td>
+                                        <td>Kids Smoothie</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  
+                <!-- <div class="dropdown">
                     <div class="arrow">
                         <p>&#x25BD</p>
                     </div>
-                    <h2>Aquarium map</h2>
-                    <img src="image/map.png">
+                    
                 </div>
                 <div class="dropdown">
                     <div class="arrow">
                         <p>&#x25BD</p>
                     </div>
-                    <h2>Cafe Menu</h2>
-                    <div id="table_wrapper">
-                        <table>
-                            <tr>
-                                <th>Coffee</th>
-                                <th>Tea</th>
-                            </tr>
-                            <tr>
-                                <td>Black Coffee &nbsp;&nbsp;&nbsp; $2.25</td>
-                                <td>Black Tea &nbsp;&nbsp;&nbsp; $1.50</td>
-                            </tr>
-                            <tr>
-                                <td>Cappuchino &nbsp;&nbsp;&nbsp; $3.50</td>
-                                <td>Chai Latte &nbsp;&nbsp;&nbsp; $3.75</td>
-                            </tr>
-                            <tr>
-                                <td>Caffee Latte &nbsp;&nbsp;&nbsp; $3.50</td>
-                                <td>Matcha Latte &nbsp;&nbsp;&nbsp; $3.75</td>
-                            </tr>
-                            <tr>
-                                <td>Cafe Mocha &nbsp;&nbsp;&nbsp; $3.75</td>
-                                <th>Other</th>
-                            </tr>
-                            <tr>
-                                <td>Vanilla Latte &nbsp;&nbsp;&nbsp; $3.75</td>
-                                <td>hot Chocolate &nbsp;&nbsp;&nbsp; $2.50</td>
-                            </tr>
-                            <tr>
-                                <td>Macchiato &nbsp;&nbsp;&nbsp; $3.75</td>
-                                <td>Water &nbsp;&nbsp;&nbsp; $1.00</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">*Drinks come hot, iced, or blended*</td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <th>Smoothies</th>
-                                <th>Pasteries</th>
-                            </tr>
-                            <tr>
-                                <td>Strawberry Banana $4.50</td>
-                                <td>Chocolate Croissant $3.25</td>
-                            </tr>
-                            <tr>
-                                <td>Peach Orange Mango $4.50</td>
-                                <td>Blueberry Muffin $2.25</td>
-                            </tr>
-                            <tr>
-                                <td>Cherry Pomegranate $4.50</td>
-                                <td>Starfish Sugar Cookie $2.00</td>
-                            </tr>
-                            <tr>
-                                <td>Pb Chocolate Banana $4.50</td>
-                                <td>Jellyfish Cake Pop $1.50</td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <th colspan="2">Food</th>
-                            </tr>
-                            <tr>
-                                <td colspan="2">*Pick a main and a side $11.99*</td>
-                            </tr>
-                            <tr>
-                                <th>Main</th>
-                                <th>Sides</th>
-                            </tr>
-                            <tr>
-                                <td>Caprese Sandwich</td>
-                                <td>Mixed Berries</td>                         
-                            </tr>
-                            <tr>
-                                <td>Cheddar Frittata</td>
-                                <td>Side Salad</td>
-                            </tr>
-                            <tr>
-                                <td>Crispy Chicken Sliders</td>
-                                <td>French Fries</td>
-                            </tr>
-                            <tr>
-                                <td>Falafel Gyro</td>
-                                <td>Mixed Veggies w/ Hummas</td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <th colspan="3">Kids Menu</th>
-                            </tr>
-                            <tr>
-                                <td colspan="3">*Pick a main, 2 sides, and a drink for $7.99*</td>
-                            </tr>
-                            <tr>
-                                <th>Main</th>
-                                <th>Sides</th>
-                                <th>Drinks</th>
-                            </tr>
-                            <tr>
-                                <td>Mac & Cheese</td>
-                                <td>Apple Sauce Pouce</td>
-                                <td>Milk</td>
-                            </tr>
-                            <tr>
-                                <td>Grilled Cheese</td>
-                                <td>Side Salad</td>
-                                <td>Chocolate Milk</td>
-                            </tr>
-                            <tr>
-                                <td>Pepperoni Pizza</td>
-                                <td>Mixed Veggies w/ Ranch</td>
-                                <td>Strawberry Milk</td>
-                            </tr>
-                            <tr>
-                                <td>Cheese Pizza</td>
-                                <td>Mixed Berries</td>
-                                <td>Apple Juice</td>
-                            </tr>
-                            <tr>
-                                <td>Cheese Burger</td>
-                                <td>French Fries</td>
-                                <td>Orange Juice</td>
-                            </tr>
-                            <tr>
-                                <td>Veggie Burger</td>
-                                <td>Goldfish Crackers</td>
-                                <td>Kids Smoothie</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
+                    
+                </div> -->
             </div>
         </main>
         <footer>

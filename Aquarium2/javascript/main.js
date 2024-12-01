@@ -10,16 +10,6 @@ menuToggle.addEventListener("click", function () {
         mobileNav.classList.toggle("open");
     }
 });
-//open explore page dropdowns
-var dropDown = document.querySelectorAll(".dropdown");
-var _loop_1 = function (i) {
-    dropDown[i].addEventListener("click", function () {
-        dropDown[i].classList.toggle("open");
-    });
-};
-for (var i = 0; i < dropDown.length; i++) {
-    _loop_1(i);
-}
 //open form
 if (signUpButton) {
     signUpButton.addEventListener("click", function () {
@@ -232,33 +222,6 @@ document.addEventListener("DOMContentLoaded", function () {
         (_a = document.querySelector("#confirm")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", processTickets);
     }
 });
-// image slides
-var slideIndex = 1;
-if (document.getElementsByClassName("mySlides").length) {
-    showSlides(slideIndex);
-}
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    if (n > slides.length) {
-        slideIndex = 1;
-    }
-    if (n < 1) {
-        slideIndex = slides.length;
-    }
-    for (i = 0; i < slides.length; i++) {
-        var slide_1 = slides[i];
-        slide_1.style.display = "none";
-    }
-    var slide = slides[slideIndex - 1];
-    slide.style.display = "block";
-}
 // ticket price calc
 var adult = document.getElementById("adult_number");
 var child = document.getElementById("child_number");
@@ -286,12 +249,12 @@ child === null || child === void 0 ? void 0 : child.addEventListener('change', f
     }
 });
 // open event info
-var eventBox = document.querySelectorAll(".event_box");
-var _loop_2 = function (i) {
+var eventBox = document.querySelectorAll(".event_box2");
+var _loop_1 = function (i) {
     eventBox[i].addEventListener("click", function () {
         eventBox[i].classList.toggle("open");
     });
 };
 for (var i = 0; i < eventBox.length; i++) {
-    _loop_2(i);
+    _loop_1(i);
 }
