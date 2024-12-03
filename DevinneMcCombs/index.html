@@ -66,8 +66,27 @@
             </div>
         </section>
         <section id="contact">
-            
-        </section>
+            <form action="mailto:devinnemccombs@my.cwi.edu?subject=Personal%20Portfolio%20Mail" enctype="text/plain" method="POST">
+                <div class="form-floating mb-3 mt-3">
+                    <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+                    <label for="name">Name</label>
+                  </div>
+                  
+                  <div class="form-floating mt-3 mb-3">
+                    <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+                    <label for="email">Email</label>
+                  </div> 
+
+                  <div class="form-floating">
+                    <textarea class="form-control" id="comment" name="text" placeholder="Comment goes here"></textarea>
+                    <label for="comment">Comments</label>
+                  </div> 
+
+                  <div id="button_wrapper">
+                    <button id="submit_button">Submit</button>
+                </div>
+            </form> 
+        </section>    
     </main>
     <footer>
 
