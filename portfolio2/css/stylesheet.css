@@ -223,8 +223,8 @@ footer a:active {
 }
 
 .me {
-  width: 500px;
-  border-radius: 250px;
+  width: 450px;
+  border-radius: 220px;
 }
 
 /* portfolio page */
@@ -253,9 +253,9 @@ footer a:active {
   }
 }
 #projectExamples a {
-  background: linear-gradient(to top right, #037F8C, #05F2F2, #037F8C);
+  background: #170B26;
   border-radius: 60px;
-  padding: 5%;
+  padding: 20px;
   margin: auto;
   display: block;
   width: 100%;
@@ -265,13 +265,12 @@ footer a:active {
   border-radius: 35px;
 }
 #projectExamples a:hover {
-  transition: all 0.19s ease-in;
-  transform: scale(1.2) translate(0px, -25px);
-  background: linear-gradient(to top right, #05F2F2, #95ffff, #05F2F2);
+  background: #F20574;
+  animation: wiggle 0.3s;
 }
 #projectExamples a:active {
-  transform: scale(1);
-  background: linear-gradient(to top right, #012e33, #037F8C, #012e33);
+  background: #730240;
+  transform: scale(0.85);
 }
 
 #portfolio h1, #portfolio h2 { /* body id */

@@ -1,0 +1,165 @@
+/*
+ * Global Styles
+ */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --l1: #F4FCFC;
+  --l2: #E4F9F4;
+  --l3: #BDEEE2;
+  --l4: #3CCDB8;
+  --l5: #268576;
+  --border-radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.card {
+  padding: 2em;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+/*
+ * Layout
+ */
+.background-image {
+  background: url('/src/assets/background.png');
+  background-size: 50%;
+  background-position: center;
+}
+header {
+  background: var(--l3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding-inline: 20px;
+}
+
+header .logo {
+  width: 85px;
+  padding: 15px;
+}
+
+header .appName {
+  font-size: 1.5em;
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+
+/*
+ * Villager Card
+ */
+.villager-card {
+  margin-block: 80px;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--l4);
+  background: var(--l1);
+  min-width: 500px;
+  min-height: 500px;
+  padding: 40px;
+
+  .name-section {
+    h1 {
+      font-size: 2em;
+      margin: 0 0 20px 0;
+      text-align: center;
+    }
+
+  }
+  .profile-section {
+    display: flex;
+    width: 100%
+
+  }
+  .profile-section {
+    .left-arrow, .right-arrow {
+
+    }
+    .profile-wrapper {
+      width: 100%;
+      text-align: center;
+
+      .profile {
+        height: 400px;
+      }
+    }
+  }
+  .details-section table tr td {
+    width: 50%;
+
+  }
+}
+
+
+
+
+
+/*
+ * Villager List
+ */

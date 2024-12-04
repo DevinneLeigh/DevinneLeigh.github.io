@@ -172,7 +172,7 @@ h1, h2, h3, h4, h5, h6 {
 
 footer {
     padding: 10px;
-    .linkedin:hover, .github:hover, .email:hover {
+    .linkedin:hover, .github:hover, .email:hover  {
         animation: fWiggle .3s;
     }
     a {
@@ -217,8 +217,8 @@ footer {
 }
 
 .me {
-    width: 500px;
-    border-radius: 250px;
+    width: 450px;
+    border-radius: 220px;
 }
 
 /* portfolio page */
@@ -244,9 +244,9 @@ footer {
         border-radius: 50px;
     }
     a {
-        background: linear-gradient(to top right, $darkTeal, $lightTeal, $darkTeal);
+        background: #170B26;
         border-radius: 60px;
-        padding: 5%;
+        padding: 20px;
         margin: auto;
         display: block;
         width: 100%; 
@@ -256,13 +256,12 @@ footer {
         }
     }
     a:hover {
-        transition: all .19s ease-in;
-        transform: scale(1.2) translate(0px, -25px);
-        background: linear-gradient(to top right, $lightTeal, #95ffff, $lightTeal);
+        background: $lightPink;
+        animation: wiggle .3s;
     }
     a:active {
-        transform: scale(1);
-        background: linear-gradient(to top right, #012e33, $darkTeal, #012e33);
+        background: $darkPink;
+        transform: scale(0.85);
     }
 }
 
