@@ -24,10 +24,10 @@ anime.timeline({loop: true})
     delay: (el, i) => 100 + 30 * i
 });
 
-var path = document.querySelector('.path');
-var length = path.getTotalLength();
-var r = document.querySelector(':root');
-r.style.setProperty('--strokeLength', length);
+// var path = document.querySelector('.path');
+// var length = path.getTotalLength();
+// var r = document.querySelector(':root');
+// r.style.setProperty('--strokeLength', length);
 
 anime({
   targets: '.line-drawing-demo .lines path',
@@ -38,3 +38,15 @@ anime({
   direction: 'alternate',
   loop: true
 });
+
+const menu = document.getElementById("menuToggle")
+const mobileNav = document.getElementById("nav")
+
+//open mobile navigation
+menu.addEventListener("click", function() { 
+    if (mobileNav) {
+        mobileNav.classList.toggle("open");
+
+    }
+        
+})

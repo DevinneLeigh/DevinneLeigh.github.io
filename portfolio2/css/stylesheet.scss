@@ -50,7 +50,7 @@ $lightGrey: #989898;
 }
 /* site wide styles */
 
-  @keyframes wiggle {
+@keyframes wiggle {
     10% {transform: rotate(1deg);}
     30% {transform: rotate(3deg);}
     40% {transform: rotate(-1deg);}
@@ -58,7 +58,7 @@ $lightGrey: #989898;
     75% {transform: rotate(1deg) ;}
     95% {transform: rotate(-.5deg) ;}
     100% {transform: rotate(0deg) ;}
-  }
+}
 
 
 html {
@@ -73,32 +73,6 @@ body {
     background: #000000;
 }
 
-header {
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    z-index: 1000;
-    background: #00000094;
-    nav {
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
-        margin-right: 15px;
-        a {
-            margin-top: 3px;
-            color: white;
-            text-decoration: none;
-            padding: 10px 16px;
-            border-radius: 40px;
-        }
-        a:hover {
-            background: $lightPink;
-            animation: wiggle .3s;
-        }
-    }
-    
-}
-
 main {
     letter-spacing: 0.1em;
     word-spacing: 0.2em;
@@ -109,7 +83,133 @@ h1, h2 {
     font-weight: 300;
     font-style: normal;
     //color: #ffffff;
-    font-size: 35px;
+}
+
+h2 {
+    font-size: 26px;
+    @include xs { // 400px
+        font-size: 30px;
+    }
+    @include sm { // 576px
+        font-size: 34px;
+    }
+    @include md { // 768px
+        font-size: 38px;
+    }
+    @include lg { // 960px
+        font-size: 42px;
+    }
+    @include xl { // 1200px
+        font-size: 46px;
+    }
+    @include xxl { // 1400px
+        font-size: 50px;
+    }
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1000;
+    @include sm {
+        background: #00000094;
+    }
+    #menuToggle {
+        font-size: 44px;
+        float: right;
+        margin: 12px;
+        border: 0;
+        background-color: #00000094;
+        border-radius: 100%;
+        padding: 10px 18px;
+        z-index: 2000;
+        @include sm {
+            display: none;
+        }
+        p {
+            margin: 0;
+            color: white;
+        }
+    }
+    nav { // Mobile styling
+        position: fixed;
+        align-items: flex-end;
+        display: none;
+        @include sm {
+            position: unset;
+            display: block;
+        }
+        ul {
+            width: 100%;
+            @include sm {
+                display: flex;
+                flex-flow: row;
+                justify-content: flex-end;
+                align-items: baseline;
+                list-style: none;
+                padding-left: 0;
+                margin: 0;
+            }
+            a {
+                margin: 0 10px 0 0;
+                text-decoration: none;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                line-height: 20px;
+                color:#ffffff;
+                padding: 10px 16px;
+                border-radius: 40px;
+                display: inline-block; // Fixes bug where browser doesn't play animation.
+            }
+            a:hover {
+                background: $lightPink;
+                animation: wiggle .3s;
+            }
+        }
+        &.open {
+            display: block;
+            @include sm {
+                width: 100%;
+                padding: 0;
+            }
+            #mobile {
+                background: #00000094;
+                right: 10px;
+                height: 100vh;
+                padding: 20px 40px;
+                text-align: center;
+            }
+            ul {
+                margin-top: 0;
+                list-style: none;
+                display: flex;
+                flex-flow: column;
+                padding-left: 0;
+                align-items: flex-end;
+                @include sm { 
+                    display: flex;
+                    flex-flow: row;
+                }
+                a {
+                    color: #ffffff;
+                    font-size: 19px;
+                    margin: 0 25px 10px 0;
+                    text-decoration: none;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    line-height: 20px;
+                    padding: 10px 16px;
+                    border-radius: 40px;
+                }
+                a:hover {
+                    background: $lightPink;
+                    animation: wiggle .3s;
+                }
+            }
+        }
+    }
+    
 }
 
 #two, #three, #four, #five {
@@ -120,20 +220,37 @@ h1, h2 {
 }
 #one {
     height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     #bannerWrapper {
         h1 {
             text-align: left;
-            padding: 14% 5%;
-            margin: 0;
             color: $lightGrey;
             .ml12 {
-                font-weight: 200;
-                font-size: 3em;
+                font-size: .9em;
                 text-transform: uppercase;
                 letter-spacing: 0.2em;
+                @include xs { // 400px
+                    font-size: 1em;
+                }
+                @include sm { // 576px
+                    font-size: 1.3em;
+                }
+                @include md { // 768px
+                    font-size: 1.7em;
+                }
+                @include lg { // 960px
+                    font-size: 2.1em;
+                }
+                @include xl { // 1200px
+                    font-size: 2.5em;
+                }
+                @include xxl { // 1400px
+                    font-size: 3em;
+                }
             }
-              
-              .ml12 .letter {
+            .ml12 .letter {
                 line-height: 1em;
             }
         }
@@ -146,23 +263,60 @@ h1, h2 {
     padding-top: 90px;
     #aboutWrapper {
         display: flex;
-        flex-flow: row;
+        flex-flow: column-reverse;
+        justify-content: center;
         align-items: flex-end;
-        width: 98%;
-        padding: 0 20px;
+        width: 90%;
         margin: auto;
-        gap: 10%;
-        #me {
-            width: 30%;
+        gap: 5%;
+        @include md { // 768px
+            flex-flow: row;
+        }
+        #img {
+            padding: 0 20px;
+            #me {
+                width: 95%;
+                margin: 7px 0 -7px 0;
+                @include xs { // 400px
+                    width: 75%;
+                }
+                @include sm { // 576px
+                    width: 60%;
+                }
+                @include md { // 768px
+                    width: 100%;
+                }
+            }
         }
         #about{
-            width: 50%;
+            @include md { // 768px
+                align-self: center;
+                margin: -45px 0 45px 0;
+            }
             p {
                 //margin: 0;
-                line-height: 2em;
+                line-height: 1.8em;
                 text-align: left;
                 text-indent: 50px;
-                font-size: 22px;
+                font-size: 14px;
+                @include xs { // 400px
+                    font-size: 15px;
+                }
+                @include sm { // 576px
+                    font-size: 16px;
+                }
+                @include md { // 768px
+                    font-size: 17px;
+                }
+                @include lg { // 960px
+                    font-size: 18px;
+                }
+                @include xl { // 1200px
+                    font-size: 19px;
+                }
+                @include xxl { // 1400px
+                    font-size: 20px;
+                }
             }
         }
     }
@@ -285,20 +439,20 @@ footer {
     } 
 }
 
-:root {
-    --strokeLength: x;
-}
-.path {
-    stroke-dasharray: var(--strokeLength);
-    stroke-dashoffset: var(--strokeLength);
-    animation: dash 2s ease-in-out infinite alternate;
-}
+// :root {
+//     --strokeLength: x;
+// }
+// .path {
+//     stroke-dasharray: var(--strokeLength);
+//     stroke-dashoffset: var(--strokeLength);
+//     animation: dash 2s ease-in-out infinite alternate;
+// }
   
-@keyframes dash {
-    to {
-      stroke-dashoffset: 0;
-    }
-}
+// @keyframes dash {
+//     to {
+//       stroke-dashoffset: 0;
+//     }
+// }
 
 @keyframes fade-in { /* scroll fade animation */
     from {opacity: 0;}

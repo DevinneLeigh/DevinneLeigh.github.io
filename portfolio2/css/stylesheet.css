@@ -60,31 +60,6 @@ body {
   background: #000000;
 }
 
-header {
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  z-index: 1000;
-  background: rgba(0, 0, 0, 0.5803921569);
-}
-header nav {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  margin-right: 15px;
-}
-header nav a {
-  margin-top: 3px;
-  color: white;
-  text-decoration: none;
-  padding: 10px 16px;
-  border-radius: 40px;
-}
-header nav a:hover {
-  background: #F20574;
-  animation: wiggle 0.3s;
-}
-
 main {
   letter-spacing: 0.1em;
   word-spacing: 0.2em;
@@ -94,7 +69,156 @@ h1, h2 {
   font-family: "Teko", Arial, sans-serif;
   font-weight: 300;
   font-style: normal;
-  font-size: 35px;
+}
+
+h2 {
+  font-size: 26px;
+}
+@media (min-width: 400px) {
+  h2 {
+    font-size: 30px;
+  }
+}
+@media (min-width: 576px) {
+  h2 {
+    font-size: 34px;
+  }
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 38px;
+  }
+}
+@media (min-width: 960px) {
+  h2 {
+    font-size: 42px;
+  }
+}
+@media (min-width: 1200px) {
+  h2 {
+    font-size: 46px;
+  }
+}
+@media (min-width: 1400px) {
+  h2 {
+    font-size: 50px;
+  }
+}
+
+header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 1000;
+}
+@media (min-width: 576px) {
+  header {
+    background: rgba(0, 0, 0, 0.5803921569);
+  }
+}
+header #menuToggle {
+  font-size: 44px;
+  float: right;
+  margin: 12px;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0.5803921569);
+  border-radius: 100%;
+  padding: 10px 18px;
+  z-index: 2000;
+}
+@media (min-width: 576px) {
+  header #menuToggle {
+    display: none;
+  }
+}
+header #menuToggle p {
+  margin: 0;
+  color: white;
+}
+header nav {
+  position: fixed;
+  align-items: flex-end;
+  display: none;
+}
+@media (min-width: 576px) {
+  header nav {
+    position: unset;
+    display: block;
+  }
+}
+header nav ul {
+  width: 100%;
+}
+@media (min-width: 576px) {
+  header nav ul {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: baseline;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+}
+header nav ul a {
+  margin: 0 10px 0 0;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  line-height: 20px;
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 40px;
+  display: inline-block;
+}
+header nav ul a:hover {
+  background: #F20574;
+  animation: wiggle 0.3s;
+}
+header nav.open {
+  display: block;
+}
+@media (min-width: 576px) {
+  header nav.open {
+    width: 100%;
+    padding: 0;
+  }
+}
+header nav.open #mobile {
+  background: rgba(0, 0, 0, 0.5803921569);
+  right: 10px;
+  height: 100vh;
+  padding: 20px 40px;
+  text-align: center;
+}
+header nav.open ul {
+  margin-top: 0;
+  list-style: none;
+  display: flex;
+  flex-flow: column;
+  padding-left: 0;
+  align-items: flex-end;
+}
+@media (min-width: 576px) {
+  header nav.open ul {
+    display: flex;
+    flex-flow: row;
+  }
+}
+header nav.open ul a {
+  color: #ffffff;
+  font-size: 19px;
+  margin: 0 25px 10px 0;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  line-height: 20px;
+  padding: 10px 16px;
+  border-radius: 40px;
+}
+header nav.open ul a:hover {
+  background: #F20574;
+  animation: wiggle 0.3s;
 }
 
 #two, #three, #four, #five {
@@ -106,18 +230,48 @@ h1, h2 {
 
 #one {
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #one #bannerWrapper h1 {
   text-align: left;
-  padding: 14% 5%;
-  margin: 0;
   color: #989898;
 }
 #one #bannerWrapper h1 .ml12 {
-  font-weight: 200;
-  font-size: 3em;
+  font-size: 0.9em;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+}
+@media (min-width: 400px) {
+  #one #bannerWrapper h1 .ml12 {
+    font-size: 1em;
+  }
+}
+@media (min-width: 576px) {
+  #one #bannerWrapper h1 .ml12 {
+    font-size: 1.3em;
+  }
+}
+@media (min-width: 768px) {
+  #one #bannerWrapper h1 .ml12 {
+    font-size: 1.7em;
+  }
+}
+@media (min-width: 960px) {
+  #one #bannerWrapper h1 .ml12 {
+    font-size: 2.1em;
+  }
+}
+@media (min-width: 1200px) {
+  #one #bannerWrapper h1 .ml12 {
+    font-size: 2.5em;
+  }
+}
+@media (min-width: 1400px) {
+  #one #bannerWrapper h1 .ml12 {
+    font-size: 3em;
+  }
 }
 #one #bannerWrapper h1 .ml12 .letter {
   line-height: 1em;
@@ -130,24 +284,81 @@ h1, h2 {
 }
 #two #aboutWrapper {
   display: flex;
-  flex-flow: row;
+  flex-flow: column-reverse;
+  justify-content: center;
   align-items: flex-end;
-  width: 98%;
-  padding: 0 20px;
+  width: 90%;
   margin: auto;
-  gap: 10%;
+  gap: 5%;
 }
-#two #aboutWrapper #me {
-  width: 30%;
+@media (min-width: 768px) {
+  #two #aboutWrapper {
+    flex-flow: row;
+  }
 }
-#two #aboutWrapper #about {
-  width: 50%;
+#two #aboutWrapper #img {
+  padding: 0 20px;
+}
+#two #aboutWrapper #img #me {
+  width: 95%;
+  margin: 7px 0 -7px 0;
+}
+@media (min-width: 400px) {
+  #two #aboutWrapper #img #me {
+    width: 75%;
+  }
+}
+@media (min-width: 576px) {
+  #two #aboutWrapper #img #me {
+    width: 60%;
+  }
+}
+@media (min-width: 768px) {
+  #two #aboutWrapper #img #me {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  #two #aboutWrapper #about {
+    align-self: center;
+    margin: -45px 0 45px 0;
+  }
 }
 #two #aboutWrapper #about p {
-  line-height: 2em;
+  line-height: 1.8em;
   text-align: left;
   text-indent: 50px;
-  font-size: 22px;
+  font-size: 14px;
+}
+@media (min-width: 400px) {
+  #two #aboutWrapper #about p {
+    font-size: 15px;
+  }
+}
+@media (min-width: 576px) {
+  #two #aboutWrapper #about p {
+    font-size: 16px;
+  }
+}
+@media (min-width: 768px) {
+  #two #aboutWrapper #about p {
+    font-size: 17px;
+  }
+}
+@media (min-width: 960px) {
+  #two #aboutWrapper #about p {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1200px) {
+  #two #aboutWrapper #about p {
+    font-size: 19px;
+  }
+}
+@media (min-width: 1400px) {
+  #two #aboutWrapper #about p {
+    font-size: 20px;
+  }
 }
 
 /* skills section */
@@ -265,21 +476,6 @@ footer a:active {
   transform: scale(1);
 }
 
-:root {
-  --strokeLength: x;
-}
-
-.path {
-  stroke-dasharray: var(--strokeLength);
-  stroke-dashoffset: var(--strokeLength);
-  animation: dash 2s ease-in-out infinite alternate;
-}
-
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
 @keyframes fade-in { /* scroll fade animation */
   from {
     opacity: 0;

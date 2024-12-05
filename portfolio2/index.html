@@ -14,12 +14,19 @@
     </head>
     <body>
         <header>
-            <nav>
-                <a href="#one">Home</a>
-                <a href="#two">About</a>
-                <a href="#three">Skills</a>
-                <a href="#four">Portfolio</a>
-                <a href="#five">Contact</a>
+            <button id="menuToggle">
+                <p>&#9776</p>
+            </button>
+            <nav id="nav">
+                <div id="mobile">
+                    <ul>
+                        <li><a href="#one">Home</a></li>
+                        <li><a href="#two">About</a></li>
+                        <li><a href="#three">Skills</a></li>
+                        <li><a href="#four">Portfolio</a></li>
+                        <li><a href="#five">Contact</a></li>
+                    </ul>
+                </div>
             </nav>
         </header>
         <main>
@@ -37,10 +44,12 @@
                     <circle cx="50" cy="50" r="25" class="path" fill="none" stroke="#f20574" stroke-width="2" />
                   </svg> -->
                 <div id="aboutWrapper">
-                    <img id="me" src="image/me.png" alt="Devinne McCombs">
+                    <div id="img">
+                        <img id="me" src="image/me.png" alt="Devinne McCombs">
+                    </div>
                     <div id="about">
                         <h2>About Me</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem magni provident inventore iure similique consequatur asperiores aperiam accusantium repellat unde ut, perferendis quasi tempore numquam in, sit, facere reiciendis aut.</p>
+                        <p>Dolorem magni provident inventore iure similique consequatur asperiores aperiam accusantium repellat unde ut, perferendis quasi tempore numquam in, sit, facere reiciendis aut.</p>
                     </div>
                 </div>
             </section>
