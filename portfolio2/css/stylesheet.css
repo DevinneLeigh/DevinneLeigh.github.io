@@ -25,47 +25,24 @@
 }
 
 /* site wide styles */
-@keyframes fWiggle {
-  10% {
-    transform: rotate(2deg);
-  }
-  30% {
-    transform: rotate(5deg);
-  }
-  40% {
-    transform: rotate(-2deg);
-  }
-  60% {
-    transform: rotate(-5deg);
-  }
-  75% {
-    transform: rotate(2deg);
-  }
-  95% {
-    transform: rotate(-1deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
 @keyframes wiggle {
   10% {
-    transform: rotate(3deg);
+    transform: rotate(1deg);
   }
   30% {
-    transform: rotate(7deg);
-  }
-  40% {
-    transform: rotate(-3deg);
-  }
-  60% {
-    transform: rotate(-7deg);
-  }
-  75% {
     transform: rotate(3deg);
   }
+  40% {
+    transform: rotate(-1deg);
+  }
+  60% {
+    transform: rotate(-3deg);
+  }
+  75% {
+    transform: rotate(1deg);
+  }
   95% {
-    transform: rotate(-2deg);
+    transform: rotate(-0.5deg);
   }
   100% {
     transform: rotate(0deg);
@@ -73,29 +50,14 @@
 }
 html {
   font-family: "Exo", "Trebuchet MS", sans-serif;
-  color: #D7C7D9;
+  color: white;
   text-align: center;
   font-size: 20px;
 }
 
 body {
   margin: 0;
-}
-
-main {
-  background-image: url(../image/BackgroundMobile.webp);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: auto;
-}
-@media (min-width: 1200px) {
-  main {
-    background-image: url(../image/Background.webp);
-    width: auto;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+  background: #000000;
 }
 
 header {
@@ -103,78 +65,189 @@ header {
   top: 0px;
   width: 100%;
   z-index: 1000;
+  background: rgba(0, 0, 0, 0.5803921569);
 }
-
-header, footer {
-  background: #170B26;
-  padding: 15px;
-}
-
-nav {
+header nav {
   display: flex;
   align-items: flex-end;
-  flex-flow: row;
   justify-content: flex-end;
   margin-right: 15px;
 }
-nav a {
-  color: #ededed;
+header nav a {
+  margin-top: 3px;
+  color: white;
   text-decoration: none;
   padding: 10px 16px;
   border-radius: 40px;
 }
-nav a:hover, nav #submit:hover {
+header nav a:hover {
   background: #F20574;
   animation: wiggle 0.3s;
 }
-nav a:active, nav #projectExamples a:active, nav #submit:active {
-  background: #730240;
-  transform: scale(0.85);
-}
 
 main {
-  padding: 80px 0;
   letter-spacing: 0.1em;
   word-spacing: 0.2em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
   font-family: "Teko", Arial, sans-serif;
-  font-weight: 550;
+  font-weight: 300;
   font-style: normal;
-  color: #ededed;
-  text-shadow: 4px 3px 5px #170B26;
-  font-size: 40px;
+  font-size: 35px;
+}
+
+#two, #three, #four, #five {
+  animation: fade-in linear;
+  animation-timeline: view();
+  animation-range-start: 1px;
+  animation-range-end: 1000px;
 }
 
 #one {
   height: 100vh;
 }
-
-#bannerWrapper h1 {
+#one #bannerWrapper h1 {
   text-align: left;
   padding: 14% 5%;
   margin: 0;
+  color: #989898;
 }
-#bannerWrapper h1 .ml12 {
+#one #bannerWrapper h1 .ml12 {
   font-weight: 200;
   font-size: 3em;
   text-transform: uppercase;
   letter-spacing: 0.2em;
 }
-#bannerWrapper h1 .ml12 .letter {
+#one #bannerWrapper h1 .ml12 .letter {
   line-height: 1em;
 }
 
-#two, #three {
+/* about section */
+#two {
+  background: #141414;
   padding-top: 90px;
+}
+#two #aboutWrapper {
+  display: flex;
+  flex-flow: row;
+  align-items: flex-end;
+  width: 98%;
+  padding: 0 20px;
+  margin: auto;
+  gap: 10%;
+}
+#two #aboutWrapper #me {
+  width: 30%;
+}
+#two #aboutWrapper #about {
+  width: 50%;
+}
+#two #aboutWrapper #about p {
+  line-height: 2em;
+  text-align: left;
+  text-indent: 50px;
+  font-size: 22px;
+}
+
+/* skills section */
+#three {
+  padding: 90px 0;
+}
+#three #skillsWrapper {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+#three #skillsWrapper .skill {
+  padding: 35px;
+  border-radius: 100%;
+  background: #141414;
+}
+#three #skillsWrapper .skill img {
+  width: 100px;
+}
+
+/* portfolio section */
+#four {
+  padding: 90px 0;
+  background: #141414;
+}
+#four #webExamples {
+  width: 85%;
+  display: flex;
+  flex-flow: column;
+  gap: 50px;
+  margin: auto;
+  padding-bottom: 90px;
+}
+@media (min-width: 768px) {
+  #four #webExamples {
+    flex-flow: row;
+    width: 90%;
+    padding: 2%;
+    border-radius: 50px;
+  }
+}
+#four #webExamples a {
+  margin: auto;
+  display: block;
+  width: 100%;
+}
+#four #webExamples a img {
+  width: 100%;
+}
+#four #webExamples a:hover {
+  transform: scale(1.1);
+  transition: all 0.4s ease-out;
+}
+
+/* contact section */
+#five {
+  padding: 90px 0;
+}
+#five #contactWrapper form {
+  border: #141414 2px solid;
+  border-radius: 30px;
+  width: 50%;
+  margin: auto;
+  padding: 20px 0;
+}
+#five #contactWrapper form #input input, #five #contactWrapper form #input textarea {
+  color: white;
+  background: #141414;
+  border-style: none;
+  border-radius: 15px;
+  font-size: 20px;
+  padding: 10px;
+  margin: 5px 0 30px 0;
+  resize: none;
+}
+#five #contactWrapper form #buttonWrapper {
+  display: flex;
+  justify-content: center;
+}
+#five #contactWrapper form #buttonWrapper button {
+  background: #141414;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 40px;
+  font-size: 20px;
+}
+#five #contactWrapper form #buttonWrapper button:hover {
+  background: #F20574;
+  animation: wiggle 0.3s;
 }
 
 footer {
   padding: 10px;
 }
 footer .linkedin:hover, footer .github:hover, footer .email:hover {
-  animation: fWiggle 0.3s;
+  animation: wiggle 0.3s;
 }
 footer a {
   transform: scale(1);
@@ -185,135 +258,11 @@ footer a {
 footer a img {
   height: 40px;
 }
-footer a:hover, footer footer:focus {
-  transform: scale(1.2);
+footer a:hover {
+  transform: scale(1.1);
 }
 footer a:active {
   transform: scale(1);
-}
-
-/* about page */
-.aboutWrapper {
-  width: 98%;
-  padding: 5px 20px;
-  background: rgba(23, 11, 38, 0.3647058824);
-  border-radius: 65px;
-  margin: auto;
-}
-@media (min-width: 768px) {
-  .aboutWrapper {
-    width: 88%;
-  }
-}
-@media (min-width: 1200px) {
-  .aboutWrapper {
-    width: 78%;
-  }
-}
-@media (min-width: 1400px) {
-  .aboutWrapper {
-    width: 60%;
-  }
-}
-.aboutWrapper p {
-  line-height: 2em;
-  text-align: left;
-  text-indent: 50px;
-  font-size: 22px;
-}
-
-.me {
-  width: 450px;
-  border-radius: 220px;
-}
-
-/* portfolio page */
-#experience h2 {
-  font-size: 50px;
-}
-
-#experience h1 {
-  padding-bottom: 20px;
-}
-
-#projectExamples {
-  width: 85%;
-  display: flex;
-  flex-flow: column;
-  gap: 50px;
-  margin: auto;
-  padding-bottom: 90px;
-}
-@media (min-width: 768px) {
-  #projectExamples {
-    flex-flow: row;
-    width: 90%;
-    padding: 2%;
-    border-radius: 50px;
-  }
-}
-#projectExamples a {
-  background: #170B26;
-  border-radius: 60px;
-  padding: 20px;
-  margin: auto;
-  display: block;
-  width: 100%;
-}
-#projectExamples a img {
-  width: 100%;
-  border-radius: 35px;
-}
-#projectExamples a:hover {
-  background: #F20574;
-  animation: wiggle 0.3s;
-}
-#projectExamples a:active {
-  background: #730240;
-  transform: scale(0.85);
-}
-
-#portfolio h1, #portfolio h2 { /* body id */
-  margin-top: 90px;
-  font-size: 50px;
-}
-
-#tables { /* parent to individual table div tags */
-  display: flex;
-  flex-flow: column;
-  width: 100%;
-  justify-content: center;
-}
-#tables .table {
-  background: #12081c;
-  padding-top: 50px;
-}
-#tables .table table {
-  justify-content: center;
-  margin: auto;
-  max-width: 650px;
-  word-spacing: 0.1em;
-  padding: 2%;
-  /* table content scroll fade animation */
-  animation: fade-in linear;
-  animation-timeline: view();
-  animation-range-start: 1px;
-  animation-range-end: 1000px;
-}
-#tables .table table caption {
-  font-size: 24px;
-  color: white;
-}
-#tables .table table thead {
-  font-size: 22px;
-  color: #ededed;
-}
-#tables .table table tbody {
-  font-size: 20px;
-}
-#tables .table table tbody td {
-  border-top: 2px solid rgba(237, 237, 237, 0.0588235294);
-  padding: 18px;
 }
 
 :root {
@@ -331,7 +280,7 @@ footer a:active {
     stroke-dashoffset: 0;
   }
 }
-@keyframes fade-in { /* table content scroll fade animation */
+@keyframes fade-in { /* scroll fade animation */
   from {
     opacity: 0;
   }
