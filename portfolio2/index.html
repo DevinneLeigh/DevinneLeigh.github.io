@@ -45,7 +45,7 @@
                   </svg> -->
                 <div id="aboutWrapper">
                     <div id="img">
-                        <img id="me" src="image/me.png" alt="Devinne McCombs">
+                        <img id="me" src="image/me.png" alt="Self portrait of Devinne McCombs">
                     </div>
                     <div id="about">
                         <h2>About Me</h2>
@@ -56,26 +56,45 @@
             <section id="three">
                 <h2>Skills</h2>
                 <div id="skillsWrapper">
-                    <div class="skill">
-                        <img class="linkedin" src="image/linkedin.svg" alt="Linkedin icon">
+                    <div class="skill tooltip">
+                        <span class="tooltiptext">HTML5</span>
+                        <img class="html" src="image/html.png" alt="HTML 5 icon">
                     </div>
-                    <div class="skill">
-                        <img class="linkedin" src="image/linkedin.svg" alt="Linkedin icon">
+                    <div class="skill tooltip">
+                        <span class="tooltiptext">CSS</span>
+                        <img class="CSS" src="image/css.png" alt="CSS icon">
                     </div>
-                    <div class="skill">
-                        <img class="linkedin" src="image/linkedin.svg" alt="Linkedin icon">
+                    <div class="skill tooltip">
+                        <span class="tooltiptext">SCSS</span>
+                        <img class="scss" src="image/scss.png" alt="SCSS icon">
                     </div>
-                    <div class="skill">
-                        <img class="linkedin" src="image/linkedin.svg" alt="Linkedin icon">
+                    <div class="skill tooltip">
+                        <span class="tooltiptext">C#</span>
+                        <img class="c#" src="image/c.png" alt="C# icon">
                     </div>
-                    <div class="skill">
-                        <img class="linkedin" src="image/linkedin.svg" alt="Linkedin icon">
+                    <div class="skill tooltip">
+                        <span class="tooltiptext">Javascript</span>
+                        <img class="javascript" src="image/js.png" alt="Javascript icon">
                     </div>
-                    <div class="skill">
-                        <img class="linkedin" src="image/linkedin.svg" alt="Linkedin icon">
+                    <div class="skill tooltip">
+                        <span class="tooltiptext">Bootstrap</span>
+                        <img class="bootstrap" src="image/bootstrap.png" alt="Bootstrap icon">
                     </div>
-                    <div class="skill">
-                        <img class="linkedin" src="image/linkedin.svg" alt="Linkedin icon">
+                    <div class="skill tooltip">
+                        <span class="tooltiptext">View</span>
+                        <img class="view" src="image/view.png" alt="View icon">
+                    </div>
+                    <div class="skill tooltip">
+                        <span class="tooltiptext">React</span>
+                        <img class="react" src="image/react.png" alt="React icon">
+                    </div>
+                    <div class="skill tooltip">
+                        <span class="tooltiptext">Adobe Fresco</span>
+                        <img class="fresco" src="image/fresco.png" alt="Adobe Fresco icon">
+                    </div>
+                    <div class="skill tooltip">
+                        <span class="tooltiptext">Canva</span>
+                        <img class="canva" src="image/canva.png" alt="Canva icon">
                     </div>
                 </div>
             </section>
@@ -103,19 +122,22 @@
                                 <br>
                                 <input type="name" id="name" name="name">
                               </div>
+                              <div id="nameError"></div>
                               <div>
                                 <label for="email">Email</label>
                                 <br>
                                 <input type="email" id="email" name="email">
                               </div>
+                              <div id="emailError"></div>
                               <div>
                                   <label for="comment">Comments</label>
                                   <br>
                                   <textarea rows="5" id="comment" name="text"></textarea>
-                              </div> 
+                              </div>
+                              <div id="messageError"></div> 
                         </div>
                         <div id="buttonWrapper">
-                            <button type="submit" id="button">Submit</button>
+                            <button type="submit" id="submit">Submit</button>
                         </div>
                       </form> 
                 </div>

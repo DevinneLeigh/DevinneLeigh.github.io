@@ -50,3 +50,61 @@ menu.addEventListener("click", function() {
     }
         
 })
+
+var nameError = document.getElementById("nameError");
+var emailError = document.getElementById("emailError");
+var messageError = document.getElementById("messageError");
+
+var submit = document.querySelector("#submit");
+
+var userName = document.querySelector("#name");
+var email = document.querySelector("#email");
+var message = document.querySelector("#comment");
+
+var processContact = function () {
+  var emailPattern = email.value.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+  var isValid = true;
+  if (userName && nameError) {
+      if (userName.value === "") {
+        nameError.innerText = "*Required*";
+        isValid = false;
+      }
+      else {
+        nameError.innerText = "";
+      }
+  }
+  if (email && emailError) {
+      if (email.value === "") {
+        emailError.innerText = "*Required*";
+        isValid = false;
+      }
+      else if (!emailPattern) {
+        emailError.innerText = "*Invalid Email*";
+        isValid = false;
+      }
+      else {
+        emailError.innerText = "";
+      }
+  }
+  if (message && messageError) {
+    if (message.value === "") {
+      messageError.innerText = "*Required*";
+      isValid = false;
+    }
+    else {
+      messageError.innerText = "";
+    }
+    if (isValid) {
+      if (submit) {
+        alert("Thank you for your message! You'll receive a response in the next 48 hours.")
+      }
+    }
+  }
+};
+document.addEventListener("DOMContentLoaded", function () {
+  var _a;
+  if (submit) {
+    (_a = document.querySelector("#submit")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", processContact);
+  }
+});
+
