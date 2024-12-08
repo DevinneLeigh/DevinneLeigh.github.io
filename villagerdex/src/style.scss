@@ -1,3 +1,20 @@
+$sm:  576px;
+$md:  768px;
+$lg:  960px;
+$xl:  1200px;
+$xxl: 1400px;
+
+/* Mixins */
+@mixin sm { @media (min-width: $sm) { @content; } }
+@mixin sm-landscape { @media (min-width: $sm) and (max-width: $md) and (orientation: landscape) { @content; } }
+@mixin md { @media (min-width: $md) { @content; } }
+@mixin lg { @media (min-width: $lg) { @content; } }
+@mixin xl { @media (min-width: $xl) { @content; } }
+@mixin xxl { @media (min-width: $xxl) { @content; } }
+@mixin lt($width) { @media (max-width: $width) { @content; } }
+@mixin gt($width) { @media (min-width: $width) { @content; } }
+@mixin between($width1, $width2) { @media (min-width: $width1) and (max-width: $width2) { @content; } }
+
 /*
  * Global Styles
  */
@@ -21,6 +38,24 @@
   box-sizing: border-box;
 }
 
+h1 {
+  font-family: "Unkempt", cursive;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.5em;
+  @include sm {
+    font-size: 2.25em;
+  }
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--l5)
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -34,11 +69,6 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
 }
 
 button {
@@ -95,12 +125,12 @@ header {
 }
 
 header .logo {
-  width: 85px;
+  width: 100px;
   padding: 15px;
 }
 
 header .appName {
-  font-size: 1.5em;
+  color: var(--l5);
 }
 
 #app {
@@ -109,6 +139,7 @@ header .appName {
   align-items: center;
   max-width: 1280px;
   margin: 0 auto;
+  flex-flow: column;
 }
 
 
@@ -116,16 +147,23 @@ header .appName {
  * Villager Card
  */
 .villager-card {
-  margin-block: 80px;
+  margin-block: 100px 40px;
   border-radius: var(--border-radius);
   border: 2px solid var(--l4);
   background: var(--l1);
-  min-width: 500px;
-  min-height: 500px;
-  padding: 40px;
+  min-width: 200px;
+  min-height: 200px;
+  padding: 20px;
+  @include md {
+    min-width: 500px;
+    min-height: 500px;
+    padding: 40px;
+
+  }
+  
 
   .name-section {
-    h1 {
+    h2 {
       font-size: 2em;
       margin: 0 0 20px 0;
       text-align: center;
@@ -139,22 +177,115 @@ header .appName {
   }
   .profile-section {
     .left-arrow, .right-arrow {
-
+      background: none;
+      svg {
+        width: 16px;
+        fill: var(--l5);
+      }
+    }
+    .left-arrow svg {
+      transform: rotate(180deg);
     }
     .profile-wrapper {
       width: 100%;
       text-align: center;
 
       .profile {
-        height: 400px;
+        height: 200px;
+        @include md {
+          height: 400px;
+
+        }
       }
     }
   }
-  .details-section table tr td {
-    width: 50%;
-
+  .details-section {
+    table {
+      margin-left: 50px;
+      width: calc(100% - 100px);
+    }
+    table tr td {
+      width: 50%;
+    }
   }
 }
+
+.flex {
+  display: flex;
+}
+.text-center {
+  text-align: center;
+}
+
+.search-wrapper {
+  position: absolute;
+  top: 110px;
+  right: 20px;
+
+  .search-input-group {
+
+    font-size: 16px;
+    position: relative;
+    z-index: 10;
+
+    label {
+      color: var(--l5);
+      font-weight: bold;
+      font-size: 20px;
+      margin-left: 8px;
+    }
+
+    input {
+      height: 40px;
+      width: 180px;
+      font-size: 16px;
+      padding-left: 34px;
+      padding-right: 8px;
+      border: 0;
+      border-radius: 8px;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 10px;
+      bottom: 6px;
+
+      svg {
+        width: 16px;
+        height: 16px;
+
+        fill: var(--l5);
+      }
+    }
+  
+  }
+  
+  .search-results {
+    background: var(--l4);
+    max-height: 50vh;
+    width: 180px;
+    overflow: scroll;
+    padding: 3px 10px 10px 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    box-shadow: 0 2px 18px -2px var(--l5);
+    position: relative;
+    z-index: 8;
+
+    .result {
+      background: var(--l2);
+      display: block;
+      width: 100%;
+      text-align: left;
+      margin-top: 8px;
+      padding: 5px;
+      border-radius: 6px;
+  
+    }
+  }
+  
+}
+
 
 
 
@@ -163,3 +294,75 @@ header .appName {
 /*
  * Villager List
  */
+.villager-list {
+  overflow: scroll;
+  width: 340px;
+  @include sm {
+    width: 500px;
+  }
+  @include md {
+    width: 70%;
+
+  }
+  height: 80vh;
+  margin-block: 40px;
+  .villager-icon {
+    width: 40px;
+  }
+  table {
+    border-collapse: collapse;
+    background: var(--l1);
+    width: 100%;
+    thead th {
+      position: sticky;
+      top: -1px;
+      background: var(--l4);
+      color: #fff;
+
+      &:after {
+        content: '';
+        height: 2px;
+        width: 100%;
+        background: var(--l4);
+      }
+    }
+    .icon-td {
+      text-align: center;
+      padding: 0;
+    }
+    td, th {
+      padding: 3px 8px;
+      border: 2px solid var(--l4);
+      font-size: 14px; 
+      @include md {
+        font-size: 16px;
+        color: var(--l5);
+      }
+    }
+    tr:hover {
+      background: var(--l3);
+      cursor: pointer;
+    }
+  }
+}
+
+.btn-group {
+  text-align: center;
+  button {
+    display: inline-block;
+    background: var(--l5);
+    color: #fff;
+    font-weight: 750;
+    font-size: 20px;
+    margin: 0 10px 40px 10px;
+
+    svg {
+      height: 24px;
+      width: 24px;
+      position: relative;
+      fill: #fff;
+      top: 3px;
+    }
+  }
+}
+
