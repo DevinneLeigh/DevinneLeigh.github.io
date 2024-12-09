@@ -323,7 +323,7 @@ header .appName {
   font-size: 20px;
   margin: 0 10px 40px 10px;
 }
-.btn-group button svg {
+.btn-group button svg, .btn-group button img {
   height: 24px;
   width: 24px;
   position: relative;
