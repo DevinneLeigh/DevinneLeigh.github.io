@@ -45,8 +45,6 @@ function showChosenVillager(villager) {
       </tbody>
     </table>
 
-
-
   </div>
-
+  
 </template>

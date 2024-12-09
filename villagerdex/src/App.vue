@@ -5393,7 +5393,7 @@ const villagers = [
 ];
 
 // initialize on page load
-let villagerIndex = 0 // Math.floor(Math.random() * villagers.length);
+let villagerIndex = Math.floor(Math.random() * villagers.length);
 
 let state = reactive({
   villagerIndex: villagerIndex,

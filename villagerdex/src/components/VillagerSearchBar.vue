@@ -56,19 +56,6 @@ function setChosenVillager(villager) {
 
 <template>
 
-<!-- 1
-  "name": "Ace",
-  "iconImage": "https://acnhcdn.com/latest/NpcIcon/brd09.png",
-  "photoImage": "https://acnhcdn.com/latest/NpcBromide/NpcNmlBrd09.png",
-  "houseImage": "",
-  "species": "Bird",
-  "gender": "Male",
-  "personality": "Jock",
-  "hobby": "Nature",
-  "birthday": "8/11",
-  "catchphrase": "ace" 
--->
-
 <div class="search-wrapper">
 
   <div class="search-input-group">

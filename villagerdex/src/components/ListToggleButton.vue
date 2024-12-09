@@ -7,9 +7,6 @@ const props = defineProps({
 
 </script>
 
-
-
-
 <template>
 
     <button @click="state.listView = !state.listView" class="list-btn">
