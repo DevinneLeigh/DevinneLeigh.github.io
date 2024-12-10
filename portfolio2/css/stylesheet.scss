@@ -371,6 +371,10 @@ header {
                 }
             }
         }
+        .skill:hover {
+            transform: scale(1.1);
+            transition: all .4s ease-out;
+        }
     }
     .tooltip {
         position: relative;

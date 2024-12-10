@@ -432,6 +432,10 @@ header nav.open ul a:hover {
     width: 100px;
   }
 }
+#three #skillsWrapper .skill:hover {
+  transform: scale(1.1);
+  transition: all 0.4s ease-out;
+}
 #three .tooltip {
   position: relative;
   display: inline-block;
