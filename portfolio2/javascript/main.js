@@ -1,5 +1,6 @@
 "use strict";
 
+
 // Wrap every letter in a span
 var text = document.querySelectorAll('.ml12');
 for (let i = 0; i < text.length; i++) {
@@ -51,60 +52,67 @@ menu.addEventListener("click", function() {
         
 })
 
-var nameError = document.getElementById("nameError");
-var emailError = document.getElementById("emailError");
-var messageError = document.getElementById("messageError");
+function validateForm() {
+  // Get the form elements
+  const nameInput = document.getElementById('name');
+  const emailInput = document.getElementById('email');
+  const commentInput = document.getElementById('comment');
+  const submit = document.getElementById('submit');
 
-var submit = document.querySelector("#submit");
+  // Get the error message elements
+  const nameError = document.getElementById('nameError');
+  const emailError = document.getElementById('emailError');
+  const commentError = document.getElementById('messageError');
 
-var userName = document.querySelector("#name");
-var email = document.querySelector("#email");
-var message = document.querySelector("#comment");
-
-var processContact = function () {
-  var emailPattern = email.value.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
   var isValid = true;
-  if (userName && nameError) {
-      if (userName.value === "") {
-        nameError.innerText = "*Required*";
-        isValid = false;
-      }
-      else {
-        nameError.innerText = "";
-      }
+
+  // Validate the name field
+  if (nameInput.value === '') {
+    nameError.textContent = 'Name is required';
+    isValid = false;
+  } else {
+    nameError.textContent = '';
   }
-  if (email && emailError) {
-      if (email.value === "") {
-        emailError.innerText = "*Required*";
-        isValid = false;
-      }
-      else if (!emailPattern) {
-        emailError.innerText = "*Invalid Email*";
-        isValid = false;
-      }
-      else {
-        emailError.innerText = "";
-      }
+
+  // Validate the email field
+  if (emailInput.value === '') {
+    emailError.textContent = 'Email is required';
+    isValid = false;
+  } else if (!isValidEmail(emailInput.value)) {
+    emailError.textContent = 'Invalid email format';
+    isValid = false;
+  } else {
+    emailError.textContent = '';
   }
-  if (message && messageError) {
-    if (message.value === "") {
-      messageError.innerText = "*Required*";
+
+    // Validate the name field
+    if (commentInput.value === '') {
+      commentError.textContent = 'Message is required';
       isValid = false;
+    } else {
+      commentError.textContent = '';
     }
-    else {
-      messageError.innerText = "";
-    }
+
     if (isValid) {
       if (submit) {
-        alert("Thank you for your message! You'll receive a response in the next 48 hours.")
+        window.open("contactConfirm.html", "_self");
       }
     }
   }
-};
+
+// Function to validate email format
+function isValidEmail(email) {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email);
+}
+
+// Add event listeners to the input fields to trigger validation on change
+document.getElementById('name').addEventListener('change', validateForm);
+document.getElementById('email').addEventListener('change', validateForm);
+document.getElementById('comment').addEventListener('change', validateForm);
+
 document.addEventListener("DOMContentLoaded", function () {
-  var _a;
   if (submit) {
-    (_a = document.querySelector("#submit")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", processContact);
+    document.querySelector("#submit").addEventListener("onclick", validateForm);
   }
 });
-

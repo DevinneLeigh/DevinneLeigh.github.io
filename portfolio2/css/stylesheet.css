@@ -510,15 +510,13 @@ header nav.open ul a:hover {
 #five {
   padding: 90px 0 150px 0;
 }
-#five #contactWrapper form {
-  border: #141414 2px solid;
-  border-radius: 30px;
-  width: 95%;
-  margin: auto;
-  padding: 20px 0;
-  font-size: 14px;
+#five #alertMessage {
+  display: none;
 }
-#five #contactWrapper form #input input, #five #contactWrapper form #input textarea {
+#five #alertMessage.open {
+  display: block;
+}
+#five #contactWrapper #input input, #five #contactWrapper #input textarea {
   color: white;
   background: #141414;
   border-style: none;
@@ -528,11 +526,11 @@ header nav.open ul a:hover {
   margin: 5px 0 30px 0;
   resize: none;
 }
-#five #contactWrapper form #buttonWrapper {
+#five #contactWrapper #buttonWrapper {
   display: flex;
   justify-content: center;
 }
-#five #contactWrapper form #buttonWrapper button {
+#five #contactWrapper #buttonWrapper button {
   background: #141414;
   color: white;
   border: none;
@@ -540,7 +538,7 @@ header nav.open ul a:hover {
   border-radius: 40px;
   font-size: 16px;
 }
-#five #contactWrapper form #buttonWrapper button:hover {
+#five #contactWrapper #buttonWrapper button:hover {
   background: #F20574;
   animation: wiggle 0.3s;
 }
@@ -552,77 +550,98 @@ header nav.open ul a:hover {
 }
 
 @media (min-width: 400px) {
-  #five #contactWrapper form {
-    font-size: 15px;
-    width: 90%;
-  }
-  #five #contactWrapper form #input input, #five #contactWrapper form #input textarea {
+  #five #contactWrapper #input input, #five #contactWrapper #input textarea {
     font-size: 17px;
   }
-  #five #contactWrapper form #buttonWrapper button {
+  #five #contactWrapper #buttonWrapper button {
     font-size: 17px;
   }
 }
 @media (min-width: 576px) {
-  #five #contactWrapper form {
-    font-size: 16px;
-    width: 80%;
-  }
-  #five #contactWrapper form #input input, #five #contactWrapper form #input textarea {
+  #five #contactWrapper #input input, #five #contactWrapper #input textarea {
     font-size: 18px;
   }
-  #five #contactWrapper form #buttonWrapper button {
+  #five #contactWrapper #buttonWrapper button {
     font-size: 18px;
   }
 }
 @media (min-width: 768px) {
-  #five #contactWrapper form {
-    font-size: 17px;
-    width: 70%;
-  }
-  #five #contactWrapper form #input input, #five #contactWrapper form #input textarea {
+  #five #contactWrapper #input input, #five #contactWrapper #input textarea {
     font-size: 19px;
   }
-  #five #contactWrapper form #buttonWrapper button {
+  #five #contactWrapper #buttonWrapper button {
     font-size: 19px;
   }
 }
 @media (min-width: 960px) {
-  #five #contactWrapper form {
-    font-size: 18px;
-    width: 60%;
-  }
-  #five #contactWrapper form #input input, #five #contactWrapper form #input textarea {
+  #five #contactWrapper #input input, #five #contactWrapper #input textarea {
     font-size: 20px;
   }
-  #five #contactWrapper form #buttonWrapper button {
+  #five #contactWrapper #buttonWrapper button {
     font-size: 20px;
   }
 }
 @media (min-width: 1200px) {
-  #five #contactWrapper form {
-    font-size: 19px;
-    width: 50%;
-  }
-  #five #contactWrapper form #input input, #five #contactWrapper form #input textarea {
+  #five #contactWrapper #input input, #five #contactWrapper #input textarea {
     font-size: 21px;
   }
-  #five #contactWrapper form #buttonWrapper button {
+  #five #contactWrapper #buttonWrapper button {
     font-size: 21px;
   }
 }
 @media (min-width: 1400px) {
-  #five #contactWrapper form {
-    font-size: 20px;
-    width: 40%;
-  }
-  #five #contactWrapper form #input input, #five #contactWrapper form #input textarea {
+  #five #contactWrapper #input input, #five #contactWrapper #input textarea {
     font-size: 22px;
   }
-  #five #contactWrapper form #buttonWrapper button {
+  #five #contactWrapper #buttonWrapper button {
     font-size: 22px;
   }
 }
+.box {
+  border: #141414 2px solid;
+  border-radius: 30px;
+  width: 95%;
+  margin: auto;
+  padding: 20px 0;
+  font-size: 14px;
+}
+@media (min-width: 400px) {
+  .box {
+    font-size: 15px;
+    width: 90%;
+  }
+}
+@media (min-width: 576px) {
+  .box {
+    font-size: 16px;
+    width: 80%;
+  }
+}
+@media (min-width: 768px) {
+  .box {
+    font-size: 17px;
+    width: 70%;
+  }
+}
+@media (min-width: 960px) {
+  .box {
+    font-size: 18px;
+    width: 60%;
+  }
+}
+@media (min-width: 1200px) {
+  .box {
+    font-size: 19px;
+    width: 50%;
+  }
+}
+@media (min-width: 1400px) {
+  .box {
+    font-size: 20px;
+    width: 40%;
+  }
+}
+
 footer {
   padding: 10px;
 }
@@ -652,4 +671,29 @@ footer a:active {
   to {
     opacity: 1;
   }
+}
+#confirmPage {
+  display: flex;
+  height: calc(100vh - 67px);
+  justify-content: center;
+  align-items: center;
+}
+#confirmPage #confirmMessage {
+  padding: 50px;
+}
+#confirmPage #confirmMessage #x {
+  display: flex;
+  justify-content: end;
+  margin: -30px -20px 30px 20px;
+}
+#confirmPage #confirmMessage #x a {
+  text-decoration: none;
+  font-size: 28px;
+  color: #fff;
+}
+#confirmPage #confirmMessage #x a:hover {
+  color: #F20574;
+}
+#confirmPage #confirmMessage h1 {
+  margin: -25px 0 25px 0;
 }/*# sourceMappingURL=stylesheet.css.map */
