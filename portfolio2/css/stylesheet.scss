@@ -113,14 +113,14 @@ header {
     width: 100%;
     z-index: 1000;
     @include sm {
-        background: #00000094;
+        background: #00000031;
     }
     #menuToggle {
         font-size: 44px;
         float: right;
         margin: 12px;
         border: 0;
-        background-color: #00000094;
+        background-color: #000000;
         border-radius: 100%;
         padding: 10px 18px;
         z-index: 2000;
@@ -139,6 +139,14 @@ header {
         @include sm {
             position: unset;
             display: block;
+        }
+        #logo {
+            display: block;
+            img {
+                width: 50px;
+                float: left;
+                margin: 10px 0 -50px 15px;
+            }
         }
         ul {
             width: 100%;
@@ -174,11 +182,14 @@ header {
                 padding: 0;
             }
             #mobile {
-                background: #00000094;
+                background: #000000;
                 right: 10px;
                 height: 100vh;
                 padding: 20px 40px;
                 text-align: center;
+            }
+            #logo {
+                display: none;
             }
             ul {
                 margin-top: 0;
@@ -346,6 +357,8 @@ header {
             padding: 25px;
             border-radius: 100%;
             background: $grey;
+            display: flex;
+            flex-flow: column;
             @include sm { // 576px
                 padding: 30px;
             }
