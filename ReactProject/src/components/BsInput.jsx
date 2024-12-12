@@ -15,7 +15,7 @@ function BsInput(props) {
             {currencyPart}
             <input 
               value={props.value} 
-              onChange={(e) => setPrincipal(e.target.value)}
+              onChange={(e) => props.setter(e.target.value)}
               type="text" className="form-control" id={props.name} placeholder="0.00" />
             {percentagePart}
           </div>
