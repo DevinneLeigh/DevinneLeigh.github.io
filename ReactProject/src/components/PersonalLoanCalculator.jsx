@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Card from './Card';
 import BsInput from './BsInput';
+import catCalc from '../assets/cat-calc.png';
 
 function PersonalLoanCalculator(props) {
 
@@ -48,7 +49,7 @@ function PersonalLoanCalculator(props) {
                 <div>
                     <Card>
                         <div className="d-flex justify-content-center align-items-center">
-                            <img className="cat-img img-fluid" src="/ReactProject/dist/src/assets/cat-calc.png" alt="Calculator Cat" height="160px" />
+                            <img className="cat-img img-fluid" src={catCalc} alt="Calculator Cat" height="160px" />
                         </div>
                         <div className="">
                             <button className="my-3 w-100 btn btn-primary" 
