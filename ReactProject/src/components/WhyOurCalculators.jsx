@@ -10,7 +10,7 @@ function WhyOurCalculators(props) {
                         <div className="container">
                             <div className="row">
                                 <div className="col-12 col-md-4 d-flex justify-content-center align-items-center">
-                                    <img className="cat-img img-fluid" src="/src/assets/cat-piggy.png" alt="Cat with a piggy bank." />
+                                    <img className="cat-img img-fluid" src="/ReactProject/dist/src/assets/cat-piggy.png" alt="Cat with a piggy bank." />
                                 </div>
                                 <div className="col-12 col-md-8">
                                     <p className="mt-3">
