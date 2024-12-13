@@ -228,7 +228,18 @@ header {
     animation-timeline: view();
     animation-range-start: 1px;
     animation-range-end: 1000px;
+    
+    @-moz-document url-prefix() {
+        animation: unset;
+        
+    }
 }
+
+@keyframes fade-in { /* scroll fade animation */
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
 #one {
     height: 100vh; 
     display: flex;
@@ -668,11 +679,6 @@ footer {
 //       stroke-dashoffset: 0;
 //     }
 // }
-
-@keyframes fade-in { /* scroll fade animation */
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
 
 #confirmPage {
     display: flex;

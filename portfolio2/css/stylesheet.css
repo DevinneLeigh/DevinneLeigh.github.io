@@ -238,7 +238,20 @@ header nav.open ul a:hover {
   animation-range-start: 1px;
   animation-range-end: 1000px;
 }
+@-moz-document url-prefix() {
+  #two, #three, #four, #five {
+    animation: unset;
+  }
+}
 
+@keyframes fade-in { /* scroll fade animation */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 #one {
   height: 100vh;
   display: flex;
@@ -677,14 +690,6 @@ footer a:active {
   transform: scale(1);
 }
 
-@keyframes fade-in { /* scroll fade animation */
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 #confirmPage {
   display: flex;
   height: calc(100vh - 67px);
