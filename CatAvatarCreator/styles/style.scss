@@ -1,0 +1,130 @@
+/* Mixins */
+@use "sass:color";
+// @import "../node_modules/bootstrap/scss/bootstrap";
+
+$xs:  400px;
+$sm:  576px;
+$md:  768px;
+$lg:  960px;
+$xl:  1200px;
+$xxl: 1400px;
+$xxxl: 1600px;
+
+/**
+@include xs { // 400px
+
+}
+@include sm { // 576px
+
+}
+@include md { // 768px
+
+}
+@include lg { // 960px
+
+}
+@include xl { // 1200px
+
+}
+@include xxl { // 1400px
+
+}
+@include xxxl { // 1600px
+
+}
+**/
+
+$pink-dark: #FF96A6;
+$pink-light: #FFD3D0;
+$pink-lightest: #FFDFDD;
+$green-dark: #9EB331;
+$green-light: #DCE8A0;
+$blue-dark: #869CDA;
+$blue-light: #C2CFED;
+$blue-lightest: #DCE1ED;
+$dark: #122245;
+
+/* Mixins */
+@mixin xs { @media (min-width: $xs) { @content; } }
+@mixin sm { @media (min-width: $sm) { @content; } }
+@mixin sm-landscape { @media (min-width: $sm) and (max-width: $md) and (orientation: landscape) { @content; } }
+@mixin md { @media (min-width: $md) { @content; } }
+@mixin lg { @media (min-width: $lg) { @content; } }
+@mixin xl { @media (min-width: $xl) { @content; } }
+@mixin xxl { @media (min-width: $xxl) { @content; } }
+@mixin xxxl { @media (min-width: $xxxl) { @content; } }
+@mixin lt($width) { @media (max-width: $width) { @content; } }
+@mixin gt($width) { @media (min-width: $width) { @content; } }
+@mixin between($width1, $width2) { @media (min-width: $width1) and (max-width: $width2) { @content; } }
+
+@mixin flex(){
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+.cat_creator_page {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  .avatar_window{
+    width: 500px;
+    height: 500px;
+    margin: 20px auto 20px auto;
+    position: relative;
+    background: $pink-lightest;
+    border: solid 5px $pink-dark;
+    border-radius: 60px;
+  }
+  .customize_window {
+    margin: auto;
+    .selection_buttons {
+      //text-align: center;
+      margin: auto;
+      button {
+        border-style: none;
+        border-radius: 25px;
+        width: 140px;
+        background: $pink-dark;
+        color: #fff;
+      }
+    }
+    .scroll_menu {
+      display: flex;
+      flex-flow: row;
+      .options_wrapper {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+        .option {
+          background: $blue-dark;
+          border-radius: 40px;
+          img {
+            margin-top: -45px;
+            width: 200px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.avatar_window img.layer {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+}
+.left_arrow, .right_arrow {
+  font-size: 30px;
+  cursor: pointer;
+  margin-top: 60px;
+}
+.left_arrow {
+  transform: scaleX(-1);
+}
+

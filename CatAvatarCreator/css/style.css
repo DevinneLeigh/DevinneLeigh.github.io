@@ -1,0 +1,87 @@
+/* Mixins */
+/**
+@include xs { // 400px
+
+}
+@include sm { // 576px
+
+}
+@include md { // 768px
+
+}
+@include lg { // 960px
+
+}
+@include xl { // 1200px
+
+}
+@include xxl { // 1400px
+
+}
+@include xxxl { // 1600px
+
+}
+**/
+/* Mixins */
+.cat_creator_page {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+}
+.cat_creator_page .avatar_window {
+  width: 500px;
+  height: 500px;
+  margin: 20px auto 20px auto;
+  position: relative;
+  background: #FFDFDD;
+  border: solid 5px #FF96A6;
+  border-radius: 60px;
+}
+.cat_creator_page .customize_window {
+  margin: auto;
+}
+.cat_creator_page .customize_window .selection_buttons {
+  margin: auto;
+}
+.cat_creator_page .customize_window .selection_buttons button {
+  border-style: none;
+  border-radius: 25px;
+  width: 140px;
+  background: #FF96A6;
+  color: #fff;
+}
+.cat_creator_page .customize_window .scroll_menu {
+  display: flex;
+  flex-flow: row;
+}
+.cat_creator_page .customize_window .scroll_menu .options_wrapper {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.cat_creator_page .customize_window .scroll_menu .options_wrapper .option {
+  background: #869CDA;
+  border-radius: 40px;
+}
+.cat_creator_page .customize_window .scroll_menu .options_wrapper .option img {
+  margin-top: -45px;
+  width: 200px;
+  cursor: pointer;
+}
+
+.avatar_window img.layer {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+}
+
+.left_arrow, .right_arrow {
+  font-size: 30px;
+  cursor: pointer;
+  margin-top: 60px;
+}
+
+.left_arrow {
+  transform: scaleX(-1);
+}/*# sourceMappingURL=style.css.map */

@@ -108,57 +108,36 @@ h2 {
 }
 
 header {
-    position: fixed;
+    position: sticky;
     top: 0px;
     width: 100%;
-    z-index: 1000;
-    @include sm {
-        background: #00000031;
-    }
-    #menuToggle {
-        font-size: 44px;
-        float: right;
-        margin: 12px;
-        border: 0;
-        background-color: #000000;
-        border-radius: 100%;
-        padding: 10px 18px;
-        z-index: 2000;
-        @include sm {
-            display: none;
-        }
-        p {
-            margin: 0;
-            color: white;
-        }
-    }
-    nav { // Mobile styling
-        position: fixed;
-        align-items: flex-end;
+    z-index: 5;
+    background: #000000;
+    &.hide {
         display: none;
-        @include sm {
-            position: unset;
-            display: block;
-        }
+    }
+    &.show {
+        display: flex;
+    }
+    nav { 
+        align-items: flex-end;
         #logo {
             display: block;
             img {
-                width: 50px;
+                width: 60px;
                 float: left;
-                margin: 10px 0 -50px 15px;
+                margin: 10px 0 -50px 20px;
             }
         }
         ul {
             width: 100%;
-            @include sm {
-                display: flex;
-                flex-flow: row;
-                justify-content: flex-end;
-                align-items: baseline;
-                list-style: none;
-                padding-left: 0;
-                margin: 0;
-            }
+            display: flex;
+            flex-flow: row;
+            justify-content: flex-end;
+            align-items: baseline;
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
             a {
                 margin: 0 10px 0 0;
                 text-decoration: none;
@@ -175,52 +154,7 @@ header {
                 animation: wiggle .3s;
             }
         }
-        &.open {
-            display: block;
-            @include sm {
-                width: 100%;
-                padding: 0;
-            }
-            #mobile {
-                background: #000000;
-                right: 10px;
-                height: 100vh;
-                padding: 20px 40px;
-                text-align: center;
-            }
-            #logo {
-                display: none;
-            }
-            ul {
-                margin-top: 0;
-                list-style: none;
-                display: flex;
-                flex-flow: column;
-                padding-left: 0;
-                align-items: flex-end;
-                @include sm { 
-                    display: flex;
-                    flex-flow: row;
-                }
-                a {
-                    color: #ffffff;
-                    font-size: 19px;
-                    margin: 0 25px 10px 0;
-                    text-decoration: none;
-                    margin-top: 10px;
-                    margin-bottom: 10px;
-                    line-height: 20px;
-                    padding: 10px 16px;
-                    border-radius: 40px;
-                }
-                a:hover {
-                    background: $lightPink;
-                    animation: wiggle .3s;
-                }
-            }
-        }
     }
-    
 }
 
 #two, #three, #four, #five {
@@ -245,6 +179,11 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 10;
+    top: -80px;
+    margin-bottom: -80px;
+    position: relative;
+    background: #000000;
     #bannerWrapper {
         h1 {
             text-align: left;
@@ -370,6 +309,7 @@ header {
             background: $grey;
             display: flex;
             flex-flow: column;
+            //justify-content: center;
             @include sm { // 576px
                 padding: 30px;
             }
@@ -406,17 +346,31 @@ header {
         border-bottom: 1px dotted black; //
     }
     .tooltip .tooltiptext {
-        visibility: hidden;
-        width: 120px;
-        background-color: black;
+        //visibility: hidden;
+        width: 65px;
+        background-color: $lightPink;
         color: #fff;
         text-align: center;
         padding: 5px 0;
         border-radius: 6px;
-        top: -30px;
-        margin-left: -10px;
+        margin-top: -60px;
+        //margin-left: -10px;
         position: absolute;
         z-index: 1;
+        @include sm { // 576px
+            width: 85px;
+        }
+        @include lg { // 960px
+            width: 100px;
+        }
+    }
+
+    .tooltiptext {
+        //justify-self: center;
+        font-size: 13px;
+        @include lg { // 960px
+            font-size: 16px;
+        }
     }
     .tooltip:hover .tooltiptext {
         visibility: visible;

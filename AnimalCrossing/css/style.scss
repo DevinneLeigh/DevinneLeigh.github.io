@@ -1,0 +1,278 @@
+$xs:  400px;
+$sm:  576px;
+$md:  768px;
+$lg:  960px;
+$xl:  1200px;
+$xxl: 1400px;
+
+/**
+@include xs { // 400px
+
+}
+@include sm { // 576px
+
+}
+@include md { // 768px
+
+}
+@include lg { // 960px
+
+}
+@include xl { // 1200px
+
+}
+@include xxl { // 1400px
+
+}
+**/
+
+$bg: #eef7f7;
+$dark: #07413b;
+$medium: #1a8176;
+$light: #28a79a;
+$yellow: #eace30;
+
+
+
+/* Mixins */
+@mixin xs { @media (min-width: $xs) { @content; }}
+@mixin sm { @media (min-width: $sm) { @content; } }
+@mixin sm-landscape { @media (min-width: $sm) and (max-width: $md) and (orientation: landscape) { @content; } }
+@mixin md { @media (min-width: $md) { @content; } }
+@mixin lg { @media (min-width: $lg) { @content; } }
+@mixin xl { @media (min-width: $xl) { @content; } }
+@mixin xxl { @media (min-width: $xxl) { @content; } }
+@mixin lt($width) { @media (max-width: $width) { @content; } }
+@mixin gt($width) { @media (min-width: $width) { @content; } }
+@mixin between($width1, $width2) { @media (min-width: $width1) and (max-width: $width2) { @content; } }
+
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+    background: $bg;
+    color: $dark;
+    font-family: sans-serif;
+}
+
+h1, h2, h3, h4 {
+    text-align: center;
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 5;
+    background: $medium;
+    nav { 
+        align-items: flex-end;
+        #logo {
+            display: block;
+            img {
+                width: 60px;
+                float: left;
+                margin: 10px 0 -50px 20px;
+            }
+        }
+        ul {
+            width: 100%;
+            display: flex;
+            flex-flow: row;
+            justify-content: flex-end;
+            align-items: baseline;
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+            a {
+                margin: 0 10px 0 0;
+                text-decoration: none;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                line-height: 20px;
+                color:#fff;
+                font-weight: 800;
+                padding: 10px 16px;
+                border-radius: 40px;
+                display: inline-block; // Fixes bug where browser doesn't play animation.
+            }
+            a:hover {
+                color: $yellow;
+                transition: 0.5s;
+            }
+        }
+    }
+}
+
+main {
+    padding-top: 60px;
+}
+
+
+.heading {
+    margin: 90px 0 20px 0;
+    text-align: center;
+    h2 {
+        font-size: 32px;
+        margin-bottom: 5px;
+    }
+    p {
+        color: #13776d;
+        font-size: 20px;
+    }
+}
+#banner_wrapper {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    #banner {
+        width: calc(100vw - 400px);
+        height: auto;
+        border-radius: 60px;
+        border: solid 8px $yellow;
+    }
+}
+
+#villager_index_wrapper {
+    background: #fff;
+    width: 100%;
+    padding: 1px 0 100px 0;
+    margin-top: 200px;
+    #villager_index_images {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        gap: 30px;
+    }
+    #villager_index_button {
+        display: flex;
+        justify-content: center;
+        button {
+            margin-top: 15px;
+        }
+    }
+}
+#memory_game {
+    background: #fff;
+    width: 900px;
+    height: 700px;
+    margin: 0 auto 100px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60px;
+    border: solid 8px $yellow;
+}
+
+#grid {
+    width: 800px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+#winner-message {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 12px;
+  text-align: center;
+  z-index: 10;
+  color: $dark;
+}
+
+
+#try-again {
+  display: none;
+  margin: auto 0 200px 0;
+  padding: 10px 20px;
+//   button {
+//     background: #13776d;
+//     color: #fff;
+//     padding: 10px 20px;
+//     border-radius: 20px;
+//     border: none;
+//     font-size: 20px;
+//   }
+}
+
+.button {
+    background: $medium;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+}
+.button:hover {
+    background: $light;
+}
+
+footer {
+    background: #fff;
+    width: 100%;
+    padding: 30px 0;
+    #villager_wrapper {
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        align-items: baseline;
+        justify-content: space-around;
+        .villager {
+            img {
+                width: auto;
+                height: 100px;
+            }
+        }
+    }
+}
+
+#gallery_page_heading {
+    padding: 100px 0;
+}
+.image_slider {
+    display: flex;
+    justify-content: center;
+    flex-flow: row;
+    align-items: center;
+    gap: 20px;
+    margin: 20px auto 100px auto;
+    .row {
+        display: flex;
+        flex-flow: row;
+        .gameplay_slides {
+            //display: none
+            img {
+                vertical-align: middle;
+                width: 100%;
+                height: auto;  
+            }
+        }
+    }
+
+}
+
+    .prev, .next {
+        cursor: pointer;
+        // position: absolute;
+        // top: 50%;
+        // width: auto;
+        padding: 16px 22px;
+        background: $yellow;
+        color: white;
+        font-weight: bold;
+        font-size: 22px;
+        transition: 0.6s ease;
+        border-radius: 30px;
+        user-select: none;
+    }
+    
+.prev:hover, .next:hover {
+    background: $light;
+}

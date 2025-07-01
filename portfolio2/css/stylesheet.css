@@ -106,67 +106,38 @@ h2 {
 }
 
 header {
-  position: fixed;
+  position: sticky;
   top: 0px;
   width: 100%;
-  z-index: 1000;
+  z-index: 5;
+  background: #000000;
 }
-@media (min-width: 576px) {
-  header {
-    background: rgba(0, 0, 0, 0.1921568627);
-  }
-}
-header #menuToggle {
-  font-size: 44px;
-  float: right;
-  margin: 12px;
-  border: 0;
-  background-color: #000000;
-  border-radius: 100%;
-  padding: 10px 18px;
-  z-index: 2000;
-}
-@media (min-width: 576px) {
-  header #menuToggle {
-    display: none;
-  }
-}
-header #menuToggle p {
-  margin: 0;
-  color: white;
-}
-header nav {
-  position: fixed;
-  align-items: flex-end;
+header.hide {
   display: none;
 }
-@media (min-width: 576px) {
-  header nav {
-    position: unset;
-    display: block;
-  }
+header.show {
+  display: flex;
+}
+header nav {
+  align-items: flex-end;
 }
 header nav #logo {
   display: block;
 }
 header nav #logo img {
-  width: 50px;
+  width: 60px;
   float: left;
-  margin: 10px 0 -50px 15px;
+  margin: 10px 0 -50px 20px;
 }
 header nav ul {
   width: 100%;
-}
-@media (min-width: 576px) {
-  header nav ul {
-    display: flex;
-    flex-flow: row;
-    justify-content: flex-end;
-    align-items: baseline;
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-  }
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  align-items: baseline;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 header nav ul a {
   margin: 0 10px 0 0;
@@ -180,54 +151,6 @@ header nav ul a {
   display: inline-block;
 }
 header nav ul a:hover {
-  background: #F20574;
-  animation: wiggle 0.3s;
-}
-header nav.open {
-  display: block;
-}
-@media (min-width: 576px) {
-  header nav.open {
-    width: 100%;
-    padding: 0;
-  }
-}
-header nav.open #mobile {
-  background: #000000;
-  right: 10px;
-  height: 100vh;
-  padding: 20px 40px;
-  text-align: center;
-}
-header nav.open #logo {
-  display: none;
-}
-header nav.open ul {
-  margin-top: 0;
-  list-style: none;
-  display: flex;
-  flex-flow: column;
-  padding-left: 0;
-  align-items: flex-end;
-}
-@media (min-width: 576px) {
-  header nav.open ul {
-    display: flex;
-    flex-flow: row;
-  }
-}
-header nav.open ul a {
-  color: #ffffff;
-  font-size: 19px;
-  margin: 0 25px 10px 0;
-  text-decoration: none;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  line-height: 20px;
-  padding: 10px 16px;
-  border-radius: 40px;
-}
-header nav.open ul a:hover {
   background: #F20574;
   animation: wiggle 0.3s;
 }
@@ -257,6 +180,11 @@ header nav.open ul a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10;
+  top: -80px;
+  margin-bottom: -80px;
+  position: relative;
+  background: #000000;
 }
 #one #bannerWrapper h1 {
   text-align: left;
@@ -468,17 +396,33 @@ header nav.open ul a:hover {
   border-bottom: 1px dotted black;
 }
 #three .tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
+  width: 65px;
+  background-color: #F20574;
   color: #fff;
   text-align: center;
   padding: 5px 0;
   border-radius: 6px;
-  top: -30px;
-  margin-left: -10px;
+  margin-top: -60px;
   position: absolute;
   z-index: 1;
+}
+@media (min-width: 576px) {
+  #three .tooltip .tooltiptext {
+    width: 85px;
+  }
+}
+@media (min-width: 960px) {
+  #three .tooltip .tooltiptext {
+    width: 100px;
+  }
+}
+#three .tooltiptext {
+  font-size: 13px;
+}
+@media (min-width: 960px) {
+  #three .tooltiptext {
+    font-size: 16px;
+  }
 }
 #three .tooltip:hover .tooltiptext {
   visibility: visible;
