@@ -140,6 +140,7 @@ header .appName {
   max-width: 1280px;
   margin: 0 auto;
   flex-flow: column;
+  height: calc(100vh - 150px);
 }
 
 
