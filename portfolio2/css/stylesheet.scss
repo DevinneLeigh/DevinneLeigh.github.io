@@ -113,66 +113,134 @@ header {
     width: 100%;
     z-index: 5;
     background: #000000;
-    &.hide {
-        display: none;
+    #menu_toggle {
+        font-size: 44px;
+        float: right;
+        margin-right: 12px;
+        border: 0;
+        background: none;
+        color: white;
+
+        p {
+            cursor: pointer;
+            margin: 0;
+        }
+        @include sm {
+            display: none;
+        }
+        img{
+            width: 60px;
+        }   
     }
-    &.show {
-        display: flex;
+    // &.hide {
+    //     display: none;
+    // }
+    // &.show {
+    //     display: flex;
+    // }
+    #logo {
+        display: block;
+        img {
+            width: 60px;
+            float: left;
+            margin: 10px 0 -50px 20px;
+        }
     }
     nav { 
+        position: fixed;
         align-items: flex-end;
-        #logo {
-            display: block;
-            img {
-                width: 60px;
-                float: left;
-                margin: 10px 0 -50px 20px;
-            }
+        // &.hide {
+        //     display: none;
+        // }
+        // &.show {
+        //     display: flex;
+        // }
+        @include sm {
+            position: unset;
+        }
+        @include lt($lg) {
+            right: -130px;
         }
         ul {
-            width: 100%;
-            display: flex;
-            flex-flow: row;
-            justify-content: flex-end;
-            align-items: baseline;
-            list-style: none;
-            padding-left: 0;
-            margin: 0;
-            a {
-                margin: 0 10px 0 0;
-                text-decoration: none;
-                margin-top: 10px;
-                margin-bottom: 10px;
-                line-height: 20px;
-                color:#ffffff;
-                padding: 10px 16px;
-                border-radius: 40px;
-                display: inline-block; // Fixes bug where browser doesn't play animation.
+            @include sm {
+                width: 100%;
+                display: flex;
+                flex-flow: row;
+                justify-content: flex-end;
+                align-items: baseline;
+                list-style: none;
+                padding-left: 0;
+                margin: 0;
+                a {
+                    margin: 0 10px 0 0;
+                    text-decoration: none;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    line-height: 20px;
+                    color:#ffffff;
+                    padding: 10px 16px;
+                    border-radius: 40px;
+                    display: inline-block; // Fixes bug where browser doesn't play animation.
+                }
+                a:hover {
+                    background: $lightPink;
+                    animation: wiggle .3s;
+                }
             }
-            a:hover {
-                background: $lightPink;
-                animation: wiggle .3s;
+        }
+        &.open {
+            right: 10px;
+            top: 40px;
+            padding: 20px;
+            width: 219px;
+            height: 100vh;
+            text-align: center;
+            background: $grey; 
+            z-index: 9999999;
+            @include sm {
+                width: 100%;
+                padding: 0;
+            }
+            ul {
+                list-style: none;
+                display: flex;
+                flex-flow: column;
+                padding-left: 0;
+                align-items: flex-end;
+                @include sm { 
+                    display: flex;
+                    flex-flow: row;
+                    justify-content: flex-end;
+                    align-items: baseline; 
+                }
+                a {
+                    color: white;
+                    font-size: 19px;
+                    margin: 0 25px 10px 0;
+                    text-decoration: none;
+                    line-height: 60px;
+                }
             }
         }
     }
 }
 
-#two, #three, #four, #five {
-    animation: fade-in linear;
-    animation-timeline: view();
-    animation-range-start: 1px;
-    animation-range-end: 1000px;
+// #two, #three, #four, #five {
+//     // animation: fade-in linear;
+//     // animation-timeline: view();
+//     // animation-range-start: 1px;
+//     // animation-range-end: 1000px;
     
-    @-moz-document url-prefix() {
-        animation: unset;
+//     @-moz-document url-prefix() {
+//         animation: unset;
         
-    }
-}
+//     }
+// }
 
-@keyframes fade-in { /* scroll fade animation */
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
+// @keyframes fade-in { /* scroll fade animation */
+//     from {opacity: 0;}
+//     to {opacity: 1;}
+// }
 
 #one {
     height: 100vh; 
@@ -230,8 +298,12 @@ header {
         width: 90%;
         margin: auto;
         gap: 5%;
-        @include md { // 768px
+        @include xl { // 1200px
             flex-flow: row;
+            gap: 1%;
+        }
+        @include xxl { // 1400px
+            gap: 2%;
         }
         #img {
             padding: 0 20px;
@@ -245,20 +317,32 @@ header {
                     width: 60%;
                 }
                 @include md { // 768px
+                    width: 45%;
+                    margin-left: 38%;
+                }
+                @include lg { // 960px
+                    width: 40%;
+                }
+                @include xl { // 1200px
+                    margin-left: 0;
                     width: 100%;
                 }
             }
         }
         #about{
-            @include md { // 768px
+            @include xl { // 1200px
                 align-self: center;
-                margin: -45px 0 45px 0;
+                margin: -45px 0 0 0;
+            }
+            h2 {
+                text-align: left;
+                margin: 0;
             }
             p {
                 //margin: 0;
                 line-height: 1.8em;
                 text-align: left;
-                text-indent: 50px;
+                //text-indent: 50px;
                 font-size: 14px;
                 @include xs { // 400px
                     font-size: 15px;
@@ -277,6 +361,22 @@ header {
                 }
                 @include xxl { // 1400px
                     font-size: 20px;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $lightPink;
+                    padding: 2px;
+                    display: inline-block;
+                    transition: .5s;
+                }
+                a:hover {
+                    background: $lightPink;
+                    padding: 2px;
+                    border-radius: 12px;
+                    color: #fff;
+                    //animation: wiggle .3s;
+                    transition: .7s;
                 }
             }
         }
@@ -309,7 +409,9 @@ header {
             background: $grey;
             display: flex;
             flex-flow: column;
-            //justify-content: center;
+            justify-content: center;
+            align-items: center;
+            transition: .35s;
             @include sm { // 576px
                 padding: 30px;
             }
@@ -321,6 +423,8 @@ header {
             }
             img {
                 width: 55px;
+                opacity: 1;
+                transition: opacity .35s ease-in-out;
                 @include sm { // 576px
                     width: 70px;
                 }
@@ -336,43 +440,43 @@ header {
             }
         }
         .skill:hover {
-            transform: scale(1.1);
-            transition: all .4s ease-out;
+            background: #222222;
+            //transition: .4s;
+        }
+        .skill:hover img {
+            opacity: 0;
+        }
+        .skill:hover .skill_text {
+            opacity: 1;
         }
     }
-    .tooltip {
-        position: relative;
-        display: inline-block;
-        border-bottom: 1px dotted black; //
-    }
-    .tooltip .tooltiptext {
-        //visibility: hidden;
-        width: 65px;
-        background-color: $lightPink;
-        color: #fff;
-        text-align: center;
-        padding: 5px 0;
-        border-radius: 6px;
-        margin-top: -60px;
-        //margin-left: -10px;
+    .skill_text {
+        opacity: 0;
+        transition: opacity .35s ease-in-out;
+        color: white;
         position: absolute;
-        z-index: 1;
+        font-size: 14px;
+        @include xs { // 400px
+            font-size: 15px;
+        }
         @include sm { // 576px
-            width: 85px;
+            font-size: 17px;
+        }
+        @include md { // 768px
+            font-size: 20px;
         }
         @include lg { // 960px
-            width: 100px;
+            font-size: 22px;
+        }
+        @include xl { // 1200px
+            font-size: 24px;
+        }
+        @include xxl { // 1400px
+            font-size: 26px;
         }
     }
 
-    .tooltiptext {
-        //justify-self: center;
-        font-size: 13px;
-        @include lg { // 960px
-            font-size: 16px;
-        }
-    }
-    .tooltip:hover .tooltiptext {
+    .skill:hover .skill_text {
         visibility: visible;
     }
 }
@@ -393,32 +497,95 @@ header {
         @include xxl { // 1400px
             gap: 50px;
         }
-        img {
-            width: 340px;
+
+        .example {
+            position: relative;
+            width: 95%;
+            height: auto;
             @include xs { // 400px
 
             }
             @include sm { // 576px
-                width: 540px;
+                width: 45%;
             }
             @include md { // 768px
-            
+               
             }
             @include lg { // 960px
-                width: 445px;
+                
             }
             @include xl { // 1200px
-                width: 560px;
+               width: 30%;
             }
             @include xxl { // 1400px
-                width: 660px;
-                gap: 50px;
+                
+            }
+            a {
+                display: flex;
+                justify-content: center;
+            }
+            img {
+                // width: 340px;
+                width: 100%;
+                height: auto;
+                z-index: 1;
+            }
+            .description {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: #000000c9;
+                color: white;
+                z-index: 2;
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                font-size: .6em;
+                transition: 0.5s;
+                opacity: 0;
+                transition: opacity .5s ease-in-out;
+                @include xs { // 400px
+
+                }
+                @include sm { // 576px
+
+                }
+                @include md { // 768px
+
+                }
+                @include lg { // 960px
+                    font-size: 1em;
+                }
+                @include xl { // 1200px
+
+                }
+                @include xxl { // 1400px
+
+                }
+
+                p {
+                    margin: 0 30px 20px 30px;
+                    text-align: left;
+                }
+                .go {
+                    font-size: 1.2em;
+                    padding-left: 20px;
+                    word-spacing: 0.05em;
+                    letter-spacing: 0.05em;
+                    font-family: 'Teko', Arial, sans-serif;
+                    transition: ease-out 0.4s;
+                }
+                .go:hover {
+                    transform: translateX(20px);
+                    transition: ease-out .5s;
+                }
+                
             }
         }
-        a:hover {
-            transform: scale(1.1);
-            transition: all .4s ease-out;
+        .example:hover .description{
+            opacity: 1;
         }
+
     }
 }
 
@@ -598,7 +765,9 @@ header {
 }
 
 footer {
-    padding: 10px;
+    padding: 40px 40px 20px 0;
+    text-align: right;
+    //background: $grey;
     .linkedin:hover, .github:hover, .email:hover  {
         animation: wiggle .3s;
     }
@@ -606,9 +775,9 @@ footer {
         transform: scale(1);
         transition: all .1s ease-in;
         display: inline-block;
-        margin-left: 25px;
+        margin-right: 25px;
         img {
-            height: 40px;
+            height: 60px;
         }
     }
     a:hover {

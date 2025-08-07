@@ -16,19 +16,19 @@
     <body>
 
         <header>
-            <!-- <button id="menuToggle">
+            <a href="#one" id="logo"><img src="image/favicon.svg" alt="DM logo"></a>
+            <button id="menu_toggle">
                 <p>&#9776</p>
-            </button> -->
+            </button>
             <nav id="nav">
-                <!-- <div id="mobile"> -->
-                    <a id="logo"><img src="image/favicon.svg" alt="DM logo"></a>
+                <div id="mobile">
                     <ul>
                         <li><a href="#two">About</a></li>
                         <li><a href="#three">Skills</a></li>
                         <li><a href="#four">Portfolio</a></li>
-                        <li><a href="#five">Contact</a></li>
+                        <!-- <li><a href="#five">Contact</a></li> -->
                     </ul>
-                <!-- </div> -->
+                </div>
             </nav>
         </header>
 
@@ -53,56 +53,62 @@
                         <img id="me" src="image/me.png" alt="Self portrait of Devinne McCombs">
                     </div>
                     <div id="about">
-                        <h2>About Devinne</h2>
-                        <p>I’m a front-end developer with a passion for design. My background is in math and science, but I've also won second place in a contest at CWI for my writing. More recently, I've found my calling in coding and web development. Check out my Github to see what I've been working on!</p>
+                        <h2>Meet Devinne McCombs</h2>
+                        <p>I'm a front-end developer and designer who enjoys building clean, user-friendly experiences. I'm especially drawn to the visual side of development and love making things that are both functional and thoughtfully designed.</p>
+                        <p>Alongside web projects, I also enjoy creating video games. I've made a visual novel using the Ren'Py engine and a first-person survival horror game in Unity.</p>
+                        <p>Right now I'm learning back-end development and working toward becoming a full-stack developer. Check out my <a href="https://www.github.com/DevinneLeigh/" target="_blank">GitHub</a> to see what I’ve been working on!</p>
                     </div>
                 </div>
             </section>
             <section id="three">
                 <h2>Skills</h2>
                 <div id="skillsWrapper">
-                    <div class="skill tooltip">
-                        <span class="tooltiptext">HTML5</span>
+                    <div class="skill">
+                        <span class="skill_text">HTML5</span>
                         <img class="html" src="image/html.png" alt="HTML 5 icon">
                     </div>
-                    <div class="skill tooltip">
-                        <span class="tooltiptext">CSS</span>
+                    <div class="skill">
+                        <span class="skill_text">CSS</span>
                         <img class="CSS" src="image/css.png" alt="CSS icon">
                     </div>
-                    <div class="skill tooltip">
-                        <span class="tooltiptext">SCSS</span>
+                    <div class="skill">
+                        <span class="skill_text">SCSS</span>
                         <img class="scss" src="image/scss.png" alt="SCSS icon">
                     </div>
-                    <div class="skill tooltip">
-                        <span class="tooltiptext">C#</span>
+                    <div class="skill">
+                        <span class="skill_text">C Sharp</span>
                         <img class="c#" src="image/c.png" alt="C# icon">
                     </div>
-                    <div class="skill tooltip">
-                        <span class="tooltiptext">JavaScript</span>
+                    <div class="skill">
+                        <span class="skill_text">JavaScript</span>
                         <img class="javascript" src="image/js.png" alt="JavaScript icon">
                     </div>
-                    <div class="skill tooltip">
-                        <span class="tooltiptext">TypeScript</span>
+                    <div class="skill">
+                        <span class="skill_text">TypeScript</span>
                         <img class="typescript" src="image/ts.png" alt="TypeScript icon">
                     </div>
-                    <div class="skill tooltip">
-                        <span class="tooltiptext">Bootstrap</span>
+                    <div class="skill">
+                        <span class="skill_text">Bootstrap</span>
                         <img class="bootstrap" src="image/bootstrap.png" alt="Bootstrap icon">
                     </div>
-                    <div class="skill tooltip">
-                        <span class="tooltiptext">View</span>
+                    <div class="skill">
+                        <span class="skill_text">WordPress</span>
+                        <img class="canva" src="image/wordpress.png" alt="WordPress icon">
+                    </div>
+                    <div class="skill">
+                        <span class="skill_text">View</span>
                         <img class="view" src="image/view.png" alt="View icon">
                     </div>
-                    <div class="skill tooltip">
-                        <span class="tooltiptext">React</span>
+                    <div class="skill">
+                        <span class="skill_text">React</span>
                         <img class="react" src="image/react.png" alt="React icon">
                     </div>
-                    <div class="skill tooltip">
-                        <span class="tooltiptext">Adobe Fresco</span>
+                    <div class="skill">
+                        <span class="skill_text">Adobe</br>Fresco</span>
                         <img class="fresco" src="image/fresco.png" alt="Adobe Fresco icon">
                     </div>
-                    <div class="skill tooltip">
-                        <span class="tooltiptext">Canva</span>
+                    <div class="skill">
+                        <span class="skill_text">Canva</span>
                         <img class="canva" src="image/canva.png" alt="Canva icon">
                     </div>
                 </div>
@@ -110,21 +116,63 @@
             <section id="four">
                 <h2>Website Examples</h2>
                 <div id="webExamples">
-                    <a href="https://devinneleigh.github.io/Aquarium/index.html" target="_blank">
-                        <img src="image/aquarium.png" alt="">
-                    </a>
-                    <a href="https://devinneleigh.github.io/villagerdex/dist/index.html" target="_blank">
-                        <img src="image/animalcrossing.png" alt="">
-                    </a>
-                    <a href="https://devinneleigh.github.io/ReactProject/dist/index.html" target="_blank">
-                        <img src="image/MeowMoney.png" alt="">
-                    </a>
-                    <a href="https://devinneleigh.github.io/ParallaxBootstrap/index.html" target="_blank">
-                        <img src="image/city.png" alt="">
-                    </a>
+                    <div class="example">
+                        <a href="https://mochiandmiso.com/" target="_blank">
+                            <span class="description">
+                                <p>A personal recipe blog website created with a fully custom WordPress theme. Designed and built as the final project in Web Design class.</p>
+                                <p class="go">VIEW SITE &rarr;</p>
+                            </span>
+                            <img src="image/mochiandmiso.png" alt="">
+                        </a>
+                    </div>
+                    <div class="example">
+                        <a href="https://devinneleigh.github.io/Aquarium/index.html" target="_blank">
+                            <span class="description">
+                                <p>A fictional aquarium business website created as coursework for Software Development: Intermediate Web App class.</p>
+                                <p class="go">VIEW SITE &rarr;</p>
+                            </span>
+                            <img src="image/aquarium.png" alt="">
+                        </a>
+                    </div>
+                    <div class="example">
+                        <a href="https://devinneleigh.github.io/villagerdex/dist/index.html" target="_blank">
+                            <span class="description">
+                                <p>A web app created as coursework for Software Development: Client-Side Frameworks class. It utilizes View.js and an Animal Crossing villager library.</p>
+                                <p class="go">VIEW SITE &rarr;</p>
+                            </span>
+                            <img src="image/villagerdex.png" alt="">
+                        </a>
+                    </div>
+                    <div class="example">
+                        <a href="https://devinneleigh.github.io/ReactProject/dist/index.html" target="_blank">
+                            <span class="description">
+                                <p>A personal loan calculator web app created using React.js for Software Development: Client-Side Frameworks class.</p>
+                                <p class="go">VIEW SITE &rarr;</p>
+                            </span>
+                            <img src="image/MeowMoney.png" alt="">
+                        </a>
+                    </div>
+                    <div class="example">
+                        <a href="https://devinneleigh.github.io/AnimalCrossing/index.html" target="_blank">
+                            <span class="description">
+                                <p>An Animal Crossing fan page that was built in one hour for Web Design class.</p>
+                                <p class="go">VIEW SITE &rarr;</p>
+                            </span>
+                            <img src="image/animalcrossing.png" alt="">
+                        </a>
+                    </div>
+                    <div class="example">
+                        <a href="https://devinneleigh.github.io/ParallaxBootstrap/index.html" target="_blank">
+                            <span class="description">
+                                <p>A parallax website made with Bootstrap for Software Development: Client-Side Frameworks class.</p>
+                                <p class="go">VIEW SITE &rarr;</p>
+                            </span>
+                            <img src="image/city.png" alt="">
+                        </a>
+                    </div>
                 </div>
             </section>
-            <section id="five">
+            <!-- <section id="five">
                 <div id="contactWrapper">
                     <h2>Contact</h2>
                     <form class="box">
@@ -153,10 +201,10 @@
                         </div>
                       </form> 
                 </div>
-            </section>
+            </section> -->
         </main>
         <footer>
-            <a href="https://www.linkedin.com" target="_blank"><img class="linkedin" src="image/linkedin.svg" alt="Linkedin icon"></a>
+            <!-- <a href="https://www.linkedin.com" target="_blank"><img class="linkedin" src="image/linkedin.svg" alt="Linkedin icon"></a> -->
 
             <a href="https://www.github.com/DevinneLeigh/" target="_blank"><img class="github" src="image/github.svg" alt="Github icon"></a>
 

@@ -40,17 +40,17 @@ anime({
   loop: true
 });
 
-// const menu = document.getElementById("menuToggle")
-// const mobileNav = document.getElementById("nav")
+const menu = document.getElementById("menu_toggle")
+const mobileNav = document.getElementById("nav")
 
-// //open mobile navigation
-// menu.addEventListener("click", function() { 
-//     if (mobileNav) {
-//         mobileNav.classList.toggle("open");
+//open mobile navigation
+menu.addEventListener("click", function() { 
+    if (mobileNav) {
+        mobileNav.classList.toggle("open");
 
-//     }
+    }
         
-// })
+})
 
 function validateForm() {
   // Get the form elements
@@ -121,12 +121,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // document.addEventListener("scroll", function() { 
   
-  // if (window.scrollY > document.getElementById('one').getBoundingClientRect().height) {
-    // header.classList.toggle("hide");
-    // console.log("We scrolled past it");
-  // }
-  // else {
-  //   header.classList.toggle("show");
-  // }
+//   if (window.scrollY > document.getElementById('one').getBoundingClientRect().height) {
+//     header.classList.toggle("hide");
+//     console.log("We scrolled past it");
+//   }
+//   else {
+//     header.classList.toggle("show");
+//   }
       
 // })

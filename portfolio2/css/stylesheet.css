@@ -112,69 +112,114 @@ header {
   z-index: 5;
   background: #000000;
 }
-header.hide {
-  display: none;
+header #menu_toggle {
+  font-size: 44px;
+  float: right;
+  margin-right: 12px;
+  border: 0;
+  background: none;
+  color: white;
 }
-header.show {
-  display: flex;
+header #menu_toggle p {
+  cursor: pointer;
+  margin: 0;
 }
-header nav {
-  align-items: flex-end;
+@media (min-width: 576px) {
+  header #menu_toggle {
+    display: none;
+  }
 }
-header nav #logo {
+header #menu_toggle img {
+  width: 60px;
+}
+header #logo {
   display: block;
 }
-header nav #logo img {
+header #logo img {
   width: 60px;
   float: left;
   margin: 10px 0 -50px 20px;
 }
-header nav ul {
-  width: 100%;
-  display: flex;
-  flex-flow: row;
-  justify-content: flex-end;
-  align-items: baseline;
+header nav {
+  position: fixed;
+  align-items: flex-end;
+}
+@media (min-width: 576px) {
+  header nav {
+    position: unset;
+  }
+}
+@media (max-width: 960px) {
+  header nav {
+    right: -130px;
+  }
+}
+@media (min-width: 576px) {
+  header nav ul {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: baseline;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  header nav ul a {
+    margin: 0 10px 0 0;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 20px;
+    color: #ffffff;
+    padding: 10px 16px;
+    border-radius: 40px;
+    display: inline-block;
+  }
+  header nav ul a:hover {
+    background: #F20574;
+    animation: wiggle 0.3s;
+  }
+}
+header nav.open {
+  right: 10px;
+  top: 40px;
+  padding: 20px;
+  width: 219px;
+  height: 100vh;
+  text-align: center;
+  background: #141414;
+  z-index: 9999999;
+}
+@media (min-width: 576px) {
+  header nav.open {
+    width: 100%;
+    padding: 0;
+  }
+}
+header nav.open ul {
   list-style: none;
+  display: flex;
+  flex-flow: column;
   padding-left: 0;
-  margin: 0;
+  align-items: flex-end;
 }
-header nav ul a {
-  margin: 0 10px 0 0;
+@media (min-width: 576px) {
+  header nav.open ul {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: baseline;
+  }
+}
+header nav.open ul a {
+  color: white;
+  font-size: 19px;
+  margin: 0 25px 10px 0;
   text-decoration: none;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  line-height: 20px;
-  color: #ffffff;
-  padding: 10px 16px;
-  border-radius: 40px;
-  display: inline-block;
-}
-header nav ul a:hover {
-  background: #F20574;
-  animation: wiggle 0.3s;
+  line-height: 60px;
 }
 
-#two, #three, #four, #five {
-  animation: fade-in linear;
-  animation-timeline: view();
-  animation-range-start: 1px;
-  animation-range-end: 1000px;
-}
-@-moz-document url-prefix() {
-  #two, #three, #four, #five {
-    animation: unset;
-  }
-}
-
-@keyframes fade-in { /* scroll fade animation */
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 #one {
   height: 100vh;
   display: flex;
@@ -243,9 +288,15 @@ header nav ul a:hover {
   margin: auto;
   gap: 5%;
 }
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   #two #aboutWrapper {
     flex-flow: row;
+    gap: 1%;
+  }
+}
+@media (min-width: 1400px) {
+  #two #aboutWrapper {
+    gap: 2%;
   }
 }
 #two #aboutWrapper #img {
@@ -267,19 +318,34 @@ header nav ul a:hover {
 }
 @media (min-width: 768px) {
   #two #aboutWrapper #img #me {
+    width: 45%;
+    margin-left: 38%;
+  }
+}
+@media (min-width: 960px) {
+  #two #aboutWrapper #img #me {
+    width: 40%;
+  }
+}
+@media (min-width: 1200px) {
+  #two #aboutWrapper #img #me {
+    margin-left: 0;
     width: 100%;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   #two #aboutWrapper #about {
     align-self: center;
-    margin: -45px 0 45px 0;
+    margin: -45px 0 0 0;
   }
+}
+#two #aboutWrapper #about h2 {
+  text-align: left;
+  margin: 0;
 }
 #two #aboutWrapper #about p {
   line-height: 1.8em;
   text-align: left;
-  text-indent: 50px;
   font-size: 14px;
 }
 @media (min-width: 400px) {
@@ -311,6 +377,20 @@ header nav ul a:hover {
   #two #aboutWrapper #about p {
     font-size: 20px;
   }
+}
+#two #aboutWrapper #about p a {
+  text-decoration: none;
+  color: #F20574;
+  padding: 2px;
+  display: inline-block;
+  transition: 0.5s;
+}
+#two #aboutWrapper #about p a:hover {
+  background: #F20574;
+  padding: 2px;
+  border-radius: 12px;
+  color: #fff;
+  transition: 0.7s;
 }
 
 /* skills section */
@@ -347,6 +427,9 @@ header nav ul a:hover {
   background: #141414;
   display: flex;
   flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.35s;
 }
 @media (min-width: 576px) {
   #three #skillsWrapper .skill {
@@ -365,6 +448,8 @@ header nav ul a:hover {
 }
 #three #skillsWrapper .skill img {
   width: 55px;
+  opacity: 1;
+  transition: opacity 0.35s ease-in-out;
 }
 @media (min-width: 576px) {
   #three #skillsWrapper .skill img {
@@ -387,44 +472,52 @@ header nav ul a:hover {
   }
 }
 #three #skillsWrapper .skill:hover {
-  transform: scale(1.1);
-  transition: all 0.4s ease-out;
+  background: #222222;
 }
-#three .tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
+#three #skillsWrapper .skill:hover img {
+  opacity: 0;
 }
-#three .tooltip .tooltiptext {
-  width: 65px;
-  background-color: #F20574;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-  margin-top: -60px;
+#three #skillsWrapper .skill:hover .skill_text {
+  opacity: 1;
+}
+#three .skill_text {
+  opacity: 0;
+  transition: opacity 0.35s ease-in-out;
+  color: white;
   position: absolute;
-  z-index: 1;
+  font-size: 14px;
+}
+@media (min-width: 400px) {
+  #three .skill_text {
+    font-size: 15px;
+  }
 }
 @media (min-width: 576px) {
-  #three .tooltip .tooltiptext {
-    width: 85px;
+  #three .skill_text {
+    font-size: 17px;
+  }
+}
+@media (min-width: 768px) {
+  #three .skill_text {
+    font-size: 20px;
   }
 }
 @media (min-width: 960px) {
-  #three .tooltip .tooltiptext {
-    width: 100px;
+  #three .skill_text {
+    font-size: 22px;
   }
 }
-#three .tooltiptext {
-  font-size: 13px;
-}
-@media (min-width: 960px) {
-  #three .tooltiptext {
-    font-size: 16px;
+@media (min-width: 1200px) {
+  #three .skill_text {
+    font-size: 24px;
   }
 }
-#three .tooltip:hover .tooltiptext {
+@media (min-width: 1400px) {
+  #three .skill_text {
+    font-size: 26px;
+  }
+}
+#three .skill:hover .skill_text {
   visibility: visible;
 }
 
@@ -447,33 +540,68 @@ header nav ul a:hover {
     gap: 50px;
   }
 }
-#four #webExamples img {
-  width: 340px;
+#four #webExamples .example {
+  position: relative;
+  width: 95%;
+  height: auto;
 }
 @media (min-width: 576px) {
-  #four #webExamples img {
-    width: 540px;
-  }
-}
-@media (min-width: 960px) {
-  #four #webExamples img {
-    width: 445px;
+  #four #webExamples .example {
+    width: 45%;
   }
 }
 @media (min-width: 1200px) {
-  #four #webExamples img {
-    width: 560px;
+  #four #webExamples .example {
+    width: 30%;
   }
 }
-@media (min-width: 1400px) {
-  #four #webExamples img {
-    width: 660px;
-    gap: 50px;
+#four #webExamples .example a {
+  display: flex;
+  justify-content: center;
+}
+#four #webExamples .example img {
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+#four #webExamples .example .description {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7882352941);
+  color: white;
+  z-index: 2;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  font-size: 0.6em;
+  transition: 0.5s;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+@media (min-width: 960px) {
+  #four #webExamples .example .description {
+    font-size: 1em;
   }
 }
-#four #webExamples a:hover {
-  transform: scale(1.1);
-  transition: all 0.4s ease-out;
+#four #webExamples .example .description p {
+  margin: 0 30px 20px 30px;
+  text-align: left;
+}
+#four #webExamples .example .description .go {
+  font-size: 1.2em;
+  padding-left: 20px;
+  word-spacing: 0.05em;
+  letter-spacing: 0.05em;
+  font-family: "Teko", Arial, sans-serif;
+  transition: ease-out 0.4s;
+}
+#four #webExamples .example .description .go:hover {
+  transform: translateX(20px);
+  transition: ease-out 0.5s;
+}
+#four #webExamples .example:hover .description {
+  opacity: 1;
 }
 
 /* contact section */
@@ -613,7 +741,8 @@ header nav ul a:hover {
 }
 
 footer {
-  padding: 10px;
+  padding: 40px 40px 20px 0;
+  text-align: right;
 }
 footer .linkedin:hover, footer .github:hover, footer .email:hover {
   animation: wiggle 0.3s;
@@ -622,10 +751,10 @@ footer a {
   transform: scale(1);
   transition: all 0.1s ease-in;
   display: inline-block;
-  margin-left: 25px;
+  margin-right: 25px;
 }
 footer a img {
-  height: 40px;
+  height: 60px;
 }
 footer a:hover {
   transform: scale(1.1);
