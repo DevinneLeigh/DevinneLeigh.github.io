@@ -119,26 +119,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-const supportsHover = window.matchMedia('(hover: hover)').matches;
+document.addEventListener('DOMContentLoaded', () => {
+  const supportsHover = window.matchMedia('(hover: hover)').matches;
 
-if (!supportsHover) {
-  document.querySelectorAll('.description').forEach(item => {
-    item.style.cursor = 'pointer';
-    item.addEventListener('click', () => {
-      item.classList.toggle('active');
+  const descriptions = document.querySelectorAll('.description');
+
+  if (!descriptions.length) return;
+
+  if (!supportsHover) {
+    descriptions.forEach(item => {
+      item.style.cursor = 'pointer';
+      item.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
     });
-  });
-} else {
-  // Optional: Add hover behavior for non-touch devices if needed
-  document.querySelectorAll('.description').forEach(item => {
-    item.addEventListener('mouseenter', () => {
-      item.classList.add('active');
+  } else {
+    descriptions.forEach(item => {
+      item.addEventListener('mouseenter', () => item.classList.add('active'));
+      item.addEventListener('mouseleave', () => item.classList.remove('active'));
     });
-    item.addEventListener('mouseleave', () => {
-      item.classList.remove('active');
-    });
-  });
-}
+  }
+});
+
 
 
 

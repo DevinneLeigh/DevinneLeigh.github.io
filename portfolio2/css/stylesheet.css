@@ -613,23 +613,20 @@ header nav.open ul a {
   font-family: "Teko", Arial, sans-serif;
   transition: ease-out 0.4s;
 }
-#four #webExamples .example .description a .go {
-  text-align: left;
-}
 #four #webExamples .example .description a:hover {
   transform: translateX(20px);
   transition: ease-out 0.5s;
 }
-@media (hover: hover) {
-  #four #webExamples .description:hover {
+@media (hover: none) {
+  #four #webExamples .example .description {
+    opacity: 0;
+  }
+  #four #webExamples .example .description.active {
     opacity: 1;
   }
 }
-@media (hover: none) {
-  #four #webExamples .description {
-    opacity: 0;
-  }
-  #four #webExamples .description.active {
+@media (hover: hover) {
+  #four #webExamples .example:hover .description, #four #webExamples .example .description.active {
     opacity: 1;
   }
 }
