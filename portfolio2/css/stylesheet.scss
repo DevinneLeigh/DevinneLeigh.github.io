@@ -26,6 +26,7 @@ $xxl: 1400px;
 }
 **/
 
+$lightestPink: #eb5d9f;
 $lightPink: #F20574;
 $darkPink: #730240;
 $grey: #141414;
@@ -365,14 +366,14 @@ header {
 
                 a {
                     text-decoration: none;
-                    color: $lightPink;
-                    padding: 2px;
+                    color: $lightestPink;
+                    padding: 1px 5px;
                     display: inline-block;
                     transition: .5s;
                 }
                 a:hover {
-                    background: $lightPink;
-                    padding: 2px;
+                    background: $lightestPink;
+                    padding: 1px 5px;
                     border-radius: 12px;
                     color: #fff;
                     //animation: wiggle .3s;
@@ -540,50 +541,59 @@ header {
                 display: flex;
                 flex-flow: column;
                 justify-content: center;
-                font-size: .6em;
-                transition: 0.5s;
+                font-size: .7em;
+                word-spacing: normal;
+                padding: 0 15px;
                 opacity: 0;
                 transition: opacity .5s ease-in-out;
                 @include xs { // 400px
-
-                }
-                @include sm { // 576px
-
+                    font-size: .8em;
                 }
                 @include md { // 768px
-
+                    padding: 0 30px;
                 }
                 @include lg { // 960px
-                    font-size: 1em;
+                    padding: 0 40px;
+                    font-size: .9em;
                 }
-                @include xl { // 1200px
 
-                }
                 @include xxl { // 1400px
-
+                    font-size: 1.1em;
                 }
-
                 p {
-                    margin: 0 30px 20px 30px;
                     text-align: left;
                 }
-                .go {
-                    font-size: 1.2em;
-                    padding-left: 20px;
+                a {
+                    color: white;
+                    text-decoration: none;
+                    font-size: 1.5em;
                     word-spacing: 0.05em;
                     letter-spacing: 0.05em;
                     font-family: 'Teko', Arial, sans-serif;
                     transition: ease-out 0.4s;
+                    .go {
+                        text-align: left;
+                    }
                 }
-                .go:hover {
+                a:hover {
                     transform: translateX(20px);
                     transition: ease-out .5s;
                 }
                 
             }
         }
-        .example:hover .description{
-            opacity: 1;
+        @media (hover: hover) {
+            .description:hover{
+                opacity: 1;
+            }
+        }
+        @media (hover: none) {
+            .description{
+                opacity: 0;
+            }
+            .description.active {
+                opacity: 1;
+            }
         }
 
     }
@@ -765,20 +775,67 @@ header {
 }
 
 footer {
-    padding: 40px 40px 20px 0;
-    text-align: right;
-    //background: $grey;
+    padding: 40px 0 20px 0;
+    text-align: center;
+    .footer_section {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+        gap: 10px;
+        @include sm { // 576px
+            justify-content: right;
+            margin-right: 30px;
+            font-size: 12px;
+            flex-flow: row-reverse;
+        }
+        @include lg { // 960px
+            font-size: 13px;
+        }
+        @include xl { // 1200px
+            font-size: 14px;
+            margin-right: 60px;
+        }
+        @include xxl { // 1400px
+            font-size: 16px;
+            margin-right: 80px;
+        }
+        .icon {
+            transform: scale(1);
+            transition: all .1s ease-in;
+            display: inline-block;
+            img {
+                width: 20px;
+                @include sm { // 576px
+                    width: 25px;
+                }
+                @include lg { // 960px
+                    width: 28px;
+                }
+                @include xl { // 1200px
+                    width: 32px;
+                }
+                @include xxl { // 1400px
+                    width: 38px;
+                }
+            }
+        }
+        p {
+            .pink {
+                color: $lightestPink;
+            }
+            a {
+                text-decoration: none;
+                color: $lightestPink;
+                cursor: pointer;
+            }
+        }
+
+    }
+
     .linkedin:hover, .github:hover, .email:hover  {
         animation: wiggle .3s;
-    }
-    a {
-        transform: scale(1);
-        transition: all .1s ease-in;
-        display: inline-block;
-        margin-right: 25px;
-        img {
-            height: 60px;
-        }
     }
     a:hover {
         transform: scale(1.1);

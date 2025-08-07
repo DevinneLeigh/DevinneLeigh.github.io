@@ -380,14 +380,14 @@ header nav.open ul a {
 }
 #two #aboutWrapper #about p a {
   text-decoration: none;
-  color: #F20574;
-  padding: 2px;
+  color: #eb5d9f;
+  padding: 1px 5px;
   display: inline-block;
   transition: 0.5s;
 }
 #two #aboutWrapper #about p a:hover {
-  background: #F20574;
-  padding: 2px;
+  background: #eb5d9f;
+  padding: 1px 5px;
   border-radius: 12px;
   color: #fff;
   transition: 0.7s;
@@ -574,34 +574,64 @@ header nav.open ul a {
   display: flex;
   flex-flow: column;
   justify-content: center;
-  font-size: 0.6em;
-  transition: 0.5s;
+  font-size: 0.7em;
+  word-spacing: normal;
+  padding: 0 15px;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
+@media (min-width: 400px) {
+  #four #webExamples .example .description {
+    font-size: 0.8em;
+  }
+}
+@media (min-width: 768px) {
+  #four #webExamples .example .description {
+    padding: 0 30px;
+  }
+}
 @media (min-width: 960px) {
   #four #webExamples .example .description {
-    font-size: 1em;
+    padding: 0 40px;
+    font-size: 0.9em;
+  }
+}
+@media (min-width: 1400px) {
+  #four #webExamples .example .description {
+    font-size: 1.1em;
   }
 }
 #four #webExamples .example .description p {
-  margin: 0 30px 20px 30px;
   text-align: left;
 }
-#four #webExamples .example .description .go {
-  font-size: 1.2em;
-  padding-left: 20px;
+#four #webExamples .example .description a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
   word-spacing: 0.05em;
   letter-spacing: 0.05em;
   font-family: "Teko", Arial, sans-serif;
   transition: ease-out 0.4s;
 }
-#four #webExamples .example .description .go:hover {
+#four #webExamples .example .description a .go {
+  text-align: left;
+}
+#four #webExamples .example .description a:hover {
   transform: translateX(20px);
   transition: ease-out 0.5s;
 }
-#four #webExamples .example:hover .description {
-  opacity: 1;
+@media (hover: hover) {
+  #four #webExamples .description:hover {
+    opacity: 1;
+  }
+}
+@media (hover: none) {
+  #four #webExamples .description {
+    opacity: 0;
+  }
+  #four #webExamples .description.active {
+    opacity: 1;
+  }
 }
 
 /* contact section */
@@ -741,20 +771,80 @@ header nav.open ul a {
 }
 
 footer {
-  padding: 40px 40px 20px 0;
-  text-align: right;
+  padding: 40px 0 20px 0;
+  text-align: center;
 }
-footer .linkedin:hover, footer .github:hover, footer .email:hover {
-  animation: wiggle 0.3s;
+footer .footer_section {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  gap: 10px;
 }
-footer a {
+@media (min-width: 576px) {
+  footer .footer_section {
+    justify-content: right;
+    margin-right: 30px;
+    font-size: 12px;
+    flex-flow: row-reverse;
+  }
+}
+@media (min-width: 960px) {
+  footer .footer_section {
+    font-size: 13px;
+  }
+}
+@media (min-width: 1200px) {
+  footer .footer_section {
+    font-size: 14px;
+    margin-right: 60px;
+  }
+}
+@media (min-width: 1400px) {
+  footer .footer_section {
+    font-size: 16px;
+    margin-right: 80px;
+  }
+}
+footer .footer_section .icon {
   transform: scale(1);
   transition: all 0.1s ease-in;
   display: inline-block;
-  margin-right: 25px;
 }
-footer a img {
-  height: 60px;
+footer .footer_section .icon img {
+  width: 20px;
+}
+@media (min-width: 576px) {
+  footer .footer_section .icon img {
+    width: 25px;
+  }
+}
+@media (min-width: 960px) {
+  footer .footer_section .icon img {
+    width: 28px;
+  }
+}
+@media (min-width: 1200px) {
+  footer .footer_section .icon img {
+    width: 32px;
+  }
+}
+@media (min-width: 1400px) {
+  footer .footer_section .icon img {
+    width: 38px;
+  }
+}
+footer .footer_section p .pink {
+  color: #eb5d9f;
+}
+footer .footer_section p a {
+  text-decoration: none;
+  color: #eb5d9f;
+  cursor: pointer;
+}
+footer .linkedin:hover, footer .github:hover, footer .email:hover {
+  animation: wiggle 0.3s;
 }
 footer a:hover {
   transform: scale(1.1);
