@@ -560,20 +560,10 @@ header {
                     transform: translateX(20px);
                     transition: ease-out .5s;
                 }
-                
             }
-            @media (hover: none) {
-                .description{
-                    opacity: 0;
-                }
-                .description.active {
-                    opacity: 1;
-                }
-            }
-        }
-        @media (hover: hover) {
-            .example:hover .description, .example .description.active{
+            .description.open {
                 opacity: 1;
+                pointer-events: auto;
             }
         }
     }

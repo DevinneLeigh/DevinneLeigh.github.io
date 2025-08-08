@@ -617,18 +617,9 @@ header nav.open ul a {
   transform: translateX(20px);
   transition: ease-out 0.5s;
 }
-@media (hover: none) {
-  #four #webExamples .example .description {
-    opacity: 0;
-  }
-  #four #webExamples .example .description.active {
-    opacity: 1;
-  }
-}
-@media (hover: hover) {
-  #four #webExamples .example:hover .description, #four #webExamples .example .description.active {
-    opacity: 1;
-  }
+#four #webExamples .example .description.open {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* contact section */

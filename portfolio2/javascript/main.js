@@ -52,6 +52,32 @@ menu.addEventListener("click", function() {
         
 })
 
+document.addEventListener('DOMContentLoaded', () => {
+  const isSmallScreen = window.innerWidth <= 768;
+  const examples = document.querySelectorAll('.example');
+
+  examples.forEach(example => {
+    const desc = example.querySelector('.description');
+
+    if (isSmallScreen) {
+      // On small screens: toggle on click
+      example.style.cursor = 'pointer'; // indicate clickable
+      example.addEventListener('click', () => {
+        desc.classList.toggle('open');
+      });
+    } else {
+      // On large screens: show on hover using JS class toggling
+      example.addEventListener('mouseenter', () => {
+        desc.classList.add('open');
+      });
+      example.addEventListener('mouseleave', () => {
+        desc.classList.remove('open');
+      });
+    }
+  });
+});
+
+
 function validateForm() {
   // Get the form elements
   const nameInput = document.getElementById('name');
@@ -114,30 +140,6 @@ document.getElementById('comment').addEventListener('change', validateForm);
 document.addEventListener("DOMContentLoaded", function () {
   if (submit) {
     document.querySelector("#submit").addEventListener("onclick", validateForm);
-  }
-});
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  const supportsHover = window.matchMedia('(hover: hover)').matches;
-
-  const descriptions = document.querySelectorAll('.description');
-
-  if (!descriptions.length) return;
-
-  if (!supportsHover) {
-    descriptions.forEach(item => {
-      item.style.cursor = 'pointer';
-      item.addEventListener('click', () => {
-        item.classList.toggle('active');
-      });
-    });
-  } else {
-    descriptions.forEach(item => {
-      item.addEventListener('mouseenter', () => item.classList.add('active'));
-      item.addEventListener('mouseleave', () => item.classList.remove('active'));
-    });
   }
 });
 
