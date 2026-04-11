@@ -1,0 +1,27 @@
+:root {
+  --bg: #F4F2F7;
+  --text: #0E1833;
+  --primary: #E8A0BF;
+  --secondary: #8B659E;
+  --tertiary: #42377A;
+  --thumb-icon: "\263C";
+  --track-icon: "\263E";
+  --track-icon-color: #2a3656;
+  --thumb-icon-position: 0%;
+  --track-icon-position: 92%;
+}
+
+
+[data-theme="dark"] {
+  --bg: #0E1833;
+  --text: #F4F2F7;
+  --primary: #E66F74;
+  --secondary: #42377A;
+  --tertiary: #8B659E;
+  --thumb-icon: "\263E";
+  --track-icon: "\263C";
+  --track-icon-color: #d1cdd8;
+  --thumb-icon-position: 88%;
+  --track-icon-position: 0%;
+
+}

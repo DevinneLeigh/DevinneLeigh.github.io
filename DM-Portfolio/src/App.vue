@@ -1,6 +1,8 @@
 <script setup>
+import Nav from './components/Nav.vue';
 import ProjectCard from './components/ProjectCard.vue';
 import LightDarkToggle from './components/LightDarkToggle.vue';
+import Footer from './components/Footer.vue';
 import { useTheme } from './composables/useTheme'
 
 const { theme, toggle } = useTheme()
@@ -8,11 +10,13 @@ const { theme, toggle } = useTheme()
 </script>
 
 <template>
-  <div class="container">
-    <h1>Vue Theme Starter</h1>
-    <p>This is a simple light/dark mode setup.</p>
-
-    <ProjectCard />
-    <LightDarkToggle />
-  </div>
+  <body>
+    <Nav />
+    <main>
+      <h1>Website Designer. Software Developer.</h1>
+      <ProjectCard />
+      <LightDarkToggle />
+    </main>
+    <Footer />
+  </body>
 </template>
