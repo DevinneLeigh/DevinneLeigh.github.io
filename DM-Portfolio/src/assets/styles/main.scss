@@ -1,0 +1,221 @@
+@import "bootstrap/scss/bootstrap";
+$xs:  400px;
+$sm:  576px;
+$md:  768px;
+$lg:  960px;
+$xl:  1200px;
+$xxl: 1400px;
+
+/**
+@include xs { // 400px
+
+}
+@include sm { // 576px
+
+}
+@include md { // 768px
+
+}
+@include lg { // 960px
+
+}
+@include xl { // 1200px
+
+}
+@include xxl { // 1400px
+
+}
+**/
+
+
+/* Mixins */
+@mixin xs { @media (min-width: $xs) { @content; }}
+@mixin sm { @media (min-width: $sm) { @content; } }
+@mixin sm-landscape { @media (min-width: $sm) and (max-width: $md) and (orientation: landscape) { @content; } }
+@mixin md { @media (min-width: $md) { @content; } }
+@mixin lg { @media (min-width: $lg) { @content; } }
+@mixin xl { @media (min-width: $xl) { @content; } }
+@mixin xxl { @media (min-width: $xxl) { @content; } }
+@mixin lt($width) { @media (max-width: $width) { @content; } }
+@mixin gt($width) { @media (min-width: $width) { @content; } }
+@mixin between($width1, $width2) { @media (min-width: $width1) and (max-width: $width2) { @content; } }
+
+@import url('../fonts/Exo/Exo.css');
+
+
+
+
+$lightestPink: #eb5d9f;
+$lightPink: #F20574;
+$darkPink: #730240;
+$grey: #0200046a;
+$lightGrey: #989898;
+
+:root {
+  --bg: white;
+  --text: black;
+  --primary: #60a5fa;
+  --thumb-icon: "\263C";
+  --track-icon: "\263E";
+  --track-icon-color: rgb(45, 45, 45);
+  --thumb-icon-position: 0%;
+  --track-icon-position: 92%;
+}
+
+
+[data-theme="dark"] {
+  --bg: black;
+  --text: white;
+  --primary: #bb86fc;
+  --thumb-icon: "\263E";
+  --track-icon: "\263C";
+  --track-icon-color: rgb(200, 200, 200);
+  --thumb-icon-position: 88%;
+  --track-icon-position: 0%;
+
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.2s, color 0.2s;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+}
+
+
+
+#webExamples {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  @include lg { // 960px
+      gap: 40px;
+  }
+  @include xxl { // 1400px
+      gap: 50px;
+  }
+  .example {
+    position: relative;
+    width: 90%;
+    height: auto;
+    @include sm { // 576px
+      width: 45%;
+    }
+    @include lg { // 960px
+      width: 40%;
+    }
+    @include xl { // 1200px
+      width: 25%;
+    }
+    a {
+      display: flex;
+      justify-content: center;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      z-index: 1;
+    }
+    .description {
+      position: absolute;
+      inset: 0;
+      background: #000000c9;
+      color: white;
+      z-index: 2;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      font-size: .7em;
+      word-spacing: normal;
+      padding: 0 15px;
+      opacity: 0;
+      transition: opacity .5s ease-in-out;
+      @include xs { // 400px
+        font-size: .8em;
+      }
+      @include md { // 768px
+        padding: 0 30px;
+      }
+      @include lg { // 960px
+        padding: 0 40px;
+        font-size: .9em;
+      }
+      p {
+        text-align: left;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.5em;
+        word-spacing: 0.05em;
+        letter-spacing: 0.05em;
+        font-family: 'Teko', Arial, sans-serif;
+        transition: ease-out 0.4s;
+      }
+      a:hover {
+        transform: translateX(20px);
+        transition: ease-out .5s;
+      }
+    }
+    .description.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}
+
+
+.form-switch .form-check-input {
+  width: 5rem;
+  height: 3rem;
+  position: relative;
+  background: var(--text);
+  border: none;
+  background-image: none; /* remove default */
+  position: relative;
+}
+
+.form-switch .form-check-input::before, .form-switch .form-check-input::after {
+  position: absolute;
+  font-size: 26px;
+  top: 6%;
+  left: 4%;
+  width: 50%;
+  height: 88%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-switch .form-check-input::before {
+  content: var(--thumb-icon);
+  background: var(--bg);
+  color: var(--text);
+  transform: translateX(var(--thumb-icon-position));
+  transition: transform 0.3s ease-in-out;
+}
+
+.form-switch .form-check-input::after {
+  content: var(--track-icon);
+  color: var(--track-icon-color);
+  transform: translateX(var(--track-icon-position));
+}
+
+.form-switch .form-check-input:focus {
+  box-shadow: none;
+  outline: none;
+}
