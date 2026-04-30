@@ -111,28 +111,7 @@ class MainScene extends Phaser.Scene {
       return;
     }
 
-    // --- knockback ---
     this.isHurting = true;
-    let dir = 0;
-
-    if (sourceX !== null && sourceX !== undefined) {
-      dir = Math.sign(this.player.x - sourceX);
-    } else {
-      dir = this.player.flipX ? 1 : -1;
-    }
-
-    if (dir === 0) dir = 1;
-
-    this.isKnockedBack = true;
-
-    // IMPORTANT: clear current velocity first
-    this.player.body.setVelocity(0, 0);
-
-    // stronger horizontal impulse
-    this.player.body.setVelocityX(50 * dir);
-
-    // consistent vertical lift
-    this.player.body.setVelocityY(-250);
 
     // --- damage animation override ---
     this.player.play("hurt", true); 
@@ -151,11 +130,11 @@ class MainScene extends Phaser.Scene {
     const KNOCKBACK_TIME = 500;     
 
     // --- knockback lock ---
-    this.isHurting = true;
 
     this.time.delayedCall(KNOCKBACK_TIME, () => {
       this.isHurting = false;
       this.isKnockedBack = false;
+
     });
 
     // --- invincibility (longer) ---
@@ -163,6 +142,41 @@ class MainScene extends Phaser.Scene {
       this.isInvincible = false;
       this.player.alpha = 1;
     }); 
+  }
+
+  handleHit(player, obstacle) {
+    if (this.isInvincible) return;
+
+    // direction: push player away from obstacle
+    const dir = (player.x < obstacle.x) ? -1 : 1;
+
+    const vx = dir * 100;   // horizontal knockback
+    const vy = -200;        // vertical lift
+
+    this.takeDamage(1, obstacle.x);
+
+    this.isKnockedBack = true;
+    player.setVelocity(vx, vy);
+  }
+
+  handleHole(player, obstacle) {
+    if (this.isDead) return;
+
+    // stop movement immediately
+    player.setVelocity(0, 0);
+    player.body.enable = false;
+
+    this.tweens.add({
+      targets: player,
+      y: player.y + 200,
+      alpha: 0,
+      duration: 500,
+      ease: "Power2"
+    });
+
+    this.time.delayedCall(600, () => {
+      this.handleDeath();
+    });
   }
 
   handleDeath() {
@@ -247,6 +261,11 @@ class MainScene extends Phaser.Scene {
   }
 
   create() {
+    this.isDead = false;
+    this.isKnockedBack = false;
+    this.isInvincible = false;
+    this.isHurting = false;
+    this.isAttacking = false;
     this.input.keyboard.on("keydown-T", () => {
       this.debugEnabled = !this.debugEnabled;
 
@@ -323,32 +342,43 @@ class MainScene extends Phaser.Scene {
     .refreshBody(); 
 
     // --- OBSTACLES ---
-    this.obstacle = this.physics.add.staticGroup();
+    this.traps = this.physics.add.staticGroup();
+    this.holes = this.physics.add.staticGroup();
 
     const obstacleData = [
 
       // bear traps
-      { type: "bearTrap", circle: false, rectangle: true, x: 800, y: height - 220, scale: .25, sizeX: 120, sizeY: 1, offsetX: 10, offsetY: 50 },
+      { type: "bearTrap", shape: "rectangle", x: 800, y: height - 220, scale: 0.25, sizeX: 100, sizeY: 1, offsetX: 20, offsetY: 60 },
+      { type: "bearTrap", shape: "rectangle", x: 2800, y: height - 220, scale: 0.25, sizeX: 100, sizeY: 1, offsetX: 20, offsetY: 60 },
 
       // holes
-      { type: "hole", circle: true, rectangle: false, x: 1250, y: height - 210, scale: .4, radius: 160, offsetX: 50, offsetY: 60 },
+      { type: "hole", shape: "circle", x: 1250, y: height - 210, scale: 0.4, radius: 160, offsetX: 50, offsetY: 60 },
     ];
 
     obstacleData.forEach(s => {
-      const obstacleZone = this.physics.add.staticSprite(s.x, s.y, s.type)
+      const obj = this.physics.add.staticSprite(s.x, s.y, s.type)
         .setDepth(6)
-        .setScale(s.scale)
+        .setScale(s.scale);
 
-      obstacleZone.refreshBody();
-      if(s.circle) {
-        obstacleZone.body.setCircle(s.radius);
-      } else if(s.rectangle) {
-        obstacleZone.body.setSize(s.sizeX, s.sizeY);
+      obj.refreshBody();
+
+      // set hitbox
+      if (s.shape === "circle") {
+        obj.body.setCircle(s.radius);
+      } else {
+        obj.body.setSize(s.sizeX, s.sizeY);
       }
-      obstacleZone.body.setOffset(s.offsetX, s.offsetY)
 
-      this.obstacle.add(obstacleZone);
-    });    
+      obj.body.setOffset(s.offsetX, s.offsetY);
+
+      // assign to correct group
+      if (s.type === "hole") {
+        this.holes.add(obj);
+      } else {
+        this.traps.add(obj);
+      }
+    });
+
 
     // --- WALK ANIMATION --
     this.anims.create({
@@ -466,13 +496,21 @@ class MainScene extends Phaser.Scene {
       attack: Phaser.Input.Keyboard.KeyCodes.SPACE
     });
 
-    // --- TAKING DAMAGE ---
+    // --- PHYSICS INTERACTIONS ---
+    // traps = solid collision + knockback
+    this.physics.add.collider(
+      this.player,
+      this.traps,
+      this.handleHit,
+      null,
+      this
+    );
+
+    // holes = overlap only (no collision) + instant death
     this.physics.add.overlap(
       this.player,
-      this.obstacle,
-      (player, obstacle) => {
-        this.takeDamage(1, obstacle.x);
-      },
+      this.holes,
+      this.handleHole,
       null,
       this
     );
@@ -527,58 +565,51 @@ class MainScene extends Phaser.Scene {
 
   update() {
     if (this.isDead) return;
-    if (this.isKnockedBack) return;
-    // --- MOVEMENT ---
+
     const onGround = 
       this.player.body.blocked.down ||
       this.player.body.touching.down;
-
-    const groundSpeed = 300;
-    const airAccel = 500;
-    const maxAirSpeed = 1000;
-
-    let vx = this.player.body.velocity.x;
-
+    
     let dir = 0;
-
     if (this.keys.left.isDown) dir = -1;
     else if (this.keys.right.isDown) dir = 1;
 
-    if (dir < 0) {
-      this.player.setFlipX(true);
-    } else if (dir > 0) {
-      this.player.setFlipX(false);
-    }
-    if (this.player.flipX) {
-      this.player.body.setOffset(26, 26);
-    } else {
-      this.player.body.setOffset(32, 26)
-      
-    }
-
-    // ground behavior
-    if (onGround) {
-      vx = dir * groundSpeed;
-    } 
-    // air behavior (TRUE acceleration)
-    else {
-      vx += dir * airAccel;
-      vx = Phaser.Math.Clamp(vx, -maxAirSpeed, maxAirSpeed);
-    }
-
     if (!this.isKnockedBack) {
+      const groundSpeed = 300;
+      const airAccel = 500;
+      const maxAirSpeed = 1000;
+
+      let vx = this.player.body.velocity.x;
+
+      if (dir < 0) this.player.setFlipX(true);
+      else if (dir > 0) this.player.setFlipX(false);
+
+      if (this.player.flipX) this.player.body.setOffset(26, 26);
+      else this.player.body.setOffset(32, 26)
+
+      // ground behavior
+      if (onGround) {
+        vx = dir * groundSpeed;
+      } 
+      // air behavior (TRUE acceleration)
+      else {
+        vx += dir * airAccel;
+        vx = Phaser.Math.Clamp(vx, -maxAirSpeed, maxAirSpeed);
+      }
+  
       this.player.body.setVelocityX(vx);
-    } 
 
 
-    // --- JUMP ---
-    const isJumpPressed = Phaser.Input.Keyboard.JustDown(this.keys.jump);
-    if (isJumpPressed && this.player.body.blocked.down) {
-      this.player.setVelocityY(-600);
+      // --- JUMP ---
+      const isJumpPressed = Phaser.Input.Keyboard.JustDown(this.keys.jump);
+      if (isJumpPressed && onGround) {
+        this.player.setVelocityY(-600);
+      }
     }
+
 
     // --- ATTACK ---
-    if (this.isAttacking && !this.isInvincible) {
+    if (!this.isKnockedBack && this.isAttacking && !this.isInvincible) {
       this.player.setVelocityX(0);
     }
     const isAttackPressed = Phaser.Input.Keyboard.JustDown(this.keys.attack);
@@ -588,14 +619,14 @@ class MainScene extends Phaser.Scene {
 
     // --- PARALLAX ---
     const cam = this.cameras.main;
-
+    
     this.layer1.tilePositionX = cam.scrollX * 0.2;
-    this.mist1.tilePositionX = cam.scrollX * 0.4;
-    this.layer2.tilePositionX = cam.scrollX * 0.6;
-    this.mist2.tilePositionX = cam.scrollX * 0.8;
-    this.layer3.tilePositionX = cam.scrollX * 1;
-    this.mist3.tilePositionX = cam.scrollX * 1.05;
-    this.layer4.tilePositionX = cam.scrollX * 1.1;
+    this.mist1.tilePositionX = cam.scrollX * 0.3;
+    this.layer2.tilePositionX = cam.scrollX * 0.4;
+    this.mist2.tilePositionX = cam.scrollX * 0.5;
+    this.layer3.tilePositionX = cam.scrollX * 0.6;
+    this.mist3.tilePositionX = cam.scrollX * 0.7;
+    this.layer4.tilePositionX = cam.scrollX * 0.8;
 
     // --- ANIMATION ---
     let anim = 'idle';
