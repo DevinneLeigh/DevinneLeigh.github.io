@@ -94,25 +94,77 @@ class MainScene extends Phaser.Scene {
       this.isAttacking = false;
     })
   }
-  takeDamage(amount) {
-    if (this.isDead || this.isInvincible ) return;
+
+  takeDamage(amount, sourceX = null) {
+    if (this.isDead || this.isInvincible) return;
 
     this.isInvincible = true;
 
+    // --- health ---
     this.currentHealth -= amount;
     this.currentHealth = Math.max(this.currentHealth, 0);
-
     this.drawHealthBar();
 
+    // --- death check ---
     if (this.currentHealth <= 0) {
       this.handleDeath();
       return;
     }
 
-    this.time.delayedCall(1000, () => {
-      this.isInvincible = false;
+    // --- knockback ---
+    this.isHurting = true;
+    let dir = 0;
+
+    if (sourceX !== null && sourceX !== undefined) {
+      dir = Math.sign(this.player.x - sourceX);
+    } else {
+      dir = this.player.flipX ? 1 : -1;
+    }
+
+    if (dir === 0) dir = 1;
+
+    this.isKnockedBack = true;
+
+    // IMPORTANT: clear current velocity first
+    this.player.body.setVelocity(0, 0);
+
+    // stronger horizontal impulse
+    this.player.body.setVelocityX(50 * dir);
+
+    // consistent vertical lift
+    this.player.body.setVelocityY(-250);
+
+    // --- damage animation override ---
+    this.player.play("hurt", true); 
+
+    // --- flash effect ---
+    this.tweens.add({
+      targets: this.player,
+      alpha: 0,
+      duration: 75,
+      yoyo: true,
+      repeat: 5
     });
+
+    // --- invincibility window ---
+    const INVINCIBILITY_TIME = 1000; 
+    const KNOCKBACK_TIME = 500;     
+
+    // --- knockback lock ---
+    this.isHurting = true;
+
+    this.time.delayedCall(KNOCKBACK_TIME, () => {
+      this.isHurting = false;
+      this.isKnockedBack = false;
+    });
+
+    // --- invincibility (longer) ---
+    this.time.delayedCall(INVINCIBILITY_TIME, () => {
+      this.isInvincible = false;
+      this.player.alpha = 1;
+    }); 
   }
+
   handleDeath() {
     if (this.isDead) return;
 
@@ -201,7 +253,7 @@ class MainScene extends Phaser.Scene {
       this.physics.world.debugGraphic.visible = this.debugEnabled;
     });
 
-
+    this.isHurting = false;
     const { width, height } = this.scale.gameSize;
 
     // --- BACKGROUNDS ---
@@ -276,10 +328,10 @@ class MainScene extends Phaser.Scene {
     const obstacleData = [
 
       // bear traps
-      { type: "bearTrap", x: 500, y: height - 220, scale: .25, radius: 85, offsetX: 0, offsetY: 0 },
+      { type: "bearTrap", circle: false, rectangle: true, x: 800, y: height - 220, scale: .25, sizeX: 120, sizeY: 1, offsetX: 10, offsetY: 50 },
 
       // holes
-      { type: "hole", x: 950, y: height - 210, scale: .4, radius: 160, offsetX: 50, offsetY: 60 },
+      { type: "hole", circle: true, rectangle: false, x: 1250, y: height - 210, scale: .4, radius: 160, offsetX: 50, offsetY: 60 },
     ];
 
     obstacleData.forEach(s => {
@@ -288,8 +340,11 @@ class MainScene extends Phaser.Scene {
         .setScale(s.scale)
 
       obstacleZone.refreshBody();
-
-      obstacleZone.body.setCircle(s.radius);
+      if(s.circle) {
+        obstacleZone.body.setCircle(s.radius);
+      } else if(s.rectangle) {
+        obstacleZone.body.setSize(s.sizeX, s.sizeY);
+      }
       obstacleZone.body.setOffset(s.offsetX, s.offsetY)
 
       this.obstacle.add(obstacleZone);
@@ -360,6 +415,16 @@ class MainScene extends Phaser.Scene {
       repeat: 0
     });
     this.isAttacking = false;
+    // --- HURT ANIMATION --
+    this.anims.create({
+      key: 'hurt',
+      frames: this.anims.generateFrameNumbers('fox_jump', {
+        start: 5,
+        end: 6
+      }),
+      frameRate: 10,
+      repeat: 0
+    });
     // --- DEATH ANIMATION --
     this.anims.create({
       key: 'death',
@@ -405,8 +470,8 @@ class MainScene extends Phaser.Scene {
     this.physics.add.overlap(
       this.player,
       this.obstacle,
-      () => {
-        this.takeDamage(25);
+      (player, obstacle) => {
+        this.takeDamage(1, obstacle.x);
       },
       null,
       this
@@ -462,6 +527,7 @@ class MainScene extends Phaser.Scene {
 
   update() {
     if (this.isDead) return;
+    if (this.isKnockedBack) return;
     // --- MOVEMENT ---
     const onGround = 
       this.player.body.blocked.down ||
@@ -500,7 +566,9 @@ class MainScene extends Phaser.Scene {
       vx = Phaser.Math.Clamp(vx, -maxAirSpeed, maxAirSpeed);
     }
 
-    this.player.setVelocityX(vx); 
+    if (!this.isKnockedBack) {
+      this.player.body.setVelocityX(vx);
+    } 
 
 
     // --- JUMP ---
@@ -510,7 +578,7 @@ class MainScene extends Phaser.Scene {
     }
 
     // --- ATTACK ---
-    if (this.isAttacking) {
+    if (this.isAttacking && !this.isInvincible) {
       this.player.setVelocityX(0);
     }
     const isAttackPressed = Phaser.Input.Keyboard.JustDown(this.keys.attack);
@@ -535,7 +603,10 @@ class MainScene extends Phaser.Scene {
     if (this.isAttacking) {
       anim = 'attack';
     }
-    else if (isJumpPressed || !onGround) {
+    else if (this.isHurting) {
+      anim = 'hurt';
+    }
+    else if (!onGround) {
       anim = 'jump';
     }
     else if (dir !== 0) {
