@@ -42,6 +42,31 @@ class MainScene extends Phaser.Scene {
   constructor() {
     super("MainScene");
   }
+
+  setState(newState) {
+    if (this.state === "dead") return;
+
+    const lockedStates = ["attack", "hurt", "sit"];
+    if (this.locked && lockedStates.includes(this.state)) return;
+
+    if (this.state === newState) return;
+
+    this.state = newState;
+
+    if (newState === "sit") {
+      this.locked = true;
+      this.isSitting = true;
+    }
+
+    if (newState !== "sit") {
+      this.isSitting = false;
+    }
+  }
+
+  unlockState() {
+    this.locked = false;
+  }
+
   createHealthBar() {
     this.maxHealth = 100;
     this.currentHealth = 100;
@@ -87,12 +112,42 @@ class MainScene extends Phaser.Scene {
 
   attack() {
     if (this.isAttacking) return;
+
     this.isAttacking = true;
+    this.setState("attack");
+
     this.player.play("attack", true);
 
     this.player.once("animationcomplete-attack", () => {
       this.isAttacking = false;
-    })
+      this.unlockState();
+      this.setState("idle");
+    });
+  }
+
+  startSitSequence() {
+    if (this.locked) return;
+
+    this.setState("sit");
+
+    // play forward (sit down)
+    this.player.play("sit", true);
+
+    this.player.once("animationcomplete-sit", () => {
+      // random linger at end
+      const linger = Phaser.Math.Between(500, 1500);
+
+      this.time.delayedCall(linger, () => {
+        // play reverse (stand up)
+        this.player.playReverse("sit", true);
+
+        this.player.once("animationcomplete-sit", () => {
+          // fully reset state here
+          this.unlockState();
+          this.setState("idle");
+        });
+      });
+    });
   }
 
   takeDamage(amount, sourceX = null) {
@@ -266,6 +321,10 @@ class MainScene extends Phaser.Scene {
     this.isInvincible = false;
     this.isHurting = false;
     this.isAttacking = false;
+
+    this.state = "idle"; 
+    this.locked = false; 
+
     this.input.keyboard.on("keydown-T", () => {
       this.debugEnabled = !this.debugEnabled;
 
@@ -477,10 +536,19 @@ class MainScene extends Phaser.Scene {
 
     this.player.setCollideWorldBounds(true);
 
-
     this.player.setMaxVelocity(300, 800);
 
     this.physics.add.collider(this.player, this.ground);
+
+    this.player.on("animationcomplete-attack", () => {
+      this.unlockState();
+    });
+
+    this.player.on("animationcomplete-hurt", () => {
+      this.unlockState();
+      this.setState("idle");
+    });
+
 
     // --- CAMERA ---
     this.cameras.main.setBounds(0, 0, WORLD_WIDTH, height);
@@ -565,6 +633,31 @@ class MainScene extends Phaser.Scene {
 
   update() {
     if (this.isDead) return;
+    const sitDelayMin = 2500;
+    const sitDelayMax = 4000;
+    if (this.locked) {
+      this.player.setVelocityX(0);
+    }
+    if (!this.idleSitTimer) {
+      this.idleSitTimer = this.time.now + Phaser.Math.Between(sitDelayMin, sitDelayMax);
+    }
+    if (
+      this.time.now > this.idleSitTimer &&
+      this.state === "idle" &&
+      !this.locked &&
+      !this.isKnockedBack &&
+      !this.isAttacking &&
+      !this.isHurting &&
+      this.player.body.velocity.x === 0 &&
+      this.player.body.blocked.down
+    ) {
+      if (Math.random() < 0.4) {
+        this.startSitSequence();
+        this.idleSitTimer = this.time.now + Phaser.Math.Between(sitDelayMin, sitDelayMax);
+        return;
+      }
+      this.idleSitTimer = this.time.now + Phaser.Math.Between(sitDelayMin, sitDelayMax);
+    }
 
     const onGround = 
       this.player.body.blocked.down ||
@@ -629,32 +722,33 @@ class MainScene extends Phaser.Scene {
     this.layer4.tilePositionX = cam.scrollX * 0.8;
 
     // --- ANIMATION ---
-    let anim = 'idle';
+    let anim;
 
-    if (this.isAttacking) {
-      anim = 'attack';
-    }
-    else if (this.isHurting) {
-      anim = 'hurt';
-    }
-    else if (!onGround) {
-      anim = 'jump';
-    }
-    else if (dir !== 0) {
-      anim = 'run';
-    }
-    else {
-      anim = 'idle';
-    }
+    switch (this.state) {
+      case "sit":
+        anim = "sit";
+        break;
 
+      case "attack":
+        anim = "attack";
+        break;
 
+      case "hurt":
+        anim = "hurt";
+        break;
 
+      default:
+        if (!onGround) anim = "jump";
+        else if (dir !== 0) anim = "run";
+        else anim = "idle";
+    }
     if (this.player.anims.currentAnim?.key !== anim) {
-      this.player.play(anim);
+      this.player.play(anim, true);
     }
-
   }
 }
+
+
 
 onMounted(() => {
   game = new Phaser.Game({
