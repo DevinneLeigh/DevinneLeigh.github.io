@@ -11,6 +11,7 @@ import layer1 from "@/assets/images/game/background/layer1.png";
 import layer2 from "@/assets/images/game/background/layer2.png";
 import layer3 from "@/assets/images/game/background/layer3.png";
 import layer4 from "@/assets/images/game/background/layer4.png";
+import layer5 from "@/assets/images/game/background/layer5.png";
 import mist1 from "@/assets/images/game/background/mist1.png";
 import mist2 from "@/assets/images/game/background/mist2.png";
 import mist3 from "@/assets/images/game/background/mist3.png";
@@ -40,7 +41,9 @@ import log from "@/assets/images/game/platforms/log.png"
 
 import tree1 from "@/assets/images/game/platforms/trees/tree1.png"
 import tree2 from "@/assets/images/game/platforms/trees/tree2.png"
-import tree3 from "@/assets/images/game/platforms/trees/tree3.png"
+import leaves1 from "@/assets/images/game/platforms/trees/leaves1.png"
+import leaves2 from "@/assets/images/game/platforms/trees/leaves2.png"
+
 
 import bearTrap from "@/assets/images/game/obstacles/bear-trap.png"
 import spike from "@/assets/images/game/obstacles/spike.png"
@@ -294,12 +297,14 @@ class MainScene extends Phaser.Scene {
     this.load.image("mist2", mist2);
     this.load.image("layer3", layer3);
     this.load.image("mist3", mist3);
-    this.load.image("ground", ground);
     this.load.image("layer4", layer4);
+    this.load.image("ground", ground);
+    this.load.image("layer5", layer5);
     this.load.image("log", log);
     this.load.image("tree1", tree1);
     this.load.image("tree2", tree2);
-    this.load.image("tree3", tree3);
+    this.load.image("leaves1", leaves1);
+    this.load.image("leaves2", leaves2);
     this.load.image("bearTrap", bearTrap);
     this.load.image("spike", spike);
     this.load.image("hole", hole);
@@ -440,13 +445,19 @@ class MainScene extends Phaser.Scene {
       .tileSprite(0, 0, width, height, "mist3")
       .setOrigin(0)
       .setScrollFactor(0)
-      .setDepth(8);
+      .setDepth(6);
 
     this.layer4 = this.add
       .tileSprite(0, 0, width, height, "layer4")
       .setOrigin(0)
       .setScrollFactor(0)
-      .setDepth(9);
+      .setDepth(8);
+
+    this.layer5 = this.add
+      .tileSprite(0, 0, width, height, "layer5")
+      .setOrigin(0)
+      .setScrollFactor(0)
+      .setDepth(11);
 
     // --- WORLD ---
     const WORLD_WIDTH = 5000;
@@ -454,7 +465,7 @@ class MainScene extends Phaser.Scene {
     this.physics.world.gravity.y = 1000;
 
     // --- GROUND ---
-    const groundHeight = 200;
+    const groundHeight = 250;
     const groundY = height - groundHeight
 
     this.ground = this.physics.add.staticImage(
@@ -472,16 +483,16 @@ class MainScene extends Phaser.Scene {
     const obstacleData = [
 
       // bear traps
-      { type: "bearTrap", shape: "rectangle", x: 700, y: height - 220, scale: 0.25, sizeX: 100, sizeY: 1, offsetX: 20, offsetY: 60 },
-      { type: "bearTrap", shape: "rectangle", x: 3500, y: height - 220, scale: 0.25, sizeX: 100, sizeY: 1, offsetX: 20, offsetY: 60 },
+      { type: "bearTrap", shape: "rectangle", x: 700, y: height - 250, scale: 0.25, sizeX: 100, sizeY: 1, offsetX: 20, offsetY: 60 },
+      { type: "bearTrap", shape: "rectangle", x: 3500, y: height - 250, scale: 0.25, sizeX: 100, sizeY: 1, offsetX: 20, offsetY: 60 },
 
       // holes
-      { type: "hole", shape: "rectangle", x: 1250, y: height - 210, scale: 0.4, sizeX: 105, sizeY: 20, offsetX: 155, offsetY: 90 },
+      { type: "hole", shape: "rectangle", x: 1250, y: height - 240, scale: 0.4, sizeX: 105, sizeY: 20, offsetX: 155, offsetY: 90 },
     ];
 
     obstacleData.forEach(s => {
       const obj = this.physics.add.staticSprite(s.x, s.y, s.type)
-        .setDepth(6)
+        .setDepth(9)
         .setScale(s.scale);
 
       obj.refreshBody();
@@ -592,8 +603,8 @@ class MainScene extends Phaser.Scene {
 
     // --- PLAYER ---
     this.player = this.physics.add
-      .sprite(200, height - 295, "fox_idle")
-      .setDepth(7);
+      .sprite(200, height - 335, "fox_idle")
+      .setDepth(10);
     this.player.setScale(4);
     this.player.play('idle')
     this.player.body.setSize(22, 20);
@@ -656,33 +667,43 @@ class MainScene extends Phaser.Scene {
     // --- PLATFORMS ---
 
     // -- TREES --
-    this.tree = this.physics.add.staticGroup();
-
+    this.tree = this.add.group();
     const treeData = [
-      { x: 2600, y: height - 330, scale: .43, color: "tree3", flip: false, offsetX: 0, depth: 6 },
-      // { x: 900, y: height - 480, scale: .43, color: "tree2", flip: true, offsetX: 255, depth: 5 },
-      // { x: 3800, y: height - 290, scale: .55, color: "tree2", flip: false, offsetX: 0, depth: 6 },
+      { x: 600, y: height - 740, scale: .75, color: "tree1", flip: true },
+    ];
+    treeData.forEach(s => {
+      const tree = this.add.sprite(s.x, s.y, s.color)
+        .setDepth(7)
+        .setScale(s.scale)
+      tree.setFlipX(s.flip);
+      this.tree.add(tree);
+    });   
+
+    // -- LEAVES --
+    this.leaves = this.physics.add.staticGroup();
+
+    const leavesData = [
+      { x: 480, y: height - 450, scale: .4, color: "leaves2", flip: false, sizeX: 350, sizeY: 1, offsetX: 75, offsetY: 80 },
+      { x: 860, y: height - 655, scale: .4, color: "leaves1", flip: false, sizeX: 350, sizeY: 1, offsetX: 75, offsetY: 80 },
     ];
 
 
-    treeData.forEach(s => {
-      const treeZone = this.physics.add.staticSprite(s.x, s.y, s.color)
-        .setDepth(s.depth)
+    leavesData.forEach(s => {
+      const leavesZone = this.physics.add.staticSprite(s.x, s.y, s.color)
+        .setDepth(8)
         .setScale(s.scale)
 
-      treeZone.refreshBody();
+      leavesZone.refreshBody();
 
-      const offsetX = s.flip ? s.offsetX : s.offsetX;
+      leavesZone.body.setSize(s.sizeX, s.sizeY);
+      leavesZone.body.setOffset(s.offsetX, s.offsetY);
+      leavesZone.setFlipX(s.flip);
 
-      treeZone.body.setSize(225, 1);
-      treeZone.body.setOffset(offsetX, 60);
-      treeZone.setFlipX(s.flip);
-
-      this.tree.add(treeZone);
+      this.leaves.add(leavesZone);
     });   
-    this.treeCollider = this.physics.add.collider(
+    this.leavesCollider = this.physics.add.collider(
       this.player,
-      this.tree,
+      this.leaves,
       null,
       (player, platform) => {
         return player.body.velocity.y >= 0;
@@ -690,6 +711,7 @@ class MainScene extends Phaser.Scene {
       this
     )
   }
+
 
   update() {
     if (this.isDead) return;
@@ -762,7 +784,7 @@ class MainScene extends Phaser.Scene {
       // --- JUMP ---
       const isJumpPressed = Phaser.Input.Keyboard.JustDown(this.cursors.up);
       if (isJumpPressed && onGround) {
-        this.player.setVelocityY(-600);
+        this.player.setVelocityY(-680);
       }
     }
 
@@ -779,13 +801,14 @@ class MainScene extends Phaser.Scene {
     // --- PARALLAX ---
     const cam = this.cameras.main;
     
-    this.layer1.tilePositionX = cam.scrollX * 0.2;
-    this.mist1.tilePositionX = cam.scrollX * 0.4;
-    this.layer2.tilePositionX = cam.scrollX * 0.6;
-    this.mist2.tilePositionX = cam.scrollX * 0.8;
-    this.layer3.tilePositionX = cam.scrollX * 1.0;
-    this.mist3.tilePositionX = cam.scrollX * 1.15;
-    this.layer4.tilePositionX = cam.scrollX * 1.25;
+    this.layer1.tilePositionX = cam.scrollX * 0.15;
+    this.mist1.tilePositionX = cam.scrollX * 0.3;
+    this.layer2.tilePositionX = cam.scrollX * 0.45;
+    this.mist2.tilePositionX = cam.scrollX * 0.6;
+    this.layer3.tilePositionX = cam.scrollX * 0.75;
+    this.mist3.tilePositionX = cam.scrollX * 0.9;
+    this.layer4.tilePositionX = cam.scrollX * 1;
+    this.layer5.tilePositionX = cam.scrollX * 1.15;
 
     // --- ANIMATION ---
     let anim;
