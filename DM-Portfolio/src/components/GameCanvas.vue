@@ -24,6 +24,18 @@ import foxIdle from "@/assets/images/game/fox/Fox_Idle.png";
 import foxAttack from "@/assets/images/game/fox/Fox_Attack.png";
 import foxDeath from "@/assets/images/game/fox/Fox_Death.png";
 
+import bearAttack from "@/assets/images/game/bear/Bear_Attack.png";
+import bearAttack2 from "@/assets/images/game/bear/Bear_Attack2.png";
+import bearDeath from "@/assets/images/game/bear/Bear_Death.png";
+import bearGetDown from "@/assets/images/game/bear/Bear_Get_Down.png";
+import bearGetUp from "@/assets/images/game/bear/Bear_Get_Up.png";
+import bearIdle from "@/assets/images/game/bear/Bear_Idle.png";
+import bearRun from "@/assets/images/game/bear/Bear_Run.png";
+import bearSit from "@/assets/images/game/bear/Bear_Sit.png";
+import bearStandUp from "@/assets/images/game/bear/Bear_Stand_Up.png";
+import bearWalk from "@/assets/images/game/bear/Bear_Walk.png";
+import bearYawn from "@/assets/images/game/bear/Bear_Yawn.png";
+
 import log from "@/assets/images/game/platforms/log.png"
 
 import tree1 from "@/assets/images/game/platforms/trees/tree1.png"
@@ -320,6 +332,52 @@ class MainScene extends Phaser.Scene {
       frameWidth: 80,
       frameHeight: 48
     });
+
+
+    this.load.spritesheet('bear_attack', bearAttack, {
+      frameWidth: 128,
+      frameHeight: 96
+    });
+    this.load.spritesheet('bear_attack2', bearAttack2, {
+      frameWidth: 128,
+      frameHeight: 96
+    });
+    this.load.spritesheet('bear_death', bearDeath, {
+      frameWidth: 128,
+      frameHeight: 96
+    });
+    this.load.spritesheet('bear_get_down', bearGetDown, {
+      frameWidth: 128,
+      frameHeight: 96
+    });
+    this.load.spritesheet('bear_get_up', bearGetUp, {
+      frameWidth: 128,
+      frameHeight: 96
+    });
+    this.load.spritesheet('bear_idle', bearIdle, {
+      frameWidth: 128,
+      frameHeight: 96
+    });
+    this.load.spritesheet('bear_run', bearRun, {
+      frameWidth: 128,
+      frameHeight: 96
+    });
+    this.load.spritesheet('bear_sit', bearSit, {
+      frameWidth: 128,
+      frameHeight: 96
+    });
+    this.load.spritesheet('bear_stand_up', bearStandUp, {
+      frameWidth: 128,
+      frameHeight: 96
+    });
+    this.load.spritesheet('bear_walk', bearWalk, {
+      frameWidth: 128,
+      frameHeight: 96
+    });
+    this.load.spritesheet('bear_yawn', bearYawn, {
+      frameWidth: 128,
+      frameHeight: 96
+    });
   }
 
   create() {
@@ -414,8 +472,8 @@ class MainScene extends Phaser.Scene {
     const obstacleData = [
 
       // bear traps
-      { type: "bearTrap", shape: "rectangle", x: 800, y: height - 220, scale: 0.25, sizeX: 100, sizeY: 1, offsetX: 20, offsetY: 60 },
-      { type: "bearTrap", shape: "rectangle", x: 2800, y: height - 220, scale: 0.25, sizeX: 100, sizeY: 1, offsetX: 20, offsetY: 60 },
+      { type: "bearTrap", shape: "rectangle", x: 700, y: height - 220, scale: 0.25, sizeX: 100, sizeY: 1, offsetX: 20, offsetY: 60 },
+      { type: "bearTrap", shape: "rectangle", x: 3500, y: height - 220, scale: 0.25, sizeX: 100, sizeY: 1, offsetX: 20, offsetY: 60 },
 
       // holes
       { type: "hole", shape: "rectangle", x: 1250, y: height - 210, scale: 0.4, sizeX: 105, sizeY: 20, offsetX: 155, offsetY: 90 },
@@ -598,39 +656,39 @@ class MainScene extends Phaser.Scene {
     // --- PLATFORMS ---
 
     // -- TREES --
-    // this.tree = this.physics.add.staticGroup();
+    this.tree = this.physics.add.staticGroup();
 
-    // const treeData = [
-    //   { x: 800, y: height - 330, scale: .43, color: "tree3", flip: false, offsetX: 0, depth: 6 },
-    //   { x: 900, y: height - 480, scale: .43, color: "tree2", flip: true, offsetX: 255, depth: 5 },
-    //   { x: 3800, y: height - 290, scale: .55, color: "tree2", flip: false, offsetX: 0, depth: 6 },
-    // ];
+    const treeData = [
+      { x: 2600, y: height - 330, scale: .43, color: "tree3", flip: false, offsetX: 0, depth: 6 },
+      // { x: 900, y: height - 480, scale: .43, color: "tree2", flip: true, offsetX: 255, depth: 5 },
+      // { x: 3800, y: height - 290, scale: .55, color: "tree2", flip: false, offsetX: 0, depth: 6 },
+    ];
 
 
-    // treeData.forEach(s => {
-    //   const treeZone = this.physics.add.staticSprite(s.x, s.y, s.color)
-    //     .setDepth(s.depth)
-    //     .setScale(s.scale)
+    treeData.forEach(s => {
+      const treeZone = this.physics.add.staticSprite(s.x, s.y, s.color)
+        .setDepth(s.depth)
+        .setScale(s.scale)
 
-    //   treeZone.refreshBody();
+      treeZone.refreshBody();
 
-    //   const offsetX = s.flip ? s.offsetX : s.offsetX;
+      const offsetX = s.flip ? s.offsetX : s.offsetX;
 
-    //   treeZone.body.setSize(225, 1);
-    //   treeZone.body.setOffset(offsetX, 60);
-    //   treeZone.setFlipX(s.flip);
+      treeZone.body.setSize(225, 1);
+      treeZone.body.setOffset(offsetX, 60);
+      treeZone.setFlipX(s.flip);
 
-    //   this.tree.add(treeZone);
-    // });   
-    // this.treeCollider = this.physics.add.collider(
-    //   this.player,
-    //   this.tree,
-    //   null,
-    //   (player, platform) => {
-    //     return player.body.velocity.y >= 0;
-    //   },
-    //   this
-    // )
+      this.tree.add(treeZone);
+    });   
+    this.treeCollider = this.physics.add.collider(
+      this.player,
+      this.tree,
+      null,
+      (player, platform) => {
+        return player.body.velocity.y >= 0;
+      },
+      this
+    )
   }
 
   update() {
