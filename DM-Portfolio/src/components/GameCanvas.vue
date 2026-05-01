@@ -46,7 +46,7 @@ class MainScene extends Phaser.Scene {
   setState(newState) {
     if (this.state === "dead") return;
 
-    const lockedStates = ["attack", "hurt", "sit"];
+    const lockedStates = ["attack", "hurt"];
     if (this.locked && lockedStates.includes(this.state)) return;
 
     if (this.state === newState) return;
@@ -134,17 +134,24 @@ class MainScene extends Phaser.Scene {
     this.player.play("sit", true);
 
     this.player.once("animationcomplete-sit", () => {
+      if (this.state !== "sit") return;
       // random linger at end
       const linger = Phaser.Math.Between(500, 1500);
 
       this.time.delayedCall(linger, () => {
+        if (this.state !== "sit") return;
         // play reverse (stand up)
         this.player.playReverse("sit", true);
 
         this.player.once("animationcomplete-sit", () => {
+          if (this.state !== "sit") return;
           // fully reset state here
           this.unlockState();
           this.setState("idle");
+
+          const sitDelayMin = 2500;
+          const sitDelayMax = 4000;
+          this.idleSitTimer = this.time.now + Phaser.Math.Between(sitDelayMin, sitDelayMax);
         });
       });
     });
@@ -411,7 +418,7 @@ class MainScene extends Phaser.Scene {
       { type: "bearTrap", shape: "rectangle", x: 2800, y: height - 220, scale: 0.25, sizeX: 100, sizeY: 1, offsetX: 20, offsetY: 60 },
 
       // holes
-      { type: "hole", shape: "circle", x: 1250, y: height - 210, scale: 0.4, radius: 160, offsetX: 50, offsetY: 60 },
+      { type: "hole", shape: "rectangle", x: 1250, y: height - 210, scale: 0.4, sizeX: 105, sizeY: 20, offsetX: 155, offsetY: 90 },
     ];
 
     obstacleData.forEach(s => {
@@ -497,10 +504,10 @@ class MainScene extends Phaser.Scene {
     this.anims.create({
       key: 'attack',
       frames: this.anims.generateFrameNumbers('fox_attack', {
-        start: 0,
+        start: 2,
         end: 7
       }),
-      frameRate: 10,
+      frameRate: 13,
       repeat: 0
     });
     this.isAttacking = false;
@@ -558,9 +565,6 @@ class MainScene extends Phaser.Scene {
     this.cursors = this.input.keyboard.createCursorKeys();
 
     this.keys = this.input.keyboard.addKeys({
-      left: Phaser.Input.Keyboard.KeyCodes.A,
-      right: Phaser.Input.Keyboard.KeyCodes.D,
-      jump: Phaser.Input.Keyboard.KeyCodes.W,
       attack: Phaser.Input.Keyboard.KeyCodes.SPACE
     });
 
@@ -586,11 +590,9 @@ class MainScene extends Phaser.Scene {
     // --- HEALTH BAR ---
       this.createHealthBar();
 
-    // Mobile: tap to jump
+
     this.input.on("pointerdown", () => {
-      if (this.player.body.blocked.down) {
-        this.player.setVelocityY(-500);
-      }
+      this.attack();
     });
 
     // --- PLATFORMS ---
@@ -664,8 +666,14 @@ class MainScene extends Phaser.Scene {
       this.player.body.touching.down;
     
     let dir = 0;
-    if (this.keys.left.isDown) dir = -1;
-    else if (this.keys.right.isDown) dir = 1;
+    if (this.cursors.left.isDown) dir = -1;
+    else if (this.cursors.right.isDown) dir = 1;
+
+    // --- INTERRUPT SIT ---
+    if (this.state === "sit" && (dir !== 0 || !onGround)) {
+      this.unlockState();
+      this.setState("idle");
+    }
 
     if (!this.isKnockedBack) {
       const groundSpeed = 300;
@@ -694,7 +702,7 @@ class MainScene extends Phaser.Scene {
 
 
       // --- JUMP ---
-      const isJumpPressed = Phaser.Input.Keyboard.JustDown(this.keys.jump);
+      const isJumpPressed = Phaser.Input.Keyboard.JustDown(this.cursors.up);
       if (isJumpPressed && onGround) {
         this.player.setVelocityY(-600);
       }
@@ -714,12 +722,12 @@ class MainScene extends Phaser.Scene {
     const cam = this.cameras.main;
     
     this.layer1.tilePositionX = cam.scrollX * 0.2;
-    this.mist1.tilePositionX = cam.scrollX * 0.3;
-    this.layer2.tilePositionX = cam.scrollX * 0.4;
-    this.mist2.tilePositionX = cam.scrollX * 0.5;
-    this.layer3.tilePositionX = cam.scrollX * 0.6;
-    this.mist3.tilePositionX = cam.scrollX * 0.7;
-    this.layer4.tilePositionX = cam.scrollX * 0.8;
+    this.mist1.tilePositionX = cam.scrollX * 0.4;
+    this.layer2.tilePositionX = cam.scrollX * 0.6;
+    this.mist2.tilePositionX = cam.scrollX * 0.8;
+    this.layer3.tilePositionX = cam.scrollX * 1.0;
+    this.mist3.tilePositionX = cam.scrollX * 1.15;
+    this.layer4.tilePositionX = cam.scrollX * 1.25;
 
     // --- ANIMATION ---
     let anim;
