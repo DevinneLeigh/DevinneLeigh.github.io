@@ -53,6 +53,137 @@ import hole from "@/assets/images/game/obstacles/hole.png"
 const gameContainer = ref(null);
 let game = null;
 
+class Bear {
+  constructor(scene, x, y) {
+    this.debugGraphics = scene.add.graphics().setDepth(999);
+    this.scene = scene;
+
+
+    // ARENA 
+    this.arenaLeft = x - 50;
+    this.arenaRight = x + 450;
+
+    // ATTACK CONFIG
+    this.activeHitFrames = [6, 7];
+
+    // damage zone
+    this.attackBox = {
+      width: 180,
+      height: 120,
+      offsetX: 100,
+      offsetY: 100
+    };
+
+    this.isAttacking = false;
+    this.hasDealtDamage = false;
+
+
+    // SPRITE
+    this.sprite = scene.physics.add
+      .sprite(x, y, "bear_idle")
+      .setScale(4)
+      .setDepth(9);
+
+    this.sprite.setCollideWorldBounds(true);
+
+    this.sprite.body.setSize(70, 50);
+    this.sprite.body.setOffset(30, 38);
+
+    // MOVEMENT
+    this.speed = 80;
+    this.direction = -1;
+  }
+  update(player) {
+    const s = this.sprite;
+
+    // face direction of movement
+    s.setFlipX(this.direction < 0);
+
+    if (this.isAttacking) return;
+
+    // arena patrol
+    if (s.x <= this.arenaLeft) this.direction = 1;
+    if (s.x >= this.arenaRight) this.direction = -1;
+
+    s.setVelocityX(this.direction * this.speed);
+    s.play("bear_walk", true);
+
+    // attack trigger (start condition only)
+    const distance = Phaser.Math.Distance.Between(
+      s.x, s.y,
+      player.x, player.y
+    );
+
+    if (distance < 120) {
+      this.attack();
+    }
+    // -----------------------------
+    // DEBUG DRAW ATTACK BOX
+    // -----------------------------
+    if (!this.debugGraphics) return;
+
+    this.debugGraphics.clear();
+
+    const boxX = s.x + (s.flipX ? -this.attackBox.offsetX : this.attackBox.offsetX);
+    const boxY = s.y + this.attackBox.offsetY;
+
+    this.debugGraphics.lineStyle(2, 0xff0000, 1);
+
+    this.debugGraphics.strokeRect(
+      boxX - this.attackBox.width / 2,
+      boxY - this.attackBox.height / 2,
+      this.attackBox.width,
+      this.attackBox.height
+    );
+    // -----------------------------
+  }
+  attack() {
+    if (this.isAttacking) return;
+
+    this.isAttacking = true;
+    this.hasDealtDamage = false;
+
+    this.sprite.setVelocityX(0);
+    this.sprite.play("bear_attack", true);
+
+    this.sprite.on("animationupdate", this.handleAttackFrame, this);
+    this.sprite.once("animationcomplete-bear_attack", this.finishAttack, this);
+  }
+  handleAttackFrame(animation, frame) {
+    if (animation.key !== "bear_attack") return;
+
+    // only allow damage during correct frames
+    if (!this.activeHitFrames.includes(frame.index)) return;
+
+    const player = this.scene.player;
+    const s = this.sprite;
+
+    // -----------------------------
+    // DEFINE ATTACK AREA IN WORLD SPACE
+    // -----------------------------
+    const boxX = s.x + (s.flipX ? -this.attackBox.offsetX : this.attackBox.offsetX);
+    const boxY = s.y + this.attackBox.offsetY;
+
+    const inBox =
+      player.x > boxX - this.attackBox.width / 2 &&
+      player.x < boxX + this.attackBox.width / 2 &&
+      player.y > boxY - this.attackBox.height / 2 &&
+      player.y < boxY + this.attackBox.height / 2;
+
+    // -----------------------------
+    // FINAL DAMAGE RULE (ONLY ONE)
+    // -----------------------------
+    if (inBox && !this.hasDealtDamage) {
+      this.hasDealtDamage = true;
+      this.scene.takeDamage(10, s.x);
+    }
+  }
+  finishAttack() {
+    this.isAttacking = false;
+    this.sprite.off("animationupdate", this.handleAttackFrame, this);
+  }
+}
+
 class MainScene extends Phaser.Scene {
   constructor() {
     super("MainScene");
@@ -289,6 +420,8 @@ class MainScene extends Phaser.Scene {
   }
 
 
+
+
   preload() {
     this.load.image("background", background);
     this.load.image("layer1", layer1);
@@ -460,7 +593,7 @@ class MainScene extends Phaser.Scene {
       .setDepth(11);
 
     // --- WORLD ---
-    const WORLD_WIDTH = 5000;
+    const WORLD_WIDTH = 7000;
     this.physics.world.setBounds(0, 0, WORLD_WIDTH, height);
     this.physics.world.gravity.y = 1000;
 
@@ -483,11 +616,11 @@ class MainScene extends Phaser.Scene {
     const obstacleData = [
 
       // bear traps
-      { type: "bearTrap", shape: "rectangle", x: 700, y: height - 250, scale: 0.25, sizeX: 100, sizeY: 1, offsetX: 20, offsetY: 60 },
+      // { type: "bearTrap", shape: "rectangle", x: 700, y: height - 255, scale: 0.25, sizeX: 100, sizeY: 1, offsetX: 20, offsetY: 60 },
       { type: "bearTrap", shape: "rectangle", x: 3500, y: height - 250, scale: 0.25, sizeX: 100, sizeY: 1, offsetX: 20, offsetY: 60 },
 
       // holes
-      { type: "hole", shape: "rectangle", x: 1250, y: height - 240, scale: 0.4, sizeX: 105, sizeY: 20, offsetX: 155, offsetY: 90 },
+      { type: "hole", shape: "rectangle", x: 1250, y: height - 255, scale: 0.4, sizeX: 105, sizeY: 20, offsetX: 155, offsetY: 90 },
     ];
 
     obstacleData.forEach(s => {
@@ -515,7 +648,7 @@ class MainScene extends Phaser.Scene {
     });
 
 
-    // --- WALK ANIMATION --
+    // ---PLAYER WALK ANIMATION --
     this.anims.create({
       key: 'walk',
       frames: this.anims.generateFrameNumbers('fox_walk', {
@@ -525,7 +658,7 @@ class MainScene extends Phaser.Scene {
       frameRate: 10,
       repeat: -1
     });
-    // --- RUN ANIMATION --
+    // ---PLAYER RUN ANIMATION --
     this.anims.create({
       key: 'run',
       frames: this.anims.generateFrameNumbers('fox_run', {
@@ -535,7 +668,7 @@ class MainScene extends Phaser.Scene {
       frameRate: 10,
       repeat: -1
     });
-    // --- JUMP ANIMATION --
+    // ---PLAYER JUMP ANIMATION --
     this.anims.create({
       key: 'jump',
       frames: [
@@ -549,7 +682,7 @@ class MainScene extends Phaser.Scene {
       ],
       repeat: 0
     });
-    // --- SIT ANIMATION --
+    // ---PLAYER SIT ANIMATION --
     this.anims.create({
       key: 'sit',
       frames: this.anims.generateFrameNumbers('fox_sit', {
@@ -559,7 +692,7 @@ class MainScene extends Phaser.Scene {
       frameRate: 10,
       repeat: 0
     });
-    // --- IDLE ANIMATION --
+    // ---PLAYER IDLE ANIMATION --
     this.anims.create({
       key: 'idle',
       frames: this.anims.generateFrameNumbers('fox_idle', {
@@ -569,7 +702,7 @@ class MainScene extends Phaser.Scene {
       frameRate: 10,
       repeat: -1
     });
-    // --- ATTACK ANIMATION --
+    // ---PLAYER ATTACK ANIMATION --
     this.anims.create({
       key: 'attack',
       frames: this.anims.generateFrameNumbers('fox_attack', {
@@ -580,7 +713,7 @@ class MainScene extends Phaser.Scene {
       repeat: 0
     });
     this.isAttacking = false;
-    // --- HURT ANIMATION --
+    // ---PLAYER HURT ANIMATION --
     this.anims.create({
       key: 'hurt',
       frames: this.anims.generateFrameNumbers('fox_jump', {
@@ -590,7 +723,7 @@ class MainScene extends Phaser.Scene {
       frameRate: 10,
       repeat: 0
     });
-    // --- DEATH ANIMATION --
+    // ---PLAYER DEATH ANIMATION --
     this.anims.create({
       key: 'death',
       frames: this.anims.generateFrameNumbers('fox_death', {
@@ -615,7 +748,7 @@ class MainScene extends Phaser.Scene {
     this.player.setMaxVelocity(300, 800);
 
     this.physics.add.collider(this.player, this.ground);
-
+ 
     this.player.on("animationcomplete-attack", () => {
       this.unlockState();
     });
@@ -624,6 +757,45 @@ class MainScene extends Phaser.Scene {
       this.unlockState();
       this.setState("idle");
     });
+
+    // ---BEAR---
+
+    this.bear = new Bear(this, 400, height - 410); //6400
+    this.physics.add.collider(this.bear.sprite, this.ground);
+
+    // ---BEAR WALK ANIMATION --
+    this.anims.create({
+      key: "bear_walk",
+      frames: this.anims.generateFrameNumbers("bear_walk", { start: 0, end: 12 }),
+      frameRate: 6,
+      repeat: -1
+    });
+
+    // ---BEAR ATTACK ANIMATION --
+    this.anims.create({
+      key: "bear_attack",
+      frames: this.anims.generateFrameNumbers("bear_attack", { start: 0, end: 9 }),
+      frameRate: 10,
+      repeat: 0
+    });
+
+    // ---BEAR IDLE ANIMATION --
+    this.anims.create({
+      key: "bear_idle",
+      frames: this.anims.generateFrameNumbers("bear_idle", { start: 0, end: 10 }),
+      frameRate: 4,
+      repeat: -1
+    });
+
+    this.physics.add.overlap(
+      this.player,
+      this.bear.attackZone,
+      () => {
+        this.takeDamage(10, this.bear.sprite.x);
+      },
+      null,
+      this
+    );
 
 
     // --- CAMERA ---
@@ -677,7 +849,21 @@ class MainScene extends Phaser.Scene {
         .setScale(s.scale)
       tree.setFlipX(s.flip);
       this.tree.add(tree);
-    });   
+    }); 
+
+    // -- LEAVES OVERLAY --
+    this.leavesOverlay = this.add.group();
+    const leavesOverlayData = [
+      { x: 480, y: height - 430, scale: .35, color: "leaves2", flip: true },
+      { x: 860, y: height - 635, scale: .35, color: "leaves1", flip: true},
+    ];
+    leavesOverlayData.forEach(s => {
+      const leavesOverlay = this.add.sprite(s.x, s.y, s.color)
+        .setDepth(11)
+        .setScale(s.scale)
+      leavesOverlay.setFlipX(s.flip);
+      this.leavesOverlay.add(leavesOverlay);
+    });     
 
     // -- LEAVES --
     this.leaves = this.physics.add.staticGroup();
@@ -834,6 +1020,8 @@ class MainScene extends Phaser.Scene {
     if (this.player.anims.currentAnim?.key !== anim) {
       this.player.play(anim, true);
     }
+
+    this.bear.update(this.player);
   }
 }
 
