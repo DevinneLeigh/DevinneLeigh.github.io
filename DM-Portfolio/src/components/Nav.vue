@@ -1,27 +1,3 @@
-<!-- <script setup>
-import { ref, watch } from 'vue'
-import { useRouter } from 'vue-router'
-
-const isOpen = ref(false)
-const router = useRouter()
-
-const toggleMenu = () => {
-  isOpen.value = !isOpen.value
-}
-
-const closeMenu = () => {
-  isOpen.value = false
-}
-
-/* auto-close on route change */
-watch(
-  () => router.currentRoute.value.fullPath,
-  () => {
-    isOpen.value = false
-  }
-)
-</script> -->
-
 <script setup>
 import { ref, watch } from 'vue'
 import { useRouter } from 'vue-router'

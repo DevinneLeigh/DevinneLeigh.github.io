@@ -78,6 +78,7 @@
   list-style: none;
   padding: 0 20px;
   margin: 0;
+
   li {
     background: var(--bg);
     border-right: solid 6px var(--primary);
@@ -93,7 +94,6 @@
   align-items: center;
   text-align: right;
   margin-bottom: 15px;
-  
 
   height: 40px;
   width: 100%;
@@ -103,39 +103,34 @@
 
   overflow: visible;
   z-index: 1;
+
   p {
     padding: 10px;
   }
 }
 
-/* background layer */
+/* ===== ACTIVE LAYER ===== */
 .nav-link::before {
   content: "";
   position: absolute;
-
   top: 0;
   right: 0;
 
   width: 100%;
   height: 100%;
 
-  background: none;
   border-radius: 4px 0 0 4px;
 
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.35s ease;
 
-  z-index: -1;
-  
+  z-index: -2;
 }
 
-.drawer .nav-link::before {
-  transition: transform 0.25s ease;
-}
-.drawer.open .nav-link:hover::before,
-.drawer.open .nav-link.router-link-active::before {
-  transform: scaleX(1.2);
+/* active visible */
+.drawer.open .router-link-exact-active::before {
+  transform: scaleX(1.15);
   background-image: linear-gradient(
     to left,
     var(--primary),
@@ -143,7 +138,49 @@
   );
 }
 
-.drawer:not(.open) .nav-link::before {
+/* ===== HOVER LAYER ===== */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 4px 0 0 4px;
+
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.35s ease;
+
+  z-index: -1;
+}
+
+/* hover grows */
+.drawer.open .nav-link:hover::after {
+  transform: scaleX(1.15);
+  background-image: linear-gradient(
+    to left,
+    var(--primary),
+    var(--inverted-primary)
+  );
+}
+
+/* ===== INTERACTION ===== */
+/* shrink active when hovering any item */
+.drawer.open .nav-list:hover .router-link-exact-active::before {
+  transform: scaleX(0);
+}
+
+/* except when hovering the active item itself */
+.drawer.open .router-link-exact-active:hover::before {
+  transform: scaleX(1);
+}
+
+/* ===== CLOSED STATE ===== */
+.drawer:not(.open) .nav-link::before,
+.drawer:not(.open) .nav-link::after {
   transform: scaleX(0) !important;
 }
 
