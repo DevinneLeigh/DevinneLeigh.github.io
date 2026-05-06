@@ -13,10 +13,6 @@ const { theme, toggle } = useTheme()
   <body>
     <Nav ></Nav>
     <main>
-      <!-- <div id="game">
-        <GameCanvas />
-      </div>
-      <ProjectCard /> -->
       <router-view />
       <LightDarkToggle />
     </main>
