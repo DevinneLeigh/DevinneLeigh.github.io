@@ -130,14 +130,21 @@
   
 }
 
-/* hover expansion OUTSIDE drawer */
-.nav-link:hover::before {
+.drawer .nav-link::before {
+  transition: transform 0.25s ease;
+}
+.drawer.open .nav-link:hover::before,
+.drawer.open .nav-link.router-link-active::before {
   transform: scaleX(1.2);
   background-image: linear-gradient(
     to left,
     var(--primary),
     var(--inverted-primary)
   );
+}
+
+.drawer:not(.open) .nav-link::before {
+  transform: scaleX(0) !important;
 }
 
 /* ===== BACKDROP ===== */
@@ -147,4 +154,3 @@
   background: rgba(0,0,0,0.4);
   z-index: 1040;
 }
-
