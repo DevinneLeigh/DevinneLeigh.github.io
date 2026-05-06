@@ -2,7 +2,6 @@
 import Nav from './components/Nav.vue';
 import ProjectCard from './components/ProjectCard.vue';
 import LightDarkToggle from './components/LightDarkToggle.vue';
-import GameCanvas from './components/GameCanvas.vue';
 import Footer from './components/Footer.vue';
 import { useTheme } from './composables/useTheme'
 
@@ -14,8 +13,11 @@ const { theme, toggle } = useTheme()
   <body>
     <Nav ></Nav>
     <main>
-      <GameCanvas />
-      <ProjectCard />
+      <!-- <div id="game">
+        <GameCanvas />
+      </div>
+      <ProjectCard /> -->
+      <router-view />
       <LightDarkToggle />
     </main>
     <Footer ></Footer>

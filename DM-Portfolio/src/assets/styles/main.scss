@@ -1,5 +1,8 @@
 @use 'variables';
 @use 'mixins' as *;
+@use 'game';
+@use 'nav';
+@use 'projectCards';
 @use 'footer';
 
 @import "bootstrap/scss/bootstrap";
@@ -12,6 +15,7 @@ body {
   transition: background 0.2s, color 0.2s;
 }
 
+
 button {
   padding: 0.5rem 1rem;
   border-radius: 8px;
@@ -20,93 +24,6 @@ button {
   color: white;
   cursor: pointer;
 }
-
-
-
-#webExamples {
-  display: flex;
-  flex-flow: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  @include lg { // 960px
-      gap: 40px;
-  }
-  @include xxl { // 1400px
-      gap: 50px;
-  }
-  .example {
-    position: relative;
-    width: 90%;
-    height: auto;
-    @include sm { // 576px
-      width: 45%;
-    }
-    @include lg { // 960px
-      width: 40%;
-    }
-    @include xl { // 1200px
-      width: 25%;
-    }
-    a {
-      display: flex;
-      justify-content: center;
-    }
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
-      z-index: 1;
-    }
-    .description {
-      position: absolute;
-      inset: 0;
-      background: #000000c9;
-      color: white;
-      z-index: 2;
-      display: flex;
-      flex-flow: column;
-      justify-content: center;
-      font-size: .7em;
-      word-spacing: normal;
-      padding: 0 15px;
-      opacity: 0;
-      transition: opacity .5s ease-in-out;
-      @include xs { // 400px
-        font-size: .8em;
-      }
-      @include md { // 768px
-        padding: 0 30px;
-      }
-      @include lg { // 960px
-        padding: 0 40px;
-        font-size: .9em;
-      }
-      p {
-        text-align: left;
-      }
-      a {
-        color: white;
-        text-decoration: none;
-        font-size: 1.5em;
-        word-spacing: 0.05em;
-        letter-spacing: 0.05em;
-        font-family: 'Teko', Arial, sans-serif;
-        transition: ease-out 0.4s;
-      }
-      a:hover {
-        transform: translateX(20px);
-        transition: ease-out .5s;
-      }
-    }
-    .description.open {
-      opacity: 1;
-      pointer-events: auto;
-    }
-  }
-}
-
 
 .form-switch .form-check-input {
   width: 5rem;
@@ -149,3 +66,13 @@ button {
   box-shadow: none;
   outline: none;
 }
+
+#themeToggle {
+  z-index: 999;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 20px;
+}
+
+

@@ -1,26 +1,28 @@
 :root {
-  --bg: #ede4fd;
-  --text: #373c5a;
+  --bg: #F2EDFA;
+  --bg-secondary: #DCD5E8;
+  --text: #222538;
   --primary: #E8A0BF;
   --secondary: #8B659E;
   --tertiary: #42377A;
   --thumb-icon: "\263C";
   --track-icon: "\263E";
-  --track-icon-color: #2a3656;
+  --track-icon-color: #373C5A;
   --thumb-icon-position: 0%;
   --track-icon-position: 92%;
 }
 
 
 [data-theme="dark"] {
-  --bg: #373c5a;
-  --text: #f8f4ff;
+  --bg: #222538;
+  --bg-secondary: #373C5A;
+  --text: #F2EDFA;
   --primary: #E66F74;
   --secondary: #42377A;
   --tertiary: #8B659E;
   --thumb-icon: "\263E";
   --track-icon: "\263C";
-  --track-icon-color: #d1cdd8;
+  --track-icon-color: #DCD5E8;
   --thumb-icon-position: 88%;
   --track-icon-position: 0%;
 
