@@ -19,3 +19,7 @@ const { theme, toggle } = useTheme()
     <Footer ></Footer>
   </body>
 </template>
+
+<style lang="scss">
+@use '@/assets/styles/main.scss';
+</style>
