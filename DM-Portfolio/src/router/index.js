@@ -14,7 +14,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory('/DM-Portfolio/'),
+  history: createWebHistory('/DM-Portfolio/dist/'),
   routes,
 })
 
