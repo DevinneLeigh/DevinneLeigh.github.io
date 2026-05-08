@@ -23,25 +23,29 @@ body {
 }
 
 #about-page {
-  background: var(--bg) var(--bg-bottom);
+  background: var(--bg) var(--bg-top);
   background-repeat: repeat-x;
-  background-position-y: bottom;
+  background-position-y: top;
+  background-attachment: fixed;
 }
 #contact-page {
+  background: var(--bg) var(--bg-top-corner);
+  background-repeat: no-repeat;
+  background-position-y: top;
+  background-attachment: fixed;
+}
+#home-page {
   background: var(--bg) var(--bg-bottom-corner);
   background-repeat: no-repeat;
   background-position-y: bottom;
   background-position-x: right;
-}
-#home-page {
-  background: var(--bg) var(--bg-top);
-  background-repeat: repeat-x;
-  background-position-y: top;
+  background-attachment: fixed;
 }
 #portfolio-page {
-  background: var(--bg) var(--bg-top-corner);
-  background-repeat: no-repeat;
-  background-position-y: top;
+  background: var(--bg) var(--bg-bottom);
+  background-repeat: repeat-x;
+  background-position-y: bottom;
+  background-attachment: fixed;
 }
 
 
