@@ -31,6 +31,10 @@
       display: flex;
       justify-content: center;
     }
+    &:hover .description {
+      opacity: 1;
+      pointer-events: auto;
+    }
     img {
       display: block;
       width: 100%;
@@ -38,6 +42,7 @@
       z-index: 1;
     }
     .description {
+      pointer-events: none;
       position: absolute;
       inset: 0;
       background: #000000c9;

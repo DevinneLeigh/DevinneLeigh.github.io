@@ -57,18 +57,22 @@ class Bear {
   constructor(scene, x, y) {
     this.scene = scene;
 
+    // -----------------------------
+    // STATE SYSTEM
+    // -----------------------------
+    this.state = "idle"; // idle | intro | patrol | chase | attack | hurt | dead
+
     // ARENA
     this.arenaLeft = x - 1200;
     this.arenaRight = x + 100;
 
-    // ACTIVATION / INTRO
+    // ACTIVATION
     this.isActivated = false;
-    this.isInIntro = false;
     this.activationRange = 1000;
 
     // ATTACK CONFIG
     this.activeHitFrames = [6, 7];
-    this.attackRange = 200;
+    this.attackRange = 150;
     this.detectionRange = 500;
 
     this.attackBox = {
@@ -78,11 +82,17 @@ class Bear {
       offsetY: 100
     };
 
-    this.isAttacking = false;
     this.hasDealtDamage = false;
+
+    // HEALTH
+    this.health = 5;
+    this.isDead = false;
+    this.isInvincible = false;
+    this.invincibleTime = 800;
 
     // SPRITE
     this.hasStarted = false;
+
     this.sprite = scene.physics.add.sprite(x, y, "bear_sit")
       .setScale(4)
       .setDepth(9);
@@ -95,33 +105,78 @@ class Bear {
 
     // MOVEMENT
     this.patrolSpeed = 80;
-    this.chaseSpeed = 140;
+    this.chaseSpeed = 260;
     this.direction = -1;
   }
 
   // -----------------------------
-  // ATTACK BOX POSITION (AUTHORITY SOURCE)
+  // ATTACK BOX POSITION
   // -----------------------------
   getAttackBox() {
     const body = this.sprite.body;
 
-    const baseX = body.center.x;
-    const baseY = body.center.y;
-
     return {
-      x: baseX + (this.sprite.flipX ? -this.attackBox.offsetX : this.attackBox.offsetX),
-      y: baseY + this.attackBox.offsetY
+      x: body.center.x + (this.sprite.flipX ? -this.attackBox.offsetX : this.attackBox.offsetX),
+      y: body.center.y + this.attackBox.offsetY
     };
   }
 
-  update(player) {
+  // -----------------------------
+  // STATE SWITCH
+  // -----------------------------
+  setState(newState) {
+    if (this.state === "dead") return;
+    if (this.state === newState) return;
+
+    this.state = newState;
+
     const s = this.sprite;
 
-    if (!this.hasStarted) {
-      s.play("bear_sit", true);
-      s.anims.stop();
-      this.hasStarted = true;
+    switch (newState) {
+
+      case "hurt":
+        s.setVelocityX(0);
+        s.play("bear_hurt", true);
+
+        s.once("animationcomplete-bear_hurt", () => {
+          this.setState("chase");
+        });
+        break;
+
+      case "attack":
+        s.setVelocityX(0);
+        s.play("bear_attack", true);
+        s.on("animationupdate", this.handleAttackFrame, this);
+
+        s.once("animationcomplete-bear_attack", () => {
+          this.finishAttack();
+          this.setState("chase");
+        });
+        break;
+
+      case "intro":
+        s.setVelocityX(0);
+        break;
+
+      case "dead":
+        s.setVelocity(0, 0);
+        s.body.enable = false;
+        s.play("bear_death");
+
+        s.once("animationcomplete-bear_death", () => {
+          this.scene.handleWin();
+        });
+        break;
     }
+  }
+
+  // -----------------------------
+  // UPDATE LOOP
+  // -----------------------------
+  update(player) {
+    if (this.state === "dead") return;
+
+    const s = this.sprite;
 
     const distance = Phaser.Math.Distance.Between(
       s.x, s.y,
@@ -129,7 +184,7 @@ class Bear {
     );
 
     // -----------------------------
-    // ACTIVATION
+    // INTRO ACTIVATION
     // -----------------------------
     if (!this.isActivated) {
       s.setVelocityX(0);
@@ -142,25 +197,24 @@ class Bear {
     }
 
     // -----------------------------
-    // INTRO LOCK
+    // LOCKED STATES
     // -----------------------------
-    if (this.isInIntro) {
+    if (this.state === "intro" || this.state === "attack" || this.state === "hurt") {
       s.setVelocityX(0);
       return;
     }
 
     // -----------------------------
-    // ATTACK
+    // ATTACK CHECK
     // -----------------------------
     const inAttackRange =
       Math.abs(player.x - s.x) < this.attackRange &&
       Math.abs(player.y - s.y) < 120;
 
-    if (!this.isAttacking && inAttackRange) {
-      this.attack();
+    if (inAttackRange) {
+      this.setState("attack");
+      return;
     }
-
-    if (this.isAttacking) return;
 
     // -----------------------------
     // CHASE / PATROL
@@ -172,6 +226,7 @@ class Bear {
       if (s.anims.currentAnim?.key !== "bear_run") {
         s.play("bear_run");
       }
+
     } else {
       if (s.x <= this.arenaLeft) this.direction = 1;
       if (s.x >= this.arenaRight) this.direction = -1;
@@ -190,14 +245,12 @@ class Bear {
   // INTRO SEQUENCE
   // -----------------------------
   startIntro() {
-    if (this.isActivated || this.isInIntro) return;
+    if (this.isActivated) return;
 
     this.isActivated = true;
-    this.isInIntro = true;
+    this.setState("intro");
 
     const s = this.sprite;
-
-    s.setVelocityX(0);
 
     s.play("bear_yawn");
 
@@ -211,7 +264,7 @@ class Bear {
           s.play("bear_attack2");
 
           s.once("animationcomplete-bear_attack2", () => {
-            this.isInIntro = false;
+            this.setState("chase");
           });
         });
       });
@@ -219,23 +272,8 @@ class Bear {
   }
 
   // -----------------------------
-  // ATTACK
+  // ATTACK FRAME LOGIC
   // -----------------------------
-  attack() {
-    if (this.isAttacking) return;
-
-    this.isAttacking = true;
-    this.hasDealtDamage = false;
-
-    const s = this.sprite;
-
-    s.setVelocityX(0);
-    s.play("bear_attack", true);
-
-    s.on("animationupdate", this.handleAttackFrame, this);
-    s.once("animationcomplete-bear_attack", this.finishAttack, this);
-  }
-
   handleAttackFrame(animation, frame) {
     if (animation.key !== "bear_attack") return;
     if (!this.activeHitFrames.includes(frame.index)) return;
@@ -264,8 +302,39 @@ class Bear {
   }
 
   finishAttack() {
-    this.isAttacking = false;
+    this.hasDealtDamage = false;
     this.sprite.off("animationupdate", this.handleAttackFrame, this);
+  }
+
+  // -----------------------------
+  // DAMAGE
+  // -----------------------------
+  takeHit(damage = 1) {
+    if (this.state === "dead") return;
+    if (this.isInvincible) return;
+
+    this.isInvincible = true;
+    this.health -= damage;
+
+    if (this.health <= 0) {
+      this.setState("dead");
+      return;
+    }
+
+    this.setState("hurt");
+
+    this.scene.time.delayedCall(this.invincibleTime, () => {
+      this.isInvincible = false;
+      this.sprite.alpha = 1;
+    });
+
+    this.scene.tweens.add({
+      targets: this.sprite,
+      alpha: 0,
+      duration: 75,
+      yoyo: true,
+      repeat: 5
+    });
   }
 }
 
@@ -345,9 +414,14 @@ class MainScene extends Phaser.Scene {
     if (this.isAttacking) return;
 
     this.isAttacking = true;
+    this.hasHitBear = false;
+
     this.setState("attack");
 
     this.player.play("attack", true);
+
+    // APPLY DAMAGE IMMEDIATELY
+    this.checkPlayerAttackHit();
 
     this.player.once("animationcomplete-attack", () => {
       this.isAttacking = false;
@@ -504,6 +578,59 @@ class MainScene extends Phaser.Scene {
     });
   }
 
+  checkPlayerAttackHit() {
+    if (this.bear.isDead) return;
+    if (this.hasHitBear) return;
+
+    const direction = this.player.flipX ? -1 : 1;
+
+    const boxX =
+      this.player.body.center.x +
+      (direction * this.playerAttackBox.offsetX);
+
+    const boxY =
+      this.player.body.center.y +
+      this.playerAttackBox.offsetY;
+
+    const bearBody = this.bear.sprite.body;
+
+    const bearX = bearBody.center.x;
+    const bearY = bearBody.center.y;
+
+    const inBox =
+      bearX >= boxX - this.playerAttackBox.width / 2 &&
+      bearX <= boxX + this.playerAttackBox.width / 2 &&
+      bearY >= boxY - this.playerAttackBox.height / 2 &&
+      bearY <= boxY + this.playerAttackBox.height / 2;
+
+    if (inBox) {
+      console.log("BEAR HIT");
+
+      this.hasHitBear = true;
+      this.bear.takeHit(1);
+    }
+  }
+
+  handleWin() {
+    const cam = this.cameras.main;
+
+    this.player.setVelocity(0, 0);
+
+    this.add.text(
+      cam.scrollX + this.scale.width / 2,
+      this.scale.height / 2,
+      "YOU WIN",
+      {
+        fontFamily: "Tahoma",
+        fontSize: "58px",
+        color: "#ffffff",
+        fontStyle: "bold"
+      }
+    )
+      .setOrigin(0.5)
+      .setDepth(100);
+  }
+
 
 
 
@@ -604,6 +731,8 @@ class MainScene extends Phaser.Scene {
   }
 
   create() {
+    this.attackDebug = this.add.graphics();
+    this.attackDebug.setDepth(9999);
     this.isDead = false;
     this.isKnockedBack = false;
     this.isInvincible = false;
@@ -738,7 +867,7 @@ class MainScene extends Phaser.Scene {
       key: 'walk',
       frames: this.anims.generateFrameNumbers('fox_walk', {
         start: 0,
-        end: 8
+        end: 7
       }),
       frameRate: 10,
       repeat: -1
@@ -748,7 +877,7 @@ class MainScene extends Phaser.Scene {
       key: 'run',
       frames: this.anims.generateFrameNumbers('fox_run', {
         start: 0,
-        end: 5
+        end: 4
       }),
       frameRate: 10,
       repeat: -1
@@ -772,9 +901,9 @@ class MainScene extends Phaser.Scene {
       key: 'sit',
       frames: this.anims.generateFrameNumbers('fox_sit', {
         start: 0,
-        end: 11
+        end: 10
       }),
-      frameRate: 10,
+      frameRate: 6,
       repeat: 0
     });
     // ---PLAYER IDLE ANIMATION --
@@ -782,7 +911,7 @@ class MainScene extends Phaser.Scene {
       key: 'idle',
       frames: this.anims.generateFrameNumbers('fox_idle', {
         start: 0,
-        end: 10
+        end: 9
       }),
       frameRate: 10,
       repeat: -1
@@ -792,7 +921,7 @@ class MainScene extends Phaser.Scene {
       key: 'attack',
       frames: this.anims.generateFrameNumbers('fox_attack', {
         start: 2,
-        end: 7
+        end: 6
       }),
       frameRate: 13,
       repeat: 0
@@ -813,7 +942,7 @@ class MainScene extends Phaser.Scene {
       key: 'death',
       frames: this.anims.generateFrameNumbers('fox_death', {
         start: 0,
-        end: 7
+        end: 6
       }),
       frameRate: 10,
       repeat: 0
@@ -843,6 +972,15 @@ class MainScene extends Phaser.Scene {
       this.setState("idle");
     });
 
+    this.playerAttackBox = {
+      width: 80,
+      height: 80,
+      offsetX: 100,
+      offsetY: -30
+    };
+
+    this.hasHitBear = false;
+
     // ---BEAR---
 
     this.bear = new Bear(this, 7750, height - 410);
@@ -851,7 +989,7 @@ class MainScene extends Phaser.Scene {
     // ---BEAR SIT ANIMATION --
     this.anims.create({
       key: "bear_sit",
-      frames: this.anims.generateFrameNumbers("bear_sit", { start: 6, end: 11 }),
+      frames: this.anims.generateFrameNumbers("bear_sit", { start: 5, end: 10 }),
       frameRate: 6,
       repeat: 0
     });
@@ -885,7 +1023,7 @@ class MainScene extends Phaser.Scene {
     // ---BEAR STAND UP ANIMATION --
     this.anims.create({
       key: "bear_stand_up",
-      frames: this.anims.generateFrameNumbers("bear_stand_up", { start: 0, end: 6 }),
+      frames: this.anims.generateFrameNumbers("bear_stand_up", { start: 0, end: 5 }),
       frameRate: 6,
       repeat: 0
     });
@@ -893,7 +1031,7 @@ class MainScene extends Phaser.Scene {
     // ---BEAR WALK ANIMATION --
     this.anims.create({
       key: "bear_walk",
-      frames: this.anims.generateFrameNumbers("bear_walk", { start: 0, end: 12 }),
+      frames: this.anims.generateFrameNumbers("bear_walk", { start: 0, end: 11 }),
       frameRate: 6,
       repeat: -1
     });
@@ -901,7 +1039,7 @@ class MainScene extends Phaser.Scene {
     // ---BEAR RUN ANIMATION --
     this.anims.create({
       key: "bear_run",
-      frames: this.anims.generateFrameNumbers("bear_run", { start: 0, end: 5 }),
+      frames: this.anims.generateFrameNumbers("bear_run", { start: 0, end: 4 }),
       frameRate: 6,
       repeat: -1
     });
@@ -909,7 +1047,7 @@ class MainScene extends Phaser.Scene {
     // ---BEAR ATTACK ANIMATION --
     this.anims.create({
       key: "bear_attack",
-      frames: this.anims.generateFrameNumbers("bear_attack", { start: 0, end: 9 }),
+      frames: this.anims.generateFrameNumbers("bear_attack", { start: 0, end: 8 }),
       frameRate: 10,
       repeat: 0
     });
@@ -935,9 +1073,25 @@ class MainScene extends Phaser.Scene {
     // ---BEAR IDLE ANIMATION --
     this.anims.create({
       key: "bear_idle",
-      frames: this.anims.generateFrameNumbers("bear_idle", { start: 0, end: 10 }),
+      frames: this.anims.generateFrameNumbers("bear_idle", { start: 0, end: 9 }),
       frameRate: 4,
       repeat: -1
+    });
+
+    // ---BEAR HURT ANIMATION --
+    this.anims.create({
+      key: "bear_hurt",
+      frames: this.anims.generateFrameNumbers("bear_attack2", { start: 2, end: 3 }),
+      frameRate: 2,
+      repeat: 0
+    });
+
+    // ---BEAR DEATH ANIMATION --
+    this.anims.create({
+      key: "bear_death",
+      frames: this.anims.generateFrameNumbers("bear_death", { start: 0, end: 5 }),
+      frameRate: 6,
+      repeat: 0
     });
 
 
@@ -1166,7 +1320,34 @@ class MainScene extends Phaser.Scene {
       this.player.play(anim, true);
     }
 
+
+    //--------PLAYER ATTACK HIT BOX-------------------------------
+    this.attackDebug.clear();
+    const direction = this.player.flipX ? -1 : 1;
+
+    const boxX =
+      this.player.body.center.x +
+      (direction * this.playerAttackBox.offsetX);
+
+    const boxY =
+      this.player.body.center.y +
+      this.playerAttackBox.offsetY;
+
+    this.attackDebug.lineStyle(2, 0x00ff00, 1);
+
+    this.attackDebug.strokeRect(
+      boxX - this.playerAttackBox.width / 2,
+      boxY - this.playerAttackBox.height / 2,
+      this.playerAttackBox.width,
+      this.playerAttackBox.height
+    );
+    //-------------------------------------------------------------
+
+    if (this.isAttacking) {
+      this.checkPlayerAttackHit();
+    }
     this.bear.update(this.player);
+
   }
 }
 
