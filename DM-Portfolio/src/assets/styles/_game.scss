@@ -2,10 +2,14 @@
 @use 'mixins' as *;
 
 #game {
-  height: 100vh;
+  height: calc(100vh - 170px);
+  display: flex;
+  justify-content: center;
+  margin: auto;
 }
 .game-container {
   width: 100%;
   max-width: 1200px;
   margin: auto;
+  // padding-top: 40px;
 }

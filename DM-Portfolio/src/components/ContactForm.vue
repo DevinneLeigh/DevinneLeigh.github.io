@@ -34,8 +34,8 @@ const sendEmail = async () => {
 </script>
 
 <template>
-    <div class="container pt-5">
-      <div class="justify-content-center">
+    <div class="container pt-5 contact-form-wrapper">
+      <div class="justify-content-center contact-form">
         <form @submit.prevent="sendEmail">
             <div class="row g-3">
                 <div class="col-md-6">

@@ -1,31 +1,47 @@
 :root {
-  --bg: #F2EDFA;
-  --bg-secondary: #DCD5E8;
-  --text: #222538;
-  --primary: #E8A0BF;
-  --inverted-primary: #E66F74;
-  --secondary: #8B659E;
-  --tertiary: #42377A;
-  --thumb-icon: "\263C";
-  --track-icon: "\263E";
-  --track-icon-color: #373C5A;
+  --bg: #EFEDFA;
+  --bg3: #F5F5F7;
+  --bg2: #E3E1ED;
+  --text: #1A1D2B; 
+  --text-secondary: #2B2F47;
+  --shadow: #0000000b;
+  --primary: #EB7A7D;
+  --inverted-primary: #BF3336;
+  --secondary: #31D68F;
+  --inverted-secondary: #259E69;
+  --tertiary: #BF5A1F;
+  --inverted-tertiary: #A6401B;
+  --thumb-icon: "☼";
+  --track-icon: "⏾";
   --thumb-icon-position: 0%;
   --track-icon-position: 92%;
+  --bg-bottom: url("/images/backgrounds/light-bottom.png");
+  --bg-top: url("/images/backgrounds/light-top.png");
+  --bg-bottom-corner: url("/images/backgrounds/light-bottom-corner.png");
+  --bg-top-corner: url("/images/backgrounds/light-top-corner.png");
 }
 
 
 [data-theme="dark"] {
   --bg: #222538;
-  --bg-secondary: #373C5A;
-  --text: #F2EDFA;
-  --primary: #E66F74;
-  --inverted-primary: #E8A0BF;
-  --secondary: #42377A;
-  --tertiary: #8B659E;
-  --thumb-icon: "\263E";
-  --track-icon: "\263C";
-  --track-icon-color: #DCD5E8;
+  --bg2: #2B2F47;
+  --bg3: #1A1D2B;
+  --text: #F5F5F7;
+  --text-secondary: #E3E1ED;
+  --shadow: #00000053;
+  --primary: #BF3336;
+  --inverted-primary: #EB7A7D;
+  --secondary: #259E69;
+  --inverted-secondary: #31D68F;
+  --tertiary: #A6401B;
+  --inverted-tertiary: #BF5A1F;
+  --thumb-icon: "⏾";
+  --track-icon: "☼";
   --thumb-icon-position: 88%;
   --track-icon-position: 0%;
+  --bg-bottom: url("/images/backgrounds/dark-bottom.png");
+  --bg-top: url("/images/backgrounds/dark-top.png");
+  --bg-bottom-corner: url("/images/backgrounds/dark-bottom-corner.png");
+  --bg-top-corner: url("/images/backgrounds/dark-top-corner.png");
 
 }

@@ -3,9 +3,9 @@
 
 footer {
     height: 170px;
-    background: var(--bg-secondary);
     text-align: center;
     padding-top: 50px;
+    bottom: 0;
     @include sm { // 576px
         padding-top: 30px;
     }

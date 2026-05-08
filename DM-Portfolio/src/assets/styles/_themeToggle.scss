@@ -34,7 +34,7 @@
 
 .form-switch .form-check-input::after {
   content: var(--track-icon);
-  color: var(--track-icon-color);
+  color: var(--text-secondary);
   transform: translateX(var(--track-icon-position));
 }
 
@@ -49,6 +49,10 @@
   bottom: 0;
   left: 0;
   margin: 20px;
+}
+
+.form-check.form-switch {
+  margin-bottom: -24px;
 }
 
 

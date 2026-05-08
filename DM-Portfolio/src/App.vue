@@ -1,5 +1,6 @@
 <script setup>
 import Nav from './components/Nav.vue';
+import Header from "./components/Header.vue";
 import ProjectCard from './components/ProjectCard.vue';
 import LightDarkToggle from './components/LightDarkToggle.vue';
 import Footer from './components/Footer.vue';
@@ -12,11 +13,8 @@ const { theme, toggle } = useTheme()
 <template>
   <body>
     <Nav ></Nav>
-    <main>
       <router-view />
       <LightDarkToggle />
-    </main>
-    <Footer ></Footer>
   </body>
 </template>
 

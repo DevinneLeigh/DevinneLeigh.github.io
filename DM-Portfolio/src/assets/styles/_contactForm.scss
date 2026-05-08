@@ -1,0 +1,31 @@
+@use 'variables';
+@use 'mixins' as *;
+
+.contact-form-wrapper {
+    max-width: 750px;
+ .contact-form {
+    form {
+        padding: 20px 40px;
+        border-radius: 6px;
+        background: var(--bg3);
+        box-shadow: 5px 10px 10px var(--shadow);
+        input, textarea {
+            background: var(--bg);
+            color: var(--inverted-primary);
+            border: none;
+        }
+        button {
+            background-color: var(--secondary);
+            color: var(--text);
+            transition-property: background-color, color;
+            transition-timing-function: ease;
+            transition-duration: 0.3s;
+            
+        }
+        button:hover {
+            background-color: var(--inverted-secondary);
+            color: var(--bg)
+        }
+    }
+ }
+}

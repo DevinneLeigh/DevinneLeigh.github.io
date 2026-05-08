@@ -2,20 +2,48 @@
 @use 'mixins' as *;
 
 @use 'bootstrap';
+@use 'header';
 @use 'game';
 @use 'nav';
 @use 'projectCards';
 @use 'footer';
 @use 'themeToggle';
+@use 'contactForm';
 
 @import url('../fonts/Exo/Exo.css');
 
+h1, h2, h3, h4, h5, h6, p, a, label, input {
+  font-family: 'Exo';
+}
+
 body {
   margin: 0;
-  background: var(--bg);
+  background-color: var(--bg);
   color: var(--text);
-  transition: background 0.2s, color 0.2s;
 }
+
+#about-page {
+  background: var(--bg) var(--bg-bottom);
+  background-repeat: repeat-x;
+  background-position-y: bottom;
+}
+#contact-page {
+  background: var(--bg) var(--bg-bottom-corner);
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-position-x: right;
+}
+#home-page {
+  background: var(--bg) var(--bg-top);
+  background-repeat: repeat-x;
+  background-position-y: top;
+}
+#portfolio-page {
+  background: var(--bg) var(--bg-top-corner);
+  background-repeat: no-repeat;
+  background-position-y: top;
+}
+
 
 main {
   min-height: calc(100vh - 170px);
@@ -26,7 +54,7 @@ button {
   padding: 0.5rem 1rem;
   border-radius: 8px;
   border: none;
-  background: var(--primary);
+  background: var(--secondary);
   color: white;
   cursor: pointer;
 }
