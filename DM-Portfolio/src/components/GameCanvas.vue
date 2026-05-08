@@ -30,7 +30,7 @@ import bearAttack2 from "@/assets/images/game/bear/Bear_Attack2.png";
 import bearDeath from "@/assets/images/game/bear/Bear_Death.png";
 import bearGetDown from "@/assets/images/game/bear/Bear_Get_Down.png";
 import bearGetUp from "@/assets/images/game/bear/Bear_Get_Up.png";
-import bearIdle from "@/assets/images/game/bear/Bear_Idle.png";
+// import bearIdle from "@/assets/images/game/bear/Bear_Idle.png";
 import bearRun from "@/assets/images/game/bear/Bear_Run.png";
 import bearSit from "@/assets/images/game/bear/Bear_Sit.png";
 import bearStandUp from "@/assets/images/game/bear/Bear_Stand_Up.png";
@@ -105,7 +105,7 @@ class Bear {
 
     // MOVEMENT
     this.patrolSpeed = 80;
-    this.chaseSpeed = 260;
+    this.chaseSpeed = 350;
     this.direction = -1;
   }
 
@@ -264,7 +264,16 @@ class Bear {
           s.play("bear_attack2");
 
           s.once("animationcomplete-bear_attack2", () => {
+
             this.setState("chase");
+
+            this.direction = -1;
+
+            s.setFlipX(true);
+
+            s.setVelocityX(this.direction * this.chaseSpeed);
+
+            s.play("bear_run", true);
           });
         });
       });
@@ -341,6 +350,17 @@ class Bear {
 class MainScene extends Phaser.Scene {
   constructor() {
     super("MainScene");
+  }
+
+  updateParallax(camX) {
+    this.layer1.tilePositionX = camX * 0.15;
+    this.mist1.tilePositionX = camX * 0.3;
+    this.layer2.tilePositionX = camX * 0.45;
+    this.mist2.tilePositionX = camX * 0.6;
+    this.layer3.tilePositionX = camX * 0.75;
+    this.mist3.tilePositionX = camX * 0.9;
+    this.layer4.tilePositionX = camX * 1;
+    this.layer5.tilePositionX = camX * 1.15;
   }
 
   setState(newState) {
@@ -631,6 +651,36 @@ class MainScene extends Phaser.Scene {
       .setDepth(100);
   }
 
+  startBossSequence() {
+    this.bossTriggered = true;
+    this.playerLocked = true;
+
+    const cam = this.cameras.main;
+
+    this.player.setVelocity(0, 0);
+
+    cam.stopFollow();
+
+    const targetX = this.bossEndX + this.scale.width / 2;
+
+    // slow cinematic pan
+    this.tweens.add({
+      targets: cam,
+      scrollX: targetX,
+      duration: 10000,
+      ease: "Power2"
+    });
+
+    // small delay BEFORE intro starts
+    this.time.delayedCall(2000, () => {
+      this.bear.startIntro();
+    });
+
+    this.time.delayedCall(4000, () => {
+      this.playerLocked = false;
+    });
+  }
+
 
 
 
@@ -704,10 +754,10 @@ class MainScene extends Phaser.Scene {
       frameWidth: 128,
       frameHeight: 96
     });
-    this.load.spritesheet('bear_idle', bearIdle, {
-      frameWidth: 128,
-      frameHeight: 96
-    });
+    // this.load.spritesheet('bear_idle', bearIdle, {
+    //   frameWidth: 128,
+    //   frameHeight: 96
+    // });
     this.load.spritesheet('bear_run', bearRun, {
       frameWidth: 128,
       frameHeight: 96
@@ -810,6 +860,8 @@ class MainScene extends Phaser.Scene {
     const WORLD_WIDTH = 8000;
     this.physics.world.setBounds(0, 0, WORLD_WIDTH, height);
     this.physics.world.gravity.y = 1000;
+    this.bossEndX = 6400; 
+
 
     // --- GROUND ---
     const groundHeight = 250;
@@ -950,7 +1002,7 @@ class MainScene extends Phaser.Scene {
 
     // --- PLAYER ---
     this.player = this.physics.add
-      .sprite(5600, height - 335, "fox_idle") //200
+      .sprite(5500, height - 335, "fox_idle") //player start position
       .setDepth(10);
     this.player.setScale(4);
     this.player.play('idle')
@@ -993,21 +1045,22 @@ class MainScene extends Phaser.Scene {
       frameRate: 6,
       repeat: 0
     });
+    this.bear.sprite.setTexture("bear_sit", 10);
 
     // ---BEAR YAWN ANIMATION --
     this.anims.create({
       key: "bear_yawn",
       frames: [
-        { key: 'bear_yawn', frame: 0, duration: 1500},
-        { key: 'bear_yawn', frame: 1, duration: 200},
-        { key: 'bear_yawn', frame: 2, duration: 150},
-        { key: 'bear_yawn', frame: 3, duration: 150},
-        { key: 'bear_yawn', frame: 4, duration: 600},
-        { key: 'bear_yawn', frame: 5, duration: 600},
-        { key: 'bear_yawn', frame: 6, duration: 600},
-        { key: 'bear_yawn', frame: 7, duration: 150},
-        { key: 'bear_yawn', frame: 8, duration: 150},
-        { key: 'bear_yawn', frame: 9, duration: 150},
+        { key: 'bear_yawn', frame: 0, duration: 10},
+        { key: 'bear_yawn', frame: 1, duration: 10},
+        { key: 'bear_yawn', frame: 2, duration: 100},
+        { key: 'bear_yawn', frame: 3, duration: 100},
+        { key: 'bear_yawn', frame: 4, duration: 400},
+        { key: 'bear_yawn', frame: 5, duration: 400},
+        { key: 'bear_yawn', frame: 6, duration: 400},
+        { key: 'bear_yawn', frame: 7, duration: 100},
+        { key: 'bear_yawn', frame: 8, duration: 100},
+        { key: 'bear_yawn', frame: 9, duration: 100},
       ],
       repeat: 0
     });
@@ -1056,27 +1109,23 @@ class MainScene extends Phaser.Scene {
     this.anims.create({
       key: "bear_attack2",
       frames: [
-        { key: 'bear_attack2', frame: 0, duration: 200},
-        { key: 'bear_attack2', frame: 1, duration: 200},
         { key: 'bear_attack2', frame: 2, duration: 100},
-        { key: 'bear_attack2', frame: 3, duration: 100},
-        { key: 'bear_attack2', frame: 4, duration: 400},
-        { key: 'bear_attack2', frame: 5, duration: 400},
-        { key: 'bear_attack2', frame: 6, duration: 400},
-        { key: 'bear_attack2', frame: 7, duration: 200},
-        { key: 'bear_attack2', frame: 8, duration: 200},
-        { key: 'bear_attack2', frame: 9, duration: 200},
+        { key: 'bear_attack2', frame: 3, duration: 75},
+        { key: 'bear_attack2', frame: 4, duration: 150},
+        { key: 'bear_attack2', frame: 5, duration: 100},
+        { key: 'bear_attack2', frame: 6, duration: 50},
+        { key: 'bear_attack2', frame: 7, duration: 25},
       ],
       repeat: 0
     });
 
     // ---BEAR IDLE ANIMATION --
-    this.anims.create({
-      key: "bear_idle",
-      frames: this.anims.generateFrameNumbers("bear_idle", { start: 0, end: 9 }),
-      frameRate: 4,
-      repeat: -1
-    });
+    // this.anims.create({
+    //   key: "bear_idle",
+    //   frames: this.anims.generateFrameNumbers("bear_idle", { start: 0, end: 9 }),
+    //   frameRate: 4,
+    //   repeat: -1
+    // });
 
     // ---BEAR HURT ANIMATION --
     this.anims.create({
@@ -1099,7 +1148,12 @@ class MainScene extends Phaser.Scene {
 
     // --- CAMERA ---
     this.cameras.main.setBounds(0, 0, WORLD_WIDTH, height);
+
     this.cameras.main.startFollow(this.player, true, 0.08, 0.08);
+
+    // force correct initial camera placement
+    this.cameras.main.scrollX = this.player.x - this.scale.width / 2;
+    this.cameras.main.scrollY = this.player.y - this.scale.height / 2;
 
     // --- CONTROLS ---
     this.cursors = this.input.keyboard.createCursorKeys();
@@ -1195,6 +1249,18 @@ class MainScene extends Phaser.Scene {
       },
       this
     )
+
+    //-------BOSS ZONE -------------
+    this.bossTriggered = false;
+    this.bossZone = this.add.zone(6570, this.scale.height - 300, 1, 1000);
+    this.physics.world.enable(this.bossZone);
+    this.bossZone.body.setAllowGravity(false);
+    this.bossZone.body.moves = false;
+    this.physics.add.overlap(this.player, this.bossZone, () => {
+      if (this.bossTriggered) return;
+      this.startBossSequence();
+    });
+    this.playerLocked = false;
   }
 
 
@@ -1204,6 +1270,21 @@ class MainScene extends Phaser.Scene {
     const sitDelayMax = 4000;
     if (this.locked) {
       this.player.setVelocityX(0);
+    }
+
+    const cam = this.cameras.main;
+    const camX = cam.midPoint.x - this.scale.width / 2;
+    this.updateParallax(camX);
+
+    // --- PLAYER LOCK ---
+    if (this.playerLocked) {
+      this.player.setVelocity(0, 0);
+
+      if (this.player.anims.currentAnim?.key !== "idle") {
+        this.player.play("idle", true);
+      }
+
+      return;
     }
     if (!this.idleSitTimer) {
       this.idleSitTimer = this.time.now + Phaser.Math.Between(sitDelayMin, sitDelayMax);
@@ -1231,8 +1312,10 @@ class MainScene extends Phaser.Scene {
       this.player.body.touching.down;
     
     let dir = 0;
-    if (this.cursors.left.isDown) dir = -1;
-    else if (this.cursors.right.isDown) dir = 1;
+    if (!this.playerLocked) {
+      if (this.cursors.left.isDown) dir = -1;
+      else if (this.cursors.right.isDown) dir = 1;
+    }
 
     // --- INTERRUPT SIT ---
     if (this.state === "sit" && (dir !== 0 || !onGround)) {
@@ -1283,17 +1366,12 @@ class MainScene extends Phaser.Scene {
       this.attack();
     }
 
-    // --- PARALLAX ---
-    const cam = this.cameras.main;
-    
-    this.layer1.tilePositionX = cam.scrollX * 0.15;
-    this.mist1.tilePositionX = cam.scrollX * 0.3;
-    this.layer2.tilePositionX = cam.scrollX * 0.45;
-    this.mist2.tilePositionX = cam.scrollX * 0.6;
-    this.layer3.tilePositionX = cam.scrollX * 0.75;
-    this.mist3.tilePositionX = cam.scrollX * 0.9;
-    this.layer4.tilePositionX = cam.scrollX * 1;
-    this.layer5.tilePositionX = cam.scrollX * 1.15;
+
+    if (this.bossTriggered && this.player.x < this.bossEndX) {
+      this.player.x = this.bossEndX;
+      this.player.setVelocityX(0);
+    }
+
 
     // --- ANIMATION ---
     let anim;
