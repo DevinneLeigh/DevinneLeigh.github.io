@@ -107,6 +107,8 @@ class Bear {
     this.patrolSpeed = 80;
     this.chaseSpeed = 350;
     this.direction = -1;
+    this.moveMode = "walk";
+    this.nextMoveSwitch = 0;
   }
 
   // -----------------------------
@@ -133,6 +135,13 @@ class Bear {
     const s = this.sprite;
 
     switch (newState) {
+
+      case "chase":
+        this.nextMoveSwitch = this.scene.time.now;
+        this.moveMode = Math.random() < 0.5 ? "run" : "walk";
+
+        this.nextMoveSwitch = this.scene.time.now;
+        break;
 
       case "hurt":
         s.setVelocityX(0);
@@ -217,25 +226,42 @@ class Bear {
     }
 
     // -----------------------------
-    // CHASE / PATROL
+    // BEAR MOVEMENT 
     // -----------------------------
-    if (distance < this.detectionRange) {
-      this.direction = player.x < s.x ? -1 : 1;
-      s.setVelocityX(this.direction * this.chaseSpeed);
+    if (this.state === "chase") {
 
-      if (s.anims.currentAnim?.key !== "bear_run") {
-        s.play("bear_run");
+      // random walk/run switching
+      if (this.scene.time.now > this.nextMoveSwitch) {
+        this.moveMode = Math.random() < 0.5 ? "run" : "walk";
+        this.nextMoveSwitch = this.scene.time.now + Phaser.Math.Between(800, 2000);
       }
 
-    } else {
+      this.direction = player.x < s.x ? -1 : 1;
+
+      const speed = this.moveMode === "run"
+        ? this.chaseSpeed
+        : this.patrolSpeed;
+
+      s.setVelocityX(this.direction * speed);
+
+      const anim = this.moveMode === "run" ? "bear_run" : "bear_walk";
+
+      if (s.anims.currentAnim?.key !== anim) {
+        s.play(anim, true);
+      }
+
+    } else if (this.state === "patrol") {
+
       if (s.x <= this.arenaLeft) this.direction = 1;
       if (s.x >= this.arenaRight) this.direction = -1;
 
       s.setVelocityX(this.direction * this.patrolSpeed);
 
       if (s.anims.currentAnim?.key !== "bear_walk") {
-        s.play("bear_walk");
+        s.play("bear_walk", true);
       }
+    } else {
+      s.setVelocityX(0);
     }
 
     s.setFlipX(this.direction < 0);
@@ -266,14 +292,7 @@ class Bear {
           s.once("animationcomplete-bear_attack2", () => {
 
             this.setState("chase");
-
-            this.direction = -1;
-
-            s.setFlipX(true);
-
-            s.setVelocityX(this.direction * this.chaseSpeed);
-
-            s.play("bear_run", true);
+            this.nextMoveSwitch = this.scene.time.now;
           });
         });
       });
