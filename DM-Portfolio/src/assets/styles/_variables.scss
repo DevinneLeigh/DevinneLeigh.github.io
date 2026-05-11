@@ -6,7 +6,7 @@
   --text-secondary: #2B2F47;
   --shadow: #0000000b;
   --primary: #EB7A7D;
-  --inverted-primary: #BF3336;
+  --inverted-primary: #ce3d60;
   --secondary: #31D68F;
   --inverted-secondary: #259E69;
   --tertiary: #BF5A1F;
@@ -19,6 +19,8 @@
   --bg-top: url("/images/backgrounds/light-top.png");
   --bg-bottom-corner: url("/images/backgrounds/light-bottom-corner.png");
   --bg-top-corner: url("/images/backgrounds/light-top-corner.png");
+  --github-green-icon: url("@/assets/images/icons/github-dark-green.svg");
+  --github-pink-icon: url("@/assets/images/icons/github-light-pink.svg");
 }
 
 
@@ -29,7 +31,7 @@
   --text: #F5F5F7;
   --text-secondary: #E3E1ED;
   --shadow: #00000053;
-  --primary: #BF3336;
+  --primary: #ce3d60;
   --inverted-primary: #EB7A7D;
   --secondary: #259E69;
   --inverted-secondary: #31D68F;
@@ -43,5 +45,7 @@
   --bg-top: url("/images/backgrounds/dark-top.png");
   --bg-bottom-corner: url("/images/backgrounds/dark-bottom-corner.png");
   --bg-top-corner: url("/images/backgrounds/dark-top-corner.png");
+  --github-green-icon: url("@/assets/images/icons/github-light-green.svg");
+  --github-pink-icon: url("@/assets/images/icons/github-dark-pink.svg");
 
 }

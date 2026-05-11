@@ -5,7 +5,7 @@ import Footer from '@/components/Footer.vue';
 
 <template>
     <div id="home-page">
-        <main>
+        <main id ="home-main">
             <div id="game">
                 <GameCanvas />
             </div>

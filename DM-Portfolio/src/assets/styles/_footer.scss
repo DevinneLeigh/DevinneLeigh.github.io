@@ -2,52 +2,59 @@
 @use 'mixins' as *;
 
 footer {
-    height: 170px;
+    height: 90px;
     text-align: center;
-    padding-top: 50px;
     bottom: 0;
-    @include sm { // 576px
-        padding-top: 30px;
-    }
     .footer_section {
+        height: 100%;
         display: flex;
         flex-flow: row;
         align-items: center;
         justify-content: right;
         flex-flow: row-reverse;
-        font-size: 12px;
+        font-size: 14px;
         margin-right: 30px;
         gap: 10px;
         z-index: 1;
         @include lg { // 960px
-            font-size: 13px;
+            // font-size: 13px;
         }
         @include xl { // 1200px
-            font-size: 14px;
+            // font-size: 14px;
             margin-right: 60px;
         }
         @include xxl { // 1400px
-            font-size: 16px;
+            // font-size: 16px;
             margin-right: 80px;
         }
         .icon {
             transform: scale(1);
             transition: all .1s ease-in;
             display: inline-block;
-            img {
-                width: 20px;
-                @include sm { // 576px
-                    width: 25px;
-                }
-                @include lg { // 960px
-                    width: 28px;
-                }
-                @include xl { // 1200px
-                    width: 32px;
-                }
-                @include xxl { // 1400px
-                    width: 38px;
-                }
+            .github {
+                background-image: var(--github-green-icon); 
+                transition: filter 0.3s ease;
+            }
+            .github::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                opacity: 0;
+                transition: opacity 0.3s ease;;
+                background-image: var(--github-pink-icon); 
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .github:hover::after {
+                opacity: 1;
+            }
+            .icon-image {
+                width: 40px;
+                height: 40px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
             }
         }
         p {
@@ -55,13 +62,16 @@ footer {
             @include sm { // 576px 
                 margin: 14px 0
             }
-            .pink {
-                color: var(--primary);
-            }
             a {
                 text-decoration: none;
-                color: var(--primary);
+                color: var(--inverted-secondary);
                 cursor: pointer;
+                transition: color 0.3s ease;
+            }
+            a:hover {
+                // text-decoration: underline;
+                // text-decoration-color: var(--inverted-primary);
+                color: var(--primary);
             }
         }
 

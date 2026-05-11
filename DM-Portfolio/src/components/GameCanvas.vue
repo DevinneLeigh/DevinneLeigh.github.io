@@ -411,10 +411,10 @@ class MainScene extends Phaser.Scene {
     this.currentHealth = 100;
 
     this.healthLabel = this.add.text(
-      35, 22, "HP",
+      33, 22, "HP",
       {
-        fontFamily: "Tahoma",
-        fontSize: "30px",
+        fontFamily: "Verdana",
+        fontSize: "28px",
         color: "#1C7850",
         fontStyle: "bold"
       }
@@ -603,7 +603,7 @@ class MainScene extends Phaser.Scene {
       this.scale.height / 2,
       "GAME OVER",
       {
-        fontFamily: "Tahoma",
+        fontFamily: '"Jersey 20"',
         fontSize: "58px",
         color: "#ffffff",
         fontStyle: "bold",
@@ -660,7 +660,7 @@ class MainScene extends Phaser.Scene {
       this.scale.height / 2,
       "YOU WIN",
       {
-        fontFamily: "Tahoma",
+        fontFamily: '"Jersey 20"',
         fontSize: "58px",
         color: "#ffffff",
         fontStyle: "bold"
@@ -1200,7 +1200,7 @@ class MainScene extends Phaser.Scene {
       this
     );
 
-    // --- HEALTH BAR ---
+    // // --- HEALTH BAR ---
       this.createHealthBar();
 
 
@@ -1450,7 +1450,8 @@ class MainScene extends Phaser.Scene {
 
 
 
-onMounted(() => {
+onMounted(async () => {
+  await document.fonts.ready;
   game = new Phaser.Game({
     type: Phaser.AUTO,
     width: 1600,

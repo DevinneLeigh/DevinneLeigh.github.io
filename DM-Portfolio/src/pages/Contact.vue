@@ -8,7 +8,7 @@ import Footer from '@/components/Footer.vue';
     <div id="contact-page">
         <main>
             <Header
-            title="Get In Touch"
+            title="Contact Devinne"
             subtitle="Questions, ideas, or opportunities."
             body="Feel free to reach out regarding projects, collaborations, freelance work, or general inquiries. I’m always interested in new ideas and opportunities to create meaningful digital experiences."
             />

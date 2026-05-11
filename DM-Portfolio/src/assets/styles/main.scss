@@ -12,14 +12,32 @@
 
 @import url('../fonts/Exo/Exo.css');
 
-h1, h2, h3, h4, h5, h6, p, a, label, input {
-  font-family: 'Exo';
+h1, a, label {
+  font-family: "Tektur", sans-serif;
+}
+
+h2, h3, h4, h5, h6, .go {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+p, input {
+  font-family: "Roboto", sans-serif;
+}
+
+.go {
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 body {
   margin: 0;
   background-color: var(--bg);
   color: var(--text);
+}
+
+#home-main {
+  display: flex;
+  justify-content: center;
+  height: 100%;
 }
 
 #about-page {
@@ -50,7 +68,7 @@ body {
 
 
 main {
-  min-height: calc(100vh - 170px);
+  min-height: calc(100vh - 90px);
 }
 
 
