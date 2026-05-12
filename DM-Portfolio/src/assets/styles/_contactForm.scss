@@ -4,11 +4,11 @@
 .contact-form-wrapper {
     max-width: 750px;
  .contact-form {
+    padding: 20px 40px;
+    border-radius: 6px;
+    background: var(--bg3);
+    box-shadow: 5px 10px 10px var(--shadow);
     form {
-        padding: 20px 40px;
-        border-radius: 6px;
-        background: var(--bg3);
-        box-shadow: 5px 10px 10px var(--shadow);
         input, textarea {
             background: var(--bg);
             color: var(--inverted-primary);

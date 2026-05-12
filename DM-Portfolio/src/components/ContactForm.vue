@@ -2,6 +2,13 @@
 import { ref } from "vue";
 import emailjs from "@emailjs/browser";
 
+defineProps({
+  title: {
+    type: String,
+    default: "",
+  }
+});
+
 const name = ref("");
 const email = ref("");
 const subject = ref("");
@@ -36,6 +43,9 @@ const sendEmail = async () => {
 <template>
     <div class="container pt-5 contact-form-wrapper">
       <div class="justify-content-center contact-form">
+        <div class="contact-title">
+          <h2>{{ title }}</h2>
+        </div>
         <form @submit.prevent="sendEmail">
             <div class="row g-3">
                 <div class="col-md-6">
