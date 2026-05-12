@@ -1,15 +1,12 @@
-<template>
-  <div class="backdrop" @click.self="close">
-    <div class="modal">
-      <h2>My Popup</h2>
-      <p>This is content inside the modal.</p>
-
-      <button @click="close">Close</button>
-    </div>
-  </div>
-</template>
-
 <script setup>
+import ContactForm from './ContactForm.vue';
+const props = defineProps({
+  title: {
+    type: String,
+    default: "",
+  }
+});
+
 const emit = defineEmits(["close"]);
 
 function close() {
@@ -17,20 +14,14 @@ function close() {
 }
 </script>
 
-<style scoped>
-.backdrop {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.modal {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  min-width: 300px;
-}
-</style>
+<template>
+  <div class="contact-backdrop" @click.self="close">
+    <div class="popup">
+        <div class="content-wrapper">
+            <button class="close-button" @click="close">✕</button>
+            <h2>{{ title }}</h2> 
+            <ContactForm/>
+        </div>
+    </div>
+  </div>
+</template>

@@ -70,7 +70,7 @@ watch(
         </div>
 
         <!-- backdrop -->
-        <div v-if="isOpen" class="backdrop" @click="closeMenu"></div>
+        <div v-if="isOpen" class="nav-backdrop" @click="closeMenu"></div>
 
       </div>
     </nav>

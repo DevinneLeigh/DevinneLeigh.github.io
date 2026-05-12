@@ -1,14 +1,6 @@
-<template>
-  <button class="modal-button" @click="showModal = true">
-    <img :src="image" :alt="alt" />
-  </button>
-
-  <Modal v-if="showModal" @close="showModal = false" />
-</template>
-
 <script setup>
 import { ref } from "vue";
-import MyModal from "./Modal.vue";
+import Modal from "./Modal.vue";
 
 defineProps({
   image: {
@@ -19,7 +11,20 @@ defineProps({
     type: String,
     default: "",
   },
+  title: {
+    type: String,
+    default: "",
+  }
 });
 
 const showModal = ref(false);
 </script>
+
+
+<template>
+  <button type="button" class="modal-button" @click="showModal = true">
+    <img :src="image" :alt="alt" />
+  </button>
+
+  <Modal v-if="showModal" :title="title" @close="showModal = false" />
+</template>

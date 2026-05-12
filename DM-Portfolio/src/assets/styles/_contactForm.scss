@@ -8,6 +8,7 @@
     border-radius: 6px;
     background: var(--bg3);
     box-shadow: 5px 10px 10px var(--shadow);
+    z-index: 999;
     form {
         input, textarea {
             background: var(--bg);
@@ -28,4 +29,40 @@
         }
     }
  }
+}
+
+
+// -------Modal-------
+
+
+.contact-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  background: rgba(0,0,0,0.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup {
+  position: relative;
+  z-index: 10000;
+  background: var(--bg);
+  padding-bottom: 80px;
+  width: 100%;
+  .content-wrapper {
+    max-width: 750px;
+    margin: auto;
+    h2 {
+        text-align: center;
+        padding: 40px 0 20px 0;
+    }
+    .close-button {
+        float: right;
+        margin: 20px 20px -20px 20px;
+    }
+  }
 }

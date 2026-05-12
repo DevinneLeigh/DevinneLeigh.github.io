@@ -13,14 +13,14 @@ const { theme, toggle } = useTheme()
 </script>
 
 <template>
-  <body>
     <Nav ></Nav>
       <router-view />
       <ModalButton
       :image="messageIcon"
+      alt="Contact Devinne"
+      title="Contact Devinne"
       />
       <LightDarkToggle />
-  </body>
 </template>
 
 <style lang="scss">

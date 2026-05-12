@@ -16,15 +16,10 @@ footer {
         margin-right: 30px;
         gap: 10px;
         z-index: 1;
-        @include lg { // 960px
-            // font-size: 13px;
-        }
         @include xl { // 1200px
-            // font-size: 14px;
             margin-right: 60px;
         }
         @include xxl { // 1400px
-            // font-size: 16px;
             margin-right: 80px;
         }
         .icon {
@@ -37,24 +32,6 @@ footer {
             justify-content: center;
             align-items: center;
             transition: 0.2s ease;
-            // .github {
-            //     background-image: var(--github-green-icon); 
-            //     transition: filter 0.3s ease;
-            // }
-            // .github::after {
-            //     content: "";
-            //     position: absolute;
-            //     inset: 0;
-            //     opacity: 0;
-            //     transition: opacity 0.3s ease;;
-            //     background-image: var(--github-pink-icon); 
-            //     background-size: contain;
-            //     background-repeat: no-repeat;
-            //     background-position: center;
-            // }
-            // .github:hover::after {
-            //     opacity: 1;
-            // }
             &:hover {
                 background: var(--primary);
             }
@@ -81,8 +58,6 @@ footer {
                 transition: color 0.3s ease;
             }
             a:hover {
-                // text-decoration: underline;
-                // text-decoration-color: var(--inverted-primary);
                 color: var(--primary);
             }
         }
