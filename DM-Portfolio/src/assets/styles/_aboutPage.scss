@@ -1,0 +1,161 @@
+@use 'variables';
+@use 'mixins' as *;
+
+#about-content-wrapper {
+    #skills-wrapper {
+        width: 100%;
+        overflow: hidden;
+        padding: 40px 100px;
+        #skills {
+            display: flex;
+            flex-flow: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px;
+            gap: 10px;
+            margin: auto;
+            @include md { // 768px
+                gap: 20px;
+                max-width: 800px;
+            }
+            @include xxl { // 1400px
+                max-width: 1200px;
+            }
+        }
+        .skill{
+            padding: 18px;
+            border-radius: 100%;
+            // background-image: radial-gradient(#000000, #00000064, #00000000);
+            background: var(--shadow);
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+
+            transition: .35s;
+            img {
+                width: 50px;
+                opacity: 1;
+                transition: opacity .35s ease-in-out;
+            }
+        }
+        .skill:hover {
+            background: var(--shadow);
+        }
+        .skill:hover img {
+            opacity: 0;
+        }
+        .skill:hover .skill-text {
+            opacity: 1;
+        }
+    }
+    .skill-text {
+        opacity: 0;
+        transition: opacity .35s ease-in-out;
+        color: var(--text);
+        position: absolute;
+        font-size: 10px;
+        @include sm { // 576px
+            font-size: 12px;
+        }
+    }
+
+    .skill:hover .skill-text {
+        visibility: visible;
+    }
+
+    #bio-wrapper {
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #bio {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        align-items: center;
+        max-width: 600px;
+        position: relative;
+        margin-top: 40px;
+        @include sm { // 576px
+            margin-top: 80px;
+        }
+        @include md { // 768px
+            margin-top: 0;      
+        }
+        #bio-img {
+            z-index: 2;
+            position: absolute;
+            top: -90px;
+            
+            @include sm { // 576px
+                top: -120px;
+            }
+            @include md { // 768px
+                top: 220px;
+                margin-left: 540px;      
+            }
+            @include lg { // 960px
+                top: 170px;
+                margin-left: 550px;
+            }
+            img {
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+                border-radius: 50%;
+                @include sm { // 576px
+                    width: 175px;
+                    height: 175px;
+                }
+                @include lg { // 960px
+                    width: 225px;
+                    height: 225px;
+                }
+            }
+        }
+        #bio-text {
+            background: var(--secondary);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 80% 85%, 85% 100%, 55% 85%, 0% 85%);
+            margin: 0 10px;
+            padding: 60px 10px 80px 10px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            @include xs { // 400px
+
+            }
+            @include sm { // 576px
+                padding: 60px 25px 80px 25px;
+            }
+            @include md { // 768px
+                padding: 40px 20px 120px 20px;
+            }
+            @include lg { // 960px
+                padding: 40px 60px 80px 60px;
+            }
+             .p1 {
+                @include md { // 768px
+                    padding-right: 30px;
+                }
+            }
+            .p2 {
+                @include md { // 768px
+                    padding-right: 60px;
+                }
+            }
+            .p3 {
+                @include md { // 768px
+                    padding-right: 95px;
+                }
+            }
+            a {
+                color: var(--text);
+                text-decoration: none;
+            }
+        }
+
+    }
+}

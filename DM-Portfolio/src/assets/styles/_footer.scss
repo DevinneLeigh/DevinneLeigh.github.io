@@ -16,12 +16,6 @@ footer {
         margin-right: 30px;
         gap: 10px;
         z-index: 1;
-        @include xl { // 1200px
-            margin-right: 60px;
-        }
-        @include xxl { // 1400px
-            margin-right: 80px;
-        }
         .icon {
             background: var(--secondary);
             border-radius: 50%;
