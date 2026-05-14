@@ -411,10 +411,10 @@ class MainScene extends Phaser.Scene {
     this.currentHealth = 100;
 
     this.healthLabel = this.add.text(
-      33, 22, "HP",
+      38, 16, "HP",
       {
-        fontFamily: "Verdana",
-        fontSize: "28px",
+        fontFamily: "VT323, monospace",
+        fontSize: "45px",
         color: "#1C7850",
         fontStyle: "bold"
       }
@@ -603,8 +603,8 @@ class MainScene extends Phaser.Scene {
       this.scale.height / 2,
       "GAME OVER",
       {
-        fontFamily: '"Jersey 20"',
-        fontSize: "58px",
+        fontFamily: "VT323, monospace",
+        fontSize: "64px",
         color: "#ffffff",
         fontStyle: "bold",
       }
@@ -660,8 +660,8 @@ class MainScene extends Phaser.Scene {
       this.scale.height / 2,
       "YOU WIN",
       {
-        fontFamily: '"Jersey 20"',
-        fontSize: "58px",
+        fontFamily: "VT323, monospace",
+        fontSize: "64px",
         color: "#ffffff",
         fontStyle: "bold"
       }
@@ -800,6 +800,38 @@ class MainScene extends Phaser.Scene {
   }
 
   create() {
+
+    this.startMessage = this.add.text(
+      800, // x position on screen
+      100, // y position on screen
+      "Welcome to My Portfolio",
+      {
+        fontFamily: "Tektur, sans-serif",
+        fontSize: "80px",
+        color: "#1A1D2B",
+        shadow: { offsetX: 2, offsetY: 2, color: '#00000053', blur: 1, fill: true },
+        align: "center"
+      }
+    )
+    .setOrigin(0.5)
+    .setDepth(200);
+
+    this.messageText = this.add.text(
+      800, // x position on screen
+      820, // y position on screen
+      "Use ←↑→ to move/jump\n Use SPACE or LMB to attack ",
+      {
+        fontFamily: "VT323, monospace",
+        fontSize: "34px",
+        color: "#E3E1ED",
+        backgroundColor: "#00000053",
+        lineSpacing: 10,
+        align: "center"
+      }
+    )
+    .setOrigin(0.5)
+    .setDepth(200);
+    
     this.attackDebug = this.add.graphics();
     this.attackDebug.setDepth(9999);
     this.isDead = false;
@@ -1021,7 +1053,7 @@ class MainScene extends Phaser.Scene {
 
     // --- PLAYER ---
     this.player = this.physics.add
-      .sprite(5500, height - 335, "fox_idle") //player start position
+      .sprite(200, height - 335, "fox_idle") //player start position
       .setDepth(10);
     this.player.setScale(4);
     this.player.play('idle')
@@ -1419,7 +1451,7 @@ class MainScene extends Phaser.Scene {
 
 
     //--------PLAYER ATTACK HIT BOX-------------------------------
-    this.attackDebug.clear();
+    // this.attackDebug.clear();
     const direction = this.player.flipX ? -1 : 1;
 
     const boxX =
@@ -1430,14 +1462,14 @@ class MainScene extends Phaser.Scene {
       this.player.body.center.y +
       this.playerAttackBox.offsetY;
 
-    this.attackDebug.lineStyle(2, 0x00ff00, 1);
+    // this.attackDebug.lineStyle(2, 0x00ff00, 1);
 
-    this.attackDebug.strokeRect(
-      boxX - this.playerAttackBox.width / 2,
-      boxY - this.playerAttackBox.height / 2,
-      this.playerAttackBox.width,
-      this.playerAttackBox.height
-    );
+    // this.attackDebug.strokeRect(
+    //   boxX - this.playerAttackBox.width / 2,
+    //   boxY - this.playerAttackBox.height / 2,
+    //   this.playerAttackBox.width,
+    //   this.playerAttackBox.height
+    // );
     //-------------------------------------------------------------
 
     if (this.isAttacking) {
@@ -1451,7 +1483,12 @@ class MainScene extends Phaser.Scene {
 
 
 onMounted(async () => {
-  await document.fonts.ready;
+  await Promise.all([
+    document.fonts.load('34px "VT323"'),
+    document.fonts.load('45px "VT323"'),
+    document.fonts.load('64px "VT323"'),
+    document.fonts.load('80px "Tektur"'),
+  ]);
   game = new Phaser.Game({
     type: Phaser.AUTO,
     width: 1600,

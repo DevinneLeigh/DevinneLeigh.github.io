@@ -2,6 +2,8 @@
 import Header from "@/components/Header.vue";
 import ProjectCard from '@/components/ProjectCard.vue';
 import Footer from '@/components/Footer.vue';
+import ModalButton from '@/components/ModalButton.vue';
+import messageIcon from "@/assets/images/icons/message-icon.svg";
 </script>
 
 <template>
@@ -16,4 +18,9 @@ import Footer from '@/components/Footer.vue';
         </main>
         <Footer ></Footer>
     </div>
+    <ModalButton
+      :image="messageIcon"
+      alt="Contact Devinne"
+      title="Contact Devinne"
+      />
 </template>
