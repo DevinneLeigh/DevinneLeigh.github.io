@@ -2,6 +2,8 @@
 import { ref } from "vue";
 import emailjs from "@emailjs/browser";
 
+const emit = defineEmits(["success"]);
+
 const name = ref("");
 const email = ref("");
 const subject = ref("");
@@ -21,7 +23,7 @@ const sendEmail = async () => {
       "csAX1d4oB0_VB9HYo"
     );
 
-    alert("Message sent!");
+    emit("success");
     name.value = "";
     email.value = "";
     subject.value = "";
@@ -74,7 +76,7 @@ const sendEmail = async () => {
                     ></textarea>
                 </div>
                 <div class="col-12 text-end">
-                    <button type="submit" class="submit-btn accent-btn">
+                    <button type="submit" class="contact-btn">
                       Send Message
                     </button>                 
                 </div>

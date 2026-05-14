@@ -2,7 +2,6 @@
 import { ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import GameCanvas from '@/components/GameCanvas.vue';
-import Footer from '@/components/Footer.vue';
 import ModalButton from '@/components/ModalButton.vue';
 import messageIcon from "@/assets/images/icons/message-icon.svg";
 
@@ -24,7 +23,6 @@ const router = useRouter()
                 </div>
             </div>
         </main>
-        <Footer ></Footer>
     </div>
     <ModalButton
       :image="messageIcon"

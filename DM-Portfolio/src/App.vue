@@ -14,6 +14,7 @@ const { theme, toggle } = useTheme()
     <Nav ></Nav>
       <router-view />
       <LightDarkToggle />
+      <Footer ></Footer>
 </template>
 
 <style lang="scss">

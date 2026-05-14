@@ -1,7 +1,6 @@
 <script setup>
 import Header from "@/components/Header.vue";
 import SkillBubble from "@/components/SkillBubble.vue";
-import Footer from '@/components/Footer.vue';
 import ModalButton from '@/components/ModalButton.vue';
 import messageIcon from "@/assets/images/icons/message-icon.svg";
 </script>
@@ -33,7 +32,6 @@ import messageIcon from "@/assets/images/icons/message-icon.svg";
                 </div>
             </div> 
         </main>
-        <Footer ></Footer>
     </div>
     <ModalButton
       :image="messageIcon"

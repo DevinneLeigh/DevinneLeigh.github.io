@@ -15,22 +15,22 @@
             color: var(--inverted-primary);
             border: none;
         }
-        button {
-            background-color: var(--secondary);
-            color: var(--text);
-            transition-property: background-color, color;
-            transition-timing-function: ease;
-            transition-duration: 0.3s;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            
-        }
-        button:hover {
-            background-color: var(--inverted-secondary);
-            color: var(--bg)
-        }
     }
  }
+}
+
+.contact-btn {
+    background-color: var(--secondary);
+    color: var(--text);
+    transition-property: background-color, color;
+    transition-timing-function: ease;
+    transition-duration: 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    &:hover {
+        background-color: var(--inverted-secondary);
+        color: var(--bg)
+    }
 }
 
 
@@ -67,4 +67,9 @@
         margin: 20px 20px -20px 20px;
     }
   }
+}
+
+.success-popup {
+    max-width: 500px;
+    text-align: center;
 }
