@@ -2,22 +2,12 @@
 @use 'mixins' as *;
 
 footer {
-    height: 90px;
-    text-align: center;
-    bottom: 0;
     .footer_section {
         z-index: 999;
         position: fixed;
         bottom: 0;
         right: 0;
         margin: 0 18px 18px 0;
-        display: flex;
-        flex-flow: row;
-        align-items: center;
-        justify-content: right;
-        flex-flow: row-reverse;
-        font-size: 14px;
-        gap: 10px;
         .icon {
             background: var(--secondary);
             border-radius: 50%;
@@ -42,31 +32,5 @@ footer {
                 height: 35px;
             }
         }
-        p {
-            margin: 10px 0;
-            @include sm { // 576px 
-                margin: 14px 0
-            }
-            a {
-                text-decoration: none;
-                color: var(--inverted-secondary);
-                cursor: pointer;
-                transition: color 0.3s ease;
-            }
-            a:hover {
-                color: var(--primary);
-            }
-        }
-
     }
-
-    .itch:hover, .github:hover, .email:hover  {
-        animation: icon-wiggle .3s;
-    }
-    a:hover {
-        transform: scale(1.1);
-    }
-    a:active { 
-        transform: scale(1); 
-    } 
 }

@@ -2,25 +2,27 @@
 @use 'mixins' as *;
 
 .header {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 10px;
    .header-text {
     display: flex;
     flex-flow: column;
     justify-content: center;
-    padding: 50px 150px;
-        .title {
-            h1 {
-                font-size: 50px;
-            }
+    .title {
+        h1 {
+            font-size: 50px;
         }
-        .subtitle {
-            h2 {
-                font-size: 26px;
-            }
+    }
+    .subtitle {
+        h2 {
+            font-size: 26px;
         }
-        .body {
-            p{
-                font-size: 14px;
-            }
+    }
+    .body {
+        p{
+            font-size: 14px;
         }
+    }
    } 
 }

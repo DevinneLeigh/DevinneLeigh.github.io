@@ -5,33 +5,28 @@
     #skills-wrapper {
         width: 100%;
         overflow: hidden;
-        padding: 40px 100px;
+        max-width: 1200px;
+        padding: 40px 10px;
+        margin: auto;
         #skills {
             display: flex;
             flex-flow: row;
             flex-wrap: wrap;
-            justify-content: center;
-            padding: 10px;
+            justify-content: left;
             gap: 10px;
             margin: auto;
             @include md { // 768px
-                gap: 20px;
-                max-width: 800px;
-            }
-            @include xxl { // 1400px
-                max-width: 1200px;
+                gap: 15px;
             }
         }
         .skill{
             padding: 18px;
             border-radius: 100%;
-            // background-image: radial-gradient(#000000, #00000064, #00000000);
             background: var(--shadow);
             display: flex;
             flex-flow: column;
             justify-content: center;
             align-items: center;
-
             transition: .35s;
             img {
                 width: 50px;
