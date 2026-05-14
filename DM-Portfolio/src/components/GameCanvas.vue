@@ -803,7 +803,7 @@ class MainScene extends Phaser.Scene {
 
     this.startMessage = this.add.text(
       800, // x position on screen
-      100, // y position on screen
+      200, // y position on screen
       "Welcome to My Portfolio",
       {
         fontFamily: "Tektur, sans-serif",
@@ -933,35 +933,46 @@ class MainScene extends Phaser.Scene {
     const obstacleData = [
 
       // bear traps
-      // { type: "bearTrap", shape: "rectangle", x: 700, y: height - 255, scale: 0.25, sizeX: 100, sizeY: 1, offsetX: 20, offsetY: 60 },
-      { type: "bearTrap", shape: "rectangle", x: 3500, y: height - 250, scale: 0.25, sizeX: 100, sizeY: 1, offsetX: 20, offsetY: 60 },
+      { type: "bearTrap", x: 900, y: height - 259, scale: 1 },
+      { type: "bearTrap", x: 3500, y: height - 250, scale: 1 },
 
       // holes
-      { type: "hole", shape: "rectangle", x: 5000, y: height - 255, scale: 0.4, sizeX: 105, sizeY: 20, offsetX: 155, offsetY: 90 },
+      { type: "hole", x: 5000, y: height - 255, scale: 1 },
     ];
 
+    const trapSizeX = 100;
+    const trapOffsetX = 20;
+    const trapOffsetY = 60;
+
+    const holeSizeX = 105;
+    const holeOffsetX = 155;
+    const holeOffsetY = 90;
+
     obstacleData.forEach(s => {
-      const obj = this.physics.add.staticSprite(s.x, s.y, s.type)
-        .setDepth(9)
-        .setScale(s.scale);
-
-      obj.refreshBody();
-
-      // set hitbox
-      if (s.shape === "circle") {
-        obj.body.setCircle(s.radius);
-      } else {
-        obj.body.setSize(s.sizeX, s.sizeY);
-      }
-
-      obj.body.setOffset(s.offsetX, s.offsetY);
-
-      // assign to correct group
       if (s.type === "hole") {
+        const scale = s.scale ?? 1;
+        const holeScale = 0.4 * scale;
+        
+        const obj = this.physics.add.staticSprite(s.x, s.y, s.type)
+          .setDepth(9)
+          .setScale(holeScale);
+
+        obj.refreshBody();
+        obj.body.setSize(holeSizeX * scale, 1);
+        obj.body.setOffset(holeOffsetX * scale, holeOffsetY * scale);
         this.holes.add(obj);
       } else {
-        this.traps.add(obj);
-      }
+          const scale = s.scale ?? 1;
+          const trapScale = 0.23 * scale;
+          const obj = this.physics.add.staticSprite(s.x, s.y, s.type)
+            .setDepth(9)
+            .setScale(trapScale);
+
+          obj.refreshBody();
+          obj.body.setSize(trapSizeX * scale, 1);
+          obj.body.setOffset(trapOffsetX * scale, trapOffsetY * scale);
+          this.traps.add(obj);
+        }
     });
 
 
@@ -1057,7 +1068,7 @@ class MainScene extends Phaser.Scene {
       .setDepth(10);
     this.player.setScale(4);
     this.player.play('idle')
-    this.player.body.setSize(22, 20);
+    this.player.body.setSize(22, 15);
     this.player.body.setOffset(32, 26);
 
     this.player.setCollideWorldBounds(true);
@@ -1245,52 +1256,95 @@ class MainScene extends Phaser.Scene {
     // // -- TREES --
     this.tree = this.add.group();
     const treeData = [
-      { x: 600, y: height - 740, scale: .75, color: "tree1", flip: true },
+      // { x: 1100, y: height - 680, scale: .75, type: "tree1", flip: false },
+      { x: 1000, y: height - 880, scale: .5, type: "tree2", flip: true },
     ];
     treeData.forEach(s => {
-      const tree = this.add.sprite(s.x, s.y, s.color)
+      const tree = this.add.sprite(s.x, s.y, s.type)
         .setDepth(7)
         .setScale(s.scale)
       tree.setFlipX(s.flip);
       this.tree.add(tree);
     }); 
 
-    // -- LEAVES OVERLAY --
-    this.leavesOverlay = this.add.group();
-    const leavesOverlayData = [
-      { x: 480, y: height - 430, scale: .35, color: "leaves2", flip: true },
-      { x: 860, y: height - 635, scale: .35, color: "leaves1", flip: true},
+    const leafPlatforms = [
+      // -------- tree 1 ---------
+      {
+        x: 900,
+        y: height - 530,
+        type: "leaves1",
+        scale: 0.82,
+        flip: true,
+      },
+      {
+        x: 1050,
+        y: height - 890,
+        type: "leaves1",
+        scale: 0.8,
+        flip: false,
+      },
+      {
+        x: 1240,
+        y: height - 810,
+        type: "leaves2",
+        scale: 0.8,
+        flip: false,
+      },
+      // -------- bush 1 ---------
+      {
+        x: 1350,
+        y: height - 300,
+        type: "leaves2",
+        scale: 0.9,
+        flip: false,
+      },
     ];
-    leavesOverlayData.forEach(s => {
-      const leavesOverlay = this.add.sprite(s.x, s.y, s.color)
-        .setDepth(11)
-        .setScale(s.scale)
-      leavesOverlay.setFlipX(s.flip);
-      this.leavesOverlay.add(leavesOverlay);
-    });     
 
-    // -- LEAVES --
+
     this.leaves = this.physics.add.staticGroup();
 
-    const leavesData = [
-      { x: 480, y: height - 450, scale: .4, color: "leaves2", flip: false, sizeX: 350, sizeY: 1, offsetX: 75, offsetY: 80 },
-      { x: 860, y: height - 655, scale: .4, color: "leaves1", flip: false, sizeX: 350, sizeY: 1, offsetX: 75, offsetY: 80 },
-    ];
+    const DEPTHS = {
+      leavesBack: 8,
+      leavesFront: 11,
+    };
 
+    leafPlatforms.forEach(s => {
 
-    leavesData.forEach(s => {
-      const leavesZone = this.physics.add.staticSprite(s.x, s.y, s.color)
-        .setDepth(8)
-        .setScale(s.scale)
+      const scale = s.scale ?? 1;
+      const backScale = 0.4 * scale;
+      const frontScale = 0.35 * scale;
+      const overlayOffsetY = 20 * scale;
+      const sizeX = 350;
+      const offsetX = 75;
+      const offsetY = 80;
 
+      const leavesZone = this.physics.add.staticSprite(
+        s.x,
+        s.y,
+        s.type
+      )
+        .setDepth(DEPTHS.leavesBack)
+        .setScale(backScale)
+        .setFlipX(s.flip);
+
+      
       leavesZone.refreshBody();
 
-      leavesZone.body.setSize(s.sizeX, s.sizeY);
-      leavesZone.body.setOffset(s.offsetX, s.offsetY);
-      leavesZone.setFlipX(s.flip);
+      leavesZone.body.setSize(sizeX * scale, 1);
+      leavesZone.body.setOffset(offsetX * scale, offsetY * scale);
 
       this.leaves.add(leavesZone);
-    });   
+
+      // OVERLAY
+      this.add.sprite(
+        s.x,
+        s.y + overlayOffsetY,
+        s.type
+      )
+        .setDepth(DEPTHS.leavesFront)
+        .setScale(frontScale)
+        .setFlipX(!s.flip);
+    });
     this.leavesCollider = this.physics.add.collider(
       this.player,
       this.leaves,
@@ -1403,7 +1457,7 @@ class MainScene extends Phaser.Scene {
       // --- JUMP ---
       const isJumpPressed = Phaser.Input.Keyboard.JustDown(this.cursors.up);
       if (isJumpPressed && onGround) {
-        this.player.setVelocityY(-680);
+        this.player.setVelocityY(-700);
       }
     }
 
