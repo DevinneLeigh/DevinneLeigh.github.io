@@ -40,6 +40,7 @@ import bearYawn from "@/assets/images/game/bear/Bear_Yawn.png";
 import log1 from "@/assets/images/game/platforms/logs/log1.png"
 import log2 from "@/assets/images/game/platforms/logs/log2.png"
 import log2_2 from "@/assets/images/game/platforms/logs/log2_2.png"
+import rock from "@/assets/images/game/platforms/logs/rock.png"
 
 import tree1 from "@/assets/images/game/platforms/trees/tree1.png"
 import tree2 from "@/assets/images/game/platforms/trees/tree2.png"
@@ -48,7 +49,6 @@ import leaves2 from "@/assets/images/game/platforms/trees/leaves2.png"
 
 
 import bearTrap from "@/assets/images/game/obstacles/bear-trap.png"
-import spike from "@/assets/images/game/obstacles/spike.png"
 
 import hole from "@/assets/images/game/obstacles/hole.png"
 
@@ -327,7 +327,7 @@ class Bear {
 
     if (inBox && !this.hasDealtDamage) {
       this.hasDealtDamage = true;
-      this.scene.takeDamage(10, s.x);
+      this.scene.takeDamage(25, s.x);
     }
   }
 
@@ -561,7 +561,7 @@ class MainScene extends Phaser.Scene {
     const vx = dir * 100;   // horizontal knockback
     const vy = -200;        // vertical lift
 
-    this.takeDamage(1, obstacle.x);
+    this.takeDamage(20, obstacle.x);
 
     this.isKnockedBack = true;
     player.setVelocity(vx, vy);
@@ -719,12 +719,12 @@ class MainScene extends Phaser.Scene {
     this.load.image("log1", log1);
     this.load.image("log2", log2);
     this.load.image("log2_2", log2_2);
+    this.load.image("rock", rock);
     this.load.image("tree1", tree1);
     this.load.image("tree2", tree2);
     this.load.image("leaves1", leaves1);
     this.load.image("leaves2", leaves2);
     this.load.image("bearTrap", bearTrap);
-    this.load.image("spike", spike);
     this.load.image("hole", hole);
 
     this.load.spritesheet('fox_walk', foxWalk, {
@@ -835,8 +835,8 @@ class MainScene extends Phaser.Scene {
     .setOrigin(0.5)
     .setDepth(200);
     
-    this.attackDebug = this.add.graphics();
-    this.attackDebug.setDepth(9999);
+    // this.attackDebug = this.add.graphics();
+    // this.attackDebug.setDepth(9999);
     this.isDead = false;
     this.isKnockedBack = false;
     this.isInvincible = false;
@@ -846,11 +846,11 @@ class MainScene extends Phaser.Scene {
     this.state = "idle"; 
     this.locked = false; 
 
-    this.input.keyboard.on("keydown-T", () => {
-      this.debugEnabled = !this.debugEnabled;
+    // this.input.keyboard.on("keydown-T", () => {
+    //   this.debugEnabled = !this.debugEnabled;
 
-      this.physics.world.debugGraphic.visible = this.debugEnabled;
-    });
+    //   this.physics.world.debugGraphic.visible = this.debugEnabled;
+    // });
 
     this.isHurting = false;
     const { width, height } = this.scale.gameSize;
@@ -936,15 +936,16 @@ class MainScene extends Phaser.Scene {
     const obstacleData = [
       // find traps
       // bear traps
-      { type: "bearTrap", x: 900, y: height - 259, scale: 1 },
-      // { type: "bearTrap", x: 1900, y: height - 259, scale: 1 },
-      { type: "bearTrap", x: 3500, y: height - 250, scale: 1 },
+      { type: "bearTrap", x: 2200, y: height - 259, scale: 1 },
+      { type: "bearTrap", x: 4400, y: height - 259, scale: 1 },
+      { type: "bearTrap", x: 4600, y: height - 259, scale: 1 },
+      { type: "bearTrap", x: 5270, y: height - 625, scale: 1 },
 
 
       // find holes
       // holes
-      { type: "hole", x: 2500, y: height - 255, scale: 1.5 },
-      { type: "hole", x: 5000, y: height - 255, scale: 1 },
+      { type: "hole", x: 3310, y: height - 240, scale: 1.58 },
+      { type: "hole", x: 5500, y: height - 255, scale: 1.58 },
     ];
 
     const trapSizeX = 100;
@@ -1072,7 +1073,7 @@ class MainScene extends Phaser.Scene {
     // --- PLAYER ---
     this.player = this.physics.add
     // find player
-      .sprite(1900, height - 335, "fox_idle") //player start position
+      .sprite(750, height - 335, "fox_idle") //player start position
       .setDepth(10);
     this.player.setScale(4);
     this.player.play('idle')
@@ -1200,8 +1201,8 @@ class MainScene extends Phaser.Scene {
     // ---BEAR HURT ANIMATION --
     this.anims.create({
       key: "bear_hurt",
-      frames: this.anims.generateFrameNumbers("bear_attack2", { start: 2, end: 3 }),
-      frameRate: 2,
+      frames: this.anims.generateFrameNumbers("bear_attack2", { start: 3, end: 7 }),
+      frameRate: 6,
       repeat: 0
     });
 
@@ -1265,8 +1266,13 @@ class MainScene extends Phaser.Scene {
     this.log = this.physics.add.staticGroup();
     const logData = [
       //find logs
-      { type: "log1", x: 160, y: height - 280, scale: 1 },
-      { type: "log2", overlay: "log2_2", x: 1500, y: height - 355, scale: 1 },
+      { type: "log1", x: 160, y: height - 300, scale: 1 },
+      { type: "log2", overlay: "log2_2", x: 1550, y: height - 360, scale: 1, flip: true },
+      { type: "log1", x: 2600, y: height - 300, scale: 1 },
+      // { type: "log2", overlay: "log2_2", x: 3800, y: height - 360, scale: 1, flip: true },
+      { type: "log1", x: 5000, y: height - 300, scale: 1 },
+
+      { type: "rock", x: 3800, y: height - 295, scale: 1 },
     ];
 
     const log1SizeX = 100;
@@ -1278,6 +1284,11 @@ class MainScene extends Phaser.Scene {
     const log2SizeY = 70;
     const log2OffsetX = 40;
     const log2OffsetY = 120;
+
+    const rockSizeX = 170;
+    const rockSizeY = 150;
+    const rockOffsetX = 45;
+    const rockOffsetY = 0;
 
     const DEPTHS = {
       back: 8,
@@ -1301,14 +1312,15 @@ class MainScene extends Phaser.Scene {
 
         this.log.add(obj);
 
-      } else {
-          const backScale = 0.5 * scale;
-          const frontScale = 0.5 * scale;
+      } else if (s.type === "log2") {
+          const backScale = 0.48 * scale;
+          const frontScale = 0.48 * scale;
           const overlayOffsetY = 15 * scale;
 
           const obj = this.physics.add.staticSprite(s.x, s.y, s.type)
             .setDepth(DEPTHS.back)
-            .setScale(backScale);
+            .setScale(backScale)
+            .setFlipX(s.flip);
 
           obj.refreshBody();
 
@@ -1319,7 +1331,20 @@ class MainScene extends Phaser.Scene {
 
           this.add.sprite(s.x, s.y + overlayOffsetY, s.overlay)
             .setDepth(DEPTHS.front)
-            .setScale(frontScale);
+            .setScale(frontScale)
+            .setFlipX(s.flip);
+        } else {
+          const rockScale = 0.3 * scale; 
+          const obj = this.physics.add.staticSprite(s.x, s.y, s.type)
+            .setDepth(DEPTHS.back)
+            .setScale(rockScale);
+
+          obj.refreshBody();
+
+          obj.body.setSize(rockSizeX * scale, rockSizeY * scale);
+          obj.body.setOffset(rockOffsetX * scale, rockOffsetY * scale);
+
+          this.log.add(obj);
         }
     });
     this.logCollider = this.physics.add.collider(
@@ -1328,12 +1353,18 @@ class MainScene extends Phaser.Scene {
     );
 
 
+
     // // -- TREES --
     this.tree = this.add.group();
     const treeData = [
       //find trees
-      // { x: 1100, y: height - 680, scale: .75, type: "tree1", flip: false },
       { x: 1000, y: height - 880, scale: .5, type: "tree2", flip: true },
+      { x: 2150, y: height - 880, scale: .5, type: "tree2", flip: false },
+      { x: 3100, y: height - 240, scale: .75, type: "tree1", flip: true },
+      { x: 3450, y: height - 880, scale: .5, type: "tree2", flip: false },
+      { x: 4450, y: height - 730, scale: .75, type: "tree1", flip: false },
+      { x: 5200, y: height - 850, scale: .5, type: "tree2", flip: false },
+      { x: 6000, y: height - 450, scale: .75, type: "tree1", flip: true },
     ];
     treeData.forEach(s => {
       const tree = this.add.sprite(s.x, s.y, s.type)
@@ -1349,17 +1380,29 @@ class MainScene extends Phaser.Scene {
       { x: 900, y: height - 530, type: "leaves1", scale: 0.82, flip: true, },
       { x: 1050, y: height - 890, type: "leaves1", scale: 0.8, flip: false, },
       { x: 1240, y: height - 810, type: "leaves2", scale: 0.8, flip: false, },
-      // -------- bush 1 ---------
-      // { x: 1350, y: height - 300, type: "leaves2", scale: 0.9, flip: false, },
+      // -------- tree 2 ---------
+      { x: 2250, y: height - 590, type: "leaves2", scale: 0.9, flip: false },
+      { x: 2050, y: height - 850, type: "leaves1", scale: 1, flip: false },
+      // -------- tree 3 ---------
+      { x: 2900, y: height - 700, type: "leaves1", scale: 1, flip: true },
+      // -------- tree 4 ---------
+      { x: 3500, y: height - 590, type: "leaves2", scale: 1, flip: true },
+      { x: 3450, y: height - 900, type: "leaves1", scale: 1.2, flip: true },
+      // -------- tree 5 ---------
+      { x: 4200, y: height - 650, type: "leaves1", scale: 1, flip: true },
+      { x: 4500, y: height - 540, type: "leaves2", scale: 0.6, flip: false },
+      // -------- tree 6 ---------
+      { x: 5250, y: height - 550, type: "leaves1", scale: 0.85, flip: false },
+      { x: 5100, y: height - 750, type: "leaves1", scale: 0.7, flip: true },
+      // -------- tree 7 ---------
+      { x: 5800, y: height - 830, type: "leaves2", scale: 1.15, flip: false },
+      // // -------- bush 1 ---------
+      // { x: 3830, y: height - 350, type: "leaves2", scale: 0.9, flip: false, },
+      // { x: 3800, y: height - 295, type: "leaves1", scale: 0.9, flip: true, },
     ];
 
 
     this.leaves = this.physics.add.staticGroup();
-
-    // const DEPTHS = {
-    //   leavesBack: 8,
-    //   leavesFront: 11,
-    // };
 
     leafPlatforms.forEach(s => {
 
@@ -1367,7 +1410,8 @@ class MainScene extends Phaser.Scene {
       const backScale = 0.4 * scale;
       const frontScale = 0.35 * scale;
       const overlayOffsetY = 20 * scale;
-      const sizeX = 350;
+      const size1X = 430;
+      const size2X = 350;
       const offsetX = 75;
       const offsetY = 80;
 
@@ -1378,12 +1422,14 @@ class MainScene extends Phaser.Scene {
       )
         .setDepth(DEPTHS.back)
         .setScale(backScale)
-        .setFlipX(s.flip);
-
+        .setFlipX(s.flip)
       
       leavesZone.refreshBody();
-
-      leavesZone.body.setSize(sizeX * scale, 1);
+      if(s.type === "leaves1"){
+        leavesZone.body.setSize(size1X * scale, 1);
+      } else {
+        leavesZone.body.setSize(size2X * scale, 1);
+      }
       leavesZone.body.setOffset(offsetX * scale, offsetY * scale);
 
       this.leaves.add(leavesZone);
@@ -1396,7 +1442,7 @@ class MainScene extends Phaser.Scene {
       )
         .setDepth(DEPTHS.front)
         .setScale(frontScale)
-        .setFlipX(!s.flip);
+        .setFlipX(!s.flip)
     });
     this.leavesCollider = this.physics.add.collider(
       this.player,
@@ -1604,8 +1650,8 @@ onMounted(async () => {
     physics: {
       default: "arcade",
       arcade: {
-        debug: true,
-        debugShowBody: true,
+        debug: false,
+        debugShowBody: false,
         debugShowVelocity: false,
         debugBodyColor: 0xff0000,
       },
