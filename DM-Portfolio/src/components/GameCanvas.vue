@@ -327,7 +327,7 @@ class Bear {
 
     if (inBox && !this.hasDealtDamage) {
       this.hasDealtDamage = true;
-      this.scene.takeDamage(25, s.x);
+      this.scene.takeDamage(20, s.x);
     }
   }
 
@@ -503,69 +503,73 @@ class MainScene extends Phaser.Scene {
     });
   }
 
-  takeDamage(amount, sourceX = null) {
-    if (this.isDead || this.isInvincible) return;
+takeDamage(amount, sourceX = null) {
+  if (this.isDead || this.isInvincible) return;
 
-    this.isInvincible = true;
+  this.isInvincible = true;
+  this.isHurting = true;
+  this.isKnockedBack = true;
 
-    // --- health ---
-    this.currentHealth -= amount;
-    this.currentHealth = Math.max(this.currentHealth, 0);
-    this.drawHealthBar();
+  // --- health ---
+  this.currentHealth -= amount;
+  this.currentHealth = Math.max(this.currentHealth, 0);
+  this.drawHealthBar();
 
-    // --- death check ---
-    if (this.currentHealth <= 0) {
-      this.handleDeath();
-      return;
+  // --- death check ---
+  if (this.currentHealth <= 0) {
+    this.handleDeath();
+    return;
+  }
+
+  // --- hurt state ---
+  this.setState("hurt");
+  this.player.play("hurt", true);
+
+  // --- knockback ---
+  if (sourceX !== null) {
+    const dir = this.player.x < sourceX ? -1 : 1;
+
+    const knockbackX = dir * 350;
+    const knockbackY = -300;
+
+    this.player.setVelocity(knockbackX, knockbackY);
+  }
+
+  // --- flash effect ---
+  this.tweens.add({
+    targets: this.player,
+    alpha: 0,
+    duration: 75,
+    yoyo: true,
+    repeat: 5
+  });
+
+  const KNOCKBACK_TIME = 400;
+  const INVINCIBILITY_TIME = 1000;
+
+  // --- end knockback ---
+  this.time.delayedCall(KNOCKBACK_TIME, () => {
+    this.isHurting = false;
+    this.isKnockedBack = false;
+
+    if (!this.isDead) {
+      this.unlockState();
+      this.setState("idle");
     }
+  });
 
-    this.isHurting = true;
+  // --- invincibility ---
+  this.time.delayedCall(INVINCIBILITY_TIME, () => {
+    this.isInvincible = false;
+    this.player.alpha = 1;
+  });
+}
 
-    // --- damage animation override ---
-    this.player.play("hurt", true); 
+handleHit(player, obstacle) {
+  if (this.isInvincible) return;
 
-    // --- flash effect ---
-    this.tweens.add({
-      targets: this.player,
-      alpha: 0,
-      duration: 75,
-      yoyo: true,
-      repeat: 5
-    });
-
-    // --- invincibility window ---
-    const INVINCIBILITY_TIME = 1000; 
-    const KNOCKBACK_TIME = 500;     
-
-    // --- knockback lock ---
-
-    this.time.delayedCall(KNOCKBACK_TIME, () => {
-      this.isHurting = false;
-      this.isKnockedBack = false;
-
-    });
-
-    // --- invincibility (longer) ---
-    this.time.delayedCall(INVINCIBILITY_TIME, () => {
-      this.isInvincible = false;
-      this.player.alpha = 1;
-    }); 
-  }
-
-  handleHit(player, obstacle) {
-    if (this.isInvincible) return;
-
-    // direction: push player away from obstacle
-    const dir = (player.x < obstacle.x) ? -1 : 1;
-
-    const vx = dir * 100;   // horizontal knockback
-    const vy = -200;        // vertical lift
-
-    this.takeDamage(20, obstacle.x);
-
-    this.isKnockedBack = true;
-    player.setVelocity(vx, vy);
-  }
+  this.takeDamage(10, obstacle.x);
+}
 
   handleHole(player, obstacle) {
     if (this.isDead) return;
