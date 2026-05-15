@@ -157,6 +157,7 @@ class Bear {
       case "attack":
         s.setVelocityX(0);
         s.play("bear_attack", true);
+        s.off("animationupdate", this.handleAttackFrame, this);
         s.on("animationupdate", this.handleAttackFrame, this);
 
         s.once("animationcomplete-bear_attack", () => {
@@ -171,7 +172,7 @@ class Bear {
 
       case "dead":
         s.setVelocity(0, 0);
-        s.body.enable = false;
+        s.disableBody(false, false);
         s.play("bear_death");
 
         s.once("animationcomplete-bear_death", () => {
@@ -386,9 +387,9 @@ class MainScene extends Phaser.Scene {
 
   setState(newState) {
     if (this.state === "dead") return;
-
-    const lockedStates = ["attack", "hurt"];
-    if (this.locked && lockedStates.includes(this.state)) return;
+    if (this.locked && this.state === "attack" && newState !== "idle") {
+      return;
+    }
 
     if (this.state === newState) return;
 
@@ -453,6 +454,8 @@ class MainScene extends Phaser.Scene {
 
   attack() {
     if (this.isAttacking) return;
+    if (this.isHurting) return;
+    if (this.isDead) return;
 
     this.isAttacking = true;
     this.hasHitBear = false;
@@ -523,7 +526,6 @@ takeDamage(amount, sourceX = null) {
 
   // --- hurt state ---
   this.setState("hurt");
-  this.player.play("hurt", true);
 
   // --- knockback ---
   if (sourceX !== null) {
@@ -576,7 +578,7 @@ handleHit(player, obstacle) {
 
     // stop movement immediately
     player.setVelocity(0, 0);
-    player.body.enable = false;
+    player.disableBody(true, false);
 
     this.tweens.add({
       targets: player,
@@ -598,14 +600,12 @@ handleHit(player, obstacle) {
     this.isAttacking = false;
 
     this.player.setVelocity(0, 0);
-    this.player.body.enable = false;
+    player.disableBody(true, false);
 
     this.player.play("death", true);
 
-    const cam = this.cameras.main;
-
     this.add.text(
-      cam.scrollX + this.scale.width / 2,
+      this.scale.width / 2,
       this.scale.height / 2,
       "GAME OVER",
       {
@@ -616,6 +616,7 @@ handleHit(player, obstacle) {
       }
     )
       .setOrigin(0.5)
+      .setScrollFactor(0)
       .setDepth(100);
 
     this.time.delayedCall(2500, () => {
@@ -656,28 +657,89 @@ handleHit(player, obstacle) {
     }
   }
 
-  handleWin() {
-    const cam = this.cameras.main;
+handleWin() {
+  if (this.isDead) return;
 
-    this.player.setVelocity(0, 0);
+  this.playerLocked = true;
+  this.player.setVelocity(0, 0);
 
-    this.add.text(
-      cam.scrollX + this.scale.width / 2,
-      this.scale.height / 2,
-      "YOU WIN",
-      {
-        fontFamily: "VT323, monospace",
-        fontSize: "64px",
-        color: "#ffffff",
-        fontStyle: "bold"
-      }
-    )
-      .setOrigin(0.5)
-      .setDepth(100);
-  }
+  const winText = this.add.text(
+    this.scale.width / 2,
+    this.scale.height / 2,
+    "YOU WIN",
+    {
+      fontFamily: "VT323, monospace",
+      fontSize: "64px",
+      color: "#ffffff",
+      fontStyle: "bold"
+    }
+  )
+    .setOrigin(0.5)
+    .setDepth(200)
+    .setScrollFactor(0);
+
+  // short pause before fade
+  this.time.delayedCall(2000, () => {
+
+    // FADE TO BLACK
+    cam.fadeOut(2000, 0, 0, 0);
+
+    cam.once("camerafadeoutcomplete", () => {
+
+      // black overlay
+      const overlay = this.add.rectangle(
+        this.scale.width / 2,
+        this.scale.height / 2,
+        this.scale.width,
+        this.scale.height,
+        0x000000
+      )
+        .setDepth(500)
+        .setScrollFactor(0);
+
+      // PLAY AGAIN BUTTON
+      const button = this.add.text(
+        this.scale.width / 2,
+        this.scale.height / 2,
+        "PLAY AGAIN",
+        {
+          fontFamily: "VT323, monospace",
+          fontSize: "54px",
+          color: "#ffffff",
+          backgroundColor: "#222222",
+          padding: {
+            left: 30,
+            right: 30,
+            top: 15,
+            bottom: 15
+          }
+        }
+      )
+        .setOrigin(0.5)
+        .setDepth(600)
+        .setScrollFactor(0)
+        .setInteractive({ useHandCursor: true });
+
+      // hover effect
+      button.on("pointerover", () => {
+        button.setScale(1.05);
+      });
+
+      button.on("pointerout", () => {
+        button.setScale(1);
+      });
+
+      // restart game
+      button.on("pointerdown", () => {
+        this.scene.restart();
+      });
+    });
+  });
+}
 
   startBossSequence() {
     this.bossTriggered = true;
+    this.bossBarrier.body.enable = true;
     this.playerLocked = true;
 
     const cam = this.cameras.main;
@@ -686,7 +748,7 @@ handleHit(player, obstacle) {
 
     cam.stopFollow();
 
-    const targetX = this.bossEndX + this.scale.width / 2;
+    const targetX = this.bossStartX + this.scale.width / 2;
 
     // slow cinematic pan
     this.tweens.add({
@@ -705,9 +767,6 @@ handleHit(player, obstacle) {
       this.playerLocked = false;
     });
   }
-
-
-
 
   preload() {
     this.load.image("background", background);
@@ -759,8 +818,6 @@ handleHit(player, obstacle) {
       frameWidth: 80,
       frameHeight: 48
     });
-
-
     this.load.spritesheet('bear_attack', bearAttack, {
       frameWidth: 128,
       frameHeight: 96
@@ -918,7 +975,7 @@ handleHit(player, obstacle) {
     const WORLD_WIDTH = 8000;
     this.physics.world.setBounds(0, 0, WORLD_WIDTH, height);
     this.physics.world.gravity.y = 1000;
-    this.bossEndX = 6400; 
+    this.bossStartX = 6400; 
 
 
     // --- GROUND ---
@@ -1077,7 +1134,7 @@ handleHit(player, obstacle) {
     // --- PLAYER ---
     this.player = this.physics.add
     // find player
-      .sprite(750, height - 335, "fox_idle") //player start position
+      .sprite(6400, height - 335, "fox_idle") //player start position
       .setDepth(10);
     this.player.setScale(4);
     this.player.play('idle')
@@ -1219,8 +1276,6 @@ handleHit(player, obstacle) {
     });
 
 
-
-
     // --- CAMERA ---
     this.cameras.main.setBounds(0, 0, WORLD_WIDTH, height);
 
@@ -1273,7 +1328,6 @@ handleHit(player, obstacle) {
       { type: "log1", x: 160, y: height - 300, scale: 1 },
       { type: "log2", overlay: "log2_2", x: 1550, y: height - 360, scale: 1, flip: true },
       { type: "log1", x: 2600, y: height - 300, scale: 1 },
-      // { type: "log2", overlay: "log2_2", x: 3800, y: height - 360, scale: 1, flip: true },
       { type: "log1", x: 5000, y: height - 300, scale: 1 },
 
       { type: "rock", x: 3800, y: height - 295, scale: 1 },
@@ -1400,9 +1454,6 @@ handleHit(player, obstacle) {
       { x: 5100, y: height - 750, type: "leaves1", scale: 0.7, flip: true },
       // -------- tree 7 ---------
       { x: 5800, y: height - 830, type: "leaves2", scale: 1.15, flip: false },
-      // // -------- bush 1 ---------
-      // { x: 3830, y: height - 350, type: "leaves2", scale: 0.9, flip: false, },
-      // { x: 3800, y: height - 295, type: "leaves1", scale: 0.9, flip: true, },
     ];
 
 
@@ -1460,11 +1511,29 @@ handleHit(player, obstacle) {
 
     //-------BOSS ZONE -------------
     this.bossTriggered = false;
+
+    // invisible boss barrier
+    this.bossBarrier = this.physics.add.staticImage(
+      this.bossStartX - 50,
+      this.scale.height / 2,
+      null
+    );
+
+    this.bossBarrier
+      .setDisplaySize(40, this.scale.height)
+      .setVisible(false);
+
+    this.bossBarrier.refreshBody();
+
+    this.bossBarrier.body.enable = false;
+
     this.bossZone = this.add.zone(6570, this.scale.height - 300, 1, 1000);
     this.physics.world.enable(this.bossZone);
     this.bossZone.body.setAllowGravity(false);
     this.bossZone.body.moves = false;
     this.physics.add.overlap(this.player, this.bossZone, () => {
+      this.physics.add.collider(this.player, this.bossBarrier);
+      this.physics.add.collider(this.bear.sprite, this.bossBarrier);
       if (this.bossTriggered) return;
       this.startBossSequence();
     });
@@ -1476,7 +1545,7 @@ handleHit(player, obstacle) {
     if (this.isDead) return;
     const sitDelayMin = 2500;
     const sitDelayMax = 4000;
-    if (this.locked) {
+    if (this.locked && !this.isKnockedBack) {
       this.player.setVelocityX(0);
     }
 
@@ -1573,13 +1642,6 @@ handleHit(player, obstacle) {
     if (isAttackPressed) {
       this.attack();
     }
-
-
-    if (this.bossTriggered && this.player.x < this.bossEndX) {
-      this.player.x = this.bossEndX;
-      this.player.setVelocityX(0);
-    }
-
 
     // --- ANIMATION ---
     let anim;
