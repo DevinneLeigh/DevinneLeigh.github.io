@@ -37,7 +37,9 @@ import bearStandUp from "@/assets/images/game/bear/Bear_Stand_Up.png";
 import bearWalk from "@/assets/images/game/bear/Bear_Walk.png";
 import bearYawn from "@/assets/images/game/bear/Bear_Yawn.png";
 
-import log from "@/assets/images/game/platforms/log.png"
+import log1 from "@/assets/images/game/platforms/logs/log1.png"
+import log2 from "@/assets/images/game/platforms/logs/log2.png"
+import log2_2 from "@/assets/images/game/platforms/logs/log2_2.png"
 
 import tree1 from "@/assets/images/game/platforms/trees/tree1.png"
 import tree2 from "@/assets/images/game/platforms/trees/tree2.png"
@@ -714,7 +716,9 @@ class MainScene extends Phaser.Scene {
     this.load.image("layer4", layer4);
     this.load.image("ground", ground);
     this.load.image("layer5", layer5);
-    this.load.image("log", log);
+    this.load.image("log1", log1);
+    this.load.image("log2", log2);
+    this.load.image("log2_2", log2_2);
     this.load.image("tree1", tree1);
     this.load.image("tree2", tree2);
     this.load.image("leaves1", leaves1);
@@ -800,7 +804,6 @@ class MainScene extends Phaser.Scene {
   }
 
   create() {
-
     this.startMessage = this.add.text(
       800, // x position on screen
       200, // y position on screen
@@ -905,7 +908,7 @@ class MainScene extends Phaser.Scene {
       .tileSprite(0, 0, width, height, "layer5")
       .setOrigin(0)
       .setScrollFactor(0)
-      .setDepth(11);
+      .setDepth(12);
 
     // --- WORLD ---
     const WORLD_WIDTH = 8000;
@@ -931,12 +934,16 @@ class MainScene extends Phaser.Scene {
     this.holes = this.physics.add.staticGroup();
 
     const obstacleData = [
-
+      // find traps
       // bear traps
       { type: "bearTrap", x: 900, y: height - 259, scale: 1 },
+      // { type: "bearTrap", x: 1900, y: height - 259, scale: 1 },
       { type: "bearTrap", x: 3500, y: height - 250, scale: 1 },
 
+
+      // find holes
       // holes
+      { type: "hole", x: 2500, y: height - 255, scale: 1.5 },
       { type: "hole", x: 5000, y: height - 255, scale: 1 },
     ];
 
@@ -944,8 +951,8 @@ class MainScene extends Phaser.Scene {
     const trapOffsetX = 20;
     const trapOffsetY = 60;
 
-    const holeSizeX = 105;
-    const holeOffsetX = 155;
+    const holeSizeX = 180;
+    const holeOffsetX = 120;
     const holeOffsetY = 90;
 
     obstacleData.forEach(s => {
@@ -1064,7 +1071,8 @@ class MainScene extends Phaser.Scene {
 
     // --- PLAYER ---
     this.player = this.physics.add
-      .sprite(200, height - 335, "fox_idle") //player start position
+    // find player
+      .sprite(1900, height - 335, "fox_idle") //player start position
       .setDepth(10);
     this.player.setScale(4);
     this.player.play('idle')
@@ -1253,9 +1261,77 @@ class MainScene extends Phaser.Scene {
 
     // // --- PLATFORMS ---
 
+    // // -- LOGS --
+    this.log = this.physics.add.staticGroup();
+    const logData = [
+      //find logs
+      { type: "log1", x: 160, y: height - 280, scale: 1 },
+      { type: "log2", overlay: "log2_2", x: 1500, y: height - 355, scale: 1 },
+    ];
+
+    const log1SizeX = 100;
+    const log1SizeY = 200;
+    const log1OffsetX = 90;
+    const log1OffsetY = 30;
+
+    const log2SizeX = 360;
+    const log2SizeY = 70;
+    const log2OffsetX = 40;
+    const log2OffsetY = 120;
+
+    const DEPTHS = {
+      back: 8,
+      front: 11,
+    };
+
+    logData.forEach(s => {
+      const scale = s.scale ?? 1;
+
+      if (s.type === "log1") {
+        const logScale = 0.3 * scale; 
+
+        const obj = this.physics.add.staticSprite(s.x, s.y, s.type)
+          .setDepth(DEPTHS.back)
+          .setScale(logScale);
+
+        obj.refreshBody();
+
+        obj.body.setSize(log1SizeX * scale, log1SizeY * scale);
+        obj.body.setOffset(log1OffsetX * scale, log1OffsetY * scale);
+
+        this.log.add(obj);
+
+      } else {
+          const backScale = 0.5 * scale;
+          const frontScale = 0.5 * scale;
+          const overlayOffsetY = 15 * scale;
+
+          const obj = this.physics.add.staticSprite(s.x, s.y, s.type)
+            .setDepth(DEPTHS.back)
+            .setScale(backScale);
+
+          obj.refreshBody();
+
+          obj.body.setSize(log2SizeX * scale, log2SizeY * scale);
+          obj.body.setOffset(log2OffsetX * scale, log2OffsetY * scale);
+
+          this.log.add(obj);
+
+          this.add.sprite(s.x, s.y + overlayOffsetY, s.overlay)
+            .setDepth(DEPTHS.front)
+            .setScale(frontScale);
+        }
+    });
+    this.logCollider = this.physics.add.collider(
+      this.player,
+      this.log
+    );
+
+
     // // -- TREES --
     this.tree = this.add.group();
     const treeData = [
+      //find trees
       // { x: 1100, y: height - 680, scale: .75, type: "tree1", flip: false },
       { x: 1000, y: height - 880, scale: .5, type: "tree2", flip: true },
     ];
@@ -1268,45 +1344,22 @@ class MainScene extends Phaser.Scene {
     }); 
 
     const leafPlatforms = [
+      //find leaves
       // -------- tree 1 ---------
-      {
-        x: 900,
-        y: height - 530,
-        type: "leaves1",
-        scale: 0.82,
-        flip: true,
-      },
-      {
-        x: 1050,
-        y: height - 890,
-        type: "leaves1",
-        scale: 0.8,
-        flip: false,
-      },
-      {
-        x: 1240,
-        y: height - 810,
-        type: "leaves2",
-        scale: 0.8,
-        flip: false,
-      },
+      { x: 900, y: height - 530, type: "leaves1", scale: 0.82, flip: true, },
+      { x: 1050, y: height - 890, type: "leaves1", scale: 0.8, flip: false, },
+      { x: 1240, y: height - 810, type: "leaves2", scale: 0.8, flip: false, },
       // -------- bush 1 ---------
-      {
-        x: 1350,
-        y: height - 300,
-        type: "leaves2",
-        scale: 0.9,
-        flip: false,
-      },
+      // { x: 1350, y: height - 300, type: "leaves2", scale: 0.9, flip: false, },
     ];
 
 
     this.leaves = this.physics.add.staticGroup();
 
-    const DEPTHS = {
-      leavesBack: 8,
-      leavesFront: 11,
-    };
+    // const DEPTHS = {
+    //   leavesBack: 8,
+    //   leavesFront: 11,
+    // };
 
     leafPlatforms.forEach(s => {
 
@@ -1323,7 +1376,7 @@ class MainScene extends Phaser.Scene {
         s.y,
         s.type
       )
-        .setDepth(DEPTHS.leavesBack)
+        .setDepth(DEPTHS.back)
         .setScale(backScale)
         .setFlipX(s.flip);
 
@@ -1341,7 +1394,7 @@ class MainScene extends Phaser.Scene {
         s.y + overlayOffsetY,
         s.type
       )
-        .setDepth(DEPTHS.leavesFront)
+        .setDepth(DEPTHS.front)
         .setScale(frontScale)
         .setFlipX(!s.flip);
     });
