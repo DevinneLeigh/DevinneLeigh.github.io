@@ -600,7 +600,7 @@ handleHit(player, obstacle) {
     this.isAttacking = false;
 
     this.player.setVelocity(0, 0);
-    player.disableBody(true, false);
+    this.player.disableBody(true, false);
 
     this.player.play("death", true);
 
@@ -660,6 +660,8 @@ handleHit(player, obstacle) {
 handleWin() {
   if (this.isDead) return;
 
+  const cam = this.cameras.main;
+
   this.playerLocked = true;
   this.player.setVelocity(0, 0);
 
@@ -679,12 +681,12 @@ handleWin() {
     .setScrollFactor(0);
 
   // short pause before fade
-  this.time.delayedCall(2000, () => {
+  this.time.delayedCall(1000, () => {
 
     // FADE TO BLACK
-    cam.fadeOut(2000, 0, 0, 0);
+    cam.fadeOut(500, 0, 0, 0);
 
-    cam.once("camerafadeoutcomplete", () => {
+    cam.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, () => {
 
       // black overlay
       const overlay = this.add.rectangle(
@@ -694,46 +696,52 @@ handleWin() {
         this.scale.height,
         0x000000
       )
-        .setDepth(500)
-        .setScrollFactor(0);
-
-      // PLAY AGAIN BUTTON
-      const button = this.add.text(
-        this.scale.width / 2,
-        this.scale.height / 2,
-        "PLAY AGAIN",
-        {
-          fontFamily: "VT323, monospace",
-          fontSize: "54px",
-          color: "#ffffff",
-          backgroundColor: "#222222",
-          padding: {
-            left: 30,
-            right: 30,
-            top: 15,
-            bottom: 15
-          }
-        }
-      )
-        .setOrigin(0.5)
-        .setDepth(600)
         .setScrollFactor(0)
-        .setInteractive({ useHandCursor: true });
-
-      // hover effect
-      button.on("pointerover", () => {
-        button.setScale(1.05);
-      });
-
-      button.on("pointerout", () => {
-        button.setScale(1);
-      });
-
-      // restart game
-      button.on("pointerdown", () => {
-        this.scene.restart();
-      });
+        .setDepth(500);
     });
+    // PLAY AGAIN BUTTON
+    cam.once(
+      Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE,
+      () => {
+
+        // remove camera fade overlay
+        cam.resetFX();
+
+        const button = this.add.text(
+          this.scale.width / 2,
+          this.scale.height / 2,
+          "PLAY AGAIN",
+          {
+            fontFamily: "VT323, monospace",
+            fontSize: "54px",
+            color: "#F5F5F7",
+            backgroundColor: "#259E69",
+            padding: {
+              left: 30,
+              right: 30,
+              top: 15,
+              bottom: 15
+            }
+          }
+        )
+          .setOrigin(0.5)
+          .setScrollFactor(0)
+          .setDepth(9999)
+          .setInteractive({ useHandCursor: true });
+
+        button.on("pointerover", () => {
+          button.setScale(1.05);
+        });
+
+        button.on("pointerout", () => {
+          button.setScale(1);
+        });
+
+        button.on("pointerdown", () => {
+          this.scene.restart();
+        });
+      }
+    );
   });
 }
 
@@ -1134,7 +1142,7 @@ handleWin() {
     // --- PLAYER ---
     this.player = this.physics.add
     // find player
-      .sprite(6400, height - 335, "fox_idle") //player start position
+      .sprite(750, height - 335, "fox_idle") //player start position
       .setDepth(10);
     this.player.setScale(4);
     this.player.play('idle')
